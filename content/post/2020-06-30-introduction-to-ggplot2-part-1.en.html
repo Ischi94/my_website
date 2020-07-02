@@ -1,0 +1,415 @@
+---
+title: Introduction to ggplot2 (Part 1)
+author: Gregor Mathes
+date: '2020-06-30'
+slug: introduction-to-ggplot2-part-1
+categories: []
+tags: []
+subtitle: ''
+summary: 'This document will give you a short introduction to the wonderful world of ggplot2'
+authors: [Gregor Mathes]
+lastmod: '2020-06-30T12:07:04+02:00'
+featured: no
+projects: []
+output:
+  blogdown::html_page:
+    toc: true
+    toc_depth: 1
+    number_sections: true
+    fig_width: 6
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#overview"><span class="toc-section-number">1</span> Overview</a></li>
+<li><a href="#further-literature"><span class="toc-section-number">2</span> Further literature</a></li>
+<li><a href="#get-started"><span class="toc-section-number">3</span> Get started</a></li>
+<li><a href="#aesthetic-mappings"><span class="toc-section-number">4</span> Aesthetic mappings</a></li>
+<li><a href="#facetting"><span class="toc-section-number">5</span> Facetting</a></li>
+<li><a href="#geometries"><span class="toc-section-number">6</span> Geometries</a></li>
+</ul>
+</div>
+
+<div id="overview" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Overview</h1>
+<p>This document will give you a short introduction to the wonderful world of ggplot2. Before you fight your way through this document, take a look at some of the <a href="https://cedricscherer.netlify.com/2019/12/30/best-tidytuesday-2019/">best visualisations</a> from 2019 produced with ggplot. Just think of the struggle to produce those in base R.<br />
+Here, we will deal with the basics and the most important aspects of the package. Each constituent of a graphic is explained shortly and a few examples will hopefully demonstrate how to use the learned input.<br />
+You can find all exercises, solutions, and source code for this introduction in my <a href="https://github.com/Ischi94/ggplot_intro">github repository</a>.<br />
+Please note that ggplot might be a gateway drug to the tidyverse. Unfortunately, this is neither an introduction to the tidyverse nor an exhaustive report showing you every detail of ggplots. If needed, I can provide an intro to the tidyverse within the next weeks. Ggplot offers the chance to produce <em>any</em> graph you can think of. Use your power wisely.</p>
+</div>
+<div id="further-literature" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Further literature</h1>
+<p>While working on a specific plot, it’s always a good idea to have the <a href="https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf">cheatsheet</a> for ggplot2 open.<br />
+It might be that my intro confused you more than it helped. This is definitely my fault and not due to ggplot2 beeing confusing. Don’t let my bad presentation skills stop you from producing awesome graphs and do your own research instead.<br />
+There are a number of free (and great!) books online covering ggplot2 and data visualisation in detail. <a href="https://r4ds.had.co.nz/">R for Data Science</a> teaches you how to get your data into R, get it into the most useful structure, transform it, visualise it and model it. Read the chapters <em>Data Visualisation</em> and <em>Graphics for communication</em> for ggplot2 info. If you’ve mastered the basics of ggplot2 and want to learn more, read <a href="https://ggplot2-book.org/index.html">ggplot2: Elegant Graphics for Data Analysis</a>. It describes the theoretical underpinnings of ggplot2 and shows you how all the pieces fit together. This book helps you understand the theory that underpins ggplot2, and will help you create new types of graphics specifically tailored to your needs. If you still want more, read <a href="http://socviz.co/">Data Visualization: A practical introduction</a>. It introduces you to both the ideas and the methods of data visualization in a sensible, comprehensible, reproducible way using ggplot2 (with code). And last but not least, if you’d like to learn more about the theoretical underpinnings of ggplot2 before you start, you can always refer to <a href="http://vita.had.co.nz/papers/layered-grammar.pdf">The Layered Grammar of Graphics</a>.<br />
+ggplot2 has a number of <a href="http://exts.ggplot2.tidyverse.org/gallery/">extentions</a> (other packages), which we will ignore for now. Especially <em>ggrepel</em>, <em>ggforce</em> and <em>patchwork</em> might be very useful for you later on.<br />
+The best thing about R compared to other programming languages is the community and the help you can find online by simply googling stuff. ggplot2 is no exception from this. You will find a lot of input online.</p>
+</div>
+<div id="get-started" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Get started</h1>
+<p>As ggplot2 is not part of base R, we need to download it first.</p>
+<pre class="r"><code>install.packages(&quot;ggplot2&quot;)
+library(ggplot2)</code></pre>
+<p>However, we will use data sets from the tidyverse. ggplot2 is a part of the tidyverse and will automatically get called along with other packages when you load the tidyverse.</p>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## -- Attaching packages --------------------------------------------------- tidyverse 1.3.0 --</code></pre>
+<pre><code>## v ggplot2 3.3.0     v purrr   0.3.4
+## v tibble  3.0.1     v dplyr   0.8.5
+## v tidyr   1.0.2     v stringr 1.4.0
+## v readr   1.3.1     v forcats 0.5.0</code></pre>
+<pre><code>## -- Conflicts ------------------------------------------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
+<div id="data" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Data</h2>
+<p>We will use three data sets which come with the ggplot2 package.<br />
+The <em>mpg</em> data contains fuel economy data from 1999 to 2008 for 38 popular models of cars.</p>
+<table>
+<caption><span id="tab:mtcars">Table 3.1: </span>The mpg data set</caption>
+<thead>
+<tr class="header">
+<th align="left">manufacturer</th>
+<th align="left">model</th>
+<th align="right">displ</th>
+<th align="right">year</th>
+<th align="right">cyl</th>
+<th align="center">trans</th>
+<th align="left">drv</th>
+<th align="right">cty</th>
+<th align="right">hwy</th>
+<th align="left">fl</th>
+<th align="left">class</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">audi</td>
+<td align="left">a4</td>
+<td align="right">1.8</td>
+<td align="right">1999</td>
+<td align="right">4</td>
+<td align="center">auto(l5)</td>
+<td align="left">f</td>
+<td align="right">18</td>
+<td align="right">29</td>
+<td align="left">p</td>
+<td align="left">compact</td>
+</tr>
+<tr class="even">
+<td align="left">audi</td>
+<td align="left">a4</td>
+<td align="right">1.8</td>
+<td align="right">1999</td>
+<td align="right">4</td>
+<td align="center">manual(m5)</td>
+<td align="left">f</td>
+<td align="right">21</td>
+<td align="right">29</td>
+<td align="left">p</td>
+<td align="left">compact</td>
+</tr>
+<tr class="odd">
+<td align="left">audi</td>
+<td align="left">a4</td>
+<td align="right">2.0</td>
+<td align="right">2008</td>
+<td align="right">4</td>
+<td align="center">manual(m6)</td>
+<td align="left">f</td>
+<td align="right">20</td>
+<td align="right">31</td>
+<td align="left">p</td>
+<td align="left">compact</td>
+</tr>
+</tbody>
+</table>
+<p>Another popular dataset is the <em>economics</em> data. This dataset was produced from US economic time series data including unemployment rate.</p>
+<table>
+<caption><span id="tab:flights">Table 3.2: </span>The economics data set</caption>
+<thead>
+<tr class="header">
+<th align="left">date</th>
+<th align="right">pce</th>
+<th align="right">pop</th>
+<th align="right">psavert</th>
+<th align="right">uempmed</th>
+<th align="right">unemploy</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1967-07-01</td>
+<td align="right">506.7</td>
+<td align="right">198712</td>
+<td align="right">12.6</td>
+<td align="right">4.5</td>
+<td align="right">2944</td>
+</tr>
+<tr class="even">
+<td align="left">1967-08-01</td>
+<td align="right">509.8</td>
+<td align="right">198911</td>
+<td align="right">12.6</td>
+<td align="right">4.7</td>
+<td align="right">2945</td>
+</tr>
+<tr class="odd">
+<td align="left">1967-09-01</td>
+<td align="right">515.6</td>
+<td align="right">199113</td>
+<td align="right">11.9</td>
+<td align="right">4.6</td>
+<td align="right">2958</td>
+</tr>
+</tbody>
+</table>
+<p>And we will have a few exercises on the prominent diamonds data set. A dataset containing the prices and other attributes of almost 54,000 diamonds.</p>
+<table>
+<caption><span id="tab:diamonds">Table 3.3: </span>The diamonds data set</caption>
+<thead>
+<tr class="header">
+<th align="right">carat</th>
+<th align="left">cut</th>
+<th align="left">color</th>
+<th align="left">clarity</th>
+<th align="right">depth</th>
+<th align="right">table</th>
+<th align="right">price</th>
+<th align="right">x</th>
+<th align="right">y</th>
+<th align="right">z</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">0.23</td>
+<td align="left">Ideal</td>
+<td align="left">E</td>
+<td align="left">SI2</td>
+<td align="right">61.5</td>
+<td align="right">55</td>
+<td align="right">326</td>
+<td align="right">3.95</td>
+<td align="right">3.98</td>
+<td align="right">2.43</td>
+</tr>
+<tr class="even">
+<td align="right">0.21</td>
+<td align="left">Premium</td>
+<td align="left">E</td>
+<td align="left">SI1</td>
+<td align="right">59.8</td>
+<td align="right">61</td>
+<td align="right">326</td>
+<td align="right">3.89</td>
+<td align="right">3.84</td>
+<td align="right">2.31</td>
+</tr>
+<tr class="odd">
+<td align="right">0.23</td>
+<td align="left">Good</td>
+<td align="left">E</td>
+<td align="left">VS1</td>
+<td align="right">56.9</td>
+<td align="right">65</td>
+<td align="right">327</td>
+<td align="right">4.05</td>
+<td align="right">4.07</td>
+<td align="right">2.31</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="our-first-ggplot" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Our first ggplot</h2>
+<p>Equipped with these datasets, we want to answer some very basic questions using plots. Let’s use our first graph to answer a question: Do cars with big engines use more fuel than cars with small engines? You probably already have an answer, but try to make your answer precise. What does the relationship between engine size and fuel efficiency look like? Is it positive? Negative? Linear? Nonlinear?</p>
+<p>We want to plot <em>mpg</em>, with <strong>displ</strong> (engine displacement, in litres) on the x-axis and <strong>hwy</strong> (highway miles per gallon) on the y-axis. Every plot starts with <code>ggplot()</code>.</p>
+<pre class="r"><code>ggplot(data = mpg)</code></pre>
+<p>We need to add a geom to this call to map our data points. As we want to have a scatterplot, we need geom_point. We will discuss this soon, so don’t worry. We can combine our <code>ggplot()</code> call with our specified geom with a <strong>+</strong> sign. Within the geom function, we can specify what should be plotted on the x-axis and what on the y-axis using the <code>aes()</code> specification. Aes stands for aestethics. Again, we will cover this soon.</p>
+<pre class="r"><code>ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy))</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-1.en_files/figure-html/first%20plot%20with%20data-1.png" width="576" style="display: block; margin: auto;" /></p>
+<p>Our first ggplot! Now we can start to answer our question. Does this plot confirm or refute your hypothesis about fuel efficiency and engine size?</p>
+<hr />
+<p>Before we move on from here, let us quickly evaluate what we did here:<br />
+We started our plot with the function <code>ggplot()</code>. <code>ggplot()</code> creates a coordinate system to which you can add layers to. The first argument of <code>ggplot()</code> is the dataset to use in the graph. So <code>ggplot(data = mpg)</code> creates an empty graph.</p>
+<p>To showcase our data, we need to add one or more layers to <code>ggplot()</code>. We did this by using <code>geom_point()</code>, which creates a scatterplot. ggplot2 comes with many geom function which each add a different type of layer to a plot.</p>
+<p>Each geom function in ggplot2 takes a mapping argument. This defines how variables in your dataset are mapped to visual properties. The mapping argument is always paired with <code>aes()</code>, and the x and y arguments of <code>aes()</code> specify which variables to map to the x and y axes. ggplot2 looks for the mapped variables in the data argument, in this case, mpg.</p>
+<p>In other words, we told ggplot to open an empty plot with mpg as underlying data set, and then we added points by using a geom and specified x and y using the aesthetics mapping argument.</p>
+<hr />
+</div>
+</div>
+<div id="aesthetic-mappings" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Aesthetic mappings</h1>
+<p>In our plot, one group of points seems to fall outside of the linear trend. These cars have a higher mileage than you might expect. How can you explain these cars?</p>
+<p>Let’s hypothesize that the cars are hybrids. One way to test this hypothesis is to look at the class value for each car. The <code>class</code> variable of the <em>mpg</em> dataset classifies cars into groups such as compact, midsize, and SUV. If the outlying points are hybrids, they should be classified as compact cars or, perhaps, subcompact cars.</p>
+<p>You can add a third variable, like class, to a two dimensional scatterplot by mapping it to an aesthetic. An aesthetic is a visual property of the objects in your plot. Aesthetics include things like the size, the shape, or the color of your points. You can display a point in different ways by changing the values of its aesthetic properties.<br />
+You can convey information about your data by mapping the aesthetics in your plot to the variables in your dataset. For example, you can map the colors of your points to the class variable to reveal the class of each car.</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, colour = class))</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-1.en_files/figure-html/mpg%20plot%20with%20grouped%20class-1.png" width="576" style="display: block; margin: auto;" /></p>
+<p>Never disappoint Nussaibah and type <em>color</em> instead of the nice british <em>colour</em>. The good thing about ggplot2 however is that it will still understand you, even if you use <del>barbarous</del> american english.</p>
+<p>To map an aesthetic to a variable, associate the name of the aesthetic to the name of the variable inside <code>aes()</code>. ggplot2 will automatically assign a unique level of the aesthetic (here a unique colour) to each unique value of the variable, a process known as scaling. ggplot2 will also add a legend that explains which levels correspond to which values.</p>
+<p>Once you map an aesthetic, ggplot2 takes care of the rest. It selects a reasonable scale to use with the aesthetic, and it constructs a legend that explains the mapping between levels and values. For x and y aesthetics, ggplot2 does not create a legend, but it creates an axis line with tick marks and a label. The axis line acts as a legend; it explains the mapping between locations and values. These pre-specified graphics are normally very nice, but we will later see how you can precisely tailor those for your own needs.</p>
+<p>You can also set the aesthetic properties of your geom manually. For example, we can make all of the points in our plot green:</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy), colour = &quot;darkgreen&quot;)</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-1.en_files/figure-html/mpg%20green-1.png" width="576" style="display: block; margin: auto;" /></p>
+<p>Here, the colour doesn’t convey information about a variable, but only changes the appearance of the plot. To set an aesthetic manually, set the aesthetic by name as an argument of your geom function; i.e. it goes outside of <code>aes()</code>. You can use aesthetics for colour, shape, and size.</p>
+<hr />
+<p>Stop here and do the aesthetics exercises int the file <em>exercises_1.R</em>.</p>
+<hr />
+</div>
+<div id="facetting" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Facetting</h1>
+<p>Another technique for displaying additional categorical variables on a plot is facetting. Facetting creates tables of graphics by splitting the data into subsets and displaying the same graph for each subset.</p>
+<p>There are two types of facetting: grid and wrapped. Wrapped is the most useful, so we’ll discuss it here, and you can learn about grid facetting later. To facet a plot you simply add a facetting specification with <code>facet_wrap()</code>, which takes the name of a variable preceded by <code>~</code>.</p>
+<pre class="r"><code>ggplot(mpg, aes(displ, hwy)) +
+  geom_point() +
+  facet_wrap( ~ class)</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-1.en_files/figure-html/facetting-1.png" width="576" style="display: block; margin: auto;" /></p>
+<p>Facetting is an alternative to using aesthetics (like colour, shape or size) to differentiate groups. Both techniques have strengths and weaknesses, based around the relative positions of the subsets. With facetting, each group is quite far apart in its own panel, and there is no overlap between the groups. This is good if the groups overlap a lot, but it does make small differences harder to see. When using aesthetics to differentiate groups, the groups are close together and may overlap, but small differences are easier to see.</p>
+<hr />
+<p>Stop here and do the facetting exercises.</p>
+<hr />
+</div>
+<div id="geometries" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> Geometries</h1>
+<p>Instead of using <code>geom_point</code> for a scatterplot, we can use other geometries to produce a different type of plot. That’s a great guess! This isn’t an exhaustive list, but should cover the most commonly used plot types.</p>
+<ul>
+<li><p><code>geom_smooth()</code> fits a smoother to the data and displays the smooth and its standard error.</p></li>
+<li><p><code>geom_boxplot()</code> produces a box-and-whisker plot to summarise the distribution of a set of points.</p></li>
+<li><p><code>geom_histogram()</code> and <code>geom_freqpoly()</code> show the distribution of continuous variables.</p></li>
+<li><p><code>geom_bar()</code> shows the distribution of categorical variables.</p></li>
+<li><p><code>geom_path()</code> and <code>geom_line()</code> draw lines between the data points. A line plot is constrained to produce lines that travel from left to right, while paths can go in any direction. Lines are typically used to explore how things change over time.</p></li>
+</ul>
+<div id="trend-lines" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Trend lines</h2>
+<p>Every geom function in ggplot2 takes a mapping argument. However, not every aesthetic works with every geom. You could set the shape of a point, but you couldn’t set the <em>shape</em> of a line. On the other hand, you could set the linetype of a line. <code>geom_smooth()</code> will draw a different line, with a different linetype, for each unique value of the variable that you map to linetype.</p>
+<pre class="r"><code>ggplot(data = mpg) +
+  geom_smooth(mapping = aes(x = displ, y = hwy, linetype = drv))</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-1.en_files/figure-html/geom_line-1.png" width="576" style="display: block; margin: auto;" /></p>
+<p><code>geom_smooth()</code> produces a smooth curve, including an assessment of uncertainty in the form of point-wise confidence intervals shown in grey. If you’re not interested in the confidence interval, turn it off with <code>geom_smooth(se = FALSE)</code>.</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_smooth(mapping = aes(x = displ, y = hwy, linetype = drv), se = FALSE)</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-1.en_files/figure-html/without%20se-1.png" width="576" style="display: block; margin: auto;" /></p>
+<p>Here <code>geom_smooth()</code> separates the cars into three lines based on their <em>drv</em> value, which describes a car’s drivetrain. One line describes all of the points with a 4 value, one line describes all of the points with an f value, and one line describes all of the points with an r value. Here, 4 stands for four-wheel drive, f for front-wheel drive, and r for rear-wheel drive.</p>
+<p>If this sounds strange, we can make it more clear by overlaying the lines on top of the raw data and then coloring everything according to <em>drv</em>.
+<img src="/post/2020-06-30-introduction-to-ggplot2-part-1.en_files/figure-html/combined%20trend-1.png" width="576" style="display: block; margin: auto;" /></p>
+<p>Notice that this plot contains two geoms in the same graph! To display multiple geoms in the same plot, add multiple geom functions to ggplot():</p>
+<pre class="r"><code>ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  geom_smooth(mapping = aes(x = displ, y = hwy))</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-1.en_files/figure-html/multiple%20geoms-1.png" width="576" style="display: block; margin: auto;" /></p>
+<p>This, however, introduces some duplication in our code. Imagine if you wanted to change the y-axis to display cty instead of hwy. You’d need to change the variable in two places, and you might forget to update one. You can avoid this type of repetition by passing a set of mappings to <code>ggplot()</code>. ggplot2 will treat these mappings as global mappings that apply to each geom in the graph. In other words, this code will produce the same plot as the previous code:</p>
+<pre class="r"><code>ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+  geom_point() + 
+  geom_smooth()</code></pre>
+<p>If you place mappings in a geom function, ggplot2 will treat them as local mappings for the layer. It will use these mappings to extend or overwrite the global mappings for that layer only. This makes it possible to display different aesthetics in different layers.</p>
+<pre class="r"><code>ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+  geom_point(mapping = aes(color = class)) + 
+  geom_smooth()</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-1.en_files/figure-html/overwrite%20layers-1.png" width="576" style="display: block; margin: auto;" /></p>
+</div>
+<div id="boxplots-and-jittered-points" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Boxplots and jittered points</h2>
+<p>When a set of data includes a categorical variable and one or more continuous variables, you will probably be interested to know how the values of the continuous variables vary with the levels of the categorical variable. Say we’re interested in seeing how fuel economy varies within cars that have the same kind of drivetrain. We might start with a scatterplot like this:</p>
+<pre class="r"><code>ggplot(mpg, aes(drv, hwy)) + 
+  geom_point()</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-1.en_files/figure-html/scatter,%20-1.png" width="288" style="display: block; margin: auto;" /></p>
+<p>Because there are few unique values of both drv and hwy, there is a lot of overplotting. Many points are plotted in the same location, and it’s difficult to see the distribution. There are three useful techniques that help alleviate the problem:</p>
+<ul>
+<li><p>Jittering, <code>geom_jitter()</code>, adds a little random noise to the data which can help avoid overplotting.</p></li>
+<li><p>Boxplots, <code>geom_boxplot()</code>, summarise the shape of the distribution with a handful of summary statistics.</p></li>
+<li><p>Violin plots, <code>geom_violin()</code>, show a compact representation of the “density” of the distribution, highlighting the areas where more points are found.</p></li>
+</ul>
+<pre class="r"><code>ggplot(mpg, aes(drv, hwy)) + geom_jitter()
+ggplot(mpg, aes(drv, hwy)) + geom_boxplot()
+ggplot(mpg, aes(drv, hwy)) + geom_violin()</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-1.en_files/figure-html/three%20plots-1.png" width="33%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-1.en_files/figure-html/three%20plots-2.png" width="33%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-1.en_files/figure-html/three%20plots-3.png" width="33%" /></p>
+</div>
+<div id="histograms-and-frequency-polygons" class="section level2" number="6.3">
+<h2><span class="header-section-number">6.3</span> Histograms and frequency polygons</h2>
+<p>Histograms and frequency polygons show the distribution of a single numeric variable. They provide more information about the distribution of a single group than boxplots do, at the expense of needing more space.</p>
+<pre class="r"><code>ggplot(mpg, aes(hwy)) + geom_histogram()</code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<pre class="r"><code>ggplot(mpg, aes(hwy)) + geom_freqpoly()</code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-1.en_files/figure-html/histograms-1.png" width="50%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-1.en_files/figure-html/histograms-2.png" width="50%" /></p>
+<p>Both histograms and frequency polygons work in the same way: they bin the data, then count the number of observations in each bin. The only difference is the display: histograms use bars and frequency polygons use lines.</p>
+<p>You can control the width of the bins with the <em>binwidth</em> argument (if you don’t want evenly spaced bins you can use the breaks argument). It is very important to experiment with the bin width. The default just splits your data into 30 bins, which is unlikely to be the best choice. You should always try many bin widths, and you may find you need multiple bin widths to tell the full story of your data.</p>
+<pre class="r"><code>ggplot(mpg, aes(hwy)) + 
+  geom_histogram(binwidth = 2.5)
+ggplot(mpg, aes(hwy)) + 
+  geom_histogram(binwidth = 1)</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-1.en_files/figure-html/histograms%20with%20bins-1.png" width="50%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-1.en_files/figure-html/histograms%20with%20bins-2.png" width="50%" /></p>
+</div>
+<div id="bar-charts" class="section level2" number="6.4">
+<h2><span class="header-section-number">6.4</span> Bar charts</h2>
+<p>The discrete analogue of the histogram is the bar chart, <code>geom_bar()</code>. It’s easy to use:</p>
+<pre class="r"><code>ggplot(diamonds, aes(cut)) + 
+  geom_bar()</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-1.en_files/figure-html/barplot-1.png" width="576" style="display: block; margin: auto;" /></p>
+<p>Note that we plotted <code>counts</code> on the y axis, but it is not included in the data set we fed into ggplot. <code>geom_bar</code> goes through your data and counts by itself.</p>
+<p>Bar charts can be confusing because there are two rather different plots that are both commonly called bar charts. The above form expects you to have unsummarised data, and each observation contributes one unit to the height of each bar. The other form of bar chart is used for presummarised data. For example, you might have three drugs with their average effect:</p>
+<pre class="r"><code>drugs &lt;- tribble(
+  ~drug, ~effect, 
+#---- --|-----------
+  &quot;a&quot;,     4.2,
+  &quot;b&quot;,     9.7, 
+  &quot;c&quot;,     6.1
+)</code></pre>
+<p>To display this pre-summarised data we need to use <code>geom_col</code> instead of <code>geom_bar</code>:</p>
+<pre class="r"><code>ggplot(drugs) +
+  geom_col(aes(drug, effect))</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-1.en_files/figure-html/geom_col-1.png" width="288" style="display: block; margin: auto;" /></p>
+<p>This reveals a strange but awesome behaviour of ggplot2: Some geoms plot the raw data, like <code>geom_col</code> does, while other geoms go through your data and calculate their own input:</p>
+<ul>
+<li><p>bar charts, histograms, and frequency polygons bin your data and then plot bin counts, the number of points that fall in each bin.</p></li>
+<li><p>smoothers fit a model to your data and then plot predictions from the model.</p></li>
+</ul>
+<p>boxplots compute a robust summary of the distribution and then display a specially formatted box.</p>
+<p>The algorithm used to calculate new values for a graph is called a <strong>stat</strong>, short for statistical transformation. The figure below describes how this process works with <code>geom_bar()</code>.</p>
+<p><img src="https://d33wubrfki0l68.cloudfront.net/70a3b18a1128c785d8676a48c005ee9b6a23cc00/7283c/images/visualization-stat-bar.png" /></p>
+<p>You can learn which stat a geom uses by inspecting the default value for the <em>stat</em> argument. For example, <code>?geom_bar</code> shows that the default value for stat is <em>count</em>, which means that <code>geom_bar()</code> uses <code>stat_count()</code>. <code>stat_count()</code> is documented on the same page as <code>geom_bar()</code>, and if you scroll down you can find a section called <em>Computed variables</em>. That describes how it computes two new variables: count and prop.</p>
+<p>You can generally use geoms and stats interchangeably. For example, you can recreate our previous plot using <code>stat_count()</code> instead of <code>geom_bar()</code>.</p>
+<pre class="r"><code>ggplot(diamonds, aes(cut)) + 
+  stat_count()</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-1.en_files/figure-html/barplot%20with%20stats-1.png" width="576" style="display: block; margin: auto;" /></p>
+<p>This works because every geom has a default stat; and every stat has a default geom. This means that you can typically use geoms without worrying about the underlying statistical transformation. There are three reasons you might need to use a stat explicitly:</p>
+<ol style="list-style-type: decimal">
+<li>You might want to override the default stat. This would allow us to use <code>geom_bar</code> to plot our pre-summarised drug data:</li>
+</ol>
+<pre class="r"><code>ggplot(drugs) +
+  geom_bar(aes(drug, effect), stat = &quot;identity&quot;)</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-1.en_files/figure-html/geom_col%20with%20stats-1.png" width="384" style="display: block; margin: auto;" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li>You might want to override the default mapping from transformed variables to aesthetics. For example, you might want to display a bar chart of proportion, rather than count:</li>
+</ol>
+<pre class="r"><code>ggplot(data = diamonds) + 
+  geom_bar(mapping = aes(x = cut, y = stat(prop), group = 1))</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-1.en_files/figure-html/override%20stats-1.png" width="384" style="display: block; margin: auto;" /></p>
+<p>To find the variables computed by the stat, look for the help section titled “computed variables”.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>You might want to draw greater attention to the statistical transformation in your code. For example, you might use <code>stat_summary()</code>, which summarises the y values for each unique x value, to draw attention to the summary that you’re computing:</li>
+</ol>
+<pre class="r"><code>ggplot(data = diamonds) + 
+  stat_summary(mapping = aes(x = cut, y = depth),
+               fun.min = min,
+               fun.max = max,
+               fun = median)</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-1.en_files/figure-html/summary%20stats-1.png" width="576" style="display: block; margin: auto;" /></p>
+</div>
+<div id="time-series-with-lines" class="section level2" number="6.5">
+<h2><span class="header-section-number">6.5</span> Time series with lines</h2>
+<p>Line and path plots are typically used for time series data. Line plots join the points from left to right, while path plots join them in the order that they appear in the dataset (in other words, a line plot is a path plot of the data sorted by x value). Line plots usually have time on the x-axis, showing how a single variable has changed over time. Path plots show how two variables have simultaneously changed over time, with time encoded in the way that observations are connected.</p>
+<p>Because the year variable in the mpg dataset only has two values, we’ll show some time series plots using the economics dataset, which contains economic data on the US measured over the last 40 years.</p>
+<pre class="r"><code>ggplot(economics, aes(x = date, y = uempmed)) + 
+  geom_line() </code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-1.en_files/figure-html/line%20plot-1.png" width="576" style="display: block; margin: auto;" /></p>
+<p>We end the first part of our ggplot2 webinar here and continue with part 2 next week. So far, we’ve learned how to <strong>call a ggplot</strong> with <code>ggplot()</code> and add various <strong>geoms</strong> to it. We’ve learned how to map data to <strong>aesthetics</strong> to answer a few basic questions. An alternative approach to mapping aesthetics was <strong>facetting</strong>. We looked a bit under the hood of ggplot when we examined the <strong>statistics</strong> of each geom. Equipped with these tools, we can now produce a lot of different and complex plots.<br />
+In the next part, we will try to make these plots visually pleasing. You will learn to modify the look of a ggplot so that it fits your needs. In the end, you will be able to produce publication ready plots within R. Additionally, we will learn how to safe those plots.</p>
+</div>
+</div>

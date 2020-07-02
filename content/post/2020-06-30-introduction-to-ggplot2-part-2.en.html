@@ -1,0 +1,399 @@
+---
+title: Introduction to ggplot2 (Part 2)
+author: Gregor Mathes
+date: '2020-06-30'
+slug: introduction-to-ggplot2-part-2
+categories: []
+tags: []
+subtitle: ''
+summary: 'This is the second part of the introduction to ggplot2, written for the palaeobiology master students at Uni Erlangen'
+authors: [Gregor Mathes]
+lastmod: '2020-06-30T12:07:04+02:00'
+featured: no
+projects: []
+output:
+  blogdown::html_page:
+    toc: true
+    toc_depth: 1
+    number_sections: true
+    fig_width: 6
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#overview"><span class="toc-section-number">1</span> Overview</a></li>
+<li><a href="#retrospect"><span class="toc-section-number">2</span> Retrospect</a></li>
+<li><a href="#scales"><span class="toc-section-number">3</span> Scales</a></li>
+<li><a href="#legends"><span class="toc-section-number">4</span> Legends</a></li>
+<li><a href="#coordinate-systems"><span class="toc-section-number">5</span> Coordinate systems</a></li>
+<li><a href="#themes"><span class="toc-section-number">6</span> Themes</a></li>
+<li><a href="#highlighting"><span class="toc-section-number">7</span> Highlighting</a></li>
+<li><a href="#saving"><span class="toc-section-number">8</span> Saving</a></li>
+<li><a href="#advantage-of-ggplot"><span class="toc-section-number">9</span> Advantage of ggplot</a></li>
+</ul>
+</div>
+
+<div id="overview" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Overview</h1>
+<p>This is the second part of the introduction to ggplot2, written for the palaeobiology master students at Uni Erlangen. You can find the <strong>first part</strong> on the <a href="https://www.evolv-ed.net/post/introduction-to-ggplot2-part-i/">evolvED homepage</a>.<br />
+Here, we will dive a little bit deeper into ggplot2 and see how we can modify the default output of ggplot. In the end you will be able to personalise a plot to fit your needs, enabling you to produce publication ready plots within the R environment.<br />
+You can find all exercises, solutions, and source code for this introduction in my <a href="https://github.com/Ischi94/ggplot_intro">github repository</a>.<br />
+Please note that ggplot might be a gateway drug to the tidyverse. Unfortunately, this is neither an introduction to the tidyverse nor an exhaustive report showing you every detail of ggplots. If needed, I can provide an intro to the tidyverse within the next weeks. Ggplot offers the chance to produce <em>any</em> graph you can think of. Use your power wisely.</p>
+</div>
+<div id="retrospect" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Retrospect</h1>
+<p>In part 1, we’ve learned how to <strong>call a ggplot</strong> with <code>ggplot()</code> and add various <strong>layers</strong> to it. We’ve learned how to map data to <strong>aesthetics</strong> to answer a few basic questions. An alternative approach to mapping aesthetics was <strong>facetting</strong>. We dealt with various <strong>geometries</strong> including trend lines, boxplots, histograms, barplots, and line plots. We looked a bit under the hood of ggplot when we examined the <strong>statistics</strong> of each geom.</p>
+</div>
+<div id="scales" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Scales</h1>
+<p>Scales control the mapping from data to aesthetics. They take your data and transform it into visuals, like size, colour, position or shape. Scales also produce the axes and legends. We already produced plots without actively modifying the underlying scales, which still resulted in nice plots. However, modifying scales gives us much more control, and is the first thing you should think about when you want to modify a plot.</p>
+<div id="modifying-scales" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Modifying scales</h2>
+<p>Whenever we don’t specify a scale in our <code>ggplot()</code> call, ggplot uses the default scale. If you want to override the defaults, you’ll need to add the scale ourself. You can do that with our <strong>+</strong> operator.</p>
+<pre class="r"><code>ggplot(mpg, aes(displ, hwy)) + 
+  geom_point(aes(colour = class)) + 
+  scale_x_continuous(&quot;This is my label for the x-axis&quot;) +
+  scale_y_continuous(&quot;This is my label for the y-axis&quot;)</code></pre>
+<p>There exists a specific naming scheme for scales made up of three pieces, each separated by an underscore "_".</p>
+<ol style="list-style-type: decimal">
+<li><p><code>scale</code></p></li>
+<li><p>The name of the aesthetic (e.g., <code>colour</code>, <code>shape</code> or <code>x</code>)</p></li>
+<li><p>The name of the scale (e.g., <code>continuous</code>, <code>discrete</code>, <code>brewer</code>)</p></li>
+</ol>
+<p>RStudio makes your life easier by giving you suggestions when you type <code>scale</code>. Just select the one you need.</p>
+</div>
+<div id="guides" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Guides</h2>
+<p>The component of a scale that we want to modify quite often is the <strong>guide</strong>, the axis or legend associated with the scale. As mentioned before, ggplot produces those for you by default (<em>note that this is a big difference to base R, where you have to do everything by your own when it comes to legends</em>). The important part here is that you used a clear mapping between your data and aesthetics, so that ggplot understands what we want it to do. We can modify every component of the axis and legend:
+<img src="https://ggplot2-book.org/diagrams/scale-guides.png" />.</p>
+<div id="labels-titles" class="section level3" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> Labels/ titles</h3>
+<p>The first argument to the scale function, <code>name</code>, is the axes/legend title:</p>
+<pre class="r"><code>ggplot(mpg, aes(displ, hwy)) + 
+  geom_point(aes(colour = class)) + 
+  scale_x_continuous(&quot;This is my label \n for the x-axis&quot;) +
+  scale_y_continuous(&quot;Hello World!&quot;)</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/first%20lab-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>As you will do this quite ofte, people have already produced shortcuts for you: <code>xlab()</code>, <code>ylab()</code> and <code>labs()</code>.</p>
+<pre class="r"><code>my_plot &lt;- ggplot(mpg, aes(displ, hwy)) + geom_point(aes(colour = class))
+my_plot + 
+  xlab(&quot;My first X axis&quot;) + 
+  ylab(&quot;My first Y axis&quot;)
+my_plot + labs(x = &quot;My second X axis&quot;, y = &quot;My second Y axis&quot;, colour = &quot;My own\nlegend&quot;)</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/labs%20shortcut-1.png" width="50%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/labs%20shortcut-2.png" width="50%" /></p>
+<p>To remove axis labels, you have to set <code>x</code> or <code>y</code> = <code>NULL</code>. If you set them = <code>""</code>, you will produce an empty space instead of removing the label.</p>
+</div>
+<div id="breaks-labels" class="section level3" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> Breaks/ labels</h3>
+<p>The <code>breaks</code> argument controls which values appear as tick marks on axes and keys on legends. Each break has an associated <code>label</code>, controlled by the <code>labels</code> argument. If you set <code>labels</code>, you must also set <code>breaks</code>; otherwise, if data changes, the breaks will no longer align with the labels.</p>
+<pre class="r"><code>my_plot
+my_plot + scale_x_continuous(breaks = c(2, 4, 6))
+my_plot + scale_x_continuous(breaks = c(2, 4, 6), labels = c(&quot;two&quot;, &quot;four&quot;, &quot;Got&#39;ya&quot;))</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/breaks-1.png" width="33%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/breaks-2.png" width="33%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/breaks-3.png" width="33%" /></p>
+<p>Same with legend breaks:</p>
+<pre class="r"><code>my_plot
+my_plot + scale_colour_continuous(breaks = c(15, 30))
+my_plot + scale_colour_continuous(breaks = c(15, 30), labels = c(&quot;low&quot;, &quot;high&quot;))</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/legend%20breaks-1.png" width="33%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/legend%20breaks-2.png" width="33%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/legend%20breaks-3.png" width="33%" /></p>
+</div>
+</div>
+<div id="scale-transformations" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Scale transformations</h2>
+<p>It might be helpful to transform your data when plotting, to see patterns emerging. This is particularly interesting in your exploratory analysis part, where you just plot things and then see where this is going. With ggplot2, you don’t have to do this manually before plotting. Transforming your scales will save you time and energy, while ggplot2 makes nice line breaks and everything. Every continuous scale takes a <code>trans</code> argument, allowing the use of a variety of transformations:</p>
+<pre class="r"><code>ggplot(diamonds, aes(price, carat)) + 
+  geom_bin2d() + 
+  scale_x_continuous(trans = &quot;log10&quot;) +
+  scale_y_continuous(trans = &quot;log2&quot;)</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/scale%20transformation-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>There are shortcuts for the most common: <code>scale_x_log10()</code>, <code>scale_x_sqrt()</code> and <code>scale_x_reverse()</code> (and similarly for y.)</p>
+</div>
+<div id="colours" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> Colours</h2>
+<p>Colours are a difficult topic and it’s always good to have the underlying basics of colour theory in your mind when you produce a plot for a presentation, website or a publication. I’ve found myself quite often spending hours and hours trying out different colours for one plot. Luckily, ggplot2 offers some sensitive defaults and shortcuts. We will spent a bit more time on colours now, as they are really important when it comes to plots.</p>
+<div id="continuous" class="section level3" number="3.4.1">
+<h3><span class="header-section-number">3.4.1</span> Continuous</h3>
+<p>Colour gradients are often used to show the height of a 2d surface. In the following example we’ll use the surface of a 2d density estimate of the <code>faithful</code> dataset (Azzalini and Bowman 1990, within the ggplot2 package), which records the waiting time between eruptions and during each eruption for the Old Faithful geyser in Yellowstone Park. I hide the legends and set expand to 0, to focus on the appearance of the data. This expands to plot to allign with the axis lines, instead of having some space there by default.</p>
+<pre class="r"><code>erupt &lt;- ggplot(faithfuld, aes(waiting, eruptions, fill = density)) +
+  geom_raster() +
+  scale_x_continuous(NULL, expand = c(0, 0)) + 
+  scale_y_continuous(NULL, expand = c(0, 0)) + 
+  theme(legend.position = &quot;none&quot;)</code></pre>
+<p>There are four continuous colour scales:</p>
+<ul>
+<li><code>scale_colour_gradient()</code> and <code>scale_fill_gradient()</code>: a two-colour gradient, low-high (light blue-dark blue). This is the default scale for continuous colour, and is the same as <code>scale_colour_continuous()</code>. Arguments <code>low</code> and <code>high</code> control the colours at either end of the gradient.</li>
+</ul>
+<pre class="r"><code>erupt
+
+erupt + scale_fill_gradient(low = &quot;white&quot;, high = &quot;black&quot;)</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/erupt%20plot-1.png" width="50%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/erupt%20plot-2.png" width="50%" /></p>
+<ul>
+<li><code>scale_colour_gradient2()</code> and <code>scale_fill_gradient2()</code>: a three-colour gradient, low-med-high (default is red-white-blue). As well as low and high colours, these scales also have a mid colour for the colour of the midpoint. The midpoint defaults to 0, but can be set to any value with the midpoint argument.</li>
+</ul>
+<pre class="r"><code>mid &lt;- median(faithfuld$density)
+erupt + scale_fill_gradient2(midpoint = mid, low = &quot;darkred&quot;, mid = &quot;darkgreen&quot;, 
+                             high = &quot;darkblue&quot;) </code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/erupt%20gradient2-1.png" width="672" style="display: block; margin: auto;" /></p>
+<ul>
+<li><code>scale_colour_gradientn()</code> and <code>scale_fill_gradientn()</code>: a custom n-colour gradient. This is useful if you have colours that are meaningful for your data (just ask Nussaibah about her terrain map), or you’d like to use a palette produced by another package (like <em>colorspace</em> or <em>RColorBrewer</em>).</li>
+</ul>
+<pre class="r"><code>erupt + scale_fill_gradientn(colours = terrain.colors(7))
+erupt + scale_fill_gradientn(colours = colorspace::heat_hcl(7))
+erupt + scale_fill_gradientn(colours =  RColorBrewer::brewer.pal(7, &quot;Spectral&quot;))</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/gradientn-1.png" width="33%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/gradientn-2.png" width="33%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/gradientn-3.png" width="33%" /></p>
+<ul>
+<li><code>scale_color_distiller()</code> and <code>scale_fill_distiller()</code> apply the ColorBrewer colour scales to continuous data. You use it the same way as <code>scale_fill_brewer()</code>, described later.</li>
+</ul>
+<pre class="r"><code>erupt + scale_fill_distiller()
+erupt + scale_fill_distiller(palette = &quot;RdPu&quot;)
+erupt + scale_fill_distiller(palette = &quot;YlOrBr&quot;)</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/colorbrewer%20fill-1.png" width="33%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/colorbrewer%20fill-2.png" width="33%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/colorbrewer%20fill-3.png" width="33%" /></p>
+</div>
+<div id="discrete" class="section level3" number="3.4.2">
+<h3><span class="header-section-number">3.4.2</span> Discrete</h3>
+<p>There are four colour scales for discrete data:</p>
+<ul>
+<li>The default colour scheme, <code>scale_colour_hue()</code>, picks evenly spaced hues around the HCL colour wheel. This works well for up to about eight colours, but after that it becomes hard to tell the different colours apart. You can control the default chroma and luminance, and the range of hues, with the <code>h</code>, <code>c</code> and <code>l</code> arguments:</li>
+</ul>
+<pre class="r"><code>my_bars
+my_bars + scale_fill_hue(c = 40)
+my_bars + scale_fill_hue(h = c(180, 300))</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/my_bars%20hue-1.png" width="33%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/my_bars%20hue-2.png" width="33%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/my_bars%20hue-3.png" width="33%" /></p>
+<ul>
+<li><p><code>scale_colour_brewer()</code> uses handpicked ColorBrewer colours, from the <a href="http://colorbrewer2.org/">RColorBrewer package</a>. These colours have been designed to work well in a wide variety of situations, although the focus is on maps and so the colours tend to work better when displayed in large areas.</p></li>
+<li><p><code>scale_colour_grey()</code> maps discrete data to grays, from light to dark.</p></li>
+<li><p><code>scale_colour_manual()</code> is useful if you have your own discrete colour palette. You can even use them with colours inspired by Wes Anderson movies, as provided by the <a href="https://github.com/karthik/wesanderson">wesanderson package</a>.<br />
+Instead of mapping a colour palette to your data, you can use the <code>values</code> parameter of <code>scale_colour_manual()</code> (or <code>scale_fill_manual()</code>, depending on your aesthetics) to manually specify the values that the scale should produce:</p></li>
+</ul>
+<pre class="r"><code>my_plot + scale_colour_manual(values = wesanderson::wes_palette(&quot;BottleRocket1&quot;))</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/ugly%20plot-1.png" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>my_bars + 
+  scale_fill_manual(values = c(&quot;coral&quot;, &quot;orange&quot;, &quot;darkgreen&quot;, &quot;steelblue&quot;, &quot;#ba855e&quot;, &quot;#919108&quot;, &quot;#f25ad8&quot;))</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/ugly%20plot-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p>You can steel colours from your favourite artist using the <a href="https://colortheft.com/">colortheft webpage</a>.<br />
+Like I already mentioned, it is always important to think about what you want to visualise and what message you want to convey. There is not the one colour palette to fit all your needs, play around with them and see what fits. Also: bright colours work well for points, but are overwhelming on bars. Subtle colours work well for bars, but are hard to see on points.</p>
+</div>
+</div>
+</div>
+<div id="legends" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Legends</h1>
+<p>While axes and legends share most parameters, some options only apply to legends, as they are more complex than axes.</p>
+<ol style="list-style-type: decimal">
+<li><p>A legend can display multiple aesthetics (e.g. colour and shape), from multiple layers, and the symbol displayed in a legend varies based on the geom used in the layer.</p></li>
+<li><p>Axes always appear in the same place. Legends can appear in different places, so you need some global way of controlling them.</p></li>
+<li><p>Legends have considerably more details that can be tweaked, e.g., vertical vs horizontal display, number of columns, size of the keys…</p></li>
+</ol>
+<div id="layout" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Layout</h2>
+<p>A number of settings that affect the overall display of the legends are controlled through the theme system. You’ll learn more about themes towards the end of this file, but for now, all you need to know is that you modify theme settings with the <code>theme()</code> function.</p>
+<p>The position and justification of legends are controlled by the theme setting <code>legend.position</code>, which takes values <code>right</code>, <code>left</code>, <code>top</code>, <code>bottom</code>, or <code>none</code> (no legend).</p>
+<pre class="r"><code>my_plot + theme(legend.position = &quot;right&quot;) # default
+my_plot + theme(legend.position = &quot;bottom&quot;) 
+my_plot + theme(legend.position = &quot;none&quot;) </code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/legend%20positions-1.png" width="33%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/legend%20positions-2.png" width="33%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/legend%20positions-3.png" width="33%" /></p>
+<p>Setting the <code>legend.position</code> to “none” within the <code>theme()</code> call has the advantage that you don’t have to set <code>show.legend = FALSE</code> for every geom.</p>
+</div>
+<div id="guides-1" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Guides</h2>
+<p>The guide functions, <code>guide_colourbar()</code> and <code>guide_legend()</code>, offer additional control over the fine details of the legend. As you sometimes want the geoms in the legend to display differently to the geoms in the plot, you can override them and set them to a new value. You can do this using the <code>override.aes</code> parameter of <code>guide_legend()</code>.</p>
+<pre class="r"><code>my_plot
+my_plot + guides(colour = guide_legend(override.aes = list(alpha = 1)))</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/alpha%20override-1.png" width="50%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/alpha%20override-2.png" width="50%" /></p>
+<p>You can override the default guide using the guide argument of the corresponding scale function, or more conveniently, the <code>guides()</code> helper function. <code>guides()</code> works like <code>labs()</code>: you can override the default guide associated with each aesthetic.</p>
+<pre class="r"><code>my_plot
+my_plot + scale_colour_continuous(guide = guide_legend(title = &quot;LEFT&quot;, title.position = &quot;left&quot;))</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/guide%20legend-1.png" width="50%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/guide%20legend-2.png" width="50%" /></p>
+<p>The most useful options for guide_legend are:
+1. <code>nrow</code> or <code>ncol</code> which specify the dimensions of the table. <code>byrow</code> controls how the table is filled: <code>FALSE</code> fills it by column (the default), <code>TRUE</code> fills it by row.</p>
+<ol start="2" style="list-style-type: decimal">
+<li><p><code>reverse</code> reverses the order of the keys. This is particularly useful when you have stacked bars because the default stacking and legend orders are different by default.</p></li>
+<li><p><code>override.aes</code> overrides some of the aesthetic settings derived from each layer. This is useful if you want to make the elements in the legend more visually prominent.</p></li>
+<li><p><code>keywidth</code> and <code>keyheight</code> (along with <code>default.unit</code>) allow you to specify the size of the keys. These are grid units, e.g. <code>unit(1, "cm")</code>.</p></li>
+</ol>
+</div>
+</div>
+<div id="coordinate-systems" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Coordinate systems</h1>
+<p>Coordinate systems define the environment your plots are displayed. There are two types of coordinate system: Linear coordinate systems preserve the shape of geoms and non-linear systems change them.</p>
+<div id="linear" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Linear</h2>
+<p>There are three linear coordinate systems: <code>coord_cartesian()</code>, <code>coord_flip()</code>, <code>coord_fixed()</code>.</p>
+<div id="zooming" class="section level3" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> Zooming</h3>
+<p>You can use <code>coord_cartesian()</code> to zoom into a plot. You might be tempted to zoom into a plot using scale limits, but this is not a good idea: When setting scale limits, any data outside the limits is thrown away; but when setting coordinate system limits we still use all the data, but we only display a small region of the plot. Setting coordinate system limits is like looking at the plot under a magnifying glass.</p>
+<pre class="r"><code>my_reg &lt;- ggplot(mpg, aes(displ, hwy)) +
+  geom_smooth(method = &quot;lm&quot;) 
+my_reg + labs(title =&quot;Raw plot&quot;)
+my_reg + labs(title = &quot;Wrong zooming&quot;) + scale_y_continuous(limits = c(20,30))</code></pre>
+<pre><code>## Warning: Removed 100 rows containing non-finite values (stat_smooth).</code></pre>
+<pre class="r"><code>my_reg + labs(title = &quot;Correct zooming&quot;) + coord_cartesian(ylim = c(20,30))</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/zooming-1.png" width="33%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/zooming-2.png" width="33%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/zooming-3.png" width="33%" /></p>
+</div>
+<div id="axis-flipping" class="section level3" number="5.1.2">
+<h3><span class="header-section-number">5.1.2</span> Axis flipping</h3>
+<p>If you want to rotate the plot 90 degrees, you can use <code>coord_flip()</code> to exchange the x and y axes. Compare this with just exchanging the variables mapped to x and y:</p>
+<pre class="r"><code>ggplot(mpg, aes(displ, cty)) + 
+  geom_point() + 
+  geom_smooth()
+# Exchanging cty and displ rotates the plot 90 degrees, but the smooth 
+# is fit to the rotated data.
+ggplot(mpg, aes(cty, displ)) + 
+  geom_point() + 
+  geom_smooth()
+# coord_flip() fits the smooth to the original data, and then rotates 
+# the output
+ggplot(mpg, aes(displ, cty)) + 
+  geom_point() + 
+  geom_smooth() + 
+  coord_flip()</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/flipping-1.png" width="33%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/flipping-2.png" width="33%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/flipping-3.png" width="33%" /></p>
+</div>
+<div id="equal-scales" class="section level3" number="5.1.3">
+<h3><span class="header-section-number">5.1.3</span> Equal scales</h3>
+<p><code>coord_fixed()</code> fixes the <code>ratio</code> of length on the x and y axes. The default <code>ratio</code> ensures that the x and y axes have equal scales: i.e., 1 cm along the x axis represents the same range of data as 1 cm along the y axis. The aspect <code>ratio</code> will also be set to ensure that the mapping is maintained regardless of the shape of the output device. See the documentation of <code>coord_fixed()</code> for more details.</p>
+</div>
+</div>
+<div id="non-linear" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Non-linear</h2>
+<p>Unlike linear coordinates, non-linear coordinates can change the shape of geoms. For example, in polar coordinates a rectangle becomes an arc; in a map projection, the shortest path between two points is not necessarily a straight line.</p>
+<div id="polar-coordinates" class="section level3" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Polar coordinates</h3>
+<p>Using polar coordinates gives rise to pie charts and wind roses (from bar geoms), and radar charts (from line geoms). The code below shows how we can turn a bar into a pie chart or a bullseye chart by changing the coordinate system.</p>
+<pre class="r"><code>base &lt;- ggplot(mtcars, aes(factor(1), fill = factor(cyl))) +
+  geom_bar(width = 1) + 
+  theme(legend.position = &quot;none&quot;) + 
+  scale_x_discrete(NULL, expand = c(0, 0)) +
+  scale_y_continuous(NULL, expand = c(0, 0))
+
+# Stacked barchart
+base
+
+# Pie chart
+base + coord_polar(theta = &quot;y&quot;)
+
+# The bullseye chart
+base + coord_polar()</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/polar%20coordinates-1.png" width="33%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/polar%20coordinates-2.png" width="33%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/polar%20coordinates-3.png" width="33%" /></p>
+</div>
+<div id="map-projections" class="section level3" number="5.2.2">
+<h3><span class="header-section-number">5.2.2</span> Map projections</h3>
+<p>Maps are intrinsically displays of spherical data. Simply plotting raw longitudes and latitudes is misleading, so we must project the data. There are two ways to do this with ggplot2:</p>
+<ul>
+<li><code>coord_quickmap()</code> is a quick and dirty approximation that sets the aspect ratio to ensure that 1m of latitude and 1m of longitude are the same distance in the middle of the plot. This is a reasonable place to start for smaller regions, and is very fast.</li>
+</ul>
+<pre class="r"><code># Prepare a map of italy
+itmap &lt;- ggplot(map_data(&quot;italy&quot;), aes(long, lat, group = group)) +
+  geom_polygon(fill = &quot;white&quot;, colour = &quot;black&quot;) +
+  xlab(NULL) + ylab(NULL)
+
+# Plot it in cartesian coordinates
+itmap
+# With the aspect ratio approximation
+itmap + coord_quickmap()</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/coord_quickmap-1.png" width="50%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/coord_quickmap-2.png" width="50%" /></p>
+<ul>
+<li><code>coord_map()</code> uses the mapproj package, <a href="https://cran.r-project.org/package=mapproj" class="uri">https://cran.r-project.org/package=mapproj</a> to do a formal map projection. It takes the same arguments as <code>mapproj::mapproject()</code> for controlling the projection. It is much slower than <code>coord_quickmap()</code> because it must munch the data and transform each piece. Normally <code>coord_quickmap()</code> should be sufficient.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="themes" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> Themes</h1>
+<p>Themes give you control over the non-data elements of your plot. The theme system does not affect how the data is rendered by geoms, or how it is transformed by scales. Themes don’t change the perceptual properties of the plot, but they do help you make the plot aesthetically pleasing or match an existing style guide. This allows you, e.g., to meet the style demands of the journal you want to publish in. Themes give you control over things like fonts, ticks, panel strips, and backgrounds.</p>
+<div id="predefined-themes" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Predefined themes</h2>
+<p>ggplot2 comes with a number of built in themes. The most popular is <code>theme_grey()</code>, the signature default ggplot2 theme with a light grey background and white gridlines.</p>
+<p>There are seven other themes built in to ggplot2 1.1.0:</p>
+<ul>
+<li><p><code>theme_bw()</code>: a variation on <code>theme_grey()</code> that uses a white background and thin grey grid lines.</p></li>
+<li><p><code>theme_linedraw()</code>: A theme with only black lines of various widths on white backgrounds, reminiscent of a line drawing.</p></li>
+<li><p><code>theme_light()</code>: similar to <code>theme_linedraw()</code> but with light grey lines and axes, to direct more attention towards the data.</p></li>
+<li><p><code>theme_dark()</code>: the dark cousin of <code>theme_light()</code>, with similar line sizes but a dark background. Useful to make thin coloured lines pop out.</p></li>
+<li><p><code>theme_minimal()</code>: A minimalistic theme with no background annotations.</p></li>
+<li><p><code>theme_classic()</code>: A classic-looking theme, with x and y axis lines and no gridlines.</p></li>
+<li><p><code>theme_void()</code>: A completely empty theme.</p></li>
+</ul>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/themes-1.png" width="25%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/themes-2.png" width="25%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/themes-3.png" width="25%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/themes-4.png" width="25%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/themes-5.png" width="25%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/themes-6.png" width="25%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/themes-7.png" width="25%" /><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/themes-8.png" width="25%" /></p>
+<p>As well as applying themes a plot at a time, you can change the default theme with theme_set(). For example, if you really hate the default grey background, run theme_set(theme_bw()) to use a white background for all plots.</p>
+<p>You’re not limited to the themes built-in to ggplot2. You can find extentions on ggplot2 themes <a href="https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/">here</a>.</p>
+</div>
+<div id="modify-themes" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Modify themes</h2>
+<p>The complete themes are a great place to start but don’t give you a lot of control. To modify individual elements, you need to use <code>theme()</code> to override the default setting for an element with an element function.</p>
+<p>To modify an individual theme component you use code like <code>plot + theme(element.name = element_function())</code>. There are four basic types of built-in element functions: <code>text</code>, <code>lines</code>, <code>rectangles</code>, and <code>blank</code>. Each element function has a set of parameters that control the appearance:</p>
+<ul>
+<li><p><code>element_text()</code> draws labels and headings. You can control the <code>font family</code>, <code>face</code>, <code>colour</code>, <code>size</code> (in points), <code>hjust</code>, <code>vjust</code>, <code>angle</code> (in degrees) and <code>lineheight</code> (as ratio of fontcase).</p></li>
+<li><p><code>element_line()</code> draws <code>lines</code> parameterised by <code>colour</code>, <code>size</code> and <code>linetype</code>.</p></li>
+<li><p><code>element_rect()</code> draws <code>rectangles</code>, mostly used for backgrounds, parameterised by <code>fill colour</code> and <code>border colour</code>, <code>size</code> and <code>linetype</code>.</p></li>
+<li><p><code>element_blank()</code> draws nothing. Use this if you don’t want anything drawn, and no space allocated for that element.</p></li>
+</ul>
+<p>There are around 40 unique elements that control the appearance of the plot. They can be roughly grouped into five categories: plot, axis, legend, panel and facet. Take a look at <a href="https://ggplot2-book.org/polishing.html#introduction-5">chapter 15.4</a> of the ggplot2 book to see them all.</p>
+</div>
+</div>
+<div id="highlighting" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> Highlighting</h1>
+<p>To highlight data within you plot, you need to add an extra layer to it. We can to this using <code>annotate()</code>, the <strong>ggforce</strong> package, or the <strong>highlight</strong> package.</p>
+<div id="annotate" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> Annotate</h2>
+<p><code>annotate</code> adds a single annotation to your plot, having the geom you specify. We can use <code>filte()</code> to a highlight a group of our data and then annotate the explanation (geom + text).
+We can use annotate to provide a point in the plot and add text:</p>
+<pre class="r"><code>ggplot(mpg, aes(displ, hwy)) +
+  geom_point(
+    data = filter(mpg, manufacturer == &quot;subaru&quot;), 
+    colour = &quot;orange&quot;,
+    size = 3
+  ) +
+  geom_point() +
+  # add orange margin
+  annotate(geom = &quot;point&quot;, x = 5.5, y = 40, colour = &quot;orange&quot;, size = 3) + 
+  # add black point
+  annotate(geom = &quot;point&quot;, x = 5.5, y = 40) + 
+  # add text
+  annotate(geom = &quot;text&quot;, x = 5.6, y = 40, label = &quot;subaru&quot;, hjust = &quot;left&quot;)</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/annotate-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>You can produce arrows, rectangles, text and many more geoms with `annotate()´.</p>
+</div>
+<div id="group-labeling" class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> Group labeling</h2>
+<p>The <strong>ggforce</strong> package contains a lot of useful tools to extend ggplot2 functionality, including functions such as <code>geom_mark_ellipse()</code> that overlays a plot with circular <strong>highlight</strong> marks. For example:</p>
+<pre class="r"><code>ggplot(mpg, aes(displ, hwy)) +
+  geom_point() + 
+  ggforce::geom_mark_ellipse(aes(label = cyl, group = cyl))</code></pre>
+<p><img src="/post/2020-06-30-introduction-to-ggplot2-part-2.en_files/figure-html/ggforce-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="saving" class="section level1" number="8">
+<h1><span class="header-section-number">8</span> Saving</h1>
+<p>You can save your plot using <code>ggsave()</code>. <code>ggsave()</code> is optimised for interactive use: you can use it after you’ve drawn a plot. It has the following important arguments:</p>
+<ul>
+<li><p>The first argument, <code>path</code>, specifies the path where the image should be saved. The file extension will be used to automatically select the correct graphics device. <code>ggsave()</code> can produce <code>.eps</code>, <code>.pdf</code>, <code>.svg</code>, <code>.wmf</code>, <code>.png</code>, <code>.jpg</code>, <code>.bmp</code>, and <code>.tiff</code>.</p></li>
+<li><p><code>width</code> and <code>height</code> control the output size, specified in inches. If left blank, they’ll use the size of the on-screen graphics device.</p></li>
+<li><p>For raster graphics (i.e. <code>.png</code>, <code>.jpg</code>), the <code>dpi</code> argument controls the resolution of the plot. It defaults to 300, which is appropriate for most printers, but you may want to use 600 for particularly high-resolution output, or 96 for on-screen (e.g., web) display.</p></li>
+</ul>
+<p>You can specify which plot you want to save using the <code>plot</code> argument:</p>
+<pre class="r"><code>p &lt;- ggplot(mpg, aes(displ, hwy)) +
+  geom_point()
+
+ggsave(plot = p, file = &quot;my_cool_plot.png&quot;)</code></pre>
+<p>If you don’t specify the <code>plot</code> argument, <code>ggsave()</code> will use the last plot you created.</p>
+<pre class="r"><code>ggplot(mpg, aes(displ, hwy)) +
+  geom_point()
+
+ggsave(file = &quot;my_cool_plot.png&quot;)</code></pre>
+</div>
+<div id="advantage-of-ggplot" class="section level1" number="9">
+<h1><span class="header-section-number">9</span> Advantage of ggplot</h1>
+<p>The main idea that lies behind ggplot is the grammar of graphics: Each plot can be made from the same few components:</p>
+<p><img src="https://miro.medium.com/max/341/1*QeaIg17ruLAFVgh64ObTyQ.png" width="20%" style="float:right; padding:0px" /></p>
+<ul>
+<li><p>Aesthetics</p></li>
+<li><p>Geometries</p></li>
+<li><p>Statistics</p></li>
+<li><p>Scaling</p></li>
+<li><p>Faceting</p></li>
+<li><p>Themes</p></li>
+</ul>
+<p><br/>
+This enables us to break down each and every plot into chunks/ components, and in return we can produce each and every plot when we just tell ggplot what components to draw. This is a very powerful tool and very different from the base R approach. Additionally, it forces you to <strong>think</strong> about your data before plotting, instead of just throwing it into a function like <code>hist()</code>. One of the biggest advantages of gplot2 is that you don’t have to open Adobe Illustrator, Corel Draw or any other software to modify your plots outside of R. If you produce the whole plot using ggplot2, you can be sure that your plot follows your data and that you didn’t add any mistakes while modifying your plot. Everybody can reproduce your plot with your code and can see that it is valid. When a reviewer wants you to add some changes to your plot, you can just add a line to your code instead of saving it as a pdf, loading it into Adobe Illustrator, modifying the plot there, adding the changes, saving it as a png etc… Yes, this can result in big chunks of code, but the pros outweigh the cons here. There is a lot of theory behind ggplot. But once you overcome this theory you can control and modify anything you like on your plot while beeing on the safeside when it comes to reproducibility.</p>
+</div>
