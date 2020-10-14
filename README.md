@@ -1,2 +1,2 @@
 # my_website
-This is the source code for my website. I plan to publish it on Netlify from github. 
+This is the source code for my website. The website is currently hosted on netlify at https://gregor-mathes.netlify.app/.
