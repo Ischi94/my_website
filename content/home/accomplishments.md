@@ -19,10 +19,21 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 [[item]]
+  organization = "Bayreuther Zentrum für Ökologie und Umweltforschung (BayCEER)"
+  organization_url = "http://www.bayceer.uni-bayreuth.de/bayceer/?lang=de"
+  title = "BayCEER Workshop Talk Award winner"
+  url = "http://www.bayceer.uni-bayreuth.de/ws2020/?lang=en"
+  certificate_url = ""
+  date_start = "2020-10-29"
+  date_end = ""
+  description = "Presentation title: Extinction risk controlled by climate interactions"
+  
+
+[[item]]
   organization = "Conservation Paleobiology Symposium"
   organization_url = "https://spark.adobe.com/page/Ffnuc5r9hxepo/"
   title = "Best Student Talk"
-  url = "https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals"
+  url = ""
   certificate_url = ""
   date_start = "2020-02-03"
   date_end = ""
