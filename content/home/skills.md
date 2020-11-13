@@ -15,36 +15,48 @@ subtitle = "Representing relative numeric level of skill"
 # For available icons, see: https://sourcethemes.com/academic/docs/widgets/#icons
 
 [[feature]]
+  icon = "r-project"
+  icon_pack = "fab"
   name = "R"
-  parcent = "90%"
+  parcent = "100%"
   
 [[feature]]
+  icon = "markdown"
+  icon_pack = "fab"
+  name = "Markdown"
+  parcent = "80%"
+  
+[[feature]]
+  icon = "laptop-code"
+  icon_pack = "fas"
+  name = "Bash"
+  parcent = "60%"
+  
+[[feature]]
+  icon = "dev"
+  icon_pack = "fab"
   name = "C++"
   parcent = "40%"  
   
 [[feature]]
-  icon = ""
-  icon_pack = ""
-  name = "Markdown"
+  icon = "python"
+  icon_pack = "fab"
+  name = "Python"
   parcent = "30%"
-
+  
 [[feature]]
-  icon = ""
-  icon_pack = ""
+  icon = "database"
+  icon_pack = "fas"
   name = "SQL"
   parcent = "25%"
   
 [[feature]]
-  icon = ""
-  icon_pack = ""
+  icon = "calculator"
+  icon_pack = "fas"
   name = "Stan"
   parcent = "20%"
   
-[[feature]]
-  icon = ""
-  icon_pack = ""
-  name = "Python"
-  parcent = "15%"
+
 
 
 +++
