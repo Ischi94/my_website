@@ -2,9 +2,9 @@
 title: "How to disclose code and data for peer-review"
 author: "Gregor Mathes"
 date: "2020-25-11"
-slug: Rethinking Chapter 3
+slug: Helpful Resources
 categories: []
-tags: [Peer Review, Publication, Statistics]
+tags: [Peer Review, Publication, Science]
 subtitle: ''
 summary: 'This post introduces my preferred method for giving reviewers access to both raw code and data of a submitted manuscript'
 authors: [Gregor Mathes]
@@ -23,4 +23,55 @@ output:
 <link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
 <script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
 
+<div id="TOC">
+<ul>
+<li><a href="#why-bother"><span class="toc-section-number">1</span> Why bother?</a></li>
+<li><a href="#the-basic-set-up"><span class="toc-section-number">2</span> The basic set up</a></li>
+<li><a href="#generating-a-link"><span class="toc-section-number">3</span> Generating a link</a></li>
+</ul>
+</div>
 
+<div id="why-bother" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Why bother?</h1>
+<p>Starting a PhD is a bit like falling into the deep ocean. You better learn how to swim as fast as possible, you will get a lot of salty feedback, and you should try to avoid any predators by all means. The good news is that there are many awesome people out there who will help you to stay on top (or at least help you not to drown). Taking their advice, I have managed to build a method that allows me to sail smoothly on the deep waters of a submission procedure.<br />
+Despite a lot of critique, I actually like the peer-review process. But for it to be helpful, reviewers need access to all files and the raw code that was used for a manuscript. Only then they will be able to tell if the results of the manuscript are reliable or not. Even worse, the code and the data should be in an analysis ready format, so that the reviewers don’t have to wrangle with e.g. absolute directories. Journals will often give you the opportunity to submit some code files along the manuscript, but this will definitely destroy your neat project structure and reviewers will stop to look at your code after some frustrating minutes.<br />
+Using Rstudio’s project option, github, and figshare, I have managed a way to provide all of my code and data anonymously and in an analysis ready structure for reviewers. I feel save knowing that reviewers have access to all files but no one else has, reviewers will have an easy time reproducing my results, and editors will have more confidence in the reliability of my manuscript.</p>
+</div>
+<div id="the-basic-set-up" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> The basic set up</h1>
+<p>I always start with a R project on my local computer. It really helps to set up a clean project structure with folders for raw data, results, and so on. The <a href="https://r4ds.had.co.nz/workflow-projects.html">Chapter 8</a> of the R for data science introduces some basic concepts of projects. The following image shows a R project for a current manuscript.</p>
+<div class="figure">
+<img src="/post/peer_review_files/pic1.png" alt="" />
+<p class="caption">Fig. 1: Examplary project structure</p>
+</div>
+<p>Note that I have a README text file there, stating what each code-file is doing, where to find data, and so on. It is basically a tutorial for everyone working with the project on how to sucessfully work with it.
+Remember to navigate between the folders (e.g. when reading in data or when exporting plots) with the awesome <a href="https://github.com/jennybc/here_here">here package</a>. This will help the reviewers later on to easily reproduce your results without the need to change any code or directories.<br />
+After setting up the infrastructure, and before working on any code, I set my project under version control using github. I will not cover why you should use a version control tool while doing data science, but I strongly recommend it for everything you do. And you will need github for disclosing code and data anyways. Remember to set the repository on private, so no one else can access (or steal) your code before publication. Upon acceptance, you can change the repo to public and everyone can look at your awesome code.</p>
+<div class="figure">
+<img src="/post/peer_review_files/pic2.png" alt="" />
+<p class="caption">Fig. 2: Remember to set your repo on private</p>
+</div>
+<p>Now, wouldn’t it be sufficient to give only reviewers access to the repo? To do that, you would need to invite the reviewers as contributors, and for that you will need their names. Not really helpful for blind peer-review, though. So we do need another tool to do that. Here figshare.com really shines. Figshare will deposit a snapshot of our repo from github and generate a link. Anyone who has the link can access and download a repo with all the code and data in the same structure as in the original repo.</p>
+</div>
+<div id="generating-a-link" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Generating a link</h1>
+<p>The first thing you need to do is to register on <a href="https://figshare.com">figshare</a>. You can now store files there up to a total of 20 GB. The home screen will show you two buttons: <em>Create a new item</em> and the github logo.</p>
+<div class="figure">
+<img src="/post/peer_review_files/pic3.png" alt="" />
+<p class="caption">Fig. 3: Link your github account to figshare</p>
+</div>
+<p>By clicking on the github symbol, you can link your github account to figshare. You will also have access to your private repos.</p>
+<p>After linking your github account to figshare, you can import any repositories (again by clicking on the github symbol). First you will be asked to select the repo and then you need to click on the <em>import repository</em> button on the lower right. Now close the window and you will see a new item on your figshare home screen. Click on it and the window of Fig.4 will open up.</p>
+<div class="figure">
+<img src="/post/peer_review_files/pic4.png" alt="" />
+<p class="caption">Fig. 4: Adjust figshare settings for your data</p>
+</div>
+<p>Here you can delete your name if you participate in double-blind peer-review. If you scroll down, you can add a description. If you were diligent previously, you can just copy the text from your github README there.</p>
+<div class="figure">
+<img src="/post/peer_review_files/pic5.png" alt="" />
+<p class="caption">Fig. 5: Generate link</p>
+</div>
+<p>By clicking on <em>generate private link</em> you can (you guessed it) generate a private link. Copy this link and keep it save. You can put it in the cover letter to the editor during submission and he can then distribute the link to the reviewers. Now make sure to not flag the <em>Publish</em> option. This will make your data publicly available and we don’t want that, yet. Just save without publishing and you’re fine. Anyone who has the link can now access a zip file with the github repo. You are ready for submission.</p>
+<p><strong>Pro tip</strong>: <em>If you release a new version of your github repo before cloning it to figshare, you will always be able to reference back to the version you were sending out to review, even if you have made changes to the repo. Just make sure to add “submission” to the flag to find it easily, e.g. v1.submission.</em></p>
+<p>I hope this might help some of you to share your awesome research more easily.</p>
+</div>
