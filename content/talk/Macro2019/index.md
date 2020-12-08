@@ -29,6 +29,6 @@ url_slides: ""
 url_video: ""
 ---
 
-{{% alert note %}}
-Click on the **Slides** button above to view the built-in slides feature.
-{{% /alert %}}
+# {{% alert note %}}
+# Click on the **Slides** button above to view the built-in slides feature.
+# {{% /alert %}}
