@@ -16,7 +16,7 @@ baseURL = "https://gregor-mathes.netlify.app/"
 copyright = "&copy; {year}"
 
 # Enable analytics by entering your Google Analytics tracking ID
-googleAnalytics = "G-EXKH1416SP"
+googleAnalytics = "UA-185894975-1"
 
 # Enable comments by entering your Disqus shortname
 disqusShortname = ""
