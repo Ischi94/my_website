@@ -1,0 +1,684 @@
+---
+title: "Rethinking Chapter 6"
+author: "Gregor Mathes"
+date: "2021-02-02"
+slug: Rethinking Chapter 6
+categories: []
+tags: [Rethinking, Bayes, Statistics]
+subtitle: ''
+summary: 'This is the fifth part of a series where I work through the practice questions of the second edition of Richard McElreaths Statistical Rethinking'
+authors: [Gregor Mathes]
+lastmod: '2021-02-02T12:07:04+02:00'
+featured: no
+projects: [Rethinking]
+output:
+  blogdown::html_page:
+    toc: true
+    toc_depth: 1
+    number_sections: true
+    fig_width: 6
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#introduction"><span class="toc-section-number">1</span> Introduction</a></li>
+<li><a href="#easy-practices"><span class="toc-section-number">2</span> Easy practices</a></li>
+<li><a href="#medium-practices"><span class="toc-section-number">3</span> Medium practices</a></li>
+<li><a href="#hard-practices"><span class="toc-section-number">4</span> Hard practices</a></li>
+<li><a href="#summary"><span class="toc-section-number">5</span> Summary</a></li>
+</ul>
+</div>
+
+<div id="introduction" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Introduction</h1>
+<p>This is the fifth part of a series where I work through the practice questions of the second edition of Richard McElreaths <a href="https://xcelab.net/rm/statistical-rethinking/">Statistical Rethinking</a>.<br />
+Each post covers a new chapter and you can see the posts on previous chapters <a href="https://gregor-mathes.netlify.app/tags/rethinking/">here</a>.</p>
+<p>You can find the the lectures and homework accompanying the book <a href="https://github.com/rmcelreath/stat_rethinking_2020%3E">here</a>.</p>
+<p>The colours for this blog post are:</p>
+<pre class="r"><code>coral &lt;- &quot;#CD7672&quot;
+mint &lt;- &quot;#138086&quot;
+purple &lt;- &quot;#534666&quot;
+yellow &lt;- &quot;#EEb462&quot;</code></pre>
+<p><img src="/post/chapter6_files/figure-html/colour%20plot-1.png" width="672" /></p>
+<p>The online version of the <em>Statistical Rethinking</em>, provided by the brilliant <a href="https://www.erikkusch.com/">Erik Kusch</a>, is missing a lot of practive questions, so I will focus on the examples from the print version here.</p>
+</div>
+<div id="easy-practices" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Easy practices</h1>
+<div id="question-6e1" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Question 6E1</h2>
+<p><strong>List three mechanisms by which multiple regression can produce false inferences about causal effect.</strong></p>
+<p>The tree examples mentioned throughout the chapter were:</p>
+<ol style="list-style-type: decimal">
+<li>Collinearity<br />
+</li>
+<li>Post-treatment bias<br />
+</li>
+<li>Collider bias</li>
+</ol>
+</div>
+<div id="question-6e2" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Question 6E2</h2>
+<p><strong>For one of the mechanisms in the previous problem, provide an example of your choice, perhaps from your own research.</strong></p>
+<ul>
+<li><p>Collinearity<br />
+If you want to estimate the effect of geographic range on the extinction risk organism in the fossil record, you can choose between a range of potential parameters that express geographic range. For example, you can use the convex hull area or the maximum pairwise great circle distance. However, if you add both parameters in a model their true magnitude of association to extinction
+risk is lowered or even hidden, as they both encapsulate the same information.</p></li>
+<li><p>Post-treatment bias<br />
+Assume you want to estimate the effect of global mean temperature on the extinction risk of marine species in the fossil record. Additionally, you have an amazing data set on continental shelve area through time and would love to include that as well. However, temperature is quite likely causally related to shelve area as it drives eustatic sea level. So including shelve area in a model would shut the path between temperature and extinction risk, even though there is a real causal association.</p></li>
+<li><p>Collider bias<br />
+If anyone has a good example for a collider bias in palaeobiology, just message me on twitter (<span class="citation">@GregorMathes</span>).</p></li>
+</ul>
+</div>
+<div id="question-6e3" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Question 6E3</h2>
+<p><strong>List the four elemental confounds. Can you explain the conditional dependencies of each?</strong></p>
+<ol style="list-style-type: decimal">
+<li>Pipe</li>
+</ol>
+<pre class="r"><code>dagitty(&quot;dag{
+        X -&gt; Y -&gt; Z}&quot;) %&gt;% 
+  impliedConditionalIndependencies()</code></pre>
+<pre><code>## X _||_ Z | Y</code></pre>
+<p>If we condition on <code>Y</code>, we shut the path between <code>X</code> and <code>Z</code>.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Fork</li>
+</ol>
+<pre class="r"><code>dagitty(&quot;dag{
+        X &lt;- Y -&gt; Z}&quot;) %&gt;% 
+  impliedConditionalIndependencies()</code></pre>
+<pre><code>## X _||_ Z | Y</code></pre>
+<p>If we condition on <code>Y</code>, then learning <code>X</code> tells us nothing about <code>Z</code>. All the information is in <code>Y</code>.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Collider</li>
+</ol>
+<pre class="r"><code>dagitty(&quot;dag{
+        X -&gt; Y &lt;- Z}&quot;) %&gt;% 
+  impliedConditionalIndependencies()</code></pre>
+<pre><code>## X _||_ Z</code></pre>
+<p><code>X</code> is independent of <code>Z</code>. But conditioning on <code>Y</code> would open the path, and then <code>X</code>
+would be dependent on <code>Z</code> conditional on <code>Y</code>.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Descendant</li>
+</ol>
+<pre class="r"><code>dagitty(&quot;dag{
+        X -&gt; Y -&gt; Z
+        Y -&gt; W}&quot;) %&gt;% 
+  impliedConditionalIndependencies()</code></pre>
+<pre><code>## W _||_ X | Y
+## W _||_ Z | Y
+## X _||_ Z | Y</code></pre>
+<p>This is interesting. In the chapter, it says that if we would condition on <code>W</code>,
+we would condition on <code>Y</code> as well (to a lesser extent). So I would have expected
+X <em>||</em> Z | W here.</p>
+</div>
+<div id="question-6e4" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Question 6E4</h2>
+<p><strong>How is a biased sample like conditioning on a collider? Think of the example at the open of the chapter.</strong></p>
+<p>Assume the collider X -&gt; Y &lt;- Z.Conditioning on a collider <code>Y</code> opens a path between <code>X</code> and <code>Z</code>, and leads to a spurious correlation between between these. This is similar to selection bias, where the researcher that sampled the data (or nature itself) cared about both <code>X</code> and <code>Z</code> when generating the sample.</p>
+</div>
+</div>
+<div id="medium-practices" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Medium practices</h1>
+<div id="question-6m1" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Question 6M1</h2>
+<p><strong>Modify the DAG on page 190 (page 186 in print) to include the variable V, an unobserved cause of C and Y: C &lt;- V -&gt; Y. Reanalyze the DAG. How many paths connect X to Y? Which must be closed? Which variables should you condition on now?</strong></p>
+<p>Let’s update the DAG using the <code>ggdag</code> package:</p>
+<pre class="r"><code>tribble(
+  ~ name,  ~ x,  ~ y,  
+    &quot;A&quot;,    1,     3,     
+    &quot;U&quot;,    0,     2,     
+    &quot;C&quot;,    2,     2,     
+    &quot;V&quot;,    3,     1,     
+    &quot;B&quot;,    1,     1,     
+    &quot;X&quot;,    0,     0,  
+    &quot;Y&quot;,    2,     0
+) %&gt;%  
+  dagify(
+    Y ~ X + C + V,
+         C ~ V + A,
+         B ~ C + U,
+         U ~ A,
+         X ~ U,
+         coords = .) %&gt;% 
+  ggplot(aes(x = x, y = y, xend = xend, yend = yend)) +
+  geom_dag_node(internal_colour = mint, alpha = 0.8, colour = &quot;white&quot;) +
+  geom_dag_text(aes(label = name), color = purple, size = 5) +
+  geom_dag_edges(edge_color = purple) +
+  labs(caption = &quot;Figure 1: Adjusted DAG from the chapter, including V.&quot;) +
+  theme_void()</code></pre>
+<p><img src="/post/chapter6_files/figure-html/6M1%20part%201-1.png" width="672" /></p>
+<p>For the visual representations of the DAGs later on in this post, I will not show the code to generate the DAG plots to reduce the visual load on the reader. Anyways, you can look at the Rmd file with the raw code <a href="https://github.com/Ischi94/statistical-rethinking/blob/master/chapter6.Rmd">here</a>.</p>
+<p>So let’s first identify each path from <code>X</code> to <code>Y</code>.<br />
+(1) X -&gt; Y<br />
+(2) X &lt;- U &lt;- A -&gt; C -&gt; Y<br />
+(3) X &lt;- U &lt;- A -&gt; C &lt;- V -&gt; Y<br />
+(4) X &lt;- U -&gt; B &lt;- C -&gt; Y<br />
+(5) X &lt;- U -&gt; B &lt;- C &lt;- V -&gt; Y</p>
+<p>C is now a collider in path (3) and the path is closed. Additionally, both paths passing through B are closed as well as <code>B</code> stays a collider. The only open backdoor path is (2), and to close this path we can condition on <code>A</code>.</p>
+</div>
+<div id="question-6m2" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Question 6M2</h2>
+<p><strong>Sometimes, in order to avoid multicollinearity, people inspect pairwise correlations among predictors before including them in a model. This is a bad procedure, because what matters is the conditional association, not the association before the variables are included in the model. To highlight this, consider the DAG X -&gt; Z -&gt; Y. Simulate data from this DAG so that the correlation between X and Z is very large. Then include both in a model prediction Y. Do you observe any multicollinearity? Why or why not? What is different from the legs example in the chapter?</strong></p>
+<p>The simulation is rather simple. We let <code>Z</code> be completely dependent on <code>X</code> with just a little bit of noise, and render <code>Y</code> then completely dependent on <code>Z</code>. Note that I standardize each value to choose the priors more easily.</p>
+<pre class="r"><code>sim_dat &lt;- tibble(x = rnorm(1e4),  
+                  z = rnorm(1e4, x, 0.5), 
+                  y = rnorm(1e4, z)) %&gt;% 
+  mutate(across(everything(), standardize))</code></pre>
+<p>The correlation between <code>X</code> and <code>Z</code> is hence really large as all information flows through this path.</p>
+<pre class="r"><code>sim_dat %&gt;% 
+  summarise(correlation = cor(x, z))</code></pre>
+<pre><code>## # A tibble: 1 x 1
+##   correlation
+##         &lt;dbl&gt;
+## 1       0.897</code></pre>
+<p>Now let’s fit a model using quadratic approximation and plot the coefficients:</p>
+<pre class="r"><code>alist(y ~ dnorm(mu, sigma), 
+      mu &lt;- a + bx*x + bz*z, 
+      a ~ dnorm(0, 0.2), 
+      c(bx, bz) ~ dnorm(0, 0.5), 
+      sigma ~ dexp(1)) %&gt;% 
+  quap(data = sim_dat) %&gt;% 
+  precis() %&gt;% 
+  as_tibble(rownames = &quot;estimate&quot;) %&gt;% 
+  filter(estimate %in% c(&quot;bx&quot;, &quot;bz&quot;)) %&gt;% 
+  rename(lower_pi = `5.5%`, upper_pi = `94.5%`) %&gt;% 
+  ggplot() +
+  geom_linerange(aes(xmin = lower_pi, xmax = upper_pi, y = estimate), 
+                 size = 1.5, colour = mint) +
+  geom_point(aes(x = mean, y = estimate), 
+             shape = 21, colour = &quot;grey20&quot;, stroke = 1, 
+             size = 5, fill = purple) +
+  labs(y = NULL, x = &quot;Estimate&quot;, caption = &quot;Figure 2: Coefficient plot for simulated data with
+       collinearity.&quot;) +
+  theme_minimal()</code></pre>
+<p><img src="/post/chapter6_files/figure-html/6M2%20part%203-1.png" width="672" /></p>
+<p>Not a big surprise, the effect of <code>X</code> is completely hidden as we condition on <code>Z</code> in a pipe. There is nothing new about <code>X</code> once the model knows <code>Z</code>. But to know that <code>Z</code> is only a mediatory variable, we need a causal model expressed in a DAG. The difference to the legs example here is that <code>X</code> and <code>Z</code> are causally related as <code>X</code> causes <code>Z</code>. It is therefore an example for a post-treatment bias. The leg lengths, on the other hand, where not causing each other, but were caused by a common parent instead:<br />
+leg1 &lt;- Parent -&gt; leg2</p>
+</div>
+<div id="question-6m3" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Question 6M3</h2>
+<p><strong>Learning to analyze DAGs requires practice. For each of the four DAGs below, state which variables, if any, you must adjust for (condition on) to estimate the total causal influence of X on Y.</strong></p>
+<p><img src="/post/chapter6_files/figure-html/6M3%20part%201-1.png" width="672" /></p>
+<p>The are two backdoor paths, X &lt;- Z -&gt; Y and X &lt;- Z &lt;- A -&gt; Y.<br />
+Both are open and go through <code>Z</code>, so we can simply condition on <code>Z</code>.</p>
+<p><img src="/post/chapter6_files/figure-html/6M3%20part%202-1.png" width="672" /></p>
+<p>There are two backdoor paths, X -&gt; Z -&gt; Y and X -&gt; Z &lt;- A -&gt; Y.<br />
+We want to keep X -&gt; Z -&gt; Y as it encapsulates information flowing from <code>X</code> to <code>Y</code> (and we
+want to capture the total causal influence).<br />
+The second path is closed as <code>Z</code> is a collider here.<br />
+We don’t need to adjust for anything.<br />
+But note that conditioning on <code>Z</code> would open the second path and would be a mistake as it would create association between <code>X</code> on <code>A</code>.</p>
+<p><img src="/post/chapter6_files/figure-html/6M3%20part%203-1.png" width="672" /></p>
+<p>There are two backdoor paths: X &lt;- A -&gt; Z &lt;- Y and X -&gt; Z &lt;- Y.<br />
+Both paths are closed as <code>Z</code> is a collider for both.<br />
+We don’t need to condition on anything.<br />
+Again, inluding <code>Z</code> in a model would create spurios relationships that we want to avoid.</p>
+<p><img src="/post/chapter6_files/figure-html/6M3%20part%204-1.png" width="672" /></p>
+<p>There are two backdoor paths: X &lt;- A -&gt; Z -&gt; Y and X -&gt; Z -&gt; Y.<br />
+We want to keep the second one but close the first one. For this, we can condition on <code>A</code>. Conditioning on <code>Z</code> would close the first path as well, but also the second one which we want to keep as true causal.</p>
+</div>
+</div>
+<div id="hard-practices" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Hard practices</h1>
+<div id="question-6h1" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Question 6H1</h2>
+<p><strong>Use the Waffle House data, data(WaffleDivorce), to find the total causal influence of number of Waffle Houses on divorce rate. Justify your model or models with a causal graph.</strong></p>
+<p>Let’s load the data, standardise predictor and outcome and assign better names. We further transform south to an index variable: 1 is coded as not belonging to south, and 2 as belonging to south.</p>
+<pre class="r"><code>data(&quot;WaffleDivorce&quot;)
+
+dat_waffle &lt;- WaffleDivorce %&gt;% 
+  as_tibble() %&gt;% 
+  select(divorce = Divorce, age = MedianAgeMarriage,
+         m_rate = Marriage, waffle = WaffleHouses,
+         south = South) %&gt;% 
+  mutate(across(-south, standardize), 
+         south = south + 1) </code></pre>
+<p>I assume that <code>age</code> (medium age at marriage) influence both <code>divorce</code> (divorce rate) and <code>m_rate</code> (marriage rate). This is something we could see in previous chapter. I further expect that <code>south</code> (southerness) influences both <code>age</code> and <code>waffle</code> (number of Waffle Houses).</p>
+<p><img src="/post/chapter6_files/figure-html/6H1%20part%202-1.png" width="672" /></p>
+<p>We can see that there is one open backdoor path from <code>waffle</code> &lt;- <code>south</code> -&gt; <code>age</code> -&gt; <code>divorce</code>. We can close this path by conditioning on <code>south</code>.</p>
+<pre class="r"><code>m_waffle &lt;- alist(
+  divorce ~ dnorm(mu, sigma),
+  mu &lt;- a[south] + Bwaffle*waffle,
+  a[south] ~ dnorm(0, 0.5),
+  Bwaffle ~ dnorm(0, 0.5),
+  sigma ~ dexp(1)) %&gt;% 
+  quap(data = dat_waffle)</code></pre>
+<p>We can see that there is no information in <code>waffle</code> about <code>divorce</code>, that is not already in <code>south</code>.</p>
+<pre class="r"><code>m_waffle %&gt;% 
+  precis() %&gt;% 
+  as_tibble(rownames = &quot;estimate&quot;) %&gt;% 
+  filter(estimate == &quot;Bwaffle&quot;) %&gt;% 
+  mutate(across(where(is.numeric), round, digits = 2)) %&gt;% 
+  knitr::kable()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">estimate</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="right">5.5%</th>
+<th align="right">94.5%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Bwaffle</td>
+<td align="right">0.08</td>
+<td align="right">0.16</td>
+<td align="right">-0.17</td>
+<td align="right">0.34</td>
+</tr>
+</tbody>
+</table>
+<p>As we will look at coefficient estimates quite often in the hard practices, I will wrap up the code above into a helper function.</p>
+<pre class="r"><code>test_independence &lt;- function(model.input, coeff.input, depth.output = 1){
+  suppressWarnings(
+    precis(model.input, depth = depth.output) %&gt;%
+    as_tibble(rownames = &quot;estimate&quot;) %&gt;%
+    filter(estimate %in% {{coeff.input}}) %&gt;%
+    mutate(across(where(is.numeric), round, digits = 2)) %&gt;%
+    knitr::kable()
+  )
+}</code></pre>
+<p>We can visualise the association as well:</p>
+<pre class="r"><code>s &lt;- seq(from = -2, to = 2, length.out = 30)
+N &lt;- 1e3
+
+m_waffle %&gt;% 
+  link(data = list(waffle = s, 
+                   south = 1)) %&gt;% 
+  as_tibble() %&gt;% 
+  pivot_longer(cols = everything(), values_to = &quot;pred_divorce&quot;) %&gt;% 
+  add_column(waffle = rep(s, N)) %&gt;% 
+  group_by(waffle) %&gt;% 
+  nest() %&gt;% 
+  mutate(pred_divorce = map(data, &quot;pred_divorce&quot;), 
+         mean_divorce = map_dbl(pred_divorce, mean), 
+         pi = map(pred_divorce, PI), 
+         lower_pi = map_dbl(pi, pluck(1)), 
+         upper_pi = map_dbl(pi, pluck(2))) %&gt;% 
+  select(waffle, mean_divorce, lower_pi, upper_pi) %&gt;% 
+  ggplot() +
+  geom_ribbon(aes(waffle, ymin = lower_pi, ymax = upper_pi), 
+              fill = mint, alpha = 0.3) +
+  geom_line(aes(waffle, mean_divorce), 
+            size = 1.5, colour = coral) +
+  coord_cartesian(ylim = c(-2, 2)) +
+  labs(x = &quot;Waffle (std)&quot;, y = &quot;Divorce (std)&quot;, 
+       caption = &quot;Figure 8: Total causal effect of number of Waffle House on Divorce, 
+       while keeping &#39;South&#39; constant.&quot;) +
+  theme_minimal()</code></pre>
+<p><img src="/post/chapter6_files/figure-html/6H1%20part%206-1.png" width="672" /></p>
+</div>
+<div id="question-6h2" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Question 6H2</h2>
+<p><strong>Build a series of models to test the implied conditional independencies of the causal graph you used in the previous problem. If any of the tests fail, how do you think the graph needs to be amended? Does the graph need more or fewer arrows? Feel free to nominate variables that are not in the data.</strong></p>
+<p>Let’s first check the implied conditional independencies.</p>
+<pre class="r"><code>dagitty(&quot;dag{
+        waffle -&gt; divorce &lt;- age &lt;- south -&gt; waffle
+        age -&gt; m_rate}&quot;) %&gt;% 
+  impliedConditionalIndependencies()</code></pre>
+<pre><code>## age _||_ wffl | soth
+## dvrc _||_ m_rt | age
+## dvrc _||_ soth | age, wffl
+## m_rt _||_ soth | age
+## m_rt _||_ wffl | soth
+## m_rt _||_ wffl | age</code></pre>
+<p>Let’s start with age <em>||</em> waffle | south</p>
+<pre class="r"><code>alist(
+  waffle ~ dnorm(mu, sigma),
+  mu &lt;- a[south] + Bage*age,
+  a[south] ~ dnorm(0, 0.5),
+  c(Bage) ~ dnorm(0, 0.5),
+  sigma ~ dexp(1)) %&gt;% 
+  quap(data = dat_waffle) %&gt;% 
+  test_independence(coeff.input = &quot;Bage&quot;)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">estimate</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="right">5.5%</th>
+<th align="right">94.5%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Bage</td>
+<td align="right">0.03</td>
+<td align="right">0.1</td>
+<td align="right">-0.13</td>
+<td align="right">0.2</td>
+</tr>
+</tbody>
+</table>
+<p><code>age</code> is independent of <code>waffle</code> after conditioning on <code>south</code>, as the posterior <code>Bage</code> shows no consistent association with <code>waffle</code>.</p>
+<hr />
+<p>divorce <em>||</em> m_rate | age</p>
+<pre class="r"><code>alist(
+  m_rate ~ dnorm(mu, sigma),
+  mu &lt;- a + Bdivorce*divorce + Bage*age,
+  a ~ dnorm(0, 0.2),
+  c(Bdivorce, Bage) ~ dnorm(0, 0.5),
+  sigma ~ dexp(1)) %&gt;% 
+  quap(data = dat_waffle) %&gt;% 
+  test_independence(coeff.input = &quot;Bdivorce&quot;)  </code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">estimate</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="right">5.5%</th>
+<th align="right">94.5%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Bdivorce</td>
+<td align="right">-0.06</td>
+<td align="right">0.12</td>
+<td align="right">-0.25</td>
+<td align="right">0.13</td>
+</tr>
+</tbody>
+</table>
+<p><code>divorce</code> is independent from <code>m_rate</code> after conditioning on <code>age</code>.</p>
+<hr />
+<p>divorce <em>||</em> south | age, waffle</p>
+<pre class="r"><code>alist(
+  divorce ~ dnorm(mu, sigma),
+  mu &lt;- a[south] + Bage*age + Bwaffle*waffle,
+  a[south] ~ dnorm(0, 0.5),
+  c(Bage, Bwaffle) ~ dnorm(0, 0.5),
+  sigma ~ dexp(1)) %&gt;% 
+  quap(data = dat_waffle) %&gt;% 
+  test_independence(depth.output = 2, coeff.input = c(&quot;a[1]&quot;, &quot;a[2]&quot;))</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">estimate</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="right">5.5%</th>
+<th align="right">94.5%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">a[1]</td>
+<td align="right">-0.08</td>
+<td align="right">0.14</td>
+<td align="right">-0.30</td>
+<td align="right">0.13</td>
+</tr>
+<tr class="even">
+<td align="left">a[2]</td>
+<td align="right">0.20</td>
+<td align="right">0.23</td>
+<td align="right">-0.17</td>
+<td align="right">0.57</td>
+</tr>
+</tbody>
+</table>
+<p><code>south</code> is independent from <code>divorce</code> after conditioning on <code>age</code> <code>and waffle</code>.</p>
+<hr />
+<p>m_rate <em>||</em> south | age</p>
+<pre class="r"><code>alist(
+  m_rate ~ dnorm(mu, sigma),
+  mu &lt;- a[south] + Bage*age,
+  a[south] ~ dnorm(0, 0.5),
+  Bage ~ dnorm(0, 0.5),
+  sigma ~ dexp(1)) %&gt;% 
+  quap(data = dat_waffle) %&gt;% 
+  test_independence(depth.output = 2, coeff.input = c(&quot;a[1]&quot;, &quot;a[2]&quot;))</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">estimate</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="right">5.5%</th>
+<th align="right">94.5%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">a[1]</td>
+<td align="right">0.06</td>
+<td align="right">0.11</td>
+<td align="right">-0.12</td>
+<td align="right">0.23</td>
+</tr>
+<tr class="even">
+<td align="left">a[2]</td>
+<td align="right">-0.13</td>
+<td align="right">0.17</td>
+<td align="right">-0.41</td>
+<td align="right">0.14</td>
+</tr>
+</tbody>
+</table>
+<p><code>south</code> is independent from <code>m_rate</code> after conditioning on <code>age</code>.</p>
+<hr />
+<p>m_rate <em>||</em> waffle | south</p>
+<pre class="r"><code>alist(
+  waffle ~ dnorm(mu, sigma),
+  mu &lt;- a[south] + Bm_rate*m_rate,
+  a[south] ~ dnorm(0, 0.5),
+  Bm_rate ~ dnorm(0, 0.5),
+  sigma ~ dexp(1)) %&gt;% 
+  quap(data = dat_waffle) %&gt;% 
+  test_independence(coeff.input = &quot;Bm_rate&quot;)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">estimate</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="right">5.5%</th>
+<th align="right">94.5%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Bm_rate</td>
+<td align="right">-0.02</td>
+<td align="right">0.1</td>
+<td align="right">-0.18</td>
+<td align="right">0.14</td>
+</tr>
+</tbody>
+</table>
+<p><code>m_rate</code> is independent from <code>waffle</code> after conditioning on <code>south</code>.</p>
+<hr />
+<p>m_rate <em>||</em> waffle | age</p>
+<pre class="r"><code>alist(
+  waffle ~ dnorm(mu, sigma),
+  mu &lt;- a + Bm_rate*m_rate + Bage*age,
+  a ~ dnorm(0, 0.2),
+  c(Bm_rate, Bage) ~ dnorm(0, 0.5),
+  sigma ~ dexp(1)) %&gt;% 
+  quap(data = dat_waffle) %&gt;% 
+  test_independence(coeff.input = &quot;Bm_rate&quot;)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">estimate</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="right">5.5%</th>
+<th align="right">94.5%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Bm_rate</td>
+<td align="right">-0.09</td>
+<td align="right">0.18</td>
+<td align="right">-0.38</td>
+<td align="right">0.2</td>
+</tr>
+</tbody>
+</table>
+<p><code>m_rate</code> is independent from <code>waffle</code> after conditioning on <code>age</code>.</p>
+</div>
+<div id="data-foxes" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> Data foxes</h2>
+<p><strong>All three problems below are based on the same data. The data in data(foxes) are 116 foxes from 30 different urban groups in England. These foxes are like street gangs. Group size varies from 2 to 8 individuals. Each group maintains its own (almost exclusive) urban territory. Some territories are larger than others. The area variable encodes this information. Some territories also have more avgfood than others. We want to model the weight of each fox. For the problems below, assume this DAG:</strong></p>
+<p><img src="/post/chapter6_files/figure-html/data%20foxes-1.png" width="672" /></p>
+</div>
+<div id="question-6h3" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> Question 6H3</h2>
+<p><strong>Use a model to infer the total causal influence of area on weight . Would increasing the area available to each fox make it heavier (healthier)? You might want to standardize the variables. Regardless, use prior predictive simulation to show that your model’s prior predictions stay within the possible outcome range.</strong></p>
+<p>There are two paths from <code>area</code> to <code>weight</code>:
+(1) area -&gt; avgfood -&gt; weight<br />
+(2) area -&gt; avgfood -&gt; groupsize -&gt; weight<br />
+Both of these paths are causal and we want to have them in our model. Note that we don’t have any backdoor paths and hence a simple linear regression with a single predictor is sufficient.</p>
+<p>Let’s start by loading the data and standardizing all variables but group, which is a dummy variable.</p>
+<pre class="r"><code>data(&quot;foxes&quot;)
+
+dat_foxes &lt;- foxes %&gt;% 
+  as_tibble() %&gt;% 
+  mutate(across(-group, standardize))</code></pre>
+<p>Now we are ready to call the model.</p>
+<pre class="r"><code>m_foxes1 &lt;- alist(weight ~ dnorm(mu, sigma),  
+                  mu &lt;- a + Barea*area, 
+                  a ~ dnorm(0, 0.2), 
+                  Barea ~ dnorm(0, 0.5), 
+                  sigma ~ dexp(1)) %&gt;% 
+  quap(data = dat_foxes)</code></pre>
+<p>Using prior predictive simulation as discussed in previous chapters, we can check if our priors are falling outside a realistic range.</p>
+<pre class="r"><code>m_foxes1 %&gt;% 
+  extract.prior() %&gt;% 
+  link(m_foxes1, post = .,
+    data = list(area = seq(-2, 2, length.out = 20))) %&gt;% 
+  as_tibble() %&gt;%
+  pivot_longer(cols = everything(), values_to = &quot;weight&quot;) %&gt;%
+  add_column(
+    area = rep(seq(-2, 2, length.out = 20), 1000),
+    type = rep(as.character(1:1000), each = 20)) %&gt;% 
+  ggplot() +
+  geom_line(aes(x = area, y = weight, group = type), 
+            alpha = 0.1, colour = coral) +
+  labs(x = &quot;Area (std)&quot;, y = &quot;Weight (std)&quot;, 
+       caption = &quot;Figure 9: Prior predictive simulation for standardised area on weight.&quot;) +
+  theme_minimal()</code></pre>
+<p><img src="/post/chapter6_files/figure-html/6H3%20part%203-1.png" width="672" /></p>
+<p>It almost seems like some of these lines are too extreme (outside of |-2, 2| sd) but they are still realistic. Anyone with some kind of knowledge about fox ecology can produce better priors than I am using here, but as I am really lazy I will stick to these rather uninformative priors for now.</p>
+<p>Let’s see the effect of <code>area</code> on <code>weight</code>.</p>
+<pre class="r"><code>m_foxes1 %&gt;% 
+  test_independence(coeff.input = &quot;Barea&quot;)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">estimate</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="right">5.5%</th>
+<th align="right">94.5%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Barea</td>
+<td align="right">0.02</td>
+<td align="right">0.09</td>
+<td align="right">-0.13</td>
+<td align="right">0.16</td>
+</tr>
+</tbody>
+</table>
+<p>There is no substantial association between <code>area</code> and <code>weight</code>.</p>
+</div>
+<div id="question-6h4" class="section level2" number="4.5">
+<h2><span class="header-section-number">4.5</span> Question 6H4</h2>
+<p><strong>Now infer the causal impact of adding food (avgfood) to a territory. Would this make foxes heavier? Which covariates do you need to adjust for to estimate the total causal influence of food?</strong></p>
+<p>There are again two paths:<br />
+(1) avgfood -&gt; groupsize -&gt; weight<br />
+(2) avgfood -&gt; weight<br />
+Both are open and we want to keep both to get the total causal impact of food on weight. Including groupsize (condition on groupsize) would close the first path, which we don’t want. Again, we don’t have any backdoor paths and a single predictor is enough.</p>
+<pre class="r"><code>alist(weight ~ dnorm(mu, sigma),  
+                  mu &lt;- a + Bavgf*avgfood, 
+                  a ~ dnorm(0, 0.2), 
+                  Bavgf ~ dnorm(0, 0.5), 
+                  sigma ~ dexp(1)) %&gt;% 
+  quap(data = dat_foxes) %&gt;% 
+  test_independence(coeff.input = &quot;Bavgf&quot;)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">estimate</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="right">5.5%</th>
+<th align="right">94.5%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Bavgf</td>
+<td align="right">-0.02</td>
+<td align="right">0.09</td>
+<td align="right">-0.17</td>
+<td align="right">0.12</td>
+</tr>
+</tbody>
+</table>
+<p>There is no substantial relationship between <code>avgfood</code> and <code>weight</code>. This is no big surprise as <code>avgfood</code> is only causally related to <code>area</code> (at least in our DAG), and <code>area</code> showed no dependency as well.</p>
+</div>
+<div id="question-6h5" class="section level2" number="4.6">
+<h2><span class="header-section-number">4.6</span> Question 6H5</h2>
+<p><strong>Now infer the causal impact of group size. Which covariates do you need to adjust for? Looking at the posterior distribution of the resulting model, what do you think explains these data? That is, can you explain the estimates for all three problems? How do they make sense together?</strong></p>
+<p>We have two paths:<br />
+(1) groupsize -&gt; weight<br />
+(2) groupsize -&gt; avgfood -&gt; weight<br />
+The second is a backdoor path and we want to close it (note that avgfood is a fork). We can do this by simply adjusting for avgfood.</p>
+<pre class="r"><code>alist(weight ~ dnorm(mu, sigma),  
+                  mu &lt;- a + Bavgf*avgfood + Bgrps*groupsize, 
+                  a ~ dnorm(0, 0.2), 
+                  c(Bavgf, Bgrps) ~ dnorm(0, 0.5), 
+                  sigma ~ dexp(1)) %&gt;% 
+  quap(data = dat_foxes) %&gt;% 
+  test_independence(coeff.input = c(&quot;Bavgf&quot;,&quot;Bgrps&quot;))</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">estimate</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="right">5.5%</th>
+<th align="right">94.5%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Bavgf</td>
+<td align="right">0.48</td>
+<td align="right">0.18</td>
+<td align="right">0.19</td>
+<td align="right">0.76</td>
+</tr>
+<tr class="even">
+<td align="left">Bgrps</td>
+<td align="right">-0.57</td>
+<td align="right">0.18</td>
+<td align="right">-0.86</td>
+<td align="right">-0.29</td>
+</tr>
+</tbody>
+</table>
+<p>We can see that <code>groupsize</code> is negatively related to <code>weight</code>, and when <code>groupsize</code> is in the model the effect of <code>avgfood</code> on <code>weight</code> is positive. This looks like a masked relationship as the total causal effect of <code>avgfood</code> on <code>weight</code> was not substantial. It makes sense that foxes with more food are heavier, but more food means also that other foxes are attracted (or born) into the area. Now you have to distribute the food between more foxes, which cancels out the effect of <code>avgfood</code> on <code>weight.</code> More foxes means also that an individual fox has less food and therefore weighs less, leading to the negative relationship between <code>groupsize</code> and <code>weight</code>.</p>
+</div>
+<div id="question-6h6-and-6h7" class="section level2" number="4.7">
+<h2><span class="header-section-number">4.7</span> Question 6H6 and 6H7</h2>
+<p>Questions 6H6 and 6H7 are open research questions and I will hopefully manage to play around with them, once I have more time. So stick around for some updates of this post in the future.</p>
+</div>
+</div>
+<div id="summary" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Summary</h1>
+<p>I have read <em>The book of why</em> by Juda Pearl two years ago and thought to myself that this nicely plays out the route analysis in Palaeobiology (or in Science overall) should go. However, there was no way I could implement the statements from <em>The book of why</em> in my own research. There was no guide to go from theory to practice and I was lacking the tools. Turns out that this chapter in <em>Statistical rethinking</em> is providing the tools and the basics for causal inference. And this just makes me happy.</p>
+</div>
