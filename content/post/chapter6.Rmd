@@ -701,7 +701,11 @@ Questions 6H6 and 6H7 are open research questions and I will hopefully manage to
 # Summary  
   
 I have read *The book of why* by Juda Pearl two years ago and thought to myself that this nicely plays out the route analysis in Palaeobiology (or in Science overall) should go. However, there was no way I could implement the statements from *The book of why* in my own research. There was no guide to go from theory to practice and I was lacking the tools. Turns out that this chapter in *Statistical rethinking* is providing the tools and the basics for causal inference. And this just makes me happy.  
-
+  
+-------
+```{r}
+sessionInfo()
+```
 
 
 
