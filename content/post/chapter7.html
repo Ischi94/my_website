@@ -1,0 +1,743 @@
+---
+title: "Rethinking Chapter 7"
+author: "Gregor Mathes"
+date: "2021-02-11"
+slug: Rethinking Chapter 7
+categories: []
+tags: [Rethinking, Bayes, Statistics]
+subtitle: ''
+summary: 'This is the sixth part of a series where I work through the practice questions of the second edition of Richard McElreaths Statistical Rethinking'
+authors: [Gregor Mathes]
+lastmod: '2021-02-11T12:07:04+02:00'
+featured: no
+projects: [Rethinking]
+output:
+  blogdown::html_page:
+    toc: true
+    toc_depth: 1
+    number_sections: true
+    fig_width: 6
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#introduction"><span class="toc-section-number">1</span> Introduction</a></li>
+<li><a href="#easy-practices"><span class="toc-section-number">2</span> Easy practices</a></li>
+<li><a href="#medium-practices"><span class="toc-section-number">3</span> Medium practices</a></li>
+<li><a href="#hard-practices"><span class="toc-section-number">4</span> Hard practices</a></li>
+<li><a href="#summary"><span class="toc-section-number">5</span> Summary</a></li>
+</ul>
+</div>
+
+<div id="introduction" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Introduction</h1>
+<p>This is the sixth part of a series where I work through the practice questions of the second edition of Richard McElreaths <a href="https://xcelab.net/rm/statistical-rethinking/">Statistical Rethinking</a>.<br />
+Each post covers a new chapter and you can see the posts on previous chapters <a href="https://gregor-mathes.netlify.app/tags/rethinking/">here</a>.</p>
+<p>You can find the the lectures and homework accompanying the book <a href="https://github.com/rmcelreath/stat_rethinking_2020%3E">here</a>.</p>
+<p>The colours for this blog post are:</p>
+<pre class="r"><code>red &lt;- &quot;#A4243B&quot;
+yellow &lt;- &quot;#D8973C&quot;
+brown &lt;- &quot;#BD632F&quot;
+grey &lt;- &quot;#273E47&quot;</code></pre>
+<p><img src="/post/chapter7_files/figure-html/colour%20plot-1.png" width="672" /></p>
+<p>The homework for this week is the same as the hard practices.</p>
+</div>
+<div id="easy-practices" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Easy practices</h1>
+<div id="question-7e1" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Question 7E1</h2>
+<p><strong>State the three motivating criteria that define information entropy. Try to express each in your own words.</strong></p>
+<ol style="list-style-type: decimal">
+<li>The measure of uncertainty should be continuous. Continuity enables the comparison of two measures.<br />
+</li>
+<li>The measure of uncertainty should increase as the number of possible events in-creases. More events mean more uncertainty about which event will occur.<br />
+</li>
+<li>The measure of uncertainty should be additive. We need to be able to add up all measures.</li>
+</ol>
+</div>
+<div id="question-7e2" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Question 7E2</h2>
+<p><strong>Suppose a coin is weighted such that, when it is tossed and lands on a table, it comes up heads 70 % of the time. What is the entropy of this coin?</strong></p>
+<p>There are two events: 70 % heads and 30 % tails. Entropy is defined as <span class="math display">\[H(p)=−\sum_{i=1}^n p_ilog(p_i) = −(p_Hlog(p_H)+p_Tlog(p_T))\]</span></p>
+<p>We can transform this into R code:</p>
+<pre class="r"><code>inf_entropy &lt;- function(p){
+  -sum(p*log(p))
+}</code></pre>
+<p>The function takes a vector as input and returns the entropy.</p>
+<pre class="r"><code>c(0.7, 0.3) %&gt;% 
+  inf_entropy()</code></pre>
+<pre><code>## [1] 0.6108643</code></pre>
+<p>The entropy is 0.61.</p>
+</div>
+<div id="question-7e3" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Question 7E3</h2>
+<p><strong>Suppose a four-sided die is loaded such that, when tossed onto a table, it shows “1” 20%, “2” 25%, ”3” 25%, and ”4” 30% of the time. What is the entropy of this die?</strong></p>
+<p>The defined function makes this quite easy:</p>
+<pre class="r"><code>c(0.2, 0.25, 0.25, 0.30) %&gt;% 
+  inf_entropy()</code></pre>
+<pre><code>## [1] 1.376227</code></pre>
+</div>
+<div id="question-7e4" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Question 7E4</h2>
+<p><strong>Suppose another four-sided die is loaded such that it never shows “4”. The other three sides show equally often. What is the entropy of this die.</strong></p>
+<p>An event not occurring can be simply omitted. All other events have a probability of 1/3.</p>
+<pre class="r"><code>rep(1/3, 3) %&gt;% 
+  inf_entropy()</code></pre>
+<pre><code>## [1] 1.098612</code></pre>
+</div>
+</div>
+<div id="medium-practices" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Medium practices</h1>
+<div id="question-7m1" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Question 7M1</h2>
+<p><strong>Write down and compare the definitions of AIC and WAIC. Which of these criteria is most general? Which assumptions are required to transform the more general criterion into a less general one?</strong></p>
+<p><span class="math display">\[AIC = D_{train} + 2p = 2lppd + 2p\]</span>
+where <span class="math inline">\(D_{train} =\)</span> in-sample deviance and <span class="math inline">\(p =\)</span> the number of free parameters in the posterior distribution.</p>
+<p>The AIC is only reliable when:<br />
+(1) The priors are flat or overwhelmed by the likelihood.<br />
+(2) The posterior distribution is approximately multivariate Gaussian.<br />
+(3) The sample size N is much greater than the number of parameters k.</p>
+<p><span class="math display">\[WAIC = −2(lppd −\sum_i(var_θ log p(y_i|θ))\]</span><br />
+where <span class="math inline">\(y_i =\)</span> observation at point <span class="math inline">\(i\)</span>, <span class="math inline">\(θ =\)</span> the posterior distribution,
+<span class="math inline">\(lppd =\)</span> log-pointwise-predictive density.</p>
+<p>The WAIC is only reliable when:<br />
+(1) The sample size N is much greater than the number of parameters k.</p>
+<p>Hence, the WAIC is similar to the AIC when the priors are flat or overwhelmed by the likelihood, and when the posterior distribution is approximately multivariate gaussian.</p>
+</div>
+<div id="question-7m2" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Question 7M2</h2>
+<p><strong>Explain the difference between model selection and model comparison. What information is lost under model selection.</strong></p>
+<p>Model selection is the practice of choosing the model with the lowest criterion value and then discarding the others. Model comparison, on the other hand, uses uses multiple models to understand both how different variables influence predictions and, in combination with a causal model, implied conditional indendencies among variables help us infer causal relationships. With model selection, we are throwing away the differences in the information criterions between each model which encapsulates how confident we are in a model.</p>
+</div>
+<div id="question-7m3" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Question 7M3</h2>
+<p><strong>When comparing models with an information criterion, why must all models be fit to exactly the same observations? What would happen to the information criterion values, if the models were fit to different numbers of observations? Perform some experiments, if you are not sure.</strong></p>
+<p>As information criterion is based on the deviance, which is a sum. More observations generally lead to a higher deviance as more values are summed up, rendering a comparison to a model with less observations useless. We can show this using a simulation approach</p>
+<p>Let’s define a function that simulates data with <code>N</code> observations, runs a linear regression and returns the WAIC estimate:</p>
+<pre class="r"><code>waic_sim &lt;- function(N){
+  dat &lt;- tibble(x = rnorm(N), 
+                y = rnorm(N)) %&gt;% 
+    mutate(across(everything(), standardize)) 
+  
+  alist(
+    x ~ dnorm(mu, 1), 
+    mu &lt;- a + By*y,
+    a ~ dnorm(0, 0.2), 
+    By ~ dnorm(0, 0.5) 
+  ) %&gt;% 
+    quap(data = dat) %&gt;% 
+    WAIC() %&gt;% 
+    as_tibble() %&gt;% 
+    pull(WAIC)
+}</code></pre>
+<p>Now we define a sequence of <code>N</code> ranging from 100 to 1000 observations, apply the <code>waic_sim</code> function to each, save the results in a data frame and plot it.</p>
+<pre class="r"><code>seq(100, 1000, by = 100) %&gt;%
+  map_dbl(waic_sim) %&gt;% 
+  enframe(name = &quot;n_obs&quot;, value = &quot;WAIC&quot;) %&gt;% 
+  mutate(n_obs = seq(100, 1000, by = 100)) %&gt;% 
+  ggplot(aes(n_obs, WAIC)) +
+  geom_line(colour = grey) +
+  geom_point(shape = 21, fill = red, 
+             colour = grey, size = 2.5, 
+             stroke = 1, alpha = 0.9) +
+  labs(x = &quot;Number of observations&quot;, 
+       caption = &quot;Figure 1: Simulation of WAIC values of the same data 
+       based on the number of observations.&quot;) +
+  theme_minimal()</code></pre>
+<p><img src="/post/chapter7_files/figure-html/7M3%20part%202-1.png" width="672" /></p>
+</div>
+<div id="question-7m4" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> Question 7M4</h2>
+<p><strong>What happens to the effective number of parameters, as measured by PSIS or WAIC, as a prior becomes more concentrated? Why? Perform some experiments, if you are not sure.</strong></p>
+<p>Experiments are always good, so let’s start. Similar to the approach above, we first define a function returning the estimate we want, in this case the number of parameters. But this time, the function takes a prior as an argument.</p>
+<pre class="r"><code>psis_sim &lt;- function(prior){
+  dat &lt;- tibble(x = rnorm(10), 
+                y = rnorm(10)) %&gt;% 
+    mutate(across(everything(), standardize)) 
+  
+  suppressMessages(
+    alist(
+      x ~ dnorm(mu, 1), 
+      mu &lt;- a + By*y,
+      a ~ dnorm(0, prior), 
+      By ~ dnorm(0, prior)
+    ) %&gt;% 
+      quap(data = list(x = dat$x, y = dat$y, prior = prior)) %&gt;% 
+      PSIS() %&gt;% 
+      as_tibble() %&gt;% 
+      pull(penalty)
+  )
+}</code></pre>
+<p>Now we can define the range for the prior, apply <code>psis_sim</code> to each of the values in the prior range, and plot the results.</p>
+<pre class="r"><code>seq(1, 0.1, length.out = 20) %&gt;%
+  purrr::map_dbl(psis_sim) %&gt;% 
+  enframe(name = &quot;b_prior&quot;, value = &quot;n_params&quot;) %&gt;% 
+  mutate(b_prior = seq(1, 0.1, length.out = 20)) %&gt;% 
+  ggplot(aes(b_prior, n_params)) +
+  geom_smooth(method = &quot;lm&quot;, colour = yellow, fill = grey) +
+  geom_point(shape = 21, fill = red, 
+             colour = grey, size = 2, 
+             stroke = 1, alpha = 0.9) +
+  labs(x = &quot;Prior on the spread for alpha and beta&quot;,
+       y = &quot;Number of parameters&quot;,
+       caption = &quot;Figure 2: Simulation of the effective number 
+       of parameters as a function of a prior&quot;) +
+  theme_minimal()</code></pre>
+<p><img src="/post/chapter7_files/figure-html/7M4%20part%202-1.png" width="672" /></p>
+<p>We can see that the number of effective parameters decreases when the prior gets more concentrated. This makes sense as model becomes less flexible in fitting the sample when a prior becomes more concentrated around particular parameter values. With a less flexible model, the effective number of parameters declines.</p>
+</div>
+<div id="question-7m5" class="section level2" number="3.5">
+<h2><span class="header-section-number">3.5</span> Question 7M5</h2>
+<p><strong>Provide an informal explanation of why informative priors reduce overfitting.</strong></p>
+<p>Overfitting means that a model captures too much noise in the data. This noise is not present in new (unseen) data, so the model will fail there. Setting an informative prior is like telling the model to ignore too unrealistic values or at least too lower their leverage. This then leads to an improved predictive performance as the model captures less noise.</p>
+</div>
+<div id="question-7m6" class="section level2" number="3.6">
+<h2><span class="header-section-number">3.6</span> Question 7M6</h2>
+<p><strong>Provide an informal explanation of why overly informative priors result in underfitting.</strong></p>
+<p>If the priors are too concentrated, we tell the model to ignore real patterns
+in the data. This then reduces predictive performance.</p>
+</div>
+</div>
+<div id="hard-practices" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Hard practices</h1>
+<div id="question-7h1" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Question 7H1</h2>
+<p><strong>In 2007,The Wall Street Journal published an editorial (“We’re Number One, Alas”) with a graph of corporate tax rates in 29 countries plotted against tax revenue. A badly fit curve was drawn in (reconstructed at right), seemingly by hand, to make the argument that the relationship between tax rate and tax revenue increases and then declines, such that higher tax rates can actually produce less tax revenue. I want you to actually fit a curve to these data, found in data(Laffer). Consider models that use tax rate to predict tax revenue. Compare, using WAIC or PSIS, a straight-line model to any curved models you like. What do you conclude about the relationship between tax rate and tax revenue?</strong></p>
+<p><img src="https://www.erikkusch.com/post/rethinking/7H1.JPG" /></p>
+<p>Let’s load the data and standardize all parameters.</p>
+<pre class="r"><code>data(&quot;Laffer&quot;)
+
+dat_laffer &lt;- Laffer %&gt;% 
+  as_tibble() %&gt;% 
+  mutate(across(everything(), standardize))</code></pre>
+<p>We start with a simple linear regression.</p>
+<pre class="r"><code>m1 &lt;- alist(
+  tax_revenue ~ dnorm(mu, sigma), 
+  mu &lt;- a + Br*tax_rate, 
+  a ~ dnorm(0, 0.2),
+  Br ~ dnorm(0, 0.5), 
+  sigma ~ dexp(1)
+) %&gt;% 
+  quap(data = dat_laffer)</code></pre>
+<p>Now we increase complexity by using a quadratic function.</p>
+<pre class="r"><code>m2 &lt;- alist(
+  tax_revenue ~ dnorm(mu, sigma), 
+  mu &lt;- a + Br*tax_rate + Br2*tax_rate^2, 
+  a ~ dnorm(0, 0.2),
+  c(Br, Br2) ~ dnorm(0, 0.5), 
+  sigma ~ dexp(1)
+) %&gt;% 
+  quap(data = dat_laffer)</code></pre>
+<p>And finally the cubic model.</p>
+<pre class="r"><code>m3 &lt;- alist(
+  tax_revenue ~ dnorm(mu, sigma), 
+  mu &lt;- a + Br*tax_rate + Br2*tax_rate^2 + Br3*tax_rate^3, 
+  a ~ dnorm(0, 0.2),
+  c(Br, Br2, Br3) ~ dnorm(0, 0.5), 
+  sigma ~ dexp(1)
+) %&gt;% 
+  quap(data = dat_laffer)</code></pre>
+<p>We can quickly visualise the WAIC values using the <code>plot(compare())</code> pipeline.</p>
+<pre class="r"><code>plot(compare(m1, m2, m3))</code></pre>
+<p><img src="/post/chapter7_files/figure-html/7H1%20part%205-1.png" width="672" /></p>
+<p>We can already see that there is no support for a particular model. But le’s visualize this a bit more:</p>
+<pre class="r"><code>N &lt;- 1e3
+
+laffer_fit &lt;- function(model.input, model.type){
+    link(model.input, n = N) %&gt;% 
+    as_tibble() %&gt;% 
+    pivot_longer(cols = everything(), values_to = &quot;pred_revenue&quot;) %&gt;% 
+    add_column(tax_rate = rep(dat_laffer$tax_rate, N)) %&gt;% 
+    group_by(tax_rate) %&gt;% 
+    nest() %&gt;% 
+    mutate(pred_revenue = map(data, &quot;pred_revenue&quot;), 
+           mean_revenue = map_dbl(pred_revenue, mean), 
+           pi = map(pred_revenue, PI), 
+           lower_pi = map_dbl(pi, pluck(1)), 
+           upper_pi = map_dbl(pi, pluck(2))) %&gt;% 
+    add_column(model = model.type) %&gt;% 
+    select(model, tax_rate, mean_revenue, lower_pi, upper_pi)
+}
+
+laffer_fit(m1, &quot;linear&quot;) %&gt;% 
+  full_join(laffer_fit(m2, &quot;quadratic&quot;)) %&gt;% 
+  full_join(laffer_fit(m3, &quot;cubic&quot;)) %&gt;% 
+  ggplot(aes(tax_rate, mean_revenue)) +
+  geom_point(aes(tax_rate, tax_revenue), 
+             colour = grey, alpha = 0.9,
+                 data = dat_laffer) +
+  geom_ribbon(aes(ymin = lower_pi, ymax = upper_pi, 
+                  fill = model),
+              alpha = 0.3) +
+  geom_line(aes(colour = model),
+            size = 1.5) +
+  scale_colour_manual(values = c(red, yellow, brown)) +
+  scale_fill_manual(values = c(red, yellow, brown)) +
+  labs(x = &quot;Tax revenue (std)&quot;, 
+       y = &quot;Tax rate (std)&quot;, 
+       caption = &quot;Figure 3: Model predictions for each model.&quot;) +
+  facet_wrap(~ model) +
+  theme_minimal() +
+  theme(legend.position = &quot;none&quot;)</code></pre>
+<p><img src="/post/chapter7_files/figure-html/7H1%20part%206-1.png" width="672" /></p>
+<p>We can see that the uncertainty for each model at the highest revenue is always quite high. Note also that we force a dip at these values for the quadratic model.</p>
+</div>
+<div id="question-7h2" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Question 7H2</h2>
+<p><strong>In the Laffer data, there is one country with a high tax revenue that is an outlier. Use PSIS and WAIC to measure the importance of this outlier in the models you fit in the previous problem. Then use robust regression with a Student’s t distribution to revisit the curve fitting problem. How much does a curved relationship depend upon the outlier point?</strong></p>
+<p>Let’s define a function that will help us to get the outlier. The outlier takes a model and returns a data frame with the Pareto-K values, the WAIC penalty, and the model name for each observation in the Laffer data.</p>
+<pre class="r"><code>get_outlier &lt;- function(model.input, model.type){
+  psis_k &lt;- PSIS(model.input, pointwise = TRUE)$k
+  waic_pen &lt;- WAIC(model.input, pointwise = TRUE)$penalty
+  tibble(psis_k = psis_k, waic_pen = waic_pen, model = model.type)
+}</code></pre>
+<pre class="r"><code>dat_outlier &lt;- get_outlier(m1, model.type = &quot;linear&quot;) %&gt;% 
+  full_join(get_outlier(m2, model.type = &quot;quadratic&quot;)) %&gt;% 
+  full_join(get_outlier(m3, model.type = &quot;cubic&quot;)) </code></pre>
+<p>Now let’s identify the maximum outlier for each model.</p>
+<pre class="r"><code>dat_outlier %&gt;% 
+  group_by(model) %&gt;% 
+  summarise(max_outlier = which.max(psis_k)) %&gt;% 
+  knitr::kable()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">model</th>
+<th align="right">max_outlier</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">cubic</td>
+<td align="right">12</td>
+</tr>
+<tr class="even">
+<td align="left">linear</td>
+<td align="right">12</td>
+</tr>
+<tr class="odd">
+<td align="left">quadratic</td>
+<td align="right">12</td>
+</tr>
+</tbody>
+</table>
+<p>We can see that all models have the 12th observation as an outlier.</p>
+<pre class="r"><code>dat_laffer[12,]</code></pre>
+<pre><code>## # A tibble: 1 x 2
+##   tax_rate tax_revenue
+##      &lt;dbl&gt;       &lt;dbl&gt;
+## 1    0.221        3.70</code></pre>
+<p>We can reproduce the outlier plot from the chapter.</p>
+<pre class="r"><code>ggplot(aes(psis_k, waic_pen, fill = model),
+       data = dat_outlier) + 
+  geom_point(shape = 21, colour = grey,
+             size = 2.5, stroke = 1, alpha = 0.9) +
+  scale_fill_manual(values = c(red, yellow, brown)) +
+  facet_wrap(~ model) +
+  labs(x = &quot;PSIS Pareto K&quot;, y = &quot;WAIC penalty&quot;, 
+       caption = &quot;Figure 4: Highly influential points and out-of-sample prediction&quot;) +
+  theme_bw() +
+  theme(legend.position = &quot;none&quot;)</code></pre>
+<p><img src="/post/chapter7_files/figure-html/7H2%20part%205-1.png" width="672" /></p>
+<p>To fit a robust model, we simply use the Student’s T distribution as a likelihood.</p>
+<pre class="r"><code>m4 &lt;- alist(
+  tax_revenue ~ dstudent(2, mu, sigma), 
+  mu &lt;- a + Br*tax_rate, 
+  a ~ dnorm(0, 0.2),
+  Br ~ dnorm(0, 0.5), 
+  sigma ~ dexp(1)
+) %&gt;% 
+  quap(data = dat_laffer)</code></pre>
+<p>And compare it to the first models.</p>
+<pre class="r"><code>plot(compare(m1, m2, m3, m4))</code></pre>
+<p><img src="/post/chapter7_files/figure-html/7H2%20part%207-1.png" width="672" /></p>
+<p>We can see that m4 clearly performs best. Overall, there is no support for a curved relationship.</p>
+</div>
+<div id="question-7h3" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> Question 7H3</h2>
+<p><strong>Consider three fictional Polynesian islands. On each there is a Royal Ornithologist charged by the king with surveying the bird population. They have each found the following proportions of 5 important bird species:</strong></p>
+<pre class="r"><code>dat_island &lt;- tibble(&quot;Island&quot; = c(&quot;Island 1&quot;, &quot;Island 2&quot;, &quot;Island 3&quot;),
+       &quot;Species A&quot; = c(0.2, 0.8, 0.05), 
+       &quot;Species B&quot; = c(0.2, 0.1, 0.15), 
+       &quot;Species C&quot; = c(0.2, 0.05, 0.7), 
+       &quot;Species D&quot; = c(0.2, 0.025, 0.05), 
+       &quot;Species E&quot; = c(0.2, 0.025, 0.05))
+
+dat_island %&gt;% 
+knitr::kable()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Island</th>
+<th align="right">Species A</th>
+<th align="right">Species B</th>
+<th align="right">Species C</th>
+<th align="right">Species D</th>
+<th align="right">Species E</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Island 1</td>
+<td align="right">0.20</td>
+<td align="right">0.20</td>
+<td align="right">0.20</td>
+<td align="right">0.200</td>
+<td align="right">0.200</td>
+</tr>
+<tr class="even">
+<td align="left">Island 2</td>
+<td align="right">0.80</td>
+<td align="right">0.10</td>
+<td align="right">0.05</td>
+<td align="right">0.025</td>
+<td align="right">0.025</td>
+</tr>
+<tr class="odd">
+<td align="left">Island 3</td>
+<td align="right">0.05</td>
+<td align="right">0.15</td>
+<td align="right">0.70</td>
+<td align="right">0.050</td>
+<td align="right">0.050</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notice that each row sums to 1, all the birds. This problem has two parts. It is not computationally complicated. But it is conceptually tricky. First, compute the entropy of each island’s bird distribution.Interpret these entropy values. Second, use each island’s bird distribution to predict the other two.This means to compute the K-L Divergence of each island from the others, treating each island as if it were a statistical model of the other islands. You should end up with 6 different K-L Divergence values. Which island predicts the others best? Why?</strong></p>
+<p>To calculate the entropy for each island, we first need to bring the data into a longer format.</p>
+<pre class="r"><code>dat_island_long &lt;- dat_island %&gt;% 
+  janitor::clean_names() %&gt;% 
+  pivot_longer(cols = -island, names_to = &quot;species&quot;, values_to = &quot;proportion&quot;) </code></pre>
+<p>Now we can use the <code>inf_entropy</code> function from practice 7E2 to get the entropy for each island.</p>
+<pre class="r"><code>dat_island_long %&gt;% 
+  group_by(island) %&gt;% 
+  summarise(entropy = inf_entropy(proportion)) %&gt;% 
+  mutate(across(is.numeric, round, 2)) %&gt;% 
+  knitr::kable()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">island</th>
+<th align="right">entropy</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Island 1</td>
+<td align="right">1.61</td>
+</tr>
+<tr class="even">
+<td align="left">Island 2</td>
+<td align="right">0.74</td>
+</tr>
+<tr class="odd">
+<td align="left">Island 3</td>
+<td align="right">0.98</td>
+</tr>
+</tbody>
+</table>
+<p>Now how to interpret this values. Imagine we throw all birds of an island in a bag, ending with 3 bags full of
+birds. Entropy is just a measure for how uncertain we are which species we would get, if we grab a random bird from the bag. In the first bag, Island 1, all species are distributed equally and we just have no idea which species we would grab. The entropy is high. On the other hand, the second bag from island 2 is full of ‘species a’ so we are quite certain that we would grab this species. The entropy is hence quite low.</p>
+<p>For the second part, we need to apply the Kullback-Leibler divergence, which is given as
+<span class="math display">\[D_{KL}(p,q) = \sum_i(p_i  log(p_i) - log(q_i))\]</span></p>
+<p>Or, in R code:</p>
+<pre class="r"><code>kl_divergence &lt;- function(p,q) sum(p*(log(p)-log(q)))</code></pre>
+<p>We just need a bit of data wrangling and can then apply <code>kl_divergence</code> for each comparison.</p>
+<pre class="r"><code>dat_island_long %&gt;% 
+  select(-species) %&gt;% 
+  group_by(island) %&gt;% 
+  nest() %&gt;% 
+  pivot_wider(names_from = island, values_from = data) %&gt;% 
+  janitor::clean_names() %&gt;% 
+  mutate(one_vs_two = map2_dbl(island_1, island_2, kl_divergence),
+         two_vs_one = map2_dbl(island_2, island_1, kl_divergence),
+         one_vs_three = map2_dbl(island_1, island_3, kl_divergence),
+         three_vs_one = map2_dbl(island_3, island_1, kl_divergence),
+         two_vs_three = map2_dbl(island_2, island_3, kl_divergence),
+         three_vs_two = map2_dbl(island_3, island_2, kl_divergence)
+         ) %&gt;% 
+  select(one_vs_two:three_vs_two) %&gt;% 
+  pivot_longer(cols = everything(), names_to = &quot;Comparison&quot;, values_to = &quot;KL Divergence&quot;) %&gt;% 
+  knitr::kable()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Comparison</th>
+<th align="right">KL Divergence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">one_vs_two</td>
+<td align="right">0.9704061</td>
+</tr>
+<tr class="even">
+<td align="left">two_vs_one</td>
+<td align="right">0.8664340</td>
+</tr>
+<tr class="odd">
+<td align="left">one_vs_three</td>
+<td align="right">0.6387604</td>
+</tr>
+<tr class="even">
+<td align="left">three_vs_one</td>
+<td align="right">0.6258376</td>
+</tr>
+<tr class="odd">
+<td align="left">two_vs_three</td>
+<td align="right">2.0109142</td>
+</tr>
+<tr class="even">
+<td align="left">three_vs_two</td>
+<td align="right">1.8388452</td>
+</tr>
+</tbody>
+</table>
+<p>Read the first row as “going from island 1 to island 2 has a divergence of 0.97”. We can see that starting at island 1 results in the overall lowest divergence values, due to the high entropy. If you are used to draw your birds from a bag 1 (from island 1), you are not very surprised of the results from drawing from the other bags. And now I think the bag metaphor reaches its limits.</p>
+<p><img src="https://media.giphy.com/media/13HceafzmozjjO/giphy.gif" /></p>
+<p>Anyways, Island 1 predicts the other islands best.</p>
+</div>
+<div id="question-7h4" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> Question 7H4</h2>
+<p><strong>Recall the marriage, age, and happiness collider bias example from Chapter 6. Run models m6.9 and m6.10 again. Compare these two models using WAIC (or LOO, they will produce identical results). Which model is expected to make better predictions? Which model provides the correct causal inference about the influence of age on happiness? Can you explain why the answers to these two questions disagree?</strong></p>
+<p>First, we need to rerun the simulation to get the data and clean it. More detail is given in chapter 6.</p>
+<pre class="r"><code>dat_happy &lt;- sim_happiness(seed=1977, N_years=1000)
+
+dat_happy &lt;- dat_happy %&gt;% 
+  as_tibble() %&gt;% 
+  filter(age &gt; 17) %&gt;% 
+  mutate(age = (age - 18)/ (65 -18)) %&gt;% 
+  mutate(mid = married +1)</code></pre>
+<p>Now we can rerun each model.</p>
+<pre class="r"><code>m6.9 &lt;- alist(
+  happiness ~ dnorm( mu , sigma ),
+  mu &lt;- a[mid] + bA*age,
+  a[mid] ~ dnorm( 0 , 1 ),
+  bA ~ dnorm( 0 , 2 ),
+  sigma ~ dexp(1)) %&gt;% 
+  quap(data = dat_happy) 
+
+m6.10 &lt;- alist(
+  happiness ~ dnorm( mu , sigma ),
+  mu &lt;- a + bA*age,
+  a ~ dnorm( 0 , 1 ),
+  bA ~ dnorm( 0 , 2 ),
+  sigma ~ dexp(1)) %&gt;% 
+  quap(data = dat_happy)</code></pre>
+<p>And then we just apply <code>WAIC</code> for both models.</p>
+<pre class="r"><code>c(m6.9, m6.10) %&gt;% 
+  map_dfr(WAIC) %&gt;% 
+  add_column(model = c(&quot;m6.9&quot;, &quot;m6.10&quot;), .before = 1) %&gt;% 
+  knitr::kable()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">model</th>
+<th align="right">WAIC</th>
+<th align="right">lppd</th>
+<th align="right">penalty</th>
+<th align="right">std_err</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">m6.9</td>
+<td align="right">2713.971</td>
+<td align="right">-1353.247</td>
+<td align="right">3.738532</td>
+<td align="right">37.54465</td>
+</tr>
+<tr class="even">
+<td align="left">m6.10</td>
+<td align="right">3101.906</td>
+<td align="right">-1548.612</td>
+<td align="right">2.340445</td>
+<td align="right">27.74379</td>
+</tr>
+</tbody>
+</table>
+<p><code>WAIC</code> favours the model with the collider bias. This is because <code>WAIC</code> cares about predictive power, not causal association. It just doesn’t care that age is not causing happiness. However, the (non-causal but still present)
+association between age and happiness results in improved predictions. That’s why WAIC selects the model containing the collider path. This just shows that we shouldn’t use model comparison without a causal model.</p>
+</div>
+<div id="question-7h5" class="section level2" number="4.5">
+<h2><span class="header-section-number">4.5</span> Question 7H5</h2>
+<p><strong>Revisit the urban fox data, data(foxes), from the previous chapter’s practice problems. Use WAIC or PSIS based model comparison on five different models, each using weight as the outcome, and containing these sets of predictor variables:</strong></p>
+<ol style="list-style-type: decimal">
+<li>avgfood + groupsize + area</li>
+<li>avgfood + groupsize</li>
+<li>groupsize + area</li>
+<li>avgfood</li>
+<li>area</li>
+</ol>
+<p><strong>Can you explain the relative differences in WAIC scores, using the fox DAG from last week’s home-work? Be sure to pay attention to the standard error of the score differences (dSE).</strong></p>
+<p>First, reload the data and standardise both the predictors and the outcome.</p>
+<pre class="r"><code>data(&quot;foxes&quot;)
+
+dat_foxes &lt;- foxes %&gt;% 
+  as_tibble() %&gt;% 
+  mutate(across(-group, standardize))</code></pre>
+<p>Now we can fit a model for each description above:</p>
+<pre class="r"><code>m1 &lt;- alist(
+  weight ~ dnorm(mu, sigma), 
+  mu &lt;- a + Bf*avgfood + Bg*groupsize + Ba*area, 
+  a ~ dnorm(0, 0.2), 
+  c(Bf, Bg, Ba) ~ dnorm(0, 0.5), 
+  sigma ~ dexp(1)) %&gt;% 
+  quap(data = dat_foxes)
+
+m2 &lt;- alist(
+  weight ~ dnorm(mu, sigma), 
+  mu &lt;- a + Bf*avgfood + Bg*groupsize, 
+  a ~ dnorm(0, 0.2), 
+  c(Bf, Bg) ~ dnorm(0, 0.5), 
+  sigma ~ dexp(1)) %&gt;% 
+  quap(data = dat_foxes)
+
+m3 &lt;- alist(
+  weight ~ dnorm(mu, sigma), 
+  mu &lt;- a + Bg*groupsize + Ba*area, 
+  a ~ dnorm(0, 0.2), 
+  c(Bg, Ba) ~ dnorm(0, 0.5), 
+  sigma ~ dexp(1)) %&gt;% 
+  quap(data = dat_foxes)
+
+m4 &lt;- alist(
+  weight ~ dnorm(mu, sigma), 
+  mu &lt;- Bf*avgfood, 
+  a ~ dnorm(0, 0.2), 
+  Bf ~ dnorm(0, 0.5), 
+  sigma ~ dexp(1)) %&gt;% 
+  quap(data = dat_foxes)
+
+m5 &lt;- alist(
+  weight ~ dnorm(mu, sigma), 
+  mu &lt;- a + Ba*area, 
+  a ~ dnorm(0, 0.2), 
+  Ba ~ dnorm(0, 0.5), 
+  sigma ~ dexp(1)) %&gt;% 
+  quap(data = dat_foxes)</code></pre>
+<p>And then compare them using <code>WAIC</code>.</p>
+<pre class="r"><code>compare(m1, m2, m3, m4, m5) %&gt;% 
+  as_tibble(rownames = &quot;model&quot;) %&gt;% 
+  mutate(across(is.numeric, round, 2)) %&gt;% 
+  knitr::kable()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">model</th>
+<th align="right">WAIC</th>
+<th align="right">SE</th>
+<th align="right">dWAIC</th>
+<th align="right">dSE</th>
+<th align="right">pWAIC</th>
+<th align="right">weight</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">m1</td>
+<td align="right">322.88</td>
+<td align="right">16.28</td>
+<td align="right">0.00</td>
+<td align="right">NA</td>
+<td align="right">4.66</td>
+<td align="right">0.46</td>
+</tr>
+<tr class="even">
+<td align="left">m3</td>
+<td align="right">323.90</td>
+<td align="right">15.68</td>
+<td align="right">1.01</td>
+<td align="right">2.90</td>
+<td align="right">3.72</td>
+<td align="right">0.28</td>
+</tr>
+<tr class="odd">
+<td align="left">m2</td>
+<td align="right">324.13</td>
+<td align="right">16.14</td>
+<td align="right">1.24</td>
+<td align="right">3.60</td>
+<td align="right">3.86</td>
+<td align="right">0.25</td>
+</tr>
+<tr class="even">
+<td align="left">m4</td>
+<td align="right">331.58</td>
+<td align="right">13.67</td>
+<td align="right">8.70</td>
+<td align="right">7.21</td>
+<td align="right">1.50</td>
+<td align="right">0.01</td>
+</tr>
+<tr class="odd">
+<td align="left">m5</td>
+<td align="right">333.72</td>
+<td align="right">13.79</td>
+<td align="right">10.84</td>
+<td align="right">7.24</td>
+<td align="right">2.65</td>
+<td align="right">0.00</td>
+</tr>
+</tbody>
+</table>
+<p>Remember the DAG from last chapter:</p>
+<p><img src="https://gregor-mathes.netlify.app/post/chapter6_files/figure-html/data%20foxes-1.png" /></p>
+<p>There is no support for the preference of a particular model. But we can see that m1, m2, and m3 are grouped together based on AIC as well as m4 and m5. Following the DAG, as long as we include the groupsize path, it does not make a difference if we use area or avgfood. They encapsulate the same information, and WAIC hence returns a similar value. m4 and m5 both don’t include groupsize. But as avgfood and area contain mostly the same information, they both show similar WAIC estimates.</p>
+</div>
+</div>
+<div id="summary" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Summary</h1>
+<p>While reading through this chapter, I had some major problems to understand the complex concepts. But now, I am really happy to experience some mechanistic understanding of model comparison approaches. And even better, I can now casually talk about <em>information entropy</em>, adding new fancy words to my vocabulary.</p>
+<hr />
+<pre class="r"><code>sessionInfo()</code></pre>
+<pre><code>## R version 4.0.3 (2020-10-10)
+## Platform: x86_64-pc-linux-gnu (64-bit)
+## Running under: Linux Mint 20.1
+## 
+## Matrix products: default
+## BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.9.0
+## LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.9.0
+## 
+## locale:
+##  [1] LC_CTYPE=de_DE.UTF-8       LC_NUMERIC=C              
+##  [3] LC_TIME=de_DE.UTF-8        LC_COLLATE=de_DE.UTF-8    
+##  [5] LC_MONETARY=de_DE.UTF-8    LC_MESSAGES=de_DE.UTF-8   
+##  [7] LC_PAPER=de_DE.UTF-8       LC_NAME=C                 
+##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+## [11] LC_MEASUREMENT=de_DE.UTF-8 LC_IDENTIFICATION=C       
+## 
+## attached base packages:
+## [1] parallel  stats     graphics  grDevices utils     datasets  methods  
+## [8] base     
+## 
+## other attached packages:
+##  [1] rethinking_2.13      rstan_2.21.2         StanHeaders_2.21.0-7
+##  [4] forcats_0.5.0        stringr_1.4.0        dplyr_1.0.3         
+##  [7] purrr_0.3.4          readr_1.4.0          tidyr_1.1.2         
+## [10] tibble_3.0.5         ggplot2_3.3.3        tidyverse_1.3.0     
+## 
+## loaded via a namespace (and not attached):
+##  [1] nlme_3.1-151       matrixStats_0.57.0 fs_1.5.0           lubridate_1.7.9.2 
+##  [5] httr_1.4.2         tools_4.0.3        backports_1.2.1    utf8_1.1.4        
+##  [9] R6_2.5.0           DBI_1.1.1          mgcv_1.8-33        colorspace_2.0-0  
+## [13] withr_2.4.1        tidyselect_1.1.0   gridExtra_2.3      prettyunits_1.1.1 
+## [17] processx_3.4.5     curl_4.3           compiler_4.0.3     cli_2.2.0         
+## [21] rvest_0.3.6        xml2_1.3.2         labeling_0.4.2     bookdown_0.21     
+## [25] scales_1.1.1       mvtnorm_1.1-1      callr_3.5.1        digest_0.6.27     
+## [29] rmarkdown_2.6      pkgconfig_2.0.3    htmltools_0.5.1.1  dbplyr_2.0.0      
+## [33] highr_0.8          rlang_0.4.10       readxl_1.3.1       rstudioapi_0.13   
+## [37] shape_1.4.5        generics_0.1.0     farver_2.0.3       jsonlite_1.7.2    
+## [41] inline_0.3.17      magrittr_2.0.1     loo_2.4.1          Matrix_1.3-2      
+## [45] Rcpp_1.0.6         munsell_0.5.0      fansi_0.4.2        lifecycle_0.2.0   
+## [49] stringi_1.5.3      yaml_2.2.1         snakecase_0.11.0   MASS_7.3-53       
+## [53] pkgbuild_1.2.0     grid_4.0.3         crayon_1.3.4       lattice_0.20-41   
+## [57] haven_2.3.1        splines_4.0.3      hms_1.0.0          knitr_1.30        
+## [61] ps_1.5.0           pillar_1.4.7       codetools_0.2-18   stats4_4.0.3      
+## [65] reprex_1.0.0       glue_1.4.2         evaluate_0.14      blogdown_1.1      
+## [69] V8_3.4.0           RcppParallel_5.0.2 modelr_0.1.8       vctrs_0.3.6       
+## [73] cellranger_1.1.0   gtable_0.3.0       assertthat_0.2.1   xfun_0.20         
+## [77] janitor_2.1.0      broom_0.7.3        coda_0.19-4        ellipsis_0.3.1</code></pre>
+</div>
