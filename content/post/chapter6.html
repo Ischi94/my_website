@@ -6,7 +6,7 @@ slug: Rethinking Chapter 6
 categories: []
 tags: [Rethinking, Bayes, Statistics]
 subtitle: ''
-summary: 'This is the fifth part of a series where I work through the practice questions of the second edition of Richard McElreaths Statistical Rethinking'
+summary: 'Backdoor criterions, conditional independencies, and more causal inference'
 authors: [Gregor Mathes]
 lastmod: '2021-02-02T12:07:04+02:00'
 featured: no
@@ -172,7 +172,7 @@ X <em>||</em> Z | W here.</p>
 <pre><code>## # A tibble: 1 x 1
 ##   correlation
 ##         &lt;dbl&gt;
-## 1       0.891</code></pre>
+## 1       0.895</code></pre>
 <p>Now let’s fit a model using quadratic approximation and plot the coefficients:</p>
 <pre class="r"><code>alist(y ~ dnorm(mu, sigma), 
       mu &lt;- a + bx*x + bz*z, 

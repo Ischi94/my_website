@@ -6,7 +6,7 @@ slug: Rethinking Chapter 4
 categories: []
 tags: [Rethinking, Bayes, Statistics]
 subtitle: ''
-summary: 'This is the third part of a series where I work through the practice questions of the second edition of Richard McElreaths Statistical Rethinking'
+summary: 'First linear regression models using quadratic approximation'
 authors: [Gregor Mathes]
 lastmod: '2021-01-01T12:07:04+02:00'
 featured: no
