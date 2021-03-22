@@ -1,0 +1,1625 @@
+---
+title: "Rethinking Chapter 8"
+author: "Gregor Mathes"
+date: "2021-03-22"
+slug: Rethinking Chapter 8
+categories: []
+tags: [Rethinking, Bayes, Statistics]
+subtitle: ''
+summary: 'Interaction terms as a modest introduction to mixed effect models'
+authors: [Gregor Mathes]
+lastmod: '2021-02-11T12:07:04+02:00'
+featured: no
+projects: [Rethinking]
+output:
+  blogdown::html_page:
+    toc: true
+    toc_depth: 1
+    number_sections: false
+    fig_width: 6
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+<link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
+
+<div id="TOC">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#easy-practices">Easy practices</a></li>
+<li><a href="#medium-practices">Medium practices</a></li>
+<li><a href="#hard-practices">Hard practices</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
+</div>
+
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>This is the seventh part of a series where I work through the practice questions of the second edition of Richard McElreaths <a href="https://xcelab.net/rm/statistical-rethinking/">Statistical Rethinking</a>.<br />
+Each post covers a new chapter and you can see the posts on previous chapters <a href="https://gregor-mathes.netlify.app/tags/rethinking/">here</a>. This chapter introduces linear interaction terms in regression models.</p>
+<p>You can find the the lectures and homework accompanying the book <a href="https://github.com/rmcelreath/stat_rethinking_2020%3E">here</a>.</p>
+<p>The colours for this blog post are:</p>
+<pre class="r"><code>purple &lt;- &quot;#612D55&quot;
+lightpurple &lt;- &quot;#C7B8CC&quot;
+red &lt;- &quot;#C56A6A&quot;
+grey &lt;- &quot;#E4E3DD&quot;</code></pre>
+<p><img src="/post/chapter8_files/figure-html/colour%20plot-1.png" width="672" /></p>
+<p>I will not cover the homework from now on as it is mostly similar to the practice exercises. Further, I am a bit running out of time. Notice that the online version of the book is missing some of the practice exercises.</p>
+</div>
+<div id="easy-practices" class="section level1">
+<h1>Easy practices</h1>
+<div id="e1" class="section level2">
+<h2>8E1</h2>
+<blockquote>
+<p>For each of the causal relationships below, name a hypothetical third variable that would lead to &gt; an interaction effect.</p>
+<ol style="list-style-type: decimal">
+<li>Bread dough rises because of yeast<br />
+</li>
+<li>Education leads to higher income<br />
+</li>
+<li>Gasoline makes a car go</li>
+</ol>
+</blockquote>
+<p>Learned this the hard way, but (1) really depends on temperature. Yeast needs to be added to the dough at the right temperature, otherwise your dough will stay flat and sad.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>I would say that motivation or drive plays into that as well. You will not get a good position or be successful in your job if you’re a couch potato doing nothing all day, even if you have a very good education.</li>
+</ol>
+<p>And (3) can be dependent on so many variables. E.g., if you’re car is broken, no amount of gasoline will make your car go.</p>
+</div>
+<div id="e2" class="section level2">
+<h2>8E2</h2>
+<blockquote>
+<p>Which of the following explanations invokes an interaction?</p>
+<ol style="list-style-type: decimal">
+<li>Caramelizing onions requires cooking over low heat and making sure the onions do not dry out<br />
+</li>
+<li>A car will go faster when it has more cylinders or when it has a better fuel injector<br />
+</li>
+<li>Most people acquire their political beliefs from their parents, unless they get them instead from their friends<br />
+</li>
+<li>Intelligent animal species tend to be either highly social or have manipulative appendages (hands, tentacles, etc.)</li>
+</ol>
+</blockquote>
+<p>Only (1) is a strict interaction, as the process of caramelizing onions is both dependent on low heat and not drying out. All the others are additive relationships.</p>
+</div>
+<div id="e3" class="section level2">
+<h2>8E3</h2>
+<blockquote>
+<p>For each of the explanations in <strong>8E2</strong>, write a linear model that expresses the stated relationship.</p>
+</blockquote>
+<ul>
+<li><ol style="list-style-type: decimal">
+<li>Let <span class="math inline">\(u\)</span> be the amount of caramelization, then <span class="math display">\[mu_{i} = alpha + beta_{heat} * heat + beta_{dry} * dry + beta_{heatdry} * heat * dry\]</span></li>
+</ol></li>
+<li><ol start="2" style="list-style-type: decimal">
+<li>Let <span class="math inline">\(u\)</span> be the speed of a car, then <span class="math display">\[mu_{i} = alpha + beta_{cyl} * cyl + beta_{inj} * inj\]</span><br />
+</li>
+</ol></li>
+<li><ol start="3" style="list-style-type: decimal">
+<li>Let <span class="math inline">\(u\)</span> be the political belief, then <span class="math display">\[mu_{i} = alpha + beta_{parent} * parent + beta_{friend} * friend\]</span></li>
+</ol></li>
+<li><ol start="4" style="list-style-type: decimal">
+<li>Let <span class="math inline">\(u\)</span> be the intelligence, then <span class="math display">\[mu_{i} = alpha + beta_{social} * social + beta_{append} * append\]</span></li>
+</ol></li>
+</ul>
+</div>
+</div>
+<div id="medium-practices" class="section level1">
+<h1>Medium practices</h1>
+<div id="m1" class="section level2">
+<h2>8M1</h2>
+<blockquote>
+<p>Recall the tulips example from the chapter. Suppose another set of treatments adjusted the temperature in the greenhouse over two levels: cold and hot. The data in the chapter were collected at the cold temperature. You find none of the plants grown under the hot temperature developed any blooms at all, regardless of the water and shade levels. Can you explain this result in terms of interactions between water, shade, and temperature?</p>
+</blockquote>
+<p>It seems like tulips don’t bloom under higher temperatures, which creates a three-way interaction. Blooming is not only dependent on the interaction between water and shade, but this interaction depends on the temperature as well. If the temperature is too high, no amount of shade and water will make the tulip bloom.</p>
+</div>
+<div id="m2" class="section level2">
+<h2>8M2</h2>
+<blockquote>
+<p>Can you invent a regression equation that would make the bloom size zero, whenever the temperature is hot?</p>
+</blockquote>
+<p>If we code temperature as an index variable with a 0 for cold and a 1 for hot, we can multiply the whole initial model with <span class="math inline">\(1 - temperature\)</span>. If the temperature is hot (= 0), the whole model will equate to zero bloom. Cold temperature, on the other hand has no effect on the bloom as the model just gets multiplied with 1.</p>
+</div>
+<div id="m3" class="section level2">
+<h2>8M3</h2>
+<blockquote>
+<p>In parts of North America, ravens depend upon wolves for their food. This is because ravens are carnivorous but cannot usually kill or open carcasses of prey. Wolves however can and do kill and tear open animals, and they tolerate ravens co-feeding at their kills. This species relationship is generally described as a “species interaction.” Can you invent a hypothetical set of data on raven population size in which this relationship would manifest as a statistical interaction? Do you think the biological interaction could be linear? Why or why not?</p>
+</blockquote>
+<p>I will just simulate a simple wolf population using a poisson distribution with an average number of 10 wolfs, and then dependent on this population I will simulate the raven population.</p>
+<pre class="r"><code>tibble(wolf = rpois(1e3, lambda = 2), 
+       raven = rpois(1e3, lambda = wolf + 2)) %&gt;% 
+  ggplot(aes(raven, wolf)) +
+  geom_jitter(shape = 21, colour = purple, fill = grey, 
+              size = 2, alpha = 0.8) +
+  geom_smooth(colour = red, fill = lightpurple,
+              alpha = 0.9) +
+  scale_y_continuous(breaks = c(0, 5)) +
+  labs(x = &quot;Number of ravens&quot;, y = &quot;Number of wolfes&quot;) +
+  theme_minimal()</code></pre>
+<div class="figure">
+<img src="/post/chapter8_files/figure-html/8M3%20part%201-1.png" alt="Figure 1 | Species interaction between wolfes and ravens." width="672" />
+<p class="caption">
+(#fig:8M3 part 1)Figure 1 | Species interaction between wolfes and ravens.
+</p>
+</div>
+</div>
+<div id="m4" class="section level2">
+<h2>8M4</h2>
+<blockquote>
+<p>Repeat the tulips analysis, but this time use priors that constrain the effect of water to be positive and the effect of shade to be negative. Use prior predictive simulation. What do these prior assumptions mean for the interaction prior, if anything?</p>
+</blockquote>
+<p>Let’s just update the model from the chapter with new priors, which we force to be positive by using a log-normal distribution. But first we load the data and bring it in a nicer format, centering <code>water</code> and <code>shade</code> and scaling <code>blooms</code> by its maximum.</p>
+<pre class="r"><code>data(&quot;tulips&quot;)
+
+dat_tulips &lt;- tulips %&gt;% 
+  as_tibble() %&gt;% 
+  mutate(water = water - mean(water), 
+         shade = shade - mean(shade), 
+         blooms = blooms/max(blooms)) </code></pre>
+<p>Now the model:</p>
+<pre class="r"><code>m1 &lt;- alist(blooms ~ dnorm(mu, sigma), 
+      mu &lt;- a + bw*water + bs*shade + bws*water*shade, 
+      a ~ dnorm(0.5, 0.25), 
+      c(bw, bs, bws) ~ dlnorm(0, 0.25), 
+      sigma ~ dexp(1)) %&gt;% 
+  quap(data = dat_tulips)</code></pre>
+<p>Now we use <code>link()</code> for the prior predictive simulation, simulating ten lines.</p>
+<pre class="r"><code>N = 100
+seq_dat &lt;- tibble(water = rep(-1:1, N), 
+                  shade = rep(-1:1, each = N))
+
+extract.prior(m1, n = N) %&gt;% 
+  link(m1, post = ., data = seq_dat) %&gt;% 
+  as_tibble() %&gt;% 
+  pivot_longer(cols = everything(), values_to = &quot;mu_blooms&quot;) %&gt;%
+  add_column(water = rep(seq_dat$water, N), 
+             shade = rep(seq_dat$shade, N), 
+             type = rep(as.character(1:N), each = length(seq_dat$water))) %&gt;% 
+  ggplot() +
+  geom_line(aes(water, mu_blooms, group = type), 
+            colour = lightpurple, alpha = 0.4) + 
+  geom_point(aes(water, blooms), 
+             shape = 21, colour = purple, fill = red, 
+             size = 2, alpha = 0.8, 
+             data = dat_tulips %&gt;% filter(water %in% -1:1)) +
+  facet_wrap(~shade) +
+  theme_minimal()</code></pre>
+<div class="figure">
+<img src="/post/chapter8_files/figure-html/8M4%20part%203-1.png" alt="Figure 3 | Prior simulations for positive priors." width="672" />
+<p class="caption">
+(#fig:8M4 part 3)Figure 3 | Prior simulations for positive priors.
+</p>
+</div>
+<p>Ehm, well. These are a bit too drastic and out of the realistic realm. It seems like we need to reduce the prior on the beta coefficients. For the log-normal distribution, we can do so by setting the meanlog to a negative number. The more negative the number, the closer we get to 0.</p>
+<pre class="r"><code>m2 &lt;- alist(blooms ~ dnorm(mu, sigma), 
+      mu &lt;- a + bw*water + bs*shade + bws*water*shade, 
+      a ~ dnorm(0.5, 0.25), 
+      c(bw, bs, bws) ~ dlnorm(-2, 0.25), 
+      sigma ~ dexp(1)) %&gt;% 
+  quap(data = dat_tulips)</code></pre>
+<div class="figure">
+<img src="/post/chapter8_files/figure-html/8M4%20part%206-1.png" alt="Figure 4 | Prior simulation with more reasonable priors." width="672" />
+<p class="caption">
+(#fig:8M4 part 6)Figure 4 | Prior simulation with more reasonable priors.
+</p>
+</div>
+<p>That looks a lot more reasonable. What seems to be a bit off, though, is the direction of the relationship. We would actually expect a high and positive effect of water on blooms when the shade is low (= when there is a lot of light) and no effect when it’s all shade (shade = 1). So actually the opposite of what we see in the priors. The reason for that is that we add a positive prior for shade in the model, resulting in a positive relationship. To get the relationship, we simply have to subtract it:</p>
+<pre class="r"><code>m3 &lt;- alist(blooms ~ dnorm(mu, sigma), 
+      mu &lt;- a + bw*water - bs*shade + bws*water*shade, 
+      a ~ dnorm(0.5, 0.25), 
+      c(bw, bs, bws) ~ dlnorm(-2, 0.25), 
+      sigma ~ dexp(1)) %&gt;% 
+  quap(data = dat_tulips, start = list(a = 0.3, bw = 0.16, bs = 0.12, bws = 0.09, sigma = 0.2))</code></pre>
+<div class="figure">
+<img src="/post/chapter8_files/figure-html/8M4%20part%208-1.png" alt="Figure 5 | Prior simulations forcing the relationship between blooms and shade negative." width="672" />
+<p class="caption">
+(#fig:8M4 part 8)Figure 5 | Prior simulations forcing the relationship between blooms and shade negative.
+</p>
+</div>
+<p>Well this has changed nothing, because the interaction term is still added. We need to modify this as well.</p>
+<pre class="r"><code>m4 &lt;- alist(blooms ~ dnorm(mu, sigma), 
+      mu &lt;- a + bw*water - bs*shade - bws*water*shade, 
+      a ~ dnorm(0.5, 0.25), 
+      c(bw, bs, bws) ~ dlnorm(-2, 0.25), 
+      sigma ~ dexp(1)) %&gt;% 
+  quap(data = dat_tulips)</code></pre>
+<div class="figure">
+<img src="/post/chapter8_files/figure-html/8M4%20part%2010-1.png" alt="Figure 6 | Prior simulations forcing the relationship between blooms and shade negative, as well as the relationship between blooms and the interaction of shade and water." width="672" />
+<p class="caption">
+(#fig:8M4 part 10)Figure 6 | Prior simulations forcing the relationship between blooms and shade negative, as well as the relationship between blooms and the interaction of shade and water.
+</p>
+</div>
+<p>Yes, this is what we want. We encapsulate our knowledge in the priors, without rendering these priors too strong. They have enough variability so that the data can shine through them. They will improve the model performance however, as unrealistic values (flat priors) are not likely given the priors.</p>
+</div>
+</div>
+<div id="hard-practices" class="section level1">
+<h1>Hard practices</h1>
+<div id="h1" class="section level2">
+<h2>8H1</h2>
+<blockquote>
+<p>Return to the <code>data(tulips)</code> example in the chapter. Now include the bed variable as a predictor in the interaction model. Don’t interact bed with the other predictors; just include it as a main effect. Note that bed is categorical. So to use it properly, you will need to either construct dummy variables or rather an index variable, as explained in Chapter 6.</p>
+</blockquote>
+<p>Recall the model m8.4 from the chapter:</p>
+<pre class="r"><code>m8.4 &lt;- alist(blooms ~ dnorm(mu, sigma), 
+      mu &lt;- a + bw*water + bs*shade + bws*water*shade, 
+      a ~ dnorm(0.5, 0.25), 
+      c(bw, bs, bws) ~ dnorm(0, 0.25), 
+      sigma ~ dexp(1)) %&gt;%
+  quap(data = dat_tulips)  
+  
+m8.4 %&gt;% 
+  precis() %&gt;% 
+  as_tibble(rownames = &quot;estimate&quot;) %&gt;% 
+  kable(digits = 2, format = &quot;html&quot;) %&gt;% 
+  kable_styling()</code></pre>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+estimate
+</th>
+<th style="text-align:right;">
+mean
+</th>
+<th style="text-align:right;">
+sd
+</th>
+<th style="text-align:right;">
+5.5%
+</th>
+<th style="text-align:right;">
+94.5%
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+a
+</td>
+<td style="text-align:right;">
+0.36
+</td>
+<td style="text-align:right;">
+0.02
+</td>
+<td style="text-align:right;">
+0.32
+</td>
+<td style="text-align:right;">
+0.40
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+bw
+</td>
+<td style="text-align:right;">
+0.21
+</td>
+<td style="text-align:right;">
+0.03
+</td>
+<td style="text-align:right;">
+0.16
+</td>
+<td style="text-align:right;">
+0.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+bs
+</td>
+<td style="text-align:right;">
+-0.11
+</td>
+<td style="text-align:right;">
+0.03
+</td>
+<td style="text-align:right;">
+-0.16
+</td>
+<td style="text-align:right;">
+-0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+bws
+</td>
+<td style="text-align:right;">
+-0.14
+</td>
+<td style="text-align:right;">
+0.04
+</td>
+<td style="text-align:right;">
+-0.20
+</td>
+<td style="text-align:right;">
+-0.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+sigma
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:right;">
+0.02
+</td>
+<td style="text-align:right;">
+0.10
+</td>
+<td style="text-align:right;">
+0.15
+</td>
+</tr>
+</tbody>
+</table>
+<p>First, I transform <code>bed</code> to an integer to integrate it as an index variable.</p>
+<pre class="r"><code>dat_tulips &lt;- dat_tulips %&gt;% 
+  mutate(bed = as.numeric(bed)) </code></pre>
+<p>Now let’s add the <code>bed</code> variable to the model m8.4.</p>
+<pre class="r"><code>m1 &lt;- alist(blooms ~ dnorm(mu, sigma), 
+      mu &lt;- a[bed] + bw*water + bs*shade + bws*water*shade, 
+      a[bed] ~ dnorm(0.5, 0.25), 
+      c(bw, bs, bws) ~ dnorm(0, 0.25), 
+      sigma ~ dexp(1)) %&gt;% 
+  quap(data = dat_tulips)</code></pre>
+<p>We can glimpse at the posterior distributions using a custom function build on precis (see the first code chunk from 8H1 for more details on <code>tidy_precis()</code>.</p>
+<pre class="r"><code>tidy_precis(m1)</code></pre>
+<table class="table table-hover table-responsive table-condensed" style="width: auto !important; ">
+<thead>
+<tr>
+<th style="text-align:left;">
+estimate
+</th>
+<th style="text-align:right;">
+mean
+</th>
+<th style="text-align:right;">
+sd
+</th>
+<th style="text-align:right;">
+5.5%
+</th>
+<th style="text-align:right;">
+94.5%
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+a[1]
+</td>
+<td style="text-align:right;">
+0.27
+</td>
+<td style="text-align:right;">
+0.04
+</td>
+<td style="text-align:right;">
+0.22
+</td>
+<td style="text-align:right;">
+0.33
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+a[2]
+</td>
+<td style="text-align:right;">
+0.40
+</td>
+<td style="text-align:right;">
+0.04
+</td>
+<td style="text-align:right;">
+0.34
+</td>
+<td style="text-align:right;">
+0.45
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+a[3]
+</td>
+<td style="text-align:right;">
+0.41
+</td>
+<td style="text-align:right;">
+0.04
+</td>
+<td style="text-align:right;">
+0.35
+</td>
+<td style="text-align:right;">
+0.47
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+bw
+</td>
+<td style="text-align:right;">
+0.21
+</td>
+<td style="text-align:right;">
+0.03
+</td>
+<td style="text-align:right;">
+0.17
+</td>
+<td style="text-align:right;">
+0.25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+bs
+</td>
+<td style="text-align:right;">
+-0.11
+</td>
+<td style="text-align:right;">
+0.03
+</td>
+<td style="text-align:right;">
+-0.15
+</td>
+<td style="text-align:right;">
+-0.07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+bws
+</td>
+<td style="text-align:right;">
+-0.14
+</td>
+<td style="text-align:right;">
+0.03
+</td>
+<td style="text-align:right;">
+-0.19
+</td>
+<td style="text-align:right;">
+-0.09
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+sigma
+</td>
+<td style="text-align:right;">
+0.11
+</td>
+<td style="text-align:right;">
+0.01
+</td>
+<td style="text-align:right;">
+0.08
+</td>
+<td style="text-align:right;">
+0.13
+</td>
+</tr>
+</tbody>
+</table>
+<p>We can see that including <code>bed</code> in the model has not changed our inferences about the effect of <code>water</code>, <code>shade</code>, and their interaction on <code>bloom</code>. We can also see that there are differences between the beds. To quantify these differences, we need to calculate contrasts from the posterior.</p>
+<pre class="r"><code>m1 %&gt;% 
+  extract.samples() %&gt;% 
+  pluck(&quot;a&quot;) %&gt;% 
+  as_tibble() %&gt;% 
+  transmute(&quot;bed1 - bed2&quot; = V1 - V2, 
+            &quot;bed1 - bed3&quot; = V1 - V3, 
+            &quot;bed2 - bed3&quot; = V2 - V3) %&gt;% 
+  pivot_longer(cols = everything(), 
+               values_to = &quot;contrast&quot;, names_to = &quot;contrast_type&quot;) %&gt;% 
+  ggplot(aes(contrast, fill = contrast_type, colour = contrast_type)) +
+  geom_vline(xintercept = 0, colour = grey) +
+  geom_density(alpha = 0.2) +
+  scale_fill_manual(values = c(lightpurple, purple, red), 
+                    name = NULL) +
+  scale_colour_manual(values = c(lightpurple, purple, red), name = NULL) +
+  labs(y = NULL, x = &quot;Contrast&quot;) +
+  theme_minimal() +
+  theme(panel.grid = element_blank(), 
+        axis.ticks = element_line(), 
+        legend.position = c(0.9, 0.8))</code></pre>
+<div class="figure">
+<img src="/post/chapter8_files/figure-html/8H1%20contrasts-1.png" alt="Figure 7 | Contrast plot per bed." width="672" />
+<p class="caption">
+(#fig:8H1 contrasts)Figure 7 | Contrast plot per bed.
+</p>
+</div>
+<p>Now we can conclude that bed <code>bed2</code> and <code>bed3</code> have a substantially higher <code>bloom</code> than <code>bed1</code> (even though some area of the distribution tails extend above zero). There are no distinguishable differences between <code>bed2</code> and <code>bed3</code>.</p>
+</div>
+<div id="h2" class="section level2">
+<h2>8H2</h2>
+<blockquote>
+<p>Use WAIC to compare the model from <strong>8H1</strong> to a model that omits bed. What do you infer from this comparison? Can you reconcile the WAIC results with the posterior distribution of the bed coefficients?</p>
+</blockquote>
+<p>Let’s just threw both models in the <code>compare()</code> function. Note that I print the output to html format using a custom function <code>tidy_table</code> built on <code>knitr::kable</code>.</p>
+<pre class="r"><code>compare(m8.4, m1) %&gt;% 
+  as_tibble(rownames = &quot;model&quot;) %&gt;% 
+  tidy_table()</code></pre>
+<table class="table table-hover table-responsive table-condensed" style="width: auto !important; ">
+<thead>
+<tr>
+<th style="text-align:left;">
+model
+</th>
+<th style="text-align:right;">
+WAIC
+</th>
+<th style="text-align:right;">
+SE
+</th>
+<th style="text-align:right;">
+dWAIC
+</th>
+<th style="text-align:right;">
+dSE
+</th>
+<th style="text-align:right;">
+pWAIC
+</th>
+<th style="text-align:right;">
+weight
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+m8.4
+</td>
+<td style="text-align:right;">
+-22.03
+</td>
+<td style="text-align:right;">
+10.39
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+6.61
+</td>
+<td style="text-align:right;">
+0.55
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+m1
+</td>
+<td style="text-align:right;">
+-21.61
+</td>
+<td style="text-align:right;">
+10.71
+</td>
+<td style="text-align:right;">
+0.41
+</td>
+<td style="text-align:right;">
+8.01
+</td>
+<td style="text-align:right;">
+10.74
+</td>
+<td style="text-align:right;">
+0.45
+</td>
+</tr>
+</tbody>
+</table>
+<p>The model with beds included (<code>m1</code>) performs a little bit better. This is consistent with the posterior distributions of the bed coefficients, as we found some robust contrasts. This then can result in improved predictions and a better WAIC. However, the difference in WAIC between both models is very weak. It seems that the effect of bed is minor compared to all other predictors (<code>water</code> and <code>shade</code>).</p>
+</div>
+<div id="h3" class="section level2">
+<h2>8H3</h2>
+<blockquote>
+<p>Consider again the <code>data(rugged)</code> data on economic development and terrain ruggedness,examined in this chapter. One of the African countries in that example, Seychelles, is far outside the cloud of other nations, being a rare country with both relatively high GDP and high ruggedness. Seychelles is also unusual, in that it is a group of islands far from the coast of mainland Africa, and its main economic activity is tourism.</p>
+</blockquote>
+<blockquote>
+<ol style="list-style-type: lower-alpha">
+<li>Focus on model m8.5 from the chapter. Use WAIC point-wise penalties and PSIS Pareto k values to measure relative influence of each country. By these criteria, is Seychelles influencing the results? Are there other nations that are relatively influential? If so, can you explain why?</li>
+</ol>
+</blockquote>
+<p>I’m a bit confused as model m8.5 is about tulip blooms. I guess what is meant is model m8.3. First, let’s load the tulip data and repeat all the processing steps from the chapter within a pipe.</p>
+<pre class="r"><code>data(rugged)
+
+dat_rugged &lt;- rugged %&gt;% 
+  as_tibble() %&gt;% 
+  drop_na(rgdppc_2000) %&gt;% 
+  mutate(log_gdp = log(rgdppc_2000), 
+         log_gdp_std = log_gdp / mean(log_gdp), 
+         rugged_std = rugged / max(rugged), 
+         cid = if_else(cont_africa == 1, 1, 2))</code></pre>
+<p>And now model m8.3 which includes an interaction between ruggedness and being in Africa.</p>
+<pre class="r"><code>m8.3 &lt;- alist(
+  log_gdp_std ~ dnorm(mu, sigma), 
+  mu &lt;- a[cid] + b[cid]*(rugged_std - 0.215),
+  a[cid] ~ dnorm(1, 0.1), 
+  b[cid] ~ dnorm(0, 0.3), 
+  sigma ~ dexp(1)) %&gt;% 
+  quap(data = dat_rugged)</code></pre>
+<p>So let’s find some influential countries in the data using WAIC point-wise penalties and PSIS Pareto k values. First the Pareto k values, where we calculate the k value for each country (<code>pointwise = TRUE</code>) and then bind it with the original data to get the country information:</p>
+<pre class="r"><code>PSIS(m8.3, pointwise = TRUE) %&gt;% 
+  as_tibble() %&gt;% 
+  select(k) %&gt;% 
+  bind_cols(dat_rugged %&gt;% 
+              select(country, rugged_std, log_gdp_std)) %&gt;% 
+  arrange(desc(k)) %&gt;% 
+  slice_head(n = 5) %&gt;% 
+  tidy_table()</code></pre>
+<table class="table table-hover table-responsive table-condensed" style="width: auto !important; ">
+<thead>
+<tr>
+<th style="text-align:right;">
+k
+</th>
+<th style="text-align:left;">
+country
+</th>
+<th style="text-align:right;">
+rugged_std
+</th>
+<th style="text-align:right;">
+log_gdp_std
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+0.64
+</td>
+<td style="text-align:left;">
+Seychelles
+</td>
+<td style="text-align:right;">
+0.79
+</td>
+<td style="text-align:right;">
+1.15
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.50
+</td>
+<td style="text-align:left;">
+Lesotho
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+<td style="text-align:right;">
+0.90
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.37
+</td>
+<td style="text-align:left;">
+Switzerland
+</td>
+<td style="text-align:right;">
+0.77
+</td>
+<td style="text-align:right;">
+1.21
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.31
+</td>
+<td style="text-align:left;">
+Rwanda
+</td>
+<td style="text-align:right;">
+0.53
+</td>
+<td style="text-align:right;">
+0.82
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.27
+</td>
+<td style="text-align:left;">
+Equatorial Guinea
+</td>
+<td style="text-align:right;">
+0.09
+</td>
+<td style="text-align:right;">
+1.13
+</td>
+</tr>
+</tbody>
+</table>
+<p>We can see that Seychelles is one of the most influential countries, but other countries are pretty big outliers as well. Unfortunatly, I am really bad in geography and have no idea why…</p>
+<p>Let’s try with WAIC penalties, using a similar approach:</p>
+<pre class="r"><code>WAIC(m8.3, pointwise = TRUE) %&gt;% 
+  as_tibble() %&gt;% 
+  select(penalty) %&gt;% 
+  bind_cols(dat_rugged %&gt;% 
+              select(country, rugged_std, log_gdp_std)) %&gt;% 
+  arrange(desc(penalty)) %&gt;%
+  slice_head(n = 5) %&gt;% 
+  tidy_table()</code></pre>
+<table class="table table-hover table-responsive table-condensed" style="width: auto !important; ">
+<thead>
+<tr>
+<th style="text-align:right;">
+penalty
+</th>
+<th style="text-align:left;">
+country
+</th>
+<th style="text-align:right;">
+rugged_std
+</th>
+<th style="text-align:right;">
+log_gdp_std
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+0.48
+</td>
+<td style="text-align:left;">
+Seychelles
+</td>
+<td style="text-align:right;">
+0.79
+</td>
+<td style="text-align:right;">
+1.15
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.44
+</td>
+<td style="text-align:left;">
+Switzerland
+</td>
+<td style="text-align:right;">
+0.77
+</td>
+<td style="text-align:right;">
+1.21
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.30
+</td>
+<td style="text-align:left;">
+Tajikistan
+</td>
+<td style="text-align:right;">
+0.85
+</td>
+<td style="text-align:right;">
+0.78
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.27
+</td>
+<td style="text-align:left;">
+Lesotho
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+<td style="text-align:right;">
+0.90
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+0.22
+</td>
+<td style="text-align:left;">
+Equatorial Guinea
+</td>
+<td style="text-align:right;">
+0.09
+</td>
+<td style="text-align:right;">
+1.13
+</td>
+</tr>
+</tbody>
+</table>
+<p>We get similar results with WAIC penalties as with Pareto k values. Again, the interpretation why some countries show higher values is up to you.</p>
+<blockquote>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Now use robust regression, as described in the previous chapter. Modify m8.5 to use a Student-t distribution with ν = 2. Does this change the results in a substantial way?</li>
+</ol>
+</blockquote>
+<p>We can use robust regression by setting the likelihood to the student-t distribution.</p>
+<pre class="r"><code>m8.3.robust &lt;- alist(
+  log_gdp_std ~ dstudent(nu = 2, mu, sigma), 
+  mu &lt;- a[cid] + b[cid]*(rugged_std - 0.215),
+  a[cid] ~ dnorm(1, 0.1), 
+  b[cid] ~ dnorm(0, 0.3), 
+  sigma ~ dexp(1)) %&gt;% 
+  quap(data = dat_rugged)</code></pre>
+<p>Now, using the robust regression, we can calculate the contrast between the slope of African countries versus the slope in all other countries. Remember, to see this difference was the motivation to build the interaction model in the first place. We can do this by calculating the difference between <code>b1</code> and <code>b2</code> of model m8.3 and compare it to the difference of the robust regression.</p>
+<pre class="r"><code>m8.3_contrast &lt;- extract.samples(m8.3) %&gt;% 
+  pluck(&quot;b&quot;) %&gt;% 
+  as_tibble() %&gt;% 
+  transmute(countrast = V1 - V2) %&gt;% 
+  add_column(model = &quot;m8.3&quot;)
+  
+robust_contrast &lt;- extract.samples(m8.3.robust) %&gt;% 
+  pluck(&quot;b&quot;) %&gt;% 
+  as_tibble() %&gt;% 
+  transmute(countrast = V1 - V2) %&gt;% 
+  add_column(model = &quot;Robust regression&quot;)
+
+m8.3_contrast %&gt;% 
+  full_join(robust_contrast) %&gt;% 
+  ggplot(aes(countrast, colour = model, fill = model)) +
+  geom_density(alpha = 0.5) +
+  scale_fill_manual(values = c(grey, lightpurple), 
+                    name = NULL) +
+  scale_colour_manual(values = c(grey, lightpurple), name = NULL) +
+  labs(y = NULL, x = &quot;Contrast&quot;) +
+  theme_minimal() +
+  theme(panel.grid = element_blank(), 
+        axis.ticks = element_line(), 
+        legend.position = c(0.9, 0.8))</code></pre>
+<div class="figure">
+<img src="/post/chapter8_files/figure-html/8H3%20contrast-1.png" alt="Figure 8 | Contrast between african countries and all other between models." width="672" />
+<p class="caption">
+(#fig:8H3 contrast)Figure 8 | Contrast between african countries and all other between models.
+</p>
+</div>
+<p>We can see that using a robust regression actually resulted in an increased contrast.</p>
+</div>
+<div id="h4" class="section level2">
+<h2>8H4</h2>
+<blockquote>
+<p>The values in data(nettle) are data on language diversity in 74 nations. The meaning of each column is given below.</p>
+<ul>
+<li>country: Name of the country<br />
+</li>
+<li>num.lang: Number of recognized languages spoken<br />
+</li>
+<li>area: Area in square kilometers<br />
+</li>
+<li>k.pop: Population, in thousands<br />
+</li>
+<li>num.stations: Number of weather stations that provided data for the next two columns<br />
+</li>
+<li>mean.growing.season: Average length of growing season, in months<br />
+</li>
+<li>sd.growing.season: Standard deviation of length of growing season, in months</li>
+</ul>
+<p>Use these data to evaluate the hypothesis that language diversity is partly a product of food security. The notion is that, in productive ecologies, people don’t need large social networks to buffer them against risk of food shortfalls. This means ethnic groups can be smaller and more self-sufficient, leading to more languages per capita. In contrast, in a poor ecology, there is more subsistence risk, and so human societies have adapted by building larger networks of mutual obligation to provide food insurance. This in turn creates social forces that help prevent languages from diversifying. Specifically, you will try to model the number of languages per capita as the outcome variable:<br />
+<code>d$lang.per.cap &lt;- d$num.lang / d$k.pop</code>
+Use the logarithm of this new variable as your regression outcome (A count model would be better here, but you’ll learn those later, in Chapter11). This problem is open ended, allowing you to decide how you address the hypotheses and the uncertain advice the modeling provides. If you think you need to use WAIC anyplace, please do. If you think you need certain priors, argue for them. If you think you need to plot predictions in a certain way, please do. Just try to honestly evaluate the main effects of both <code>mean.growing.season</code> and <code>sd.growing.season</code>, as well as their two-way interaction, as outlined in parts (a), (b), and (c) below. If you are not sure which approach to use, try several.</p>
+</blockquote>
+<blockquote>
+<ol style="list-style-type: lower-alpha">
+<li>Evaluate the hypothesis that language diversity, as measured by <code>log(lang.per.cap)</code>, is positively associated with the average length of the growing season, <code>mean.growing.season</code>. Consider <code>log(area)</code> in your regression(s) as a covariate (not an interaction). Interpret your results.</li>
+</ol>
+</blockquote>
+<p>Ok, we start with loading the data and taking a glimpse.</p>
+<pre class="r"><code>data(&quot;nettle&quot;)
+
+nettle %&gt;% 
+  glimpse()</code></pre>
+<pre><code>## Rows: 74
+## Columns: 7
+## $ country             &lt;fct&gt; Algeria, Angola, Australia, Bangladesh, Benin, Bo…
+## $ num.lang            &lt;int&gt; 18, 42, 234, 37, 52, 38, 27, 209, 75, 94, 18, 275…
+## $ area                &lt;int&gt; 2381741, 1246700, 7713364, 143998, 112622, 109858…
+## $ k.pop               &lt;int&gt; 25660, 10303, 17336, 118745, 4889, 7612, 1348, 15…
+## $ num.stations        &lt;int&gt; 102, 50, 134, 20, 7, 48, 10, 245, 6, 13, 9, 35, 1…
+## $ mean.growing.season &lt;dbl&gt; 6.60, 6.22, 6.00, 7.40, 7.14, 6.92, 4.60, 9.71, 5…
+## $ sd.growing.season   &lt;dbl&gt; 2.29, 1.87, 4.17, 0.73, 0.99, 2.50, 1.69, 5.87, 1…</code></pre>
+<p>We can pre-process the outcome variable and standardize the predictors to set reasonable priors more easily.</p>
+<pre class="r"><code>dat_nettle &lt;- nettle %&gt;% 
+  as_tibble() %&gt;% 
+  mutate(lang.per.cap = log(num.lang / k.pop),
+         log.area = log(area)) %&gt;% 
+  mutate(across(c(lang.per.cap, log.area, mean.growing.season), standardize))</code></pre>
+<p>Now we fit a regression model with one single variable, <code>mean.growing.season</code>.</p>
+<pre class="r"><code>m1 &lt;- alist(
+  lang.per.cap ~ dnorm(mu, sigma), 
+  mu &lt;- a + bm*mean.growing.season, 
+  a ~ dnorm(0, 0.25), 
+  bm ~ dnorm(0, 0.5), 
+  sigma ~ dexp(1)) %&gt;% 
+  quap(data = dat_nettle)</code></pre>
+<p>And a second model with an added predictor, <code>log.area</code>.</p>
+<pre class="r"><code>m2 &lt;- alist(
+  lang.per.cap ~ dnorm(mu, sigma), 
+  mu &lt;- a + bm*mean.growing.season + ba*log.area, 
+  a ~ dnorm(0, 0.2), 
+  c(bm, ba) ~ dnorm(0, 0.5), 
+  sigma ~ dexp(1)) %&gt;% 
+  quap(data = dat_nettle)</code></pre>
+<p>I will skip the prior predictive checks as we have used and checked these prior on standardized variables in other chapters. However, we can compare the model performance between these two models.</p>
+<pre class="r"><code>compare(m1, m2) %&gt;% 
+  as_tibble(rownames = &quot;Model&quot;) %&gt;% 
+  tidy_table()</code></pre>
+<table class="table table-hover table-responsive table-condensed" style="width: auto !important; ">
+<thead>
+<tr>
+<th style="text-align:left;">
+Model
+</th>
+<th style="text-align:right;">
+WAIC
+</th>
+<th style="text-align:right;">
+SE
+</th>
+<th style="text-align:right;">
+dWAIC
+</th>
+<th style="text-align:right;">
+dSE
+</th>
+<th style="text-align:right;">
+pWAIC
+</th>
+<th style="text-align:right;">
+weight
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+m1
+</td>
+<td style="text-align:right;">
+205.70
+</td>
+<td style="text-align:right;">
+15.52
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+3.62
+</td>
+<td style="text-align:right;">
+0.56
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+m2
+</td>
+<td style="text-align:right;">
+206.18
+</td>
+<td style="text-align:right;">
+16.19
+</td>
+<td style="text-align:right;">
+0.48
+</td>
+<td style="text-align:right;">
+3.64
+</td>
+<td style="text-align:right;">
+5.01
+</td>
+<td style="text-align:right;">
+0.44
+</td>
+</tr>
+</tbody>
+</table>
+<p>There is no substantial support for including <code>log.area</code> if we want to increase predictive accuracy. But does including <code>log.area</code> change the estimate for the <code>mean.growing.season</code> coefficient?</p>
+<pre class="r"><code>tidy_m1 &lt;- precis(m1) %&gt;% 
+  as_tibble(rownames = &quot;estimate&quot;) %&gt;% 
+  add_column(model = &quot;m1&quot;, .before = &quot;estimate&quot;)
+
+tidy_m2 &lt;- precis(m2) %&gt;% 
+  as_tibble(rownames = &quot;estimate&quot;) %&gt;% 
+  add_column(model = &quot;m2&quot;, .before = &quot;estimate&quot;)
+
+full_join(tidy_m1, tidy_m2) %&gt;% 
+  mutate(coefficient = str_c(model, estimate, sep = &quot;: &quot;)) %&gt;% 
+  filter(estimate != &quot;sigma&quot;) %&gt;% 
+  select(lower_pi = &#39;5.5%&#39;, upper_pi = &#39;94.5%&#39;, everything()) %&gt;% 
+  ggplot(aes(mean, coefficient, colour = model)) +
+  geom_pointrange(aes(xmin = lower_pi, xmax = upper_pi), 
+                  show.legend = FALSE, size = 0.8) +
+  labs(y = NULL, x = &quot;Coefficient estimate&quot;) +
+  scale_colour_manual(values = c(red, purple)) +
+  theme_minimal()</code></pre>
+<div class="figure">
+<img src="/post/chapter8_files/figure-html/8H4%20precis%20m1%20m2-1.png" alt="Figure 9 | Coefficient plot for model m1 including mean.growing.season and model m2 additionally including log.area." width="672" />
+<p class="caption">
+(#fig:8H4 precis m1 m2)Figure 9 | Coefficient plot for model m1 including mean.growing.season and model m2 additionally including log.area.
+</p>
+</div>
+<p>The coefficient for <code>mean.growing.season</code> stays consistently high and strict positive. The coefficient for <code>log.area</code>, however, is present but not substantial. So we will stick with model m1.</p>
+<p>Let’s plot the relationship between <code>lang.per.cap</code> and <code>mean.growing.season</code>, based on model m1.</p>
+<pre class="r"><code>N &lt;-  1e4
+my_seq &lt;- seq(-2.5, 2, length.out = 20)
+
+link(m1, n = N, 
+     data = data.frame(lang.per.cap = my_seq, mean.growing.season = my_seq)) %&gt;% 
+  as_tibble() %&gt;% 
+  pivot_longer(cols = everything(), values_to = &quot;lang.per.cap&quot;) %&gt;% 
+  add_column(mean.growing.season = rep(my_seq, N)) %&gt;% 
+  group_by(mean.growing.season) %&gt;% 
+  summarise(pi = list(PI(lang.per.cap)), 
+            lang.per.cap = mean(lang.per.cap)) %&gt;% 
+  mutate(lower_pi = map_dbl(pi, pluck(1)), 
+         upper_pi = map_dbl(pi, pluck(2))) %&gt;% 
+  ggplot(aes(x = mean.growing.season, y = lang.per.cap)) +
+  geom_ribbon(aes(ymin = lower_pi, ymax = upper_pi), 
+              fill = red, alpha = 0.5) +
+  geom_line(colour = purple, size = 2, alpha = 0.9) + 
+  geom_point(data = dat_nettle) +
+  geom_label(aes(label = country), 
+             nudge_x = c(-0.25, -0.5, -0.6, -0.3),
+             data = dat_nettle %&gt;% 
+               filter(lang.per.cap &gt; 2 | lang.per.cap &lt; -2.2)) +
+  theme_minimal()</code></pre>
+<div class="figure">
+<img src="/post/chapter8_files/figure-html/visualize%20m1-1.png" alt="Figure 10 | Language per capita as a function of mean growing seasion based on m1." width="672" />
+<p class="caption">
+(#fig:visualize m1)Figure 10 | Language per capita as a function of mean growing seasion based on m1.
+</p>
+</div>
+<p>We can see that there is a robust positive relationship between <code>lang.per.cap</code> and <code>mean.growing.season</code>. However, the model substantially underpredicts <code>lang.per.cap</code> for French Guiana, Papua New Guinea, and Vanuatu while overpredicting for Cuba.</p>
+<blockquote>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Now evaluate the hypothesis that language diversity is negatively associated with the standard deviation of length of growing season, <code>sd.growing.season</code>. This hypothesis follows from uncertainty in harvest favoring social insurance through larger social networks and therefore fewer languages. Again, consider <code>log(area)</code> as a covariate (not an interaction). Interpret your results.</li>
+</ol>
+</blockquote>
+<p>Following the same steps as above:</p>
+<pre class="r"><code># standardize predictor
+dat_nettle &lt;- dat_nettle %&gt;% 
+  mutate(sd.growing.season = standardize(sd.growing.season))
+
+# model without log.area
+m3 &lt;- alist(
+  lang.per.cap ~ dnorm(mu, sigma), 
+  mu &lt;- a + bsd*sd.growing.season, 
+  a ~ dnorm(0, 0.25), 
+  bsd ~ dnorm(0, 0.5), 
+  sigma ~ dexp(1)) %&gt;% 
+  quap(data = dat_nettle)
+
+# model with log.area
+m4 &lt;- alist(
+  lang.per.cap ~ dnorm(mu, sigma), 
+  mu &lt;- a + bsd*sd.growing.season + ba*log.area, 
+  a ~ dnorm(0, 0.2), 
+  c(bsd, ba) ~ dnorm(0, 0.5), 
+  sigma ~ dexp(1)) %&gt;% 
+  quap(data = dat_nettle)
+
+# compare using model information
+compare(m1, m2, m3, m4) %&gt;% 
+  as_tibble(rownames = &quot;Model&quot;) %&gt;% 
+  tidy_table()</code></pre>
+<table class="table table-hover table-responsive table-condensed" style="width: auto !important; ">
+<thead>
+<tr>
+<th style="text-align:left;">
+Model
+</th>
+<th style="text-align:right;">
+WAIC
+</th>
+<th style="text-align:right;">
+SE
+</th>
+<th style="text-align:right;">
+dWAIC
+</th>
+<th style="text-align:right;">
+dSE
+</th>
+<th style="text-align:right;">
+pWAIC
+</th>
+<th style="text-align:right;">
+weight
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+m1
+</td>
+<td style="text-align:right;">
+205.34
+</td>
+<td style="text-align:right;">
+15.42
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+3.45
+</td>
+<td style="text-align:right;">
+0.54
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+m2
+</td>
+<td style="text-align:right;">
+205.92
+</td>
+<td style="text-align:right;">
+16.17
+</td>
+<td style="text-align:right;">
+0.58
+</td>
+<td style="text-align:right;">
+3.48
+</td>
+<td style="text-align:right;">
+4.87
+</td>
+<td style="text-align:right;">
+0.40
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+m3
+</td>
+<td style="text-align:right;">
+211.11
+</td>
+<td style="text-align:right;">
+17.26
+</td>
+<td style="text-align:right;">
+5.77
+</td>
+<td style="text-align:right;">
+7.37
+</td>
+<td style="text-align:right;">
+3.74
+</td>
+<td style="text-align:right;">
+0.03
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+m4
+</td>
+<td style="text-align:right;">
+211.12
+</td>
+<td style="text-align:right;">
+17.10
+</td>
+<td style="text-align:right;">
+5.78
+</td>
+<td style="text-align:right;">
+6.48
+</td>
+<td style="text-align:right;">
+5.04
+</td>
+<td style="text-align:right;">
+0.03
+</td>
+</tr>
+</tbody>
+</table>
+<p>Again, there is no strong support to include area. But <code>mean.growing.season</code> seems to fit the data a bit better than <code>sd.growing.season</code>. Let’s look at the posteriors of the two new models:</p>
+<pre class="r"><code>tidy_m3 &lt;- precis(m3) %&gt;% 
+  as_tibble(rownames = &quot;estimate&quot;) %&gt;% 
+  add_column(model = &quot;m3&quot;, .before = &quot;estimate&quot;)
+
+tidy_m4 &lt;- precis(m4) %&gt;% 
+  as_tibble(rownames = &quot;estimate&quot;) %&gt;% 
+  add_column(model = &quot;m4&quot;, .before = &quot;estimate&quot;)
+
+full_join(tidy_m3, tidy_m4) %&gt;% 
+  mutate(coefficient = str_c(model, estimate, sep = &quot;: &quot;)) %&gt;% 
+  filter(estimate != &quot;sigma&quot;) %&gt;% 
+  select(lower_pi = &#39;5.5%&#39;, upper_pi = &#39;94.5%&#39;, everything()) %&gt;% 
+  ggplot(aes(mean, coefficient, colour = model)) +
+  geom_pointrange(aes(xmin = lower_pi, xmax = upper_pi), 
+                  show.legend = FALSE, size = 0.8) +
+  labs(y = NULL, x = &quot;Coefficient estimate&quot;) +
+  scale_colour_manual(values = c(red, purple)) +
+  theme_minimal()</code></pre>
+<div class="figure">
+<img src="/post/chapter8_files/figure-html/8H4%20precis%20m3%20m4-1.png" alt="Figure 11 | Coefficient plot for model m3 including sd.growing.season and model m4 additionally including log.area." width="672" />
+<p class="caption">
+(#fig:8H4 precis m3 m4)Figure 11 | Coefficient plot for model m3 including sd.growing.season and model m4 additionally including log.area.
+</p>
+</div>
+<p>We can see that including area (ba) in the model introduces more uncertainty about <code>sd.growing.season</code> (bds). However, the mode of the posterior distribution, the maximum a posteriori probability, is negative in both models. This fits with the hypothesis that uncertainty in harvest favors social insurance through larger social networks and therefore fewer languages.</p>
+<blockquote>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Finally, evaluate the hypothesis that <code>mean.growing.season</code> and <code>sd.growing.season</code> interact to synergistically reduce language diversity. The idea is that, in nations with longer average growing seasons, high variance makes storage and redistribution even more important than it would be otherwise. That way, people can cooperate to preserve and protect windfalls to be used during the droughts. These forces in turn may lead to greater social integration and fewer languages.**</li>
+</ol>
+</blockquote>
+<p>Let’s build a model with an interaction term:</p>
+<pre class="r"><code>m5 &lt;- alist(
+  lang.per.cap ~ dnorm(mu, sigma), 
+  mu &lt;- a + bm*mean.growing.season + bsd*sd.growing.season + bmsd*mean.growing.season*sd.growing.season, 
+  a ~ dnorm(0, 0.25), 
+  c(bm, bsd, bmsd) ~ dnorm(0, 0.5), 
+  sigma ~ dexp(1)) %&gt;% 
+  quap(data = dat_nettle)</code></pre>
+<p>And now we need to plot the posterior predictions, which is way harder with the interaction terms. So I will stick to the tryptich plots from the chapter. First I will define a function that returns a posterior prediction plot for a predictor at a given value of the second predictor. Note that we need a bit of tidy_eval here and there (e.g. the ‘curly-curly: {{}}’ or the assigner ‘:=’)</p>
+<pre class="r"><code>post_tryptich &lt;- function(predictor1 = NULL, predictor2 = NULL, predictor2.val) {
+  N &lt;-  1e4
+  my_seq &lt;- seq(-2.5, 2, length.out = 20 )
+  
+  link(m5, n = N, 
+     data = tibble({{ predictor1 }} := my_seq,
+                       {{ predictor2 }} := predictor2.val)) %&gt;% 
+    as_tibble() %&gt;% 
+    pivot_longer(cols = everything(), values_to = &quot;lang.per.cap&quot;) %&gt;% 
+    add_column({{ predictor1 }} := rep(my_seq, N)) %&gt;% 
+    group_by({{ predictor1 }}) %&gt;% 
+    summarise(pi = list(PI(lang.per.cap)),
+              lang.per.cap = mean(lang.per.cap)) %&gt;% 
+    mutate(lower_pi = map_dbl(pi, pluck(1)), 
+           upper_pi = map_dbl(pi, pluck(2))) %&gt;% 
+    add_column({{ predictor2 }} := predictor2.val) %&gt;% 
+    select({{ predictor1 }}, {{ predictor2 }}, lang.per.cap, lower_pi, upper_pi)
+}</code></pre>
+<p>Now we can calculate the posterior predictions for <code>mean.growing.season</code> across values of <code>sd.growing.season</code>. For this, I take three quantiles from <code>sd.growing.season</code>, the 5%, 50%, and 95% quantile. Then I apply the above defined function <code>post_tryptich</code> to each of those quantiles and save all results in a data frame, which I then feed into <code>ggplot</code>.</p>
+<pre class="r"><code>quantile(dat_nettle$sd.growing.season, c(0.05, 0.5, 0.95)) %&gt;% 
+  map_dfr(post_tryptich, predictor1 = mean.growing.season, predictor2 = sd.growing.season) %&gt;% 
+  ggplot(aes(mean.growing.season, lang.per.cap)) +
+  geom_ribbon(aes(ymin = lower_pi, ymax = upper_pi), 
+              fill = grey, alpha = 0.6) +
+  geom_line(colour = red, 
+            alpha = 0.8, size = 1.5) + 
+  facet_wrap(~sd.growing.season) +
+  theme_minimal() +
+  theme(panel.grid.minor = element_blank(), 
+        panel.grid.major = element_blank())</code></pre>
+<div class="figure">
+<img src="/post/chapter8_files/figure-html/8H4%20first%20tryptich-1.png" alt="Figure 12 | Tryptich plot for model m5 for average language predicted by the mean growing seasion across values of variane in growing season." width="672" />
+<p class="caption">
+(#fig:8H4 first tryptich)Figure 12 | Tryptich plot for model m5 for average language predicted by the mean growing seasion across values of variane in growing season.
+</p>
+</div>
+<p>So we get a positive relationship between <code>lang.per.cap</code> and <code>mean.growing.season</code> at low values of <code>sd.growing.season</code>, but a negative relationship at high values. So the models suggest that mean growing season increases language diversity, unless the variance in growing season is also high. Let’s check the other way around:</p>
+<pre class="r"><code>quantile(dat_nettle$mean.growing.season, c(0.05, 0.5, 0.95)) %&gt;% 
+  map_dfr(post_tryptich, predictor1 = sd.growing.season, predictor2 = mean.growing.season) %&gt;% 
+  ggplot(aes(sd.growing.season, lang.per.cap)) +
+  geom_ribbon(aes(ymin = lower_pi, ymax = upper_pi), 
+              fill = grey, alpha = 0.6) +
+  geom_line(colour = red, 
+            alpha = 0.8, size = 1.5) + 
+  facet_wrap(~mean.growing.season) +
+  theme_minimal() +
+  theme(panel.grid.minor = element_blank(), 
+        panel.grid.major = element_blank())</code></pre>
+<div class="figure">
+<img src="/post/chapter8_files/figure-html/8H4%20second%20tryptich-1.png" alt="Figure 13 | Tryptich plot for model m5 for average language predicted by the variance in growing seasion across values of mean growing season." width="672" />
+<p class="caption">
+(#fig:8H4 second tryptich)Figure 13 | Tryptich plot for model m5 for average language predicted by the variance in growing seasion across values of mean growing season.
+</p>
+</div>
+<p>We see the same pattern: Variance in growing season decreases language diversity, unless the mean growing season is very short.</p>
+</div>
+<div id="h5" class="section level2">
+<h2>8H5</h2>
+<blockquote>
+<p>Consider the <code>data(Wines2012)</code> data table. These data are expert ratings of 20 different French and American wines by 9 different French and American judges. Your goal is to model score, the subjective rating assigned by each judge to each wine. I recommend standardizing it. In this problem, consider only variation among judges and wines. Construct index variables of judge and wine and then use these index variables to construct a linear regression model. Justify your priors. You should end up with 9 judge parameters and 20 wines parameters. How do you interpret the variation among individual judges and individual wines? Do you notice any patterns, just by plotting the differences? Which judges gave the highest/ lowest ratings? Which wines were rated worst/ best on average?</p>
+</blockquote>
+<p>First things first, loading the data and standardizing the variables to fit priors more easily.</p>
+<pre class="r"><code>data(&quot;Wines2012&quot;)
+
+dat_wine &lt;- Wines2012 %&gt;% 
+  as_tibble() %&gt;% 
+  mutate(score = standardize(score), 
+         judge = as.integer(judge), 
+         wine = as.integer(wine))</code></pre>
+<p>Now we can build the model:</p>
+<pre class="r"><code>m1 &lt;- alist(
+  score ~ dnorm(mu, sigma), 
+  mu &lt;- j[judge] + w[wine], 
+  j[judge] ~ dnorm(0, 0.5), 
+  w[wine] ~ dnorm(0, 0.5), 
+  sigma ~ dexp(1)) %&gt;% 
+  quap(data = dat_wine)</code></pre>
+<p>I have use a pretty wide prior on both index variables, to allow the values to spread. And we have no other prior information besides that it should be centered around zero. Let’s plot the coefficients:</p>
+<pre class="r"><code>m1 %&gt;% 
+  precis(depth = 2) %&gt;% 
+  as_tibble(rownames = &quot;coefficient&quot;) %&gt;% 
+  select(everything(), lower_pi = &#39;5.5%&#39;,  upper_pi = &#39;94.5%&#39;) %&gt;% 
+  mutate(type = if_else(str_starts(coefficient, &quot;j&quot;), &quot;judge&quot;, &quot;wine&quot;), 
+         coefficient = fct_reorder(coefficient, mean)) %&gt;% 
+  filter(coefficient != &quot;sigma&quot;) %&gt;% 
+  ggplot(aes(mean, coefficient, colour = type)) +
+  geom_segment(aes(x = -1.25, xend = lower_pi, y = coefficient, yend = coefficient), 
+               colour = grey, linetype = &quot;dashed&quot;, alpha = 0.7) +
+  geom_vline(xintercept = 0, colour = lightpurple) +
+  geom_pointrange(aes(xmin = lower_pi, xmax = upper_pi), 
+                  size = 0.8) +
+  labs(y = NULL, x = &quot;Coefficient estimate&quot;, colour = NULL) +
+  scale_colour_manual(values = c(red, purple)) +
+  scale_x_continuous(expand = c(0,0)) +
+  theme_minimal() +
+  theme(panel.grid = element_blank(), 
+        legend.position = c(0.85, 0.2))</code></pre>
+<div class="figure">
+<img src="/post/chapter8_files/figure-html/8H5%20coefficient%20plot-1.png" alt="Figure 14 | Coefficient plot for wine data" width="672" />
+<p class="caption">
+(#fig:8H5 coefficient plot)Figure 14 | Coefficient plot for wine data
+</p>
+</div>
+<p>Judge number 5, which corresponds to John Foy (I love inline rmarkdown code), and judge number 6 named Linda Murphy have the most positive ratings. They seem to enjoy wine in general. Notice the three judges that score wine pretty negative on average. There is only one wine with consistently positive average scores across judges, B2, which is a red wine. And then we have wine number 18, with very bad scores. This is a red wine as well.</p>
+</div>
+<div id="h6" class="section level2">
+<h2>8H6</h2>
+<blockquote>
+<p>Now consider three features of the wines and judges:</p>
+<ol style="list-style-type: decimal">
+<li>flight: Whether the wine is red or white.<br />
+</li>
+<li>wine.amer: Indicator variable for American wines.<br />
+</li>
+<li>judge.amer: Indicator variable for American judges.</li>
+</ol>
+<p>Use indicator or index variables to model the influence of these features on the scores. Omit the individual judge and wine index variables from Problem 1. Do not include interaction effects yet. Again, justify your priors. What do you conclude about the differences among the wines and judges? Try to relate the results to the inferences in the previous problem.</p>
+</blockquote>
+<p>First, let’s convert the focal indicator variables to index variables for easier model fitting and interpretation.</p>
+<pre class="r"><code>dat_wine &lt;- dat_wine %&gt;% 
+  mutate(flight = as.numeric(flight), 
+         wine.amer = if_else(wine.amer == 0, 1, 2), 
+         judge.amer = if_else(judge.amer == 0, 1, 2))</code></pre>
+<p>Now we can easily fit the model.</p>
+<pre class="r"><code>m2 &lt;- alist(
+  score ~ dnorm(mu, sigma), 
+  mu &lt;- f[flight] + w[wine.amer] + j[judge.amer], 
+  f[flight] ~ dnorm(0, 0.5),
+  w[wine.amer] ~ dnorm(0, 0.5),
+  j[judge.amer] ~ dnorm(0, 0.5), 
+  sigma ~ dexp(1)) %&gt;% 
+  quap(data = dat_wine)</code></pre>
+<p>Note that I used a similar prior as in m1. It places most of the probability within one standard deviation from the mean, for each indexed category. If we would consider the knowledge from the results from m1, we could even tighten those priors a little bit. But priors should be fitted using knowledge, and not the data at hands.</p>
+<p>Again, I will plot the results as it is much easier to see results, instead of reading tables:</p>
+<pre class="r"><code>m2 %&gt;% 
+  precis(depth = 2) %&gt;% 
+  as_tibble(rownames = &quot;coefficient&quot;) %&gt;% 
+  filter(coefficient != &quot;sigma&quot;) %&gt;% 
+  select(everything(), lower_pi = &#39;5.5%&#39;,  upper_pi = &#39;94.5%&#39;) %&gt;% 
+  mutate(type = if_else(str_starts(coefficient, &quot;j&quot;), &quot;judge&quot;, 
+                        if_else(str_starts(coefficient, &quot;w&quot;), &quot;wine&quot;,
+                                &quot;flight&quot;)), 
+         coefficient = as.factor(coefficient), 
+         coefficient = fct_recode(coefficient, 
+                                  wine.red = &quot;f[1]&quot;, 
+                                  wine.white = &quot;f[2]&quot;, 
+                                  judge.non.amer = &quot;j[1]&quot;, 
+                                  judge.amer = &quot;j[2]&quot;, 
+                                  wine.non.amer = &quot;w[1]&quot;, 
+                                  wine.amer = &quot;w[2]&quot;)) %&gt;% 
+  ggplot(aes(mean, coefficient, colour = type)) +
+  geom_vline(xintercept = 0, colour = grey) +
+  geom_pointrange(aes(xmin = lower_pi, xmax = upper_pi), 
+                  size = 0.8) +
+  labs(y = NULL, x = &quot;Coefficient estimate&quot;, colour = NULL) +
+  scale_colour_manual(values = c(red, purple, lightpurple)) +
+  scale_x_continuous(expand = c(0,0)) +
+  theme_minimal() +
+  theme(panel.grid = element_blank(), 
+        legend.position = &quot;none&quot;)</code></pre>
+<div class="figure">
+<img src="/post/chapter8_files/figure-html/m2%20plot-1.png" alt="Figure 14 | Second coefficient plot for wine data" width="672" />
+<p class="caption">
+(#fig:m2 plot)Figure 14 | Second coefficient plot for wine data
+</p>
+</div>
+<p>Before we jump to conclusions, let’s first calculate contrasts. First, I define a function that extracts samples from the posterior, subsets to a specific predictor variable, and calculates the contrast between the first index variable and the second. The I apply this function to each predictor variable and store it in a dataframe.</p>
+<pre class="r"><code>calculate_contrast &lt;- function(coefficient){
+  m2 %&gt;%
+    extract.samples() %&gt;%
+    .[c(coefficient)] %&gt;%
+    as.data.frame() %&gt;%
+    as_tibble() %&gt;%
+    select(first = 1, second = 2) %&gt;%
+    transmute(contrast = first - second) %&gt;%
+    add_column(coefficient = coefficient)
+}
+
+c(&quot;j&quot;, &quot;w&quot;, &quot;f&quot;) %&gt;% 
+  map_dfr(calculate_contrast) %&gt;% 
+  mutate(coefficient = if_else(coefficient == &quot;j&quot;, &quot;judge.non.amer - amer&quot;, 
+                               if_else(coefficient == &quot;f&quot;, &quot;whine.red - white&quot;, 
+                               &quot;wine.non.amer - amer&quot;))) %&gt;% 
+  ggplot(aes(contrast, fill = coefficient)) +
+  geom_vline(xintercept = 0, colour = grey, size = 2) +
+  geom_density(colour = grey, alpha = 0.5) +
+  scale_fill_manual(values = c(purple, red, lightpurple)) +
+  scale_y_continuous(labels = NULL) +
+  labs(fill = NULL, y = NULL) +
+  theme_minimal() +
+  theme(panel.grid = element_blank(), 
+        legend.position = c(0.84, 0.85))</code></pre>
+<div class="figure">
+<img src="/post/chapter8_files/figure-html/8H6%20contrasts-1.png" alt="Figure 15 | Contrast plot for wine data" width="672" />
+<p class="caption">
+(#fig:8H6 contrasts)Figure 15 | Contrast plot for wine data
+</p>
+</div>
+<p>Now we can see that American judges tend to judge wines more positive. In contrast, non-American wines get worse scores on average. But note that both contrasts include zero. There is absolutely no difference in red vs. white wines, as it should be, because judges only compare within flights.</p>
+</div>
+<div id="h7" class="section level2">
+<h2>8H7</h2>
+<blockquote>
+<p>Now consider two-way interactions among the three features. You should end up with three different interaction terms in your model. These will be easier to build, if you use indicator variables. Again, justify your priors. Explain what each interaction term means. Be sure to interpret the model’s predictions on the outcome scale (<span class="math inline">\(mu\)</span>, the expected score), not on the scale of individual parameters. You can use link to help with this, or just your knowledge of the linear model instead. What do you conclude about the features and the scores? Can you relate the results of your model(s) to the individual judge and wine inferences from <strong>8H5</strong>?</p>
+</blockquote>
+<p>Even though I am not a big fan of indicator variables, I will do as told:</p>
+<pre class="r"><code>dat_wine2 &lt;- Wines2012 %&gt;%
+  mutate(score = standardize(score),
+         red.wine = if_else(flight == &quot;white&quot;, 0, 1))</code></pre>
+<p>Now we can fit the new model with all the interaction terms.</p>
+<pre class="r"><code>m3 &lt;- alist(
+  score ~ dnorm(mu, sigma), 
+  mu &lt;- a + bw*wine.amer + bj*judge.amer + br*red.wine + bwj*wine.amer*judge.amer + bwr*wine.amer*red.wine + bjr*judge.amer*red.wine, 
+  a ~ dnorm(0, 0.2), 
+  c(bw, bj, br, bwj, bwr, bjr) ~ dnorm(0, 0.5), 
+  sigma ~ dexp(1)) %&gt;% 
+  quap(data = dat_wine2)</code></pre>
+<p>With the interaction terms added, it’s really impossible to see what the model thinks from the <code>precis</code> table output. Instead, we will build a table to apply the model to, to see the implications. The table contains all possible combinations of the indicator variables.</p>
+<pre class="r"><code>(dat_predict &lt;- tibble(wine.amer = rep(c(0, 1), 4), 
+       judge.amer = rep(c(0, 1), each = 4), 
+       red.wine = c(0, 0, 1, 1, 0, 0, 1, 1)))</code></pre>
+<pre><code>## # A tibble: 8 x 3
+##   wine.amer judge.amer red.wine
+##       &lt;dbl&gt;      &lt;dbl&gt;    &lt;dbl&gt;
+## 1         0          0        0
+## 2         1          0        0
+## 3         0          0        1
+## 4         1          0        1
+## 5         0          1        0
+## 6         1          1        0
+## 7         0          1        1
+## 8         1          1        1</code></pre>
+<p>Now we can use link on this data set. Note that the column names of the link output correspond to the row values in <code>dat_predict</code>. So the first column predicts data for french white wine judged by a french. To label the data easier, I will first create a vector with the correct names.</p>
+<pre class="r"><code>lbl &lt;- dat_predict %&gt;% 
+  mutate(wine.label = if_else(wine.amer == 0, &quot;F&quot;, &quot;A&quot;), 
+         judge.label = if_else(judge.amer == 0, &quot;F&quot;, &quot;A&quot;), 
+         flight.label = if_else(red.wine == 0, &quot;W&quot;, &quot;R&quot;)) %&gt;% 
+  transmute(label = str_c(judge.label, wine.label, flight.label)) %&gt;% 
+  pull()</code></pre>
+<p>And we are ready to <code>link</code>:</p>
+<pre class="r"><code>link(m3, dat_predict) %&gt;% 
+  as_tibble() %&gt;% 
+  rename(!!lbl[1] := V1, !!lbl[2] := V2, 
+         !!lbl[3] := V3, !!lbl[4] := V4,
+         !!lbl[5] := V5, !!lbl[6] := V6, 
+         !!lbl[7] := V7, !!lbl[8] := V8) %&gt;% 
+  pivot_longer(cols = everything(), values_to = &quot;mu&quot;, names_to = &quot;interaction&quot;) %&gt;% 
+  group_by(interaction) %&gt;% 
+  summarise(across(mu, list(mean = mean, pi = PI))) %&gt;% 
+  ungroup() %&gt;%
+  add_column(pi_type = rep(c(&quot;lower_pi&quot;, &quot;upper_pi&quot;), 8)) %&gt;% 
+  pivot_wider(values_from = mu_pi, names_from = pi_type) %&gt;% 
+  mutate(interaction = fct_reorder(interaction, mu_mean)) %&gt;% 
+  ggplot(aes(mu_mean, interaction, xmin = lower_pi, xmax = upper_pi)) +
+  geom_vline(xintercept = 0, colour = grey, size = 1) +
+  geom_pointrange() +
+  labs(y = NULL, x= &quot;Predicted Score&quot;, 
+       subtitle = expression(paste(&#39;Read &#39;, bold(&#39;AFR&#39;), &#39; as an &#39;, 
+                                   bold(&#39;A&#39;), &#39;merican judge drinking &#39;,
+                                    bold(&#39;F&#39;), &#39;rench &#39;, 
+                                   bold(&#39;R&#39;), &#39;ed wine&#39;))) +
+  theme_minimal() +
+  theme(panel.grid = element_blank(), 
+        axis.ticks = element_line(colour = grey))</code></pre>
+<div class="figure">
+<img src="/post/chapter8_files/figure-html/8H7%20link-1.png" alt="Figure 16 | Coefficient plot for all interactions in the wine data." width="672" />
+<p class="caption">
+(#fig:8H7 link)Figure 16 | Coefficient plot for all interactions in the wine data.
+</p>
+</div>
+<p>We can clearly see that American judges tend to judge French wines more positive, for both red and white wines. And French judges clearly dislike American red wines. But looking back at m1 form <strong>8H5</strong>, this trend is mainly driven by one American red wine, which was judged as extremely bad.</p>
+</div>
+</div>
+<div id="conclusion" class="section level1">
+<h1>Conclusion</h1>
+<p>This was a great chapter about a topic that is closely related to my PhD (where I look at interactions in deep-time fossil data). And again, it reminds me of how powerful the teaching methods of McElreath are: He gives you full power over your models as you slowly get a grasp about the underlying concepts. I never felt more confident about using interactions.</p>
+<hr />
+<pre><code>## R version 4.0.3 (2020-10-10)
+## Platform: x86_64-pc-linux-gnu (64-bit)
+## Running under: Linux Mint 20.1
+## 
+## Matrix products: default
+## BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.9.0
+## LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.9.0
+## 
+## locale:
+##  [1] LC_CTYPE=de_DE.UTF-8       LC_NUMERIC=C              
+##  [3] LC_TIME=de_DE.UTF-8        LC_COLLATE=de_DE.UTF-8    
+##  [5] LC_MONETARY=de_DE.UTF-8    LC_MESSAGES=de_DE.UTF-8   
+##  [7] LC_PAPER=de_DE.UTF-8       LC_NAME=C                 
+##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+## [11] LC_MEASUREMENT=de_DE.UTF-8 LC_IDENTIFICATION=C       
+## 
+## attached base packages:
+## [1] parallel  stats     graphics  grDevices utils     datasets  methods  
+## [8] base     
+## 
+## other attached packages:
+##  [1] kableExtra_1.3.4     knitr_1.30           rethinking_2.13     
+##  [4] rstan_2.21.2         StanHeaders_2.21.0-7 forcats_0.5.0       
+##  [7] stringr_1.4.0        dplyr_1.0.3          purrr_0.3.4         
+## [10] readr_1.4.0          tidyr_1.1.2          tibble_3.0.5        
+## [13] ggplot2_3.3.3        tidyverse_1.3.0     
+## 
+## loaded via a namespace (and not attached):
+##  [1] nlme_3.1-151       matrixStats_0.57.0 fs_1.5.0           lubridate_1.7.9.2 
+##  [5] webshot_0.5.2      httr_1.4.2         tools_4.0.3        backports_1.2.1   
+##  [9] utf8_1.1.4         R6_2.5.0           DBI_1.1.1          mgcv_1.8-33       
+## [13] colorspace_2.0-0   withr_2.4.1        tidyselect_1.1.0   gridExtra_2.3     
+## [17] prettyunits_1.1.1  processx_3.4.5     curl_4.3           compiler_4.0.3    
+## [21] cli_2.2.0          rvest_0.3.6        xml2_1.3.2         labeling_0.4.2    
+## [25] bookdown_0.21      scales_1.1.1       mvtnorm_1.1-1      callr_3.5.1       
+## [29] systemfonts_1.0.1  digest_0.6.27      rmarkdown_2.6      svglite_2.0.0     
+## [33] pkgconfig_2.0.3    htmltools_0.5.1.1  highr_0.8          dbplyr_2.0.0      
+## [37] rlang_0.4.10       readxl_1.3.1       rstudioapi_0.13    shape_1.4.5       
+## [41] generics_0.1.0     farver_2.0.3       jsonlite_1.7.2     inline_0.3.17     
+## [45] magrittr_2.0.1     loo_2.4.1          Matrix_1.3-2       Rcpp_1.0.6        
+## [49] munsell_0.5.0      fansi_0.4.2        lifecycle_0.2.0    stringi_1.5.3     
+## [53] yaml_2.2.1         MASS_7.3-53        pkgbuild_1.2.0     grid_4.0.3        
+## [57] crayon_1.3.4       lattice_0.20-41    splines_4.0.3      haven_2.3.1       
+## [61] hms_1.0.0          ps_1.5.0           pillar_1.4.7       codetools_0.2-18  
+## [65] stats4_4.0.3       reprex_1.0.0       glue_1.4.2         evaluate_0.14     
+## [69] blogdown_1.1       V8_3.4.0           RcppParallel_5.0.2 modelr_0.1.8      
+## [73] vctrs_0.3.6        cellranger_1.1.0   gtable_0.3.0       assertthat_0.2.1  
+## [77] xfun_0.20          broom_0.7.3        coda_0.19-4        viridisLite_0.3.0 
+## [81] ellipsis_0.3.1</code></pre>
+</div>
