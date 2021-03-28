@@ -8,7 +8,7 @@ tags: [Regression, t-test, Bayes, Statistics]
 subtitle: ''
 summary: 'Modeling the central tendency within one sample'
 authors: [Gregor Mathes]
-lastmod: "27 März, 2021"
+lastmod: "28 März, 2021"
 featured: no
 projects: [Regression tests]
 output:
@@ -17,6 +17,21 @@ output:
     toc_depth: 1
     number_sections: false
     fig_width: 6
+references:
+- id: kruschke2013
+  title: Bayesian estimation supersedes the t test
+  author:
+  - family: Kruschke
+    given: John
+  container-title: Journal of Experimental Psychology
+  volume: 142
+  URL: 'https://doi.org/10.1037/a0029146'
+  DOI: 10.1037/a0029146
+  issue: 2
+  page: 573
+  type: article-journal
+  issued:
+    year: 2013
 ---
 
 <script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
@@ -26,13 +41,15 @@ output:
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#one-sample-t-test">One sample t-test</a></li>
 <li><a href="#comparing-the-test-to-the-regression">Comparing the test to the regression</a></li>
-<li><a href="#comparison">Comparison</a></li>
+<li><a href="#bayesian-regression">Bayesian regression</a></li>
+<li><a href="#comparison-of-all-methods">Comparison of all methods</a></li>
+<li><a href="#references">References</a></li>
 </ul>
 </div>
 
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
-<p>I have a very weird relationship to statistics. Even though I was very bad at maths, I decided to study geosciences. I somehow managed to get through the Bachelor maths exams. For some reason, I then proceeded with a shiny new Master program called <a href="http://www.palaeobiology.de/">Analytical Paleobiology</a> that was build around the R programming software and a lot of statistics (it’s an amazing research-oriented programm with lots of fossils, stats and outreach courses). During the first lectures, we learned about frequentist null hypothesis testing and p-values. It was very confusing, and it is still today. We also learned how to use statistical tests such as a <em>t-test</em> or an <em>ANOVA</em>. It was even more confusing. We’ve got told that these tests are small little black-boxes and that we should not trust them. Then every one just proceeded to work with those black boxes, completely trusting them.<br />
+<p>I have a very weird relationship to statistics. Even though I was very bad at maths, I decided to study geosciences. I somehow managed to get through the Bachelor maths exams. For some reason, I then proceeded with a shiny new Master program called <a href="http://www.palaeobiology.de/">Analytical Paleobiology</a> that was build around the R programming software and a lot of statistics (it’s an amazing research-oriented program with lots of fossils, stats and outreach courses). During the first lectures, we learned about frequentist null hypothesis significance testing and p-values. It was very confusing, and it is still today. We also learned how to use statistical tests such as a <em>t-test</em> or an <em>ANOVA</em>. It was even more confusing. We’ve got told that these tests are small little black-boxes and that we should not trust them. Then every one just proceeded to work with those black boxes, completely trusting them.<br />
 During that Master program I found my passion for stats and programming. Since then, I have read a lot of statistic textbooks and blogs, something that I could never explain my former self that disliked maths. With all this amazing new knowledge, a few things cleared up for me:</p>
 <ol style="list-style-type: decimal">
 <li>frequentist null hypothesis testing makes no sense<br />
@@ -41,7 +58,7 @@ During that Master program I found my passion for stats and programming. Since t
 </li>
 <li>statistical tests are just regression in disguise</li>
 </ol>
-<p>I somehow managed to avoid (1) and (2) by using resampling and permutation methods, and by sticking to effect sizes instead of p-values. Lately, I started to work with Bayesian estimates, completely ditching the frequentist approach (and I will never look back). But statistical tests are still important in my daily work-flow and I simply don’t want to use black boxes anymore. So, basically as a resource to future me, I decided to start a series of blog posts on statistical tests. In each blog post, I will cover one commonly used statistical test and show that it’s just a regression (and that you get much more power if you express the test as a regression model). I will then proceed to fit a Bayesian regression model for each test, because as John Kruschke states it in the amazing paper <em>Bayesian Estimation Supersedes the t Test</em>:</p>
+<p>I somehow managed to avoid (1) and (2) by using resampling and permutation methods, and by sticking to effect sizes instead of p-values. Lately, I started to work with Bayesian estimates, completely ditching the frequentist approach (and I will never look back). But statistical tests are still important in my daily work-flow and I simply don’t want to use black boxes anymore. So, basically as a resource to future me, I decided to start a series of blog posts on statistical tests. In each post, I will cover one commonly used statistical test and show that it’s just a regression (and that you get much more power if you express the test as a regression model). I will then proceed to fit a Bayesian regression model for each test, because as John Kruschke states it in the amazing paper <em>Bayesian Estimation Supersedes the t Test</em><span class="citation">(<a href="#ref-kruschke2013" role="doc-biblioref">Kruschke 2013</a>)</span>:</p>
 <blockquote>
 <p>Some people may wonder which approach, Bayesian or NHST, is more often correct. This question has limited applicability because in real research we never know the ground truth; all we have is a sample of data. If we knew the ground truth, against which to compare the conclusion from the statistical analysis, we would not
 bother to collect the data. If the question of correctness is instead asked of some hypothetical data generator, the assessment is confined to that particular distribution of simulated data, which likely has only limited resemblance to real-world data encountered across research paradigms. Therefore, instead of asking which
@@ -53,13 +70,13 @@ method is more often correct in some hypothetical world of simulated data, the r
 <h1>One sample t-test</h1>
 <div id="when-to-use" class="section level2">
 <h2>When to use</h2>
-<p>If you have one sample of measurements and you want to estimate the central tendency of this sample (e.g. the mean) compared to a specific value. For example, assume I want to test whether my males from my family tends to be smaller than the average male human height. If heights across my male family members are normally distributed, I can use the one sample t-test.</p>
+<p>If you have one sample of measurements and you want to estimate the central tendency of this sample (e.g. the mean) compared to a specific value. Assume I want to test whether all males from my family tend to be smaller than the average human male. If heights across my male family members are normally distributed, I can use the one sample t-test.</p>
 </div>
 <div id="assumptions" class="section level2">
 <h2>Assumptions</h2>
 <p>Your sample should have the following characteristics:</p>
 <ol style="list-style-type: decimal">
-<li>continuous (not discrete).<br />
+<li>continuous (not discrete)<br />
 </li>
 <li>normally distributed<br />
 </li>
@@ -69,7 +86,7 @@ probability of being selected in the sample</li>
 </div>
 <div id="as-a-regression" class="section level2">
 <h2>As a regression</h2>
-<p>All we need is a regression that approximates the mean of the sample. Back in high-school, we learned that the intercept of a regression line goes through the mean of the data. So all we need is a regression with an intercept and nothing less. We can state this as <span class="math display">\[\mu = \alpha\]</span> where <span class="math inline">\(\alpha\)</span> is the intercept and <span class="math inline">\(\mu\)</span> the height of each individual. Note that the t-test assumes that height is normally distributed, which we can express as <span class="math display">\[height \sim Normal(\mu, \sigma)\]</span></p>
+<p>All we need is a regression that approximates the mean of the sample. Back in high-school, we learned that the intercept of a regression line goes through the mean of the data. So all we need is a regression with an intercept and nothing else We can state this as <span class="math display">\[\mu = \alpha\]</span> where <span class="math inline">\(\alpha\)</span> is the intercept and <span class="math inline">\(\mu\)</span> the height of each individual. Note that the t-test assumes that height is normally distributed, which we can express as <span class="math display">\[height \sim Normal(\mu, \sigma)\]</span></p>
 </div>
 </div>
 <div id="comparing-the-test-to-the-regression" class="section level1">
@@ -82,7 +99,7 @@ dat_height &lt;- rnorm(100, 160, 2)
 
 head(dat_height)</code></pre>
 <pre><code>## [1] 162.0337 159.4832 157.5617 158.4347 159.5004 161.0900</code></pre>
-<p>So we just generated 100 height values from a normal distribution with mean 160 cm and a standard deviation of 2. Now we just need a value for the average height of all males. Google says that <em>The global mean height of adult men born in 1996 is 171 centimetres (cm)</em>.</p>
+<p>We just generated 100 height values from a normal distribution with mean 160 cm and a standard deviation of 2. Now we just need a value for the average height of all males. Google says that <em>“The global mean height of adult men born in 1996 is 171 centimeters (cm)”</em>.</p>
 </div>
 <div id="the-black-box" class="section level2">
 <h2>The black box</h2>
@@ -101,7 +118,7 @@ head(dat_height)</code></pre>
 ## sample estimates:
 ## mean of x 
 ##   159.882</code></pre>
-<p>We get a p-value as output that states the probability to get a value of 159.882 cm (the mean from my male family members) if the true mean would be 171 cm (average male). The p-value is very low, certainly below many commonly used thresholds, so we could reject the null hypothesis. Are you already confused? Let’s focus on the effect size instead. The mean of my male family members is 159.882, and those members are therefore 11.118 cm (171 - 159.882 cm) smaller as the average male. As we get a confidence interval for the mean as well, we can transform it as well:</p>
+<p>We get a p-value as output that states the probability to get a value of 159.8819784 cm (the mean from my male family members) if the true mean would be 171 cm (average male). The p-value is very low, certainly below many commonly used thresholds, so we could reject the null hypothesis. Are you already confused? Let’s focus on the effect size instead. The mean of my male family members is 159.8819784, and those members are therefore 11.1180216 cm (171 - 159.882 cm) smaller as the average male. As we get a confidence interval for the mean as well, we can transform it to a difference estimate:</p>
 <pre class="r"><code>ci_ttest &lt;- result_ttest$conf.int %&gt;% 
   as.vector()
 171 - ci_ttest</code></pre>
@@ -133,22 +150,28 @@ head(dat_height)</code></pre>
 <pre class="r"><code>confint(result_lm)</code></pre>
 <pre><code>##                 2.5 %   97.5 %
 ## (Intercept) -11.52475 -10.7113</code></pre>
-<p>Coolio, we obviously get the same results. It seems like the one sample t-test is just a regression in disguise.<br />
-# Bayesian regression</p>
-<p>Now we get to the gold standard, the Bayesian estimation. I will use the <code>brms</code> package for that, which is R’s interface to the Stan language, using a Hamiltonian Markov Chain Monte Carlo and the Nuts sampler. Or as Andrew Heiss stated it in one of his blog posts:<br />
-&gt; … all the cool kids are using Stan.</p>
+<p>Coolio, we obviously get the same results. It seems like the one sample t-test is just a regression in disguise.</p>
+</div>
+</div>
+<div id="bayesian-regression" class="section level1">
+<h1>Bayesian regression</h1>
+<p>Now we get to the gold standard, the Bayesian estimation. I will use the <code>brms</code> package for that, which is R’s interface to the Stan language, using a Hamiltonian Markov Chain Monte Carlo and the Nuts sampler. Or as Andrew Heiss stated it in one of his blog posts:</p>
+<blockquote>
+<p>… all the cool kids are using Stan.</p>
+</blockquote>
 <pre class="r"><code>library(brms)
 options(mc.cores = parallel::detectCores())  # Use all cores</code></pre>
-<p>For Bayesian analysis, we can additionally set a prior on the intercept. I will not go into detail, but notice that we can help the model to run by using our knowledge. We do this by setting a weakly informative prior on the intercept with a normal distribution with a mean of 170 and a standard deviation of 3. Why these specific values? Because most males I have seen in my life fall within this range, and it is just reasonable to assume that our sample has similar values. Either way, the prior is so broad that it is easily overwhelmed by the data (it <em>listens</em> to the data), but the model does not assume some very irrealistic values like a height of thousand meters for a human male, or even negative values. We can even visualise the prior:</p>
+<p>For Bayesian analysis, we can additionally set a prior on the intercept. I will not go into detail, but notice that we can help the model to run by using our knowledge. We do this by setting a weakly informative prior on the intercept with a normal distribution with a mean of 170 and a standard deviation of 3. Why these specific values? Because most males I have seen in my life fall within this range, and it is just reasonable to assume that our sample has similar values. Either way, the prior is so broad that it is easily overwhelmed by the data (it <em>listens</em> to the data), but the model does not assume some very unrealistic values like a height of thousand meters for a human male, or even negative values. We can even visualize the prior:</p>
 <pre class="r"><code>tibble(height = rnorm(1e5, 170, 10)) %&gt;% 
   ggplot(aes(height)) +
   geom_density() +
   theme_minimal()</code></pre>
 <p><img src="/post/one_sample_t_test_files/figure-html/prior-1.png" width="576" /></p>
-<p>And as we don’t need to fiddle with the meaning of a p-value anymore, I will directly model the mean for our samples using the formule <code>dat_height ~ 1</code> and then compare these values to the average human male height using posterior samples.</p>
+<p>And as we don’t need to fiddle with the meaning of a p-value anymore, I will directly model the mean for our samples using the formula <code>dat_height ~ 1</code> and then compare these values to the average human male height using posterior samples. Note that I use a standard prior on sigma, which samples from the cauchy distribution.</p>
 <pre class="r"><code>result_brms &lt;- brm(
   bf(dat_height ~ 1), 
-  prior = c(set_prior(&quot;normal(170, 10)&quot;, class = &quot;Intercept&quot;)),
+  prior = c(set_prior(&quot;normal(170, 10)&quot;, class = &quot;Intercept&quot;), 
+            set_prior(&quot;cauchy(0, 1)&quot;, class = &quot;sigma&quot;)),
   chains = 3, iter = 2000, warmup = 1000, data = tibble(dat_height = dat_height))</code></pre>
 <p>That’s it. We can get a summary of this model as well:</p>
 <pre class="r"><code>summary(result_brms)</code></pre>
@@ -161,16 +184,16 @@ options(mc.cores = parallel::detectCores())  # Use all cores</code></pre>
 ## 
 ## Population-Level Effects: 
 ##           Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## Intercept   159.89      0.21   159.48   160.29 1.00     2584     1983
+## Intercept   159.88      0.21   159.48   160.31 1.00     2647     2149
 ## 
 ## Family Specific Parameters: 
 ##       Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## sigma     2.07      0.15     1.80     2.38 1.00     2337     1767
+## sigma     2.06      0.15     1.79     2.37 1.00     2644     2084
 ## 
 ## Samples were drawn using sampling(NUTS). For each parameter, Bulk_ESS
 ## and Tail_ESS are effective sample size measures, and Rhat is the potential
 ## scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
-<p>The Rhat values are equal 1 and the effective sample sizes are large, indicating low autocorrelation. So our model fitted just fine. One great advantage of Bayesian estimation (and Hamiltonian MCMC in particular) is that the model would tell us if something is wrong.The estimate shows the mean for my family members as well as 95% credible intervals. But stop, with frequentist approaches we get only point estimates like these, but with Bayesian estimation we get the whole distribution from the MCMC. Let’s take a look:</p>
+<p>The Rhat values are equal 1 and the effective sample sizes are large, indicating low autocorrelation. So our model fitted just fine. One great advantage of Bayesian estimation (and Hamiltonian MCMC in particular) is that the model would tell us if something is wrong. The estimate shows the mean for my family members as well as 95% credible intervals. But stop, with frequentist approaches we get only point estimates like these, but with Bayesian estimation we get the whole distribution from the MCMC. Let’s take a look:</p>
 <pre class="r"><code>result_posterior &lt;- posterior_samples(result_brms)
 
 result_posterior %&gt;% 
@@ -184,7 +207,7 @@ Now to the interpretation: The whole distribution does not include the average h
 <pre class="r"><code>hypothesis(result_brms, &quot;Intercept &lt; 171&quot;)</code></pre>
 <pre><code>## Hypothesis Tests for class b:
 ##              Hypothesis Estimate Est.Error CI.Lower CI.Upper Evid.Ratio
-## 1 (Intercept)-(171) &lt; 0   -11.11      0.21   -11.46   -10.78        Inf
+## 1 (Intercept)-(171) &lt; 0   -11.12      0.21   -11.46   -10.76        Inf
 ##   Post.Prob Star
 ## 1         1    *
 ## ---
@@ -192,11 +215,10 @@ Now to the interpretation: The whole distribution does not include the average h
 ## &#39;*&#39;: For one-sided hypotheses, the posterior probability exceeds 95%;
 ## for two-sided hypotheses, the value tested against lies outside the 95%-CI.
 ## Posterior probabilities of point hypotheses assume equal prior probabilities.</code></pre>
-<p>As the credible interval does not include zero and the evidence ratio is really high, we can accept the hypothesis that my family male members have a mean height smaller than 171 cm. What did I just say? Accepting a hypothesis is not possible, right? But this is only true for frequentist approeaches and not for Bayesian one. The p-value of a frequentist approach gives us the probability for the data given a null hypothesis <span class="math display">\[p(data | N_0)\]</span> Bayesian estimation instead gives us the probability of a hypothesis given the data <span class="math display">\[p(N_0 | data)\]</span> This is basically what we wanted from the beginning.</p>
+<p>As the credible interval does not include zero and the evidence ratio is really high, we can accept the hypothesis that my family male members have a mean height smaller than 171 cm. What did I just say? Accepting a hypothesis is not possible, right? But this is only true for frequentist approaches and not for Bayesian ones. The p-value of a frequentist approach gives us the probability for the data under a null hypothesis <span class="math display">\[p(data | N_0)\]</span> Bayesian estimation instead gives us the probability of a hypothesis given the data <span class="math display">\[p(N_0 | data)\]</span> This is basically what we wanted from the beginning.</p>
 </div>
-</div>
-<div id="comparison" class="section level1">
-<h1>Comparison</h1>
+<div id="comparison-of-all-methods" class="section level1">
+<h1>Comparison of all methods</h1>
 <p>Let’s compare the estimates of all approaches.</p>
 <pre class="r"><code>tibble(Model = c(&quot;T-Test&quot;, 
                  &quot;OLS Regression&quot;, 
@@ -248,10 +270,10 @@ Now to the interpretation: The whole distribution does not include the average h
 </tr>
 <tr class="odd">
 <td align="left">Bayesian Regression</td>
-<td align="right">-11.11</td>
+<td align="right">-11.12</td>
 <td align="right">0.21</td>
 <td align="right">-11.52</td>
-<td align="right">-10.71</td>
+<td align="right">-10.69</td>
 <td align="right">NA</td>
 </tr>
 </tbody>
@@ -323,4 +345,12 @@ Now to the interpretation: The whole distribution does not include the average h
 ## [109] threejs_0.3.3        reprex_1.0.0         digest_0.6.27       
 ## [112] xtable_1.8-4         httpuv_1.5.5         RcppParallel_5.0.2  
 ## [115] stats4_4.0.4         munsell_0.5.0        shinyjs_2.0.0</code></pre>
+</div>
+<div id="references" class="section level1 unnumbered">
+<h1>References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-kruschke2013" class="csl-entry">
+Kruschke, John. 2013. <span>“Bayesian Estimation Supersedes the t Test.”</span> <em>Journal of Experimental Psychology</em> 142 (2): 573. <a href="https://doi.org/10.1037/a0029146">https://doi.org/10.1037/a0029146</a>.
+</div>
+</div>
 </div>
