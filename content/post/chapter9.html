@@ -1,0 +1,1614 @@
+---
+title: "Rethinking Chapter 9"
+author: "Gregor Mathes"
+date: "2021-03-31"
+slug: Rethinking Chapter 9
+categories: []
+tags: [Rethinking, Bayes, Statistics]
+subtitle: ''
+summary: 'Markov Chain Monte Carlo algorithms'
+authors: [Gregor Mathes]
+lastmod: "31 März, 2021"
+featured: no
+projects: [Rethinking]
+output:
+  blogdown::html_page:
+    toc: true
+    toc_depth: 1
+    number_sections: false
+    fig_width: 6
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#easy-practices">Easy practices</a></li>
+<li><a href="#medium-practices">Medium practices</a></li>
+<li><a href="#hard-practices">Hard practices</a></li>
+</ul>
+</div>
+
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>This is the eigth part of a series where I work through the practice questions of the second edition of Richard McElreaths <a href="https://xcelab.net/rm/statistical-rethinking/">Statistical Rethinking</a>.<br />
+Each post covers a new chapter and you can see the posts on previous chapters <a href="https://gregor-mathes.netlify.app/tags/rethinking/">here</a>. This chapter introduces Markov Chain Monte Carlo algorithms to obtain or approximate the posterior distribution.</p>
+<p>You can find the the lectures and homework accompanying the book <a href="https://github.com/rmcelreath/stat_rethinking_2020%3E">here</a>.</p>
+<p>The colours for this blog post are:</p>
+<pre class="r"><code>blue &lt;- &quot;#337677&quot;
+red &lt;- &quot;#C4977F&quot;
+grey &lt;- &quot;#ECDED2&quot;
+brown &lt;- &quot;#50473D&quot;</code></pre>
+<p><img src="/post/chapter9_files/figure-html/colour%20plot-1.png" width="672" /></p>
+<p>Note that I did not have time for practive questions 9H6 and 9H7, but I probably manage to add these soon(-ish).</p>
+</div>
+<div id="easy-practices" class="section level1">
+<h1>Easy practices</h1>
+<div id="e1" class="section level2">
+<h2>9E1</h2>
+<blockquote>
+<p>Which of the following is a requirement of the simple Metropolis algorithm?</p>
+<ul>
+<li><ol style="list-style-type: decimal">
+<li>The parameters must be discrete.<br />
+</li>
+</ol></li>
+<li><ol start="2" style="list-style-type: decimal">
+<li>The likelihood function must be Gaussian.<br />
+</li>
+</ol></li>
+<li><ol start="3" style="list-style-type: decimal">
+<li>The proposal distribution must be symmetric.</li>
+</ol></li>
+</ul>
+</blockquote>
+<p>A quick look into chapter 9.2 shows that parameters are allowed to be non-discrete (e.g. continuous) and that the likelihood function can be anything. The only requirement is (3). Or, keeping it in the metaphor of the islands, that there is an equal chance of proposing from Island A to Island B and from B to A.</p>
+</div>
+<div id="e2" class="section level2">
+<h2>9E2</h2>
+<blockquote>
+<p>Gibbs sampling is more efficient than the Metropolis algorithm. How does it achieve this extra efficiency? Are there any limitations to the Gibbs sampling strategy?</p>
+</blockquote>
+<p>Hamiltonian algorithms jump from proposal to proposal in a random way. This might take some time to explore the whole posterior distribution space. Using <em>conjugate priors</em>, Gibbs sampling makes more intelligent proposals. In order words, it makes smart jumps in the joint posterior distribution. This way, you need less samples as you get less rejected proposals. The disadvantages of the Gibbs sampler is that it relies on conjugate priors, which you sometimes don’t want to provide, or sometimes it’s not even possible. Similar to the Metropolis MCMC, it get’s stuck in a valley of the joint posterior when there is a high correlation between parameters.</p>
+</div>
+<div id="e3" class="section level2">
+<h2>9E3</h2>
+<blockquote>
+<p>Which sort of parameters can Hamiltonian Monte Carlo not handle? Can you explain why?</p>
+</blockquote>
+<p>Hamiltonian Monte Carlo cannot handle discrete parameters. This is because it requires a smooth surface to glide its imaginary particle over while sampling from the posterior distribution.</p>
+</div>
+<div id="e4" class="section level2">
+<h2>9E4</h2>
+<blockquote>
+<p>Explain the difference between the effective number of samples, <em>n_eff</em> as calculated by Stan,and the actual number of samples.</p>
+</blockquote>
+<p><em>n_eff</em> corresponds to the number of independent samples with the same estimation power as the number of autocorrelated samples. It is is a measure of how much independent information there is in autocorrelated chains. It is always smaller than the actual number of samples.</p>
+</div>
+<div id="e5" class="section level2">
+<h2>9E5</h2>
+<blockquote>
+<p>Which value should <em>Rhat</em> approach, when a chain is sampling the posterior distribution correctly?</p>
+</blockquote>
+<p>A <em>Rhat</em> value of one is always a good sight.</p>
+</div>
+<div id="e6" class="section level2">
+<h2>9E6</h2>
+<blockquote>
+<p>Sketch a good trace plot for a Markov chain, one that is effectively sampling from the posterior distribution. What is good about its shape? Then sketch a trace plot for a malfunctioning Markov chain. What about its shape indicates malfunction?</p>
+</blockquote>
+<p>So first a good chain. We want good mixing and the chain to be stationary, meaning that we should have some minor horizontal noise around a fixed mean.</p>
+<pre class="r"><code>tibble(chain = rnorm(1e3, 2, 0.25), 
+       steps = 1:1e3) %&gt;% 
+  ggplot(aes(steps, chain)) +
+  geom_line(colour = red) +
+  coord_cartesian(ylim = c(0, 3)) +
+  labs(x = &quot;Steps&quot;, y = &quot;Sample&quot;) +
+  theme_minimal()</code></pre>
+<div class="figure">
+<img src="/post/chapter9_files/figure-html/9E6%20Figure%201-1.png" alt="A good Markow chain showing good mixing and stationarity." width="672" />
+<p class="caption">
+(#fig:9E6 Figure 1)A good Markow chain showing good mixing and stationarity.
+</p>
+</div>
+<p>Note how the chain converges around the mean of 2 and has only small and random divergence from that mean.</p>
+<p>Now the bad chain:</p>
+<pre class="r"><code>tibble(mean.val = c(seq(2, 6, length.out = 400),
+                seq(6, 1, length.out = 400), 
+                seq(1, 0.5, length.out = 200)),
+       steps = 1:1e3, 
+       noise = rlogis(1e3, 0, 0.15)) %&gt;% 
+  mutate(chain = mean.val + noise) %&gt;% 
+  ggplot(aes(steps, chain)) +
+  geom_line(colour = red) +
+  labs(x = &quot;Steps&quot;, y = &quot;Sample&quot;) +
+  theme_minimal()</code></pre>
+<div class="figure">
+<img src="/post/chapter9_files/figure-html/9E6%20Figure%202-1.png" alt="A bad Markow chain showing bad mixing and non-stationarity" width="672" />
+<p class="caption">
+(#fig:9E6 Figure 2)A bad Markow chain showing bad mixing and non-stationarity
+</p>
+</div>
+<p>The chain is not stationary around a mean. Instead, it get’s stuck at some pretty unrealistic values.</p>
+</div>
+</div>
+<div id="medium-practices" class="section level1">
+<h1>Medium practices</h1>
+<div id="m1" class="section level2">
+<h2>9M1</h2>
+<blockquote>
+<p>Re-estimate the terrain ruggedness model from the chapter, but now using a uniform prior and an exponential prior for the standard deviation, sigma. The uniform prior should be <code>dunif(0,10)</code> and the exponential should be <code>dexp(1)</code>. Do the different priors have any detectible influence on the posterior distribution?</p>
+</blockquote>
+<p>First, we fit the model from the chapter to compare the differences later on. Note that this model has the <code>dexp(1)</code> prior on <code>sigma</code>.</p>
+<pre class="r"><code>data(&quot;rugged&quot;)
+
+dat_rugged &lt;- rugged %&gt;% 
+  as_tibble() %&gt;% 
+  drop_na(rgdppc_2000) %&gt;% 
+  transmute(log_gdp = log(rgdppc_2000), 
+         log_gdp_std = log_gdp/ mean(log_gdp), 
+         rugged_std = rugged / max(rugged), 
+         cid = if_else(cont_africa == 1, 1, 2)) %&gt;% 
+  as.list()
+
+m9.1 &lt;- alist(
+  log_gdp_std ~ dnorm(mu, sigma),
+  mu &lt;- a[cid] + b[cid] * (rugged_std - 0.215),
+  a[cid] ~ dnorm(1, 0.1),
+  b[cid] ~ dnorm(0, 0.3),
+  sigma ~ dexp(1)) %&gt;% 
+  ulam(data = dat_rugged, chains = 1)</code></pre>
+<p>And now the new model with the updated priors.</p>
+<pre class="r"><code>m9.1.upd &lt;- alist(
+  log_gdp_std ~ dnorm(mu, sigma),
+  mu &lt;- a[cid] + b[cid] * (rugged_std - 0.215),
+  a[cid] ~ dnorm(1, 0.1),
+  b[cid] ~ dnorm(0, 0.3),
+  sigma ~ dunif(0, 10)) %&gt;% 
+  ulam(data = dat_rugged, chains = 1)</code></pre>
+<p>Let’s plot the prior distributions against each other.</p>
+<pre class="r"><code>tibble(exponential = rexp(1e3, 1), 
+       uniform = runif(1e3, 0, 10)) %&gt;% 
+  pivot_longer(cols = everything(), 
+               names_to = &quot;type&quot;, 
+               values_to = &quot;Sigma&quot;) %&gt;% 
+  ggplot(aes(Sigma, fill = type)) +
+  geom_density(colour = grey, 
+               alpha = 0.6) +
+  scale_fill_manual(values = c(blue, red)) +
+  labs(y = NULL, fill = NULL) +
+  theme_minimal()</code></pre>
+<div class="figure">
+<img src="/post/chapter9_files/figure-html/9M1%20Figure%203-1.png" alt="Prior distributions on sigma." width="672" />
+<p class="caption">
+(#fig:9M1 Figure 3)Prior distributions on sigma.
+</p>
+</div>
+<p>Now we can look at the posteriors for <code>sigma</code>and compare the models.</p>
+<pre class="r"><code>tibble(exponential = extract.samples(m9.1) %&gt;%
+         pluck(&quot;sigma&quot;), 
+       uniform = extract.samples(m9.1.upd) %&gt;% 
+         pluck(&quot;sigma&quot;)) %&gt;% 
+  pivot_longer(cols = everything(), 
+               names_to = &quot;model&quot;, 
+               values_to = &quot;Sigma&quot;) %&gt;% 
+  ggplot(aes(Sigma, fill = model)) +
+  geom_density(colour = grey, 
+               alpha = 0.6) +
+  scale_fill_manual(values = c(blue, red)) +
+  labs(y = NULL, fill = NULL) +
+  theme_minimal()</code></pre>
+<div class="figure">
+<img src="/post/chapter9_files/figure-html/9M1%20Figure%204-1.png" alt="Posterior distributions for sigma." width="672" />
+<p class="caption">
+(#fig:9M1 Figure 4)Posterior distributions for sigma.
+</p>
+</div>
+<p>There are basically no differences in the posterior. It seems that there was so much data that the prior was just overwhelmed. However, the uniform prior results in a broader and less peaky posterior, expressing more uncertainty.</p>
+</div>
+<div id="m2" class="section level2">
+<h2>9M2</h2>
+<blockquote>
+<p>Modify the terrain ruggedness model again. This time, change the prior for <code>b[cid]</code> to <code>dexp(0.3)</code>. What does this do to the posterior distribution? Can you explain it?</p>
+</blockquote>
+<p>First, let’s take a look at the modified prior distribution:</p>
+<pre class="r"><code>tibble(exponential = rexp(1e3, 0.3))  %&gt;% 
+  ggplot(aes(exponential)) +
+  geom_density(colour = grey, 
+               alpha = 0.8, fill = brown) +
+  labs(y = NULL, fill = NULL) +
+  theme_minimal()</code></pre>
+<div class="figure">
+<img src="/post/chapter9_files/figure-html/9M2%20%20Figure%205-1.png" alt="Prior distributions on b[cid]" width="672" />
+<p class="caption">
+(#fig:9M2 Figure 5)Prior distributions on b[cid]
+</p>
+</div>
+<p>And now refit the model.</p>
+<pre class="r"><code>m9.1.mod &lt;- alist(
+  log_gdp_std ~ dnorm(mu, sigma),
+  mu &lt;- a[cid] + b[cid] * (rugged_std - 0.215),
+  a[cid] ~ dnorm(1, 0.1),
+  b[cid] ~ dexp(0.3),
+  sigma ~ dexp(1)) %&gt;% 
+  ulam(data = dat_rugged, chains = 1)</code></pre>
+<pre><code>## 
+## SAMPLING FOR MODEL &#39;2d7c6a1aa2bdb94b39fe33e534d21641&#39; NOW (CHAIN 1).
+## Chain 1: 
+## Chain 1: Gradient evaluation took 1.1e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.11 seconds.
+## Chain 1: Adjust your expectations accordingly!
+## Chain 1: 
+## Chain 1: 
+## Chain 1: Iteration:   1 / 1000 [  0%]  (Warmup)
+## Chain 1: Iteration: 100 / 1000 [ 10%]  (Warmup)
+## Chain 1: Iteration: 200 / 1000 [ 20%]  (Warmup)
+## Chain 1: Iteration: 300 / 1000 [ 30%]  (Warmup)
+## Chain 1: Iteration: 400 / 1000 [ 40%]  (Warmup)
+## Chain 1: Iteration: 500 / 1000 [ 50%]  (Warmup)
+## Chain 1: Iteration: 501 / 1000 [ 50%]  (Sampling)
+## Chain 1: Iteration: 600 / 1000 [ 60%]  (Sampling)
+## Chain 1: Iteration: 700 / 1000 [ 70%]  (Sampling)
+## Chain 1: Iteration: 800 / 1000 [ 80%]  (Sampling)
+## Chain 1: Iteration: 900 / 1000 [ 90%]  (Sampling)
+## Chain 1: Iteration: 1000 / 1000 [100%]  (Sampling)
+## Chain 1: 
+## Chain 1:  Elapsed Time: 0.10648 seconds (Warm-up)
+## Chain 1:                0.040993 seconds (Sampling)
+## Chain 1:                0.147473 seconds (Total)
+## Chain 1:</code></pre>
+<p>Looking at the coefficient estimates, we can already see that something happened to <code>b[2]</code>.</p>
+<pre class="r"><code>precis(m9.1.mod, depth = 2) %&gt;% 
+  as_tibble(rownames = &quot;coefficient&quot;) %&gt;% 
+  knitr::kable(digits = 2)</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+coefficient
+</th>
+<th style="text-align:right;">
+mean
+</th>
+<th style="text-align:right;">
+sd
+</th>
+<th style="text-align:right;">
+5.5%
+</th>
+<th style="text-align:right;">
+94.5%
+</th>
+<th style="text-align:right;">
+n_eff
+</th>
+<th style="text-align:right;">
+Rhat4
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+a[1]
+</td>
+<td style="text-align:right;">
+0.89
+</td>
+<td style="text-align:right;">
+0.01
+</td>
+<td style="text-align:right;">
+0.86
+</td>
+<td style="text-align:right;">
+0.91
+</td>
+<td style="text-align:right;">
+308.74
+</td>
+<td style="text-align:right;">
+1.02
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+a[2]
+</td>
+<td style="text-align:right;">
+1.05
+</td>
+<td style="text-align:right;">
+0.01
+</td>
+<td style="text-align:right;">
+1.03
+</td>
+<td style="text-align:right;">
+1.07
+</td>
+<td style="text-align:right;">
+499.20
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+b[1]
+</td>
+<td style="text-align:right;">
+0.15
+</td>
+<td style="text-align:right;">
+0.07
+</td>
+<td style="text-align:right;">
+0.04
+</td>
+<td style="text-align:right;">
+0.26
+</td>
+<td style="text-align:right;">
+335.93
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+b[2]
+</td>
+<td style="text-align:right;">
+0.02
+</td>
+<td style="text-align:right;">
+0.02
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.05
+</td>
+<td style="text-align:right;">
+531.35
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+sigma
+</td>
+<td style="text-align:right;">
+0.11
+</td>
+<td style="text-align:right;">
+0.01
+</td>
+<td style="text-align:right;">
+0.10
+</td>
+<td style="text-align:right;">
+0.13
+</td>
+<td style="text-align:right;">
+328.71
+</td>
+<td style="text-align:right;">
+1.01
+</td>
+</tr>
+</tbody>
+</table>
+<p>Let’s plot the posterior</p>
+<pre class="r"><code>extract.samples(m9.1.mod) %&gt;%
+         pluck(&quot;b&quot;) %&gt;% 
+         .[,1] %&gt;% 
+  as_tibble_col(column_name = &quot;b1&quot;) %&gt;% 
+  ggplot(aes(b1)) +
+  geom_density(colour = grey,
+               fill = brown,
+               alpha = 0.8) +
+  labs(y = NULL) +
+  theme_minimal()</code></pre>
+<div class="figure">
+<img src="/post/chapter9_files/figure-html/Figure%206-1.png" alt="Posterior distributions for b[2]" width="672" />
+<p class="caption">
+(#fig:Figure 6)Posterior distributions for b[2]
+</p>
+</div>
+<p>We can clearly see that the posterior get’s cut off at zero and only shows positive numbers. This is because the prior does not allow any numbers below zero.</p>
+</div>
+<div id="m3" class="section level2">
+<h2>9M3</h2>
+<blockquote>
+<p>Re-estimate one of the Stan models from the chapter, but at different numbers of <code>warmup</code> iterations. Be sure to use the same number of sampling iterations in each case. Compare the <code>n_eff</code> values. How much warmup is enough?</p>
+</blockquote>
+<p>Let’s stick to the model <code>m9.1</code>. Let’s define a function that fits this model dependent on the <code>warmup</code> number, and returns the effective number of samples. Similar to the <code>update</code> function from the <em>brms</em> package, we can use <code>ulam</code> on a fitted model, which makes updating much easier. This is described in the help for <code>?ulam</code>.</p>
+<pre class="r"><code>refit_m9.1 &lt;- function(N){
+    ulam(m9.1, chains = 1, warmup = N, iter = 1000,
+       cores = parallel::detectCores()) %&gt;% 
+    precis() %&gt;% 
+    as_tibble() %&gt;% 
+    pull(n_eff)
+}</code></pre>
+<p>Now we can iterate over the <code>warmup</code> numbers using <code>purrr::map</code>.</p>
+<pre class="r"><code>n_effective &lt;- seq(1, 500, length.out = 100) %&gt;% 
+  round(0) %&gt;% 
+  map_dbl(refit_m9.1) </code></pre>
+<p>Now we just refitted 100 new models with a warmup betwenn 1 and 500. Let’s plot the results.</p>
+<pre class="r"><code>n_effective %&gt;% 
+  as_tibble_col(column_name = &quot;n_eff&quot;) %&gt;% 
+  add_column(warmup = seq(1, 500, length.out = 100)) %&gt;% 
+  ggplot(aes(warmup, n_eff)) +
+  geom_line(colour = red, size = 0.9) +
+  labs(x = &quot;Warm-up&quot;, y = &quot;ESS&quot;) +
+  theme_minimal()</code></pre>
+<div class="figure">
+<img src="/post/chapter9_files/figure-html/9M3%20Figure%207-1.png" alt="Effective number of samples (ESS) as a function of warmup." width="672" />
+<p class="caption">
+(#fig:9M3 Figure 7)Effective number of samples (ESS) as a function of warmup.
+</p>
+</div>
+<p>With such an easy model, and such a low correlation between parameters, the effective number of samples increases fast. We get a robust estimate for a warm-up bigger than 20. But note that this is not the case for all models.</p>
+</div>
+</div>
+<div id="hard-practices" class="section level1">
+<h1>Hard practices</h1>
+<div id="h1" class="section level2">
+<h2>9H1</h2>
+<blockquote>
+<p>Run the model below and then inspect the posterior distribution and explain what it is accomplishing.</p>
+</blockquote>
+<pre class="r"><code>mp &lt;- map2stan(
+  alist(
+    a ~ dnorm(0,1),
+    b ~ dcauchy(0,1)),
+  data=list(y=1),
+  start=list(a=0,b=0),
+  iter=1e4, 
+  warmup=100, 
+  WAIC=FALSE )</code></pre>
+<blockquote>
+<p>Compare the samples for the parameters a and b. Can you explain the different trace plots, using what you know about the Cauchy distribution?</p>
+</blockquote>
+<p>Let’s look at the priors first.</p>
+<pre class="r"><code>tibble(a = rnorm(1e5, 0, 1), 
+       b = rcauchy(1e5, 0, 1)) %&gt;% 
+  pivot_longer(cols = everything(), 
+               names_to = &quot;Parameter&quot;, 
+               values_to = &quot;Estimate&quot;) %&gt;% 
+  ggplot(aes(Estimate, fill = Parameter)) +
+  geom_density(colour = brown) +
+  scale_fill_manual(values = c(red, blue)) +
+  facet_wrap(~ Parameter, scales = &quot;free&quot;) +
+  labs(y = NULL, fill = NULL) +
+  theme_minimal()</code></pre>
+<div class="figure">
+<img src="/post/chapter9_files/figure-html/9H1%20Figure%208-1.png" alt="Prior simulation for a and b." width="672" />
+<p class="caption">
+(#fig:9H1 Figure 8)Prior simulation for a and b.
+</p>
+</div>
+<p>The normal prior on <code>a</code> is pretty straight forward. But looking at <code>b</code> and the cauchy prior draws a different picture. The cauchy distribution places the most probability mass at the same area as <code>a</code> but with some very extreme outliers.<br />
+Now let’s look at the posterior:</p>
+<pre class="r"><code>extract.samples(mp) %&gt;%
+  as_tibble() %&gt;% 
+  pivot_longer(cols = everything(), 
+               names_to = &quot;Parameter&quot;, 
+               values_to = &quot;Estimate&quot;) %&gt;% 
+  ggplot(aes(Estimate, fill = Parameter)) +
+  geom_density(colour = brown) +
+  scale_fill_manual(values = c(red, blue)) +
+  facet_wrap(~ Parameter, scales = &quot;free&quot;) +
+  labs(y = NULL, fill = NULL) +
+  theme_minimal()</code></pre>
+<div class="figure">
+<img src="/post/chapter9_files/figure-html/9H1%20Figure%209-1.png" alt="Posterior distribution for a and b." width="672" />
+<p class="caption">
+(#fig:9H1 Figure 9)Posterior distribution for a and b.
+</p>
+</div>
+<p>Notice a pattern? The posteriors look exactly as the priors. That’s simply because we didn’t specify any likelihood, any data to update our beliefs. So the MCMC just samples from the priors. Now what does the trace plots look like?</p>
+<pre class="r"><code>plot(mp, n_col = 2)</code></pre>
+<div class="figure">
+<img src="/post/chapter9_files/figure-html/9H1%20Figure%2010-1.png" alt="Trace plots for model mp." width="672" />
+<p class="caption">
+(#fig:9H1 Figure 10)Trace plots for model mp.
+</p>
+</div>
+<p>The chain for <code>a</code> looks like a beautiful and hairy caterpillar, so that’s fine. However, <code>b</code> looks very worrying. It seems like the chain diverges from the mean to some extremes from time to time. This normally indicates some convergence problems. However, I think it is fine in this case as it closely mirrors the cauchy distribution, with a lot of probability at a mean and some very extreme outliers.</p>
+</div>
+<div id="h2" class="section level2">
+<h2>9H2</h2>
+<blockquote>
+<p>Recall the divorce rate example from Chapter 5. Repeat that analysis, using <code>ulam()</code> this time, fitting modelsm 5.1, m5.2, and m5.3. Use <code>compare</code> to compare the models on the basis of WAIC orPSIS. Explain the results.</p>
+</blockquote>
+<p>Ok, we need the data and the processing steps as in Chapter 5.</p>
+<pre class="r"><code>data(WaffleDivorce)
+
+dat_waffel &lt;- WaffleDivorce %&gt;% 
+  as_tibble() %&gt;% 
+  transmute(across(c(Divorce, Marriage, MedianAgeMarriage), standardize)) %&gt;% 
+  select(D = Divorce, M = Marriage, A = MedianAgeMarriage)</code></pre>
+<p>And here are the models, now refit with <code>ulam()</code>. Note that we need to set <code>log_lik = TRUE</code> to enable the calculation of WAIC and LOO.</p>
+<pre class="r"><code>m5.1 &lt;- alist(
+  D ~ dnorm(mu, sigma), 
+  mu &lt;- a + bA * A, 
+  a ~ dnorm(0, 0.2), 
+  bA ~ dnorm(0, 0.5), 
+  sigma ~ dexp(1)) %&gt;% 
+  ulam(data = dat_waffel, cores = 8, log_lik = TRUE)
+
+m5.2 &lt;- alist(
+  D ~ dnorm(mu, sigma), 
+  mu &lt;- a + bM * M, 
+  a ~ dnorm(0, 0.2), 
+  bM ~ dnorm(0, 0.5), 
+  sigma ~ dexp(1)) %&gt;% 
+  ulam(data = dat_waffel, cores = 8, log_lik = TRUE)
+
+m5.3 &lt;- alist(
+  D ~ dnorm(mu, sigma), 
+  mu &lt;- a + bM * M + bA * A, 
+  a ~ dnorm(0, 0.2), 
+  c(bM, bA) ~ dnorm(0, 0.5), 
+  sigma ~ dexp(1)) %&gt;% 
+  ulam(data = dat_waffel, cores = 8, log_lik = TRUE)</code></pre>
+<p>We should check the MCMC performance.</p>
+<pre class="r"><code>c(m5.1, m5.2, m5.3) %&gt;% 
+  walk(traceplot)</code></pre>
+<pre><code>## [1] 1000
+## [1] 1
+## [1] 1000</code></pre>
+<div class="figure">
+<img src="/post/chapter9_files/figure-html/9H2%20Figure%2011-1.png" alt="Trace plots for all models from chapter 5." width="672" />
+<p class="caption">
+(#fig:9H2 Figure 11-1)Trace plots for all models from chapter 5.
+</p>
+</div>
+<pre><code>## [1] 1000
+## [1] 1
+## [1] 1000</code></pre>
+<div class="figure">
+<img src="/post/chapter9_files/figure-html/9H2%20Figure%2011-2.png" alt="Trace plots for all models from chapter 5." width="672" />
+<p class="caption">
+(#fig:9H2 Figure 11-2)Trace plots for all models from chapter 5.
+</p>
+</div>
+<pre><code>## [1] 1000
+## [1] 1
+## [1] 1000</code></pre>
+<div class="figure">
+<img src="/post/chapter9_files/figure-html/9H2%20Figure%2011-3.png" alt="Trace plots for all models from chapter 5." width="672" />
+<p class="caption">
+(#fig:9H2 Figure 11-3)Trace plots for all models from chapter 5.
+</p>
+</div>
+<p>They look all fine and the numbers of effective samples is fine as well for all. However, it’s substantially lower for the parameters in <code>m5.3</code>, indicating correlation. Now checking the rhat values.</p>
+<pre class="r"><code>get_rhat &lt;- function(model.input) {
+  model.input %&gt;% 
+  precis() %&gt;% 
+  as_tibble(rownames = &quot;estimate&quot;) %&gt;% 
+  select(estimate, rhat = Rhat4)
+}
+
+c(m5.1, m5.2, m5.3) %&gt;% 
+  map_dfr(get_rhat) %&gt;% 
+  add_column(model = c(rep(&quot;5.1&quot;, 3), 
+                       rep(&quot;5.2&quot;, 3), 
+                       rep(&quot;5.3&quot;, 4)), .before = &quot;estimate&quot;) %&gt;% 
+  knitr::kable(digits = 3)</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+model
+</th>
+<th style="text-align:left;">
+estimate
+</th>
+<th style="text-align:right;">
+rhat
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+5.1
+</td>
+<td style="text-align:left;">
+a
+</td>
+<td style="text-align:right;">
+0.998
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5.1
+</td>
+<td style="text-align:left;">
+bA
+</td>
+<td style="text-align:right;">
+0.999
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5.1
+</td>
+<td style="text-align:left;">
+sigma
+</td>
+<td style="text-align:right;">
+0.998
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5.2
+</td>
+<td style="text-align:left;">
+a
+</td>
+<td style="text-align:right;">
+0.998
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5.2
+</td>
+<td style="text-align:left;">
+bM
+</td>
+<td style="text-align:right;">
+0.998
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5.2
+</td>
+<td style="text-align:left;">
+sigma
+</td>
+<td style="text-align:right;">
+0.999
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5.3
+</td>
+<td style="text-align:left;">
+a
+</td>
+<td style="text-align:right;">
+1.006
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5.3
+</td>
+<td style="text-align:left;">
+bA
+</td>
+<td style="text-align:right;">
+0.998
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5.3
+</td>
+<td style="text-align:left;">
+bM
+</td>
+<td style="text-align:right;">
+0.999
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5.3
+</td>
+<td style="text-align:left;">
+sigma
+</td>
+<td style="text-align:right;">
+0.998
+</td>
+</tr>
+</tbody>
+</table>
+<p>They look all good. But note that they are slightly increased in model <code>m5.3</code>, probably due to the correlation between parameters.</p>
+<p>Now we can compare the models via the <code>compare()</code> function.</p>
+<pre class="r"><code>compare(m5.1, m5.2, m5.3, func = PSIS) %&gt;% 
+  as_tibble(rownames = &quot;Model&quot;) %&gt;% 
+  knitr::kable(digits = 2)</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+Model
+</th>
+<th style="text-align:right;">
+PSIS
+</th>
+<th style="text-align:right;">
+SE
+</th>
+<th style="text-align:right;">
+dPSIS
+</th>
+<th style="text-align:right;">
+dSE
+</th>
+<th style="text-align:right;">
+pPSIS
+</th>
+<th style="text-align:right;">
+weight
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+m5.1
+</td>
+<td style="text-align:right;">
+125.30
+</td>
+<td style="text-align:right;">
+12.42
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+3.31
+</td>
+<td style="text-align:right;">
+0.79
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+m5.3
+</td>
+<td style="text-align:right;">
+127.92
+</td>
+<td style="text-align:right;">
+12.91
+</td>
+<td style="text-align:right;">
+2.61
+</td>
+<td style="text-align:right;">
+0.76
+</td>
+<td style="text-align:right;">
+4.87
+</td>
+<td style="text-align:right;">
+0.21
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+m5.2
+</td>
+<td style="text-align:right;">
+138.94
+</td>
+<td style="text-align:right;">
+9.94
+</td>
+<td style="text-align:right;">
+13.64
+</td>
+<td style="text-align:right;">
+8.78
+</td>
+<td style="text-align:right;">
+2.79
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+</tr>
+</tbody>
+</table>
+<p>Model <code>m5.1</code> with only median age at marriage as a predictor performs best, but is not really distinguishable from model <code>m5.3</code>. However, the model with marriage rate only, <code>m5.2</code> clearly performs worse than both.</p>
+</div>
+<div id="h3" class="section level2">
+<h2>9H3</h2>
+<blockquote>
+<p>Sometimes changing a prior for one parameter has unanticipated effects on other parameters. This is because when a parameter is highly correlated with another parameter in the posterior, the prior influences both parameters. Here’s an example to work and think through. Go back to the leg length example in Chapter 5. Here is the code again, which simulates height and leg lengths for 100 imagined individuals:</p>
+</blockquote>
+<pre class="r"><code>N &lt;- 100 # number of individuals
+height &lt;- rnorm(N,10,2) # sim total height of each 
+leg_prop &lt;- runif(N,0.4,0.5) # leg as proportion of height
+leg_left &lt;- leg_prop*height + # sim left leg as proportion + error
+  rnorm( N , 0 , 0.02 )
+leg_right &lt;- leg_prop*height +    # sim right leg as proportion + error
+  rnorm( N , 0 , 0.02 ) 
+
+# combine into data frame
+d &lt;- data.frame(height,leg_left,leg_right)</code></pre>
+<blockquote>
+<p>And below is the model you fit before, resulting in a highly correlated posterior for the two beta parameters. This time, fit the model using <code>ulam()</code>:</p>
+</blockquote>
+<pre class="r"><code>m5.8s &lt;- ulam(
+  alist(
+    height ~ dnorm( mu , sigma ),
+    mu &lt;- a + bl*leg_left + br*leg_right,
+    a ~ dnorm( 10 , 100 ),
+    bl ~ dnorm( 2 , 10 ),
+    br ~ dnorm( 2 , 10 ),
+    sigma ~ dexp( 1 )),
+  data=d, chains=4, start=list(a=10,bl=0,br=0.1,sigma=1), 
+  log_lik = TRUE)</code></pre>
+<blockquote>
+<p>Compare the posterior distribution produced by the code above to the posterior distribution produced when you change the prior forbrso that it is strictly positive:</p>
+</blockquote>
+<pre class="r"><code>m5.8s2 &lt;- ulam(
+  alist(
+    height ~ dnorm( mu , sigma ),
+    mu &lt;- a + bl*leg_left + br*leg_right,
+    a ~ dnorm( 10 , 100 ),
+    bl ~ dnorm( 2 , 10 ),
+    br ~ dnorm( 2 , 10 ),
+    sigma ~ dexp( 1 )),
+  data=d, chains=4, 
+  constraints=list(br=&quot;lower=0&quot;), 
+  start=list(a=10,bl=0,br=0.1,sigma=1), 
+  log_lik = TRUE)</code></pre>
+<blockquote>
+<p>Note the <code>constraints</code> list. What this does is constrain the prior distribution of <code>br</code> so that it has positive probability only above zero. In other words, that prior ensures that the posterior distribution for <code>br</code> will have no probability mass below zero. Compare the two posterior distributions for <code>m5.8s</code> and <code>m5.8s2</code>. What has changed in the posterior distribution of both beta parameters? Can you explain the change induced by the change inprior?</p>
+</blockquote>
+<p>First let’s take a look at both model summaries:</p>
+<pre class="r"><code>precis(m5.8s) %&gt;% 
+  as_tibble(rownames = &quot;estimate&quot;) %&gt;% 
+  add_column(model = &quot;m5.8s&quot;, .before = &quot;estimate&quot;) %&gt;% 
+  full_join(
+    
+    precis(m5.8s2) %&gt;%
+      as_tibble(rownames = &quot;estimate&quot;) %&gt;%
+      add_column(model = &quot;m5.8s2&quot;, .before = &quot;estimate&quot;)
+    
+  ) %&gt;% 
+  arrange(estimate) %&gt;% 
+  knitr::kable(digits = 3)</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+model
+</th>
+<th style="text-align:left;">
+estimate
+</th>
+<th style="text-align:right;">
+mean
+</th>
+<th style="text-align:right;">
+sd
+</th>
+<th style="text-align:right;">
+5.5%
+</th>
+<th style="text-align:right;">
+94.5%
+</th>
+<th style="text-align:right;">
+n_eff
+</th>
+<th style="text-align:right;">
+Rhat4
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+m5.8s
+</td>
+<td style="text-align:left;">
+a
+</td>
+<td style="text-align:right;">
+1.008
+</td>
+<td style="text-align:right;">
+0.304
+</td>
+<td style="text-align:right;">
+0.531
+</td>
+<td style="text-align:right;">
+1.492
+</td>
+<td style="text-align:right;">
+1048.286
+</td>
+<td style="text-align:right;">
+1.000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+m5.8s2
+</td>
+<td style="text-align:left;">
+a
+</td>
+<td style="text-align:right;">
+1.002
+</td>
+<td style="text-align:right;">
+0.297
+</td>
+<td style="text-align:right;">
+0.515
+</td>
+<td style="text-align:right;">
+1.470
+</td>
+<td style="text-align:right;">
+1039.225
+</td>
+<td style="text-align:right;">
+1.002
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+m5.8s
+</td>
+<td style="text-align:left;">
+bl
+</td>
+<td style="text-align:right;">
+0.332
+</td>
+<td style="text-align:right;">
+2.216
+</td>
+<td style="text-align:right;">
+-3.116
+</td>
+<td style="text-align:right;">
+3.904
+</td>
+<td style="text-align:right;">
+680.453
+</td>
+<td style="text-align:right;">
+1.005
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+m5.8s2
+</td>
+<td style="text-align:left;">
+bl
+</td>
+<td style="text-align:right;">
+-0.334
+</td>
+<td style="text-align:right;">
+1.517
+</td>
+<td style="text-align:right;">
+-3.009
+</td>
+<td style="text-align:right;">
+1.774
+</td>
+<td style="text-align:right;">
+467.333
+</td>
+<td style="text-align:right;">
+1.009
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+m5.8s
+</td>
+<td style="text-align:left;">
+br
+</td>
+<td style="text-align:right;">
+1.676
+</td>
+<td style="text-align:right;">
+2.207
+</td>
+<td style="text-align:right;">
+-1.900
+</td>
+<td style="text-align:right;">
+5.117
+</td>
+<td style="text-align:right;">
+682.848
+</td>
+<td style="text-align:right;">
+1.005
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+m5.8s2
+</td>
+<td style="text-align:left;">
+br
+</td>
+<td style="text-align:right;">
+2.344
+</td>
+<td style="text-align:right;">
+1.511
+</td>
+<td style="text-align:right;">
+0.237
+</td>
+<td style="text-align:right;">
+5.007
+</td>
+<td style="text-align:right;">
+461.211
+</td>
+<td style="text-align:right;">
+1.009
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+m5.8s
+</td>
+<td style="text-align:left;">
+sigma
+</td>
+<td style="text-align:right;">
+0.666
+</td>
+<td style="text-align:right;">
+0.048
+</td>
+<td style="text-align:right;">
+0.594
+</td>
+<td style="text-align:right;">
+0.747
+</td>
+<td style="text-align:right;">
+1024.013
+</td>
+<td style="text-align:right;">
+1.001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+m5.8s2
+</td>
+<td style="text-align:left;">
+sigma
+</td>
+<td style="text-align:right;">
+0.665
+</td>
+<td style="text-align:right;">
+0.048
+</td>
+<td style="text-align:right;">
+0.592
+</td>
+<td style="text-align:right;">
+0.745
+</td>
+<td style="text-align:right;">
+959.761
+</td>
+<td style="text-align:right;">
+1.001
+</td>
+</tr>
+</tbody>
+</table>
+<p>We can already see that changing the prior on one parameter (<code>br</code>) results in a change in the other parameter (<code>bl</code>).</p>
+<p>We can and should plot the whole posterior distributions:</p>
+<pre class="r"><code>extract.samples(m5.8s) %&gt;% 
+  as_tibble() %&gt;% 
+  add_column(model = &quot;m5.8s&quot;) %&gt;% 
+  full_join(
+    
+    extract.samples(m5.8s2) %&gt;%
+      as_tibble() %&gt;%
+      add_column(model = &quot;m5.8s2&quot;)
+    
+  ) %&gt;% 
+  pivot_longer(cols = -model, 
+               names_to = &quot;estimate&quot;) %&gt;%
+  ggplot(aes(value, fill = model)) +
+  geom_density(colour = grey, alpha = 0.7) +
+  facet_wrap(~estimate, scales = &quot;free&quot;) +
+  scale_fill_manual(values = c(red, blue)) +
+  scale_y_continuous(breaks = 0, labels = NULL) +
+  theme_minimal() +
+  labs(y = NULL, fill = &quot;Model&quot;, 
+       x = &quot;Posterior estimate&quot;) +
+  theme(legend.position = c(0.9, 0.9), 
+        legend.background = element_rect(colour = &quot;white&quot;))</code></pre>
+<div class="figure">
+<img src="/post/chapter9_files/figure-html/9H3%20Figure%2012-1.png" alt="Posterior distributions for all estimates of both models." width="672" />
+<p class="caption">
+(#fig:9H3 Figure 12)Posterior distributions for all estimates of both models.
+</p>
+</div>
+<p>We can see that the posterior on the intercept and on sigma remains constant. But forcing <code>br</code> to be positive shifts the posterior for <code>bl</code> to the left. That’s because <code>br</code> and <code>bl</code> are negatively correlated in the likelihood (the data) and the model wants to keep this information. And the only way to express this information in the posterior is to shift the estimate for <code>bl</code> to the left, when <code>br</code> is shifted to the right. It’s just a necessity arising from the extreme negative correlation in the data.</p>
+</div>
+<div id="h4" class="section level2">
+<h2>9H4</h2>
+<blockquote>
+<p>For the two models fit in the previous problem, use WAIC or PSIS to compare the effective numbers of parameters for each model. You will need to use log_lik=TRUE to instruct ulam() to compute the terms that both WAIC and PSIS need. Which model has more effective parameters? Why?</p>
+</blockquote>
+<p>We can just throw both models into the <code>compare()</code> function with Pareto smoothed importance sampling (PSIS).</p>
+<pre class="r"><code>compare(m5.8s, m5.8s2, func = &quot;PSIS&quot;) %&gt;% 
+  as_tibble(rownames = &quot;Estimate&quot;) %&gt;% 
+  knitr::kable(digits = 2)</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+Estimate
+</th>
+<th style="text-align:right;">
+PSIS
+</th>
+<th style="text-align:right;">
+SE
+</th>
+<th style="text-align:right;">
+dPSIS
+</th>
+<th style="text-align:right;">
+dSE
+</th>
+<th style="text-align:right;">
+pPSIS
+</th>
+<th style="text-align:right;">
+weight
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+m5.8s2
+</td>
+<td style="text-align:right;">
+204.36
+</td>
+<td style="text-align:right;">
+10.83
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+2.69
+</td>
+<td style="text-align:right;">
+0.68
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+m5.8s
+</td>
+<td style="text-align:right;">
+205.89
+</td>
+<td style="text-align:right;">
+10.81
+</td>
+<td style="text-align:right;">
+1.53
+</td>
+<td style="text-align:right;">
+0.61
+</td>
+<td style="text-align:right;">
+3.47
+</td>
+<td style="text-align:right;">
+0.32
+</td>
+</tr>
+</tbody>
+</table>
+<p>The important column here is <code>pPSIS</code> containing the effective number of parameters given by PSIS, or “the overfitting penalty”. There is not much difference in these models, but <code>m5.8s2</code> is a bit less flexible as the prior is more informative. At the same time, the model fits the data slightly worse as indicated by the other PSIS estimates.</p>
+</div>
+<div id="h5" class="section level2">
+<h2>9H5</h2>
+<blockquote>
+<p>Modify the Metropolis algorithm code from the chapter to handle the case that the island populations have a different distribution than the island labels. This means the island’s number will not be the same as its population.</p>
+</blockquote>
+<p>Here’s the code from the chapter:</p>
+<pre class="r"><code>num_weeks &lt;- 1e5
+positions &lt;- rep(0, num_weeks)
+current &lt;- 10
+
+for (i in 1:num_weeks) {
+  
+  # record current position
+  positions[i] &lt;- current
+  
+  # flip coin to generate proposal
+  proposal &lt;- current + sample(c(-1, 1) , size = 1)
+  
+  # now make sure he loops around the archipelago
+  if (proposal &lt; 1)
+    proposal &lt;- 10
+  if (proposal &gt; 10)
+    proposal &lt;- 1
+  
+  # move?
+  prob_move &lt;- proposal / current
+  current &lt;- ifelse(runif(1) &lt; prob_move , proposal , current)
+  
+}</code></pre>
+<p>Let’s set up a data frame with the number of the islands (1 to 10) and population for each islands.</p>
+<pre class="r"><code>set.seed(123)
+island &lt;- tibble(current = 1:10, 
+                 population = rpois(10, 10))
+
+island %&gt;% 
+  arrange(desc(population)) %&gt;% 
+  knitr::kable()</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:right;">
+current
+</th>
+<th style="text-align:right;">
+population
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+15
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+14
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+13
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+11
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+10
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+10
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+9
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+8
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+</tbody>
+</table>
+<p>Island 6 has the highest population, and island 9 the lowest.</p>
+<p>Now to refit the code, we simply make the probability to move <code>prob_move</code> dependent on the population, and not on the number of the island (which was equal to the population in the original code).</p>
+<pre class="r"><code>num_weeks &lt;- 1e5
+positions &lt;- rep(0, num_weeks)
+current &lt;- 10
+
+for (i in 1:num_weeks) {
+  
+  # record current position
+  positions[i] &lt;- island$current[current]
+  
+  # flip coin to generate proposal
+  proposal &lt;- island$current[current] + sample(c(-1, 1), size = 1)
+  
+  # now make sure he loops around the archipelago
+  if (proposal &lt; 1)
+    proposal &lt;- 10
+  if (proposal &gt; 10)
+    proposal &lt;- 1
+  
+  # move?
+  prob_move &lt;- island$population[proposal] / island$population[current]
+  current &lt;- ifelse(runif(1) &lt; prob_move , island$current[proposal] , island$current[current])
+  
+}</code></pre>
+<p>Now we can plot the results. We start by plotting the first 100 weeks:</p>
+<pre class="r"><code>tibble(positions = positions[1:100], week = 1:100) %&gt;%
+  ggplot(aes(week, positions)) +
+  geom_point(shape = 21, size = 2,
+    stroke = 1.1,  alpha = 0.8,
+    fill = blue, colour = brown) +
+  labs(y = &quot;Island&quot;, x = &quot;Week&quot;) +
+  scale_y_continuous(breaks = seq(2, 10, by = 2)) +
+  theme_minimal() +
+  theme(panel.grid.major.x = element_blank(),
+        panel.grid.minor.x = element_blank())</code></pre>
+<div class="figure">
+<img src="/post/chapter9_files/figure-html/9H5%20Figure%2013-1.png" alt="Walk-through the first 100 island visits." width="672" />
+<p class="caption">
+(#fig:9H5 Figure 13)Walk-through the first 100 island visits.
+</p>
+</div>
+<p>The movement looks all good, now we should take a look at the absolute visits for each islands.</p>
+<pre class="r"><code>tibble(positions = positions) %&gt;% 
+  count(positions, name = &quot;n_weeks&quot;) %&gt;% 
+  mutate(positions = as_factor(positions), 
+         positions = fct_reorder(positions, n_weeks)) %&gt;% 
+  ggplot(aes(positions, n_weeks)) +
+  geom_segment(aes(xend = positions, y = 0, yend = n_weeks), 
+               size = 2, colour = grey) +
+  geom_point(shape = 21, size = 4,
+             stroke = 1.1, alpha = 0.8,
+             fill = blue, colour = brown) +
+  labs(x = &quot;Island&quot;, y = &quot;Number of weeks&quot;) +
+  theme_minimal() +
+  theme(panel.grid = element_blank(), 
+        axis.ticks.y = element_line())</code></pre>
+<div class="figure">
+<img src="/post/chapter9_files/figure-html/9H5%20Figure%2014-1.png" alt="The long-run behaviour of the algorithm." width="672" />
+<p class="caption">
+(#fig:9H5 Figure 14)The long-run behaviour of the algorithm.
+</p>
+</div>
+<p>That’s a perfect results, with island 9 having the fewest visits, and island 6 the most. Another way to visualise this is to plot the number of weeks for each island against it’s population size.</p>
+<pre class="r"><code>island %&gt;% 
+  rename(positions = current) %&gt;% 
+  left_join(
+    
+    tibble(positions = positions) %&gt;% 
+  count(positions, name = &quot;n_weeks&quot;)
+    
+  ) %&gt;% 
+  ggplot(aes(n_weeks, population, 
+             label = positions)) +
+  geom_label(colour = brown, size = 6) +
+  labs(x = &quot;Number of weeks&quot;, y = &quot;Population&quot;) +
+  theme_minimal()</code></pre>
+<div class="figure">
+<img src="/post/chapter9_files/figure-html/9H5%20Figure%2015-1.png" alt="Population size of each island plotted against the number of weeks each island was visited." width="672" />
+<p class="caption">
+(#fig:9H5 Figure 15)Population size of each island plotted against the number of weeks each island was visited.
+</p>
+</div>
+<p>So with these three plots at hand, and some <code>magick</code> as well as <code>gganimate</code>, we can make a nice Gif with the build-up of the Markov Chain for the first 100 steps.</p>
+<pre class="r"><code>library(magick)
+library(gganimate)
+
+# first plot
+walk_through &lt;- tibble(positions = positions[1:100], 
+                       week = 1:100) %&gt;%
+  ggplot(aes(week, positions)) +
+  geom_point(aes(week2, positions2),
+             shape = 21, size = 2,
+    stroke = 1.1,  alpha = 0.3,
+    fill = grey, colour = brown, 
+    data = tibble(positions2 = positions[1:100], 
+                       week2 = 1:100)) +
+  geom_point(shape = 21, size = 4,
+    stroke = 1.1,  alpha = 0.8,
+    fill = blue, colour = brown) +
+  labs(y = &quot;Island&quot;, x = &quot;Week&quot;) +
+  scale_y_continuous(breaks = seq(2, 10, by = 2)) +
+  theme_minimal() +
+  theme(panel.grid.major.x = element_blank(),
+        panel.grid.minor.x = element_blank()) +
+  transition_reveal(week) +
+  ease_aes() 
+
+walk_through_gif &lt;- animate(walk_through, width = 240, height = 240)
+
+
+
+# second plot
+week_counts &lt;- tibble(positions = positions[1:100],  week = 1:100) %&gt;% 
+  count(positions, week) %&gt;% 
+  group_by(positions) %&gt;% 
+  arrange(week) %&gt;% 
+  mutate(n_weeks = cumsum(n)) %&gt;% 
+  ungroup()
+
+
+  
+lollipop &lt;- week_counts %&gt;% 
+  expand(positions, week) %&gt;% 
+  left_join(week_counts) %&gt;% 
+  replace_na(list(n_weeks = 0)) %&gt;% 
+  group_by(positions) %&gt;% 
+  mutate(n_weeks = cumsum(n_weeks), 
+         positions = as_factor(positions)) %&gt;% 
+  ggplot(aes(positions, n_weeks)) +
+  geom_segment(aes(xend = positions, y = 0, yend = n_weeks), 
+               size = 2, colour = grey) +
+  geom_point(shape = 21, size = 4,
+             stroke = 1.1, alpha = 0.8,
+             fill = blue, colour = brown) +
+  labs(x = &quot;Island&quot;, y = &quot;Number of weeks&quot;) +
+  theme_minimal() +
+  theme(panel.grid = element_blank(), 
+        axis.ticks.y = element_line()) +
+  transition_time(week)
+
+
+lollipop_gif &lt;- animate(lollipop, width = 240/2, height = 240)
+
+
+# third plot
+corr_plot &lt;- island %&gt;% 
+  rename(positions = current) %&gt;% 
+  mutate(positions = as_factor(positions)) %&gt;% 
+  full_join(
+    
+    week_counts %&gt;%
+      expand(positions, week) %&gt;%
+      left_join(week_counts) %&gt;%
+      replace_na(list(n_weeks = 0)) %&gt;%
+      group_by(positions) %&gt;%
+      mutate(n_weeks = cumsum(n_weeks),
+             positions = as_factor(positions))
+    
+  ) %&gt;%  
+  drop_na(week) %&gt;%  
+  ggplot(aes(n_weeks, population)) +
+  geom_smooth(aes(x, y), colour = brown, 
+              method = &quot;lm&quot;, se = FALSE, 
+              data = tibble(x = 1:250, 
+                            y = seq(1, 15, length.out = 250))) +
+  geom_label(aes(label = positions), 
+             colour = brown, size = 6) +
+  labs(x = &quot;Number of weeks&quot;, y = &quot;Population&quot;) +
+  theme_minimal() +
+  transition_time(week)
+
+corr_plot_gif &lt;- animate(corr_plot, width = 240/2, height = 240)</code></pre>
+<p><img src="https://raw.githubusercontent.com/Ischi94/statistical-rethinking/master/walk_through_gif.gif" style="width:30.0%" /></p>
+<p><img src="https://raw.githubusercontent.com/Ischi94/statistical-rethinking/master/lollipop_gif.gif" style="width:15.0%" /> <img src="https://raw.githubusercontent.com/Ischi94/statistical-rethinking/master/corr_plot_gif.gif" style="width:15.0%" /></p>
+<p>Here we see the problem of the Metropolis algorithm. After 100 weeks, you start to see a pattern, but it does not really reflect the true posterior. It just needs more time to converge.</p>
+<hr />
+<pre class="r"><code>sessionInfo()</code></pre>
+<pre><code>## R version 4.0.4 (2021-02-15)
+## Platform: x86_64-pc-linux-gnu (64-bit)
+## Running under: Linux Mint 20.1
+## 
+## Matrix products: default
+## BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.9.0
+## LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.9.0
+## 
+## locale:
+##  [1] LC_CTYPE=de_DE.UTF-8       LC_NUMERIC=C              
+##  [3] LC_TIME=de_DE.UTF-8        LC_COLLATE=de_DE.UTF-8    
+##  [5] LC_MONETARY=de_DE.UTF-8    LC_MESSAGES=de_DE.UTF-8   
+##  [7] LC_PAPER=de_DE.UTF-8       LC_NAME=C                 
+##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+## [11] LC_MEASUREMENT=de_DE.UTF-8 LC_IDENTIFICATION=C       
+## 
+## attached base packages:
+## [1] parallel  stats     graphics  grDevices utils     datasets  methods  
+## [8] base     
+## 
+## other attached packages:
+##  [1] kableExtra_1.3.4     knitr_1.30           rethinking_2.13     
+##  [4] rstan_2.21.2         StanHeaders_2.21.0-7 forcats_0.5.0       
+##  [7] stringr_1.4.0        dplyr_1.0.3          purrr_0.3.4         
+## [10] readr_1.4.0          tidyr_1.1.2          tibble_3.0.5        
+## [13] ggplot2_3.3.3        tidyverse_1.3.0     
+## 
+## loaded via a namespace (and not attached):
+##  [1] matrixStats_0.57.0 fs_1.5.0           lubridate_1.7.9.2  webshot_0.5.2     
+##  [5] httr_1.4.2         tools_4.0.4        backports_1.2.1    R6_2.5.0          
+##  [9] DBI_1.1.1          colorspace_2.0-0   withr_2.4.1        tidyselect_1.1.0  
+## [13] gridExtra_2.3      prettyunits_1.1.1  processx_3.4.5     curl_4.3          
+## [17] compiler_4.0.4     cli_2.2.0          rvest_0.3.6        xml2_1.3.2        
+## [21] labeling_0.4.2     bookdown_0.21      scales_1.1.1       mvtnorm_1.1-1     
+## [25] callr_3.5.1        systemfonts_1.0.1  digest_0.6.27      rmarkdown_2.6     
+## [29] svglite_2.0.0      pkgconfig_2.0.3    htmltools_0.5.1.1  dbplyr_2.0.0      
+## [33] highr_0.8          rlang_0.4.10       readxl_1.3.1       rstudioapi_0.13   
+## [37] shape_1.4.5        generics_0.1.0     farver_2.0.3       jsonlite_1.7.2    
+## [41] inline_0.3.17      magrittr_2.0.1     loo_2.4.1          Rcpp_1.0.6        
+## [45] munsell_0.5.0      fansi_0.4.2        lifecycle_0.2.0    stringi_1.5.3     
+## [49] yaml_2.2.1         MASS_7.3-53.1      pkgbuild_1.2.0     grid_4.0.4        
+## [53] crayon_1.3.4       lattice_0.20-41    haven_2.3.1        hms_1.0.0         
+## [57] ps_1.5.0           pillar_1.4.7       codetools_0.2-18   stats4_4.0.4      
+## [61] reprex_1.0.0       glue_1.4.2         evaluate_0.14      blogdown_1.1      
+## [65] V8_3.4.0           RcppParallel_5.0.2 modelr_0.1.8       vctrs_0.3.6       
+## [69] cellranger_1.1.0   gtable_0.3.0       assertthat_0.2.1   xfun_0.20         
+## [73] broom_0.7.3        coda_0.19-4        viridisLite_0.3.0  ellipsis_0.3.1</code></pre>
+</div>
+</div>
