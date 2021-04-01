@@ -4,7 +4,7 @@ author: "Gregor Mathes"
 date: "2021-03-27"
 slug: Regression tests
 categories: []
-tags: [Regression, t-test, Bayes, Statistics]
+tags: [Regression in disguise, Regression, t-test, Bayes, Statistics]
 subtitle: ''
 summary: 'Modeling the central tendency within one sample'
 authors: [Gregor Mathes]

@@ -4,11 +4,11 @@ author: "Gregor Mathes"
 date: "2021-03-27"
 slug: Regression tests
 categories: []
-tags: [Regression, t-test, Bayes, Statistics]
+tags: [Regression in disguise, Regression, t-test, Bayes, Statistics]
 subtitle: ''
 summary: 'Modeling the central tendency within one sample'
 authors: [Gregor Mathes]
-lastmod: "28 März, 2021"
+lastmod: "01 April, 2021"
 featured: no
 projects: [Regression tests]
 output:
@@ -184,11 +184,11 @@ options(mc.cores = parallel::detectCores())  # Use all cores</code></pre>
 ## 
 ## Population-Level Effects: 
 ##           Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## Intercept   159.88      0.21   159.48   160.31 1.00     2647     2149
+## Intercept   159.89      0.21   159.48   160.29 1.00     2097     1684
 ## 
 ## Family Specific Parameters: 
 ##       Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-## sigma     2.06      0.15     1.79     2.37 1.00     2644     2084
+## sigma     2.06      0.14     1.81     2.37 1.00     2457     1859
 ## 
 ## Samples were drawn using sampling(NUTS). For each parameter, Bulk_ESS
 ## and Tail_ESS are effective sample size measures, and Rhat is the potential
@@ -207,7 +207,7 @@ Now to the interpretation: The whole distribution does not include the average h
 <pre class="r"><code>hypothesis(result_brms, &quot;Intercept &lt; 171&quot;)</code></pre>
 <pre><code>## Hypothesis Tests for class b:
 ##              Hypothesis Estimate Est.Error CI.Lower CI.Upper Evid.Ratio
-## 1 (Intercept)-(171) &lt; 0   -11.12      0.21   -11.46   -10.76        Inf
+## 1 (Intercept)-(171) &lt; 0   -11.11      0.21   -11.44   -10.77        Inf
 ##   Post.Prob Star
 ## 1         1    *
 ## ---
@@ -270,10 +270,10 @@ Now to the interpretation: The whole distribution does not include the average h
 </tr>
 <tr class="odd">
 <td align="left">Bayesian Regression</td>
-<td align="right">-11.12</td>
+<td align="right">-11.11</td>
 <td align="right">0.21</td>
 <td align="right">-11.52</td>
-<td align="right">-10.69</td>
+<td align="right">-10.71</td>
 <td align="right">NA</td>
 </tr>
 </tbody>
