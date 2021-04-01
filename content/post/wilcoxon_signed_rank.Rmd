@@ -199,7 +199,7 @@ This is the same as for the t-test on sign-ranked data.
   
 ## The model  
   
-We could already see that we get into weird terrain with these parametric and non-parametric stuff. But reverend Bayes comes to the rescue. We can model the whole posterior distribution for our sample and can even verify the null hypothesis, not only reject it. And we are not bound to arbitrary thresholds, but can base our decision on the whole set of information, instead of point estimates. As I am playing chess from time to time, I know that most games are quite short but that some games tend to be extremely long. I have written the stackexchange post mentioned above and therefore have prior knowledge that the duration of chess games is log-normal distributed. We can use this information in the Bayesian model:  
+We could already see that we get into weird terrain with these parametric and non-parametric stuff. But reverend Bayes comes to the rescue. We can model the whole posterior distribution for our sample and can even verify the null hypothesis, not only reject it. And we are not bound to arbitrary thresholds, but can base our decision on the whole set of information, instead of point estimates. As I am playing chess from time to time, I know that most games are quite short but that some games tend to be extremely long. I have read the stackexchange post mentioned above and therefore have prior knowledge that the duration of chess games is log-normal distributed. We can use this information in the Bayesian model:  
   
 ```{r Bayesian regression, results='hide'}
 library(brms)
