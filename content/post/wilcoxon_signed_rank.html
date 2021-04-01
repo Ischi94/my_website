@@ -1,14 +1,36 @@
 ---
-title: "Untitled"
+title: "Wilcoxon signed-rank test"
 author: "Gregor Mathes"
-date: "1 4 2021"
-output: 
-  html_document:
-    mathjax: "default"
+date: "2021-04-01"
+slug: Regression tests
+categories: []
+tags: [Regression in disguise, Regression, t-test, Bayes, Statistics]
+subtitle: ''
+summary: 'Modeling the central tendency within one sample without the normality assumption'
+authors: [Gregor Mathes]
+lastmod: "01 April, 2021"
+featured: no
+projects: [Regression tests]
+output:
+  blogdown::html_page:
+    toc: true
+    toc_depth: 1
+    number_sections: false
+    fig_width: 6
 ---
 
 <script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
+<div id="TOC">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#wilcoxon-signed-rank-test">Wilcoxon signed-rank test</a></li>
+<li><a href="#comparing-the-test-to-the-regression">Comparing the test to the regression</a></li>
+<li><a href="#bayesian-estimation">Bayesian estimation</a></li>
+<li><a href="#comparison">Comparison</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
+</div>
 
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
@@ -56,7 +78,7 @@ simulated_data %&gt;%
                alpha = 0.9) +
   facet_wrap(~distribution, scale = &quot;free&quot;) +
   theme_minimal()</code></pre>
-<p><img src="/post/wilcoxon_signed_rank_files/figure-html/simulation%20raw-1.png" width="672" /></p>
+<p><img src="/post/wilcoxon_signed_rank_files/figure-html/simulation%20raw-1.png" width="576" /></p>
 <p>So that’s the un-transformed simulated data. Now let’s try to transform them.</p>
 <pre class="r"><code># define the transformation function
 signed_rank &lt;-  function(x) {
@@ -72,7 +94,7 @@ simulated_data %&gt;%
                alpha = 0.9) +
   facet_wrap(~distribution, scale = &quot;free&quot;) +
   theme_minimal()</code></pre>
-<p><img src="/post/wilcoxon_signed_rank_files/figure-html/simulation%20transformed-1.png" width="672" /></p>
+<p><img src="/post/wilcoxon_signed_rank_files/figure-html/simulation%20transformed-1.png" width="576" /></p>
 <p>We can see that the transformation does not work properly on all distributions (especially for the binomial and the poisson data). This is because the rank-transformation works only for continuous data, and not for discrete. And on the other distributions, it seems like a mixture of a normal and a uniform distribution. The test is applied as a black box and you don’t see these transformations, and that those transformations might fail. We will see how to overcome these problems with Bayesian estimation later on in this blog. But not only Bayesian estimation is capable to tackle these issues. There are frequentist ways for regression on discrete data as well. But all of this requires thinking, cross-checking, and plotting each step in the analysis. You won’t tackle these issues with a classical test like. Even worse, if you throw the data in such a black box, it won’t even tell you that something is wrong, or that it’s assumptions are violated.</p>
 </div>
 <div id="assumptions" class="section level2">
@@ -107,7 +129,7 @@ dat_chess %&gt;%
                alpha = 0.9) +
   labs(x = &quot;Length of chess game&quot;) +
   theme_minimal()</code></pre>
-<p><img src="/post/wilcoxon_signed_rank_files/figure-html/sim%20data-1.png" width="672" /></p>
+<p><img src="/post/wilcoxon_signed_rank_files/figure-html/sim%20data-1.png" width="576" /></p>
 <p>With this much data, all our p-value would be totally small (see the problem?). So I will sample 200 values from this total distribution.</p>
 <pre class="r"><code>set.seed(1708)
 dat_chess &lt;- sample(dat_chess, 200)</code></pre>
@@ -227,7 +249,7 @@ result_posterior %&gt;%
   geom_density(colour = &quot;grey20&quot;, fill = &quot;coral2&quot;, alpha = 0.8) +
   labs(x = &quot;Mean height&quot;, y = NULL) + 
   theme_minimal() </code></pre>
-<p><img src="/post/wilcoxon_signed_rank_files/figure-html/posterior%20brms-1.png" width="672" /></p>
+<p><img src="/post/wilcoxon_signed_rank_files/figure-html/posterior%20brms-1.png" width="576" /></p>
 <p>And we can proceed to test our hypothesis:</p>
 <pre class="r"><code>hyp_test &lt;- result_posterior %&gt;% 
   mutate(b_Intercept= exp(b_Intercept)) %&gt;% 
@@ -236,15 +258,15 @@ result_posterior %&gt;%
 hyp_test </code></pre>
 <pre><code>## Hypothesis Tests for class :
 ##               Hypothesis Estimate Est.Error CI.Lower CI.Upper Evid.Ratio
-## 1 (b_Intercept)-(75) &gt; 0     3.52      2.08      0.1     6.92      21.06
+## 1 (b_Intercept)-(75) &gt; 0     3.56      2.09     0.23     7.06      25.09
 ##   Post.Prob Star
-## 1      0.95    *
+## 1      0.96    *
 ## ---
 ## &#39;CI&#39;: 90%-CI for one-sided and 95%-CI for two-sided hypotheses.
 ## &#39;*&#39;: For one-sided hypotheses, the posterior probability exceeds 95%;
 ## for two-sided hypotheses, the value tested against lies outside the 95%-CI.
 ## Posterior probabilities of point hypotheses assume equal prior probabilities.</code></pre>
-<p>It’s 21.1 times more likely that the average chess game from the sample takes more than 75 minutes, than that the average is less than 75 minutes.</p>
+<p>It’s 25.1 times more likely that the average chess game from the sample takes more than 75 minutes, than that the average is less than 75 minutes.</p>
 </div>
 </div>
 <div id="comparison" class="section level1">
@@ -308,12 +330,12 @@ dat_comparison %&gt;%
 </tr>
 <tr class="odd">
 <td align="left">Bayes</td>
-<td align="right">4.363</td>
-<td align="right">4.311</td>
-<td align="right">4.414</td>
+<td align="right">4.364</td>
+<td align="right">4.313</td>
+<td align="right">4.417</td>
 <td align="right">0.378</td>
-<td align="right">0.343</td>
-<td align="right">0.417</td>
+<td align="right">0.345</td>
+<td align="right">0.418</td>
 </tr>
 </tbody>
 </table>
@@ -328,7 +350,7 @@ dat_comparison %&gt;%
   labs(x = &quot;Log of the mean duration of chess games&quot;, 
        y = NULL) +
   theme_minimal()</code></pre>
-<p><img src="/post/wilcoxon_signed_rank_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p><img src="/post/wilcoxon_signed_rank_files/figure-html/unnamed-chunk-1-1.png" width="576" /></p>
 <p>We can transform that to the normal scale by taking the exponential:</p>
 <pre class="r"><code>dat_comparison %&gt;% 
   mutate(across(mean:mean_upper, exp)) %&gt;% 
@@ -341,7 +363,7 @@ dat_comparison %&gt;%
   labs(x = &quot;Log of the mean duration of chess games&quot;, 
        y = NULL) +
   theme_minimal()</code></pre>
-<p><img src="/post/wilcoxon_signed_rank_files/figure-html/standard%20deviantion-1.png" width="672" /></p>
+<p><img src="/post/wilcoxon_signed_rank_files/figure-html/standard%20deviantion-1.png" width="576" /></p>
 <p>The Bayesian regression performs best, however the Wilcoxon test still is close to the true value. This shows that when all assumptions are met, the Wilcoxon test can still be a powerfull tool. Just don’t use it without knowing what’s going on. We can see that an ordinary least squares regression (OLS) is quite far off, because it models the mean and not the median. It is therefore less robust. And I would assume that the Wilcoxon test in R performs some extra steps and corrections that leads to the better estimate for our data.</p>
 </div>
 <div id="conclusion" class="section level1">

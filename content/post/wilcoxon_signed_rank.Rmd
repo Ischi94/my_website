@@ -1,10 +1,22 @@
 ---
-title: "Untitled"
+title: "Wilcoxon signed-rank test"
 author: "Gregor Mathes"
-date: "1 4 2021"
-output: 
-  html_document:
-    mathjax: "default"
+date: "2021-04-01"
+slug: Regression tests
+categories: []
+tags: [Regression in disguise, Regression, t-test, Bayes, Statistics]
+subtitle: ''
+summary: 'Modeling the central tendency within one sample without the normality assumption'
+authors: [Gregor Mathes]
+lastmod: "`r format(Sys.time(), '%d %B, %Y')`"
+featured: no
+projects: [Regression tests]
+output:
+  blogdown::html_page:
+    toc: true
+    toc_depth: 1
+    number_sections: false
+    fig_width: 6
 ---
 
 ```{r setup, include=FALSE}
