@@ -247,7 +247,7 @@ result_posterior %&gt;%
   mutate(across(b_Intercept:sigma, exp)) %&gt;% 
   ggplot(aes(b_Intercept)) +
   geom_density(colour = &quot;grey20&quot;, fill = &quot;coral2&quot;, alpha = 0.8) +
-  labs(x = &quot;Mean height&quot;, y = NULL) + 
+  labs(x = &quot;Mean duration of a chess game&quot;, y = NULL) + 
   theme_minimal() </code></pre>
 <p><img src="/post/wilcoxon_signed_rank_files/figure-html/posterior%20brms-1.png" width="576" /></p>
 <p>And we can proceed to test our hypothesis:</p>
@@ -258,7 +258,7 @@ result_posterior %&gt;%
 hyp_test </code></pre>
 <pre><code>## Hypothesis Tests for class :
 ##               Hypothesis Estimate Est.Error CI.Lower CI.Upper Evid.Ratio
-## 1 (b_Intercept)-(75) &gt; 0     3.52      2.04     0.25     6.95         24
+## 1 (b_Intercept)-(75) &gt; 0     3.56      2.08     0.19     6.91      24.64
 ##   Post.Prob Star
 ## 1      0.96    *
 ## ---
@@ -266,7 +266,7 @@ hyp_test </code></pre>
 ## &#39;*&#39;: For one-sided hypotheses, the posterior probability exceeds 95%;
 ## for two-sided hypotheses, the value tested against lies outside the 95%-CI.
 ## Posterior probabilities of point hypotheses assume equal prior probabilities.</code></pre>
-<p>It’s 24 times more likely that the average chess game from the sample takes more than 75 minutes, than that the average is less than 75 minutes.</p>
+<p>It’s 24.6 times more likely that the average chess game from the sample takes more than 75 minutes, than that the average is less than 75 minutes.</p>
 </div>
 </div>
 <div id="comparison" class="section level1">
@@ -330,11 +330,11 @@ dat_comparison %&gt;%
 </tr>
 <tr class="odd">
 <td align="left">Bayes</td>
-<td align="right">4.363</td>
-<td align="right">4.311</td>
-<td align="right">4.415</td>
-<td align="right">0.378</td>
-<td align="right">0.342</td>
+<td align="right">4.364</td>
+<td align="right">4.314</td>
+<td align="right">4.413</td>
+<td align="right">0.377</td>
+<td align="right">0.343</td>
 <td align="right">0.418</td>
 </tr>
 </tbody>
@@ -360,7 +360,7 @@ dat_comparison %&gt;%
   geom_vline(xintercept = exp(4.37), 
              size = 2, colour = &quot;coral2&quot;) +
   geom_pointrange(size = 0.9) +
-  labs(x = &quot;Log of the mean duration of chess games&quot;, 
+  labs(x = &quot;Mean duration of chess games&quot;, 
        y = NULL) +
   theme_minimal()</code></pre>
 <p><img src="/post/wilcoxon_signed_rank_files/figure-html/standard%20deviantion-1.png" width="576" /></p>
