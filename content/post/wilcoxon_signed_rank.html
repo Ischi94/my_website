@@ -278,7 +278,7 @@ result_posterior %&gt;%
 hyp_test </code></pre>
 <pre><code>## Hypothesis Tests for class :
 ##               Hypothesis Estimate Est.Error CI.Lower CI.Upper Evid.Ratio
-## 1 (b_Intercept)-(75) &gt; 0     3.57      1.98     0.34     6.83      26.78
+## 1 (b_Intercept)-(75) &gt; 0     3.49      2.05     0.21     6.89      23.39
 ##   Post.Prob Star
 ## 1      0.96    *
 ## ---
@@ -286,7 +286,7 @@ hyp_test </code></pre>
 ## &#39;*&#39;: For one-sided hypotheses, the posterior probability exceeds 95%;
 ## for two-sided hypotheses, the value tested against lies outside the 95%-CI.
 ## Posterior probabilities of point hypotheses assume equal prior probabilities.</code></pre>
-<p>It’s 26.8 times more likely that the average chess game from the sample takes more than 75 minutes, than that the average is less than 75 minutes.</p>
+<p>It’s 23.4 times more likely that the average chess game from the sample takes more than 75 minutes, than that the average is less than 75 minutes.</p>
 </div>
 </div>
 <div id="comparison" class="section level1">
@@ -366,12 +366,12 @@ dat_comparison %&gt;%
 </tr>
 <tr class="even">
 <td align="left">Bayes</td>
-<td align="right">4.364</td>
-<td align="right">4.314</td>
-<td align="right">4.414</td>
-<td align="right">0.378</td>
+<td align="right">4.363</td>
+<td align="right">4.313</td>
+<td align="right">4.413</td>
+<td align="right">0.377</td>
 <td align="right">0.342</td>
-<td align="right">0.417</td>
+<td align="right">0.418</td>
 </tr>
 </tbody>
 </table>
@@ -396,7 +396,7 @@ dat_comparison %&gt;%
   geom_vline(xintercept = exp(4.37), 
              size = 2, colour = &quot;coral2&quot;) +
   geom_pointrange(size = 0.9) +
-  labs(x = &quot;Log of the mean duration of chess games&quot;, 
+  labs(x = &quot;Mean duration of chess games&quot;, 
        y = NULL) +
   theme_minimal()</code></pre>
 <p><img src="/post/wilcoxon_signed_rank_files/figure-html/standard%20deviantion-1.png" width="576" /></p>

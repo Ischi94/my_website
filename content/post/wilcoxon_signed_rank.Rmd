@@ -322,7 +322,7 @@ dat_comparison %>%
   geom_vline(xintercept = exp(4.37), 
              size = 2, colour = "coral2") +
   geom_pointrange(size = 0.9) +
-  labs(x = "Log of the mean duration of chess games", 
+  labs(x = "Mean duration of chess games", 
        y = NULL) +
   theme_minimal()
 ```  
