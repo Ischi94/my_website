@@ -16,13 +16,15 @@ image:
   preview_only: true
 links: null
 projects: null
-publication: '*Ambio*'
+publication: '*PeerJ*'
 publication_short:
 publication_types:
 - "2"
 publishDate: "2020-04-14T00:00:00Z"
 tags:
-- Source Themes
+- Sport Ecology
+- Covid
+- Corona
 title: Outdoor cycling activity affected by COVID-19 related epidemic-control decisions
 ---
 

@@ -10,7 +10,7 @@ authors:
 - Yadong Sung
 - admin
 - J. Tong  
-date: "2020-10-02T00:00:00Z"
+date: "2021-04-16T00:00:00Z"
 doi: ""
 featured: true
 image:
@@ -19,13 +19,15 @@ image:
   preview_only: true
 links: null
 projects: null
-publication: '*Nature Communications*'
+publication: '*Geology*'
 publication_short:
 publication_types:
 - "2"
-publishDate: "2020-04-14T00:00:00Z"
+publishDate: "2021-04-16T00:00:00Z"
 tags:
-- Source Themes
+- Isotopes
+- Geology
+- Climate
 title: Siberian Trap outgassing triggered five million years of elevated atmospheric CO2
 ---
 
