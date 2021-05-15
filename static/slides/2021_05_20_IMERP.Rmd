@@ -95,6 +95,33 @@ xaringanExtra::use_tile_view()
 xaringanExtra::use_animate_css()
 ```
 
+```{r metathis, echo=FALSE}
+library(metathis)
+meta() %>%
+  meta_name("github-repo" = "https://github.com/Ischi94") %>% 
+  meta_social(
+    title = "IMERP presentation Mathes",
+    description = paste(
+      "Cascading palaeoclimate interactions affect origination rate of marine genera.,", 
+      "presented at the 5th International Meeting of Early-stage Researchers in Palaeontology by Gregor Mathes"
+    ),
+    url = "https://gregor-mathes.netlify.app/",
+    image = "https://gregor-mathes.netlify.app/files/social-card.png",
+    image_alt = paste(
+      "Title slide of the presentation:", 
+      "Cascading palaeoclimate interactions affect origination rate of marine genera.,", 
+      "presented at the 5th International Meeting of Early-stage Researchers in Palaeontology by Gregor Mathes"
+    ),
+    og_type = "website",
+    og_author = "Gregor H. Mathes",
+    twitter_card_type = "summary_large_image",
+    twitter_creator = "@GregorMathes"
+    )
+```
+
+```{r xaringanExtra-share-again, echo=FALSE}
+xaringanExtra::use_share_again()
+```
 
 ---
 ## Paleoclimate Interaction
