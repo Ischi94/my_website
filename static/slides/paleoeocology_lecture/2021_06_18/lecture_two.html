@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Analytical Paleobiology</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Gregor H. Mathes" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
+    <script src="libs/mark.js/mark.min.js"></script>
+    <link href="libs/xaringanExtra-search/search.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-search/search.js"></script>
+    <script>window.addEventListener('load', function() { window.xeSearch = new RemarkSearch({"position":"bottom-left","caseSensitive":false,"showIcon":false,"autoSearch":true}) })</script>
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <link href="libs/panelset/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset/panelset.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Analytical Paleobiology
+## with the Tidyverse
+### Gregor H. Mathes
+### University of Bayreuth/ Paleoecology Lectures
+### 2021/06/18 (updated: 2021-06-16)
+
+---
+
+class: center
+
+  
+
+  
+
+
+
+
+
+# The Tidyverse
+
+
+.center[![The hex symbols for the core tidyverse packages](http://d33wubrfki0l68.cloudfront.net/2834374971f416c892196363767fd7e1e87e2d1a/288a4/img/tidyverse/tidyverse_all.png)]
+
+---
+class: inverse, center
+
+# The Tidyverse
+
+### - collection of &lt;span style = 'color:#E69F00'&gt;easy-to-use&lt;/span&gt; tools for data analysis and visualization
+
+### - &lt;span style = 'color:#E69F00'&gt;consistent&lt;/span&gt; in both syntax and output
+
+### - &lt;span style = 'color:#E69F00'&gt;widely used&lt;/span&gt; in the industry and in science
+&lt;br&gt;
+
+.center[&lt;img src="https://peadarcoyle.com/wp-content/uploads/2019/01/hadley-wickham.jpg" alt="Picture of Hadley Wickham" width="500"/&gt;
+]
+
+---
+
+background-image: url(https://raw.githubusercontent.com/tidyverse/tidyverse/master/man/figures/logo.png)
+background-position: 90% 10%
+## `library(tidyverse)` will load  
+## the core tidyverse packages: 
+
+#### [ggplot2](http://ggplot2.tidyverse.org), for data visualisation.
+#### [dplyr](http://dplyr.tidyverse.org), for data manipulation.
+#### [tidyr](http://tidyr.tidyverse.org), for data tidying.
+#### [readr](http://readr.tidyverse.org), for data import.
+#### [purrr](http://purrr.tidyverse.org), for functional programming.
+#### [tibble](http://tibble.tidyverse.org), for tibbles, a modern re-imagining of data frames.
+#### [stringr](https://github.com/tidyverse/stringr), for strings.
+#### [forcats](https://github.com/hadley/forcats), for factors.
+
+---
+# Agenda
+
+## - read in data with the `readr` package
+&lt;br&gt;
+## - wrangle data with the `dplyr` package
+&lt;br&gt;
+## - visualise data with the `ggplot2` package
+
+---
+class:inverse, mline, center, middle
+# The *readr* package
+
+---
+# readr
+
+Function       | Reads
+-------------- | --------------------------
+`read_csv()`   | Comma separated values
+`read_csv2()`  | Semi-colon separate values
+`read_delim()` | General delimited files
+`read_fwf()`   | Fixed width files
+`read_log()`   | Apache log files
+`read_table()` | Space separated files
+`read_tsv()`   | Tab delimited values
+
+&lt;br&gt;
+.center[and many more ...]
+
+---
+# readr
+
+
+
+```r
+dfr &lt;- read_csv("file_name.csv")
+```
+&lt;br&gt;
+
+--
+&lt;html&gt;
+  &lt;div style='float:left'&gt;&lt;/div&gt;
+  &lt;hr color='#EB811B' size=1px width=720px&gt;
+&lt;/html&gt;
+&lt;br&gt;
+
+```r
+dfr &lt;- read_csv(here("figures/file_name.csv"))
+```
+&lt;br&gt;
+--
+&lt;html&gt;
+  &lt;div style='float:left'&gt;&lt;/div&gt;
+  &lt;hr color='#EB811B' size=1px width=720px&gt;
+&lt;/html&gt;
+&lt;br&gt;
+
+```r
+url &lt;- 'https://paleobiodb.org/data1.2/occs/list.txt?base_name=Carnivora&amp;show=full'
+dfr &lt;- read_csv(file = url)
+```
+
+---
+# readr
+
+
+
+```r
+carnivores &lt;- read_csv(file = here("2021_06_18/carnivores.csv"))
+carnivores
+```
+
+```
+## # A tibble: 12,168 x 118
+##    occurrence_no record_type reid_no flags collection_no
+##            &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt; &lt;lgl&gt;         &lt;dbl&gt;
+##  1        117266 occ              NA NA             9070
+##  2        137493 occ              NA NA            11601
+##  3        137495 occ              NA NA            11601
+##  4        138737 occ              NA NA            11798
+##  5        138738 occ              NA NA            11798
+##  6        138739 occ              NA NA            11798
+##  7        138740 occ              NA NA            11798
+##  8        138741 occ              NA NA            11798
+##  9        138742 occ              NA NA            11798
+## 10        138743 occ              NA NA            11798
+## # … with 12,158 more rows, and 113 more variables:
+## #   identified_name &lt;chr&gt;, identified_rank &lt;chr&gt;,
+## #   identified_no &lt;dbl&gt;, difference &lt;chr&gt;,
+## #   accepted_name &lt;chr&gt;, accepted_attr &lt;lgl&gt;, …
+```
+
+---
+# Tibbles
+
+## &lt;span style = 'color:#E69F00'&gt;data.frames&lt;/span&gt; are the basic form of rectangular data in R (columns of variables, rows of observations)
+
+---
+# Tibbles
+
+## &lt;span style = 'color:#E5E5E5'&gt;data.frames are the basic form of rectangular data in R (columns of variables, rows of observations&lt;/span&gt;
+
+## `read_csv()` reads the data into a &lt;span style = 'color:#E69F00'&gt;tibble&lt;/span&gt;, a modern version of the data frame 
+
+---
+# Tibbles
+
+## &lt;span style = 'color:#E5E5E5'&gt;data.frames are the basic form of rectangular data in R (columns of variables, rows of observations&lt;/span&gt;
+
+## &lt;span style = 'color:#E5E5E5'&gt;read_csv() reads the data into a tibble, a modern version of the data frame.&lt;/span&gt;
+
+## a tibble &lt;span style = 'color:#E69F00'&gt;is&lt;/span&gt; a data frame
+
+---
+# Saving data
+
+Function            | Writes
+------------------- | ----------------------------------------
+`write_csv()`       | Comma separated values
+`write_excel_csv()` | CSV that you plan to open in Excel
+`write_delim()`     | General delimited files
+`write_file()`      | A single string, written as is
+`write_lines()`     | A vector of strings, one string per line
+`write_tsv()`       | Tab delimited values
+`write_rds()`       | A data type used by R to save objects
+`write_sas()`       | SAS .sas7bdat files
+`write_xpt()`       | SAS transport format, .xpt
+`write_sav()`       | SPSS .sav files
+`write_stata()`     | Stata .dta files
+
+.center[
+and many more...
+]
+
+---
+class:inverse, mline, center, middle
+# The *dplyr* package
+
+---
+# The main verbs of *dplyr*
+
+## `select()`
+
+## `filter()`
+
+## `mutate()`
+
+## `arrange()`
+
+## `summarize()`
+
+## `group_by()`
+
+---
+# The main verbs of *dplyr*
+
+## &lt;span style = 'color:#E69F00'&gt;&lt;code&gt;select()&lt;/code&gt;&lt;/span&gt; = &lt;span style = 'color:#56B4E9'&gt;Subset columns (variables)&lt;/span&gt;
+
+## `filter()`
+
+## `mutate()`
+
+## `arrange()`
+
+## `summarize()`
+
+## `group_by()`
+
+---
+# dplyr
+
+## `select()`
+
+
+```r
+select(&lt;DATA&gt;, &lt;VARIABLES&gt;)
+```
+
+---
+# dplyr
+
+## `select()`
+
+
+```r
+select(&lt;DATA&gt;, &lt;VARIABLES&gt;)
+```
+
+
+```r
+carnivores
+```
+
+```
+## # A tibble: 12,168 x 118
+##    occurrence_no record_type reid_no flags collection_no
+##            &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt; &lt;lgl&gt;         &lt;dbl&gt;
+##  1        117266 occ              NA NA             9070
+##  2        137493 occ              NA NA            11601
+##  3        137495 occ              NA NA            11601
+##  4        138737 occ              NA NA            11798
+##  5        138738 occ              NA NA            11798
+##  6        138739 occ              NA NA            11798
+##  7        138740 occ              NA NA            11798
+##  8        138741 occ              NA NA            11798
+##  9        138742 occ              NA NA            11798
+## 10        138743 occ              NA NA            11798
+## # … with 12,158 more rows, and 113 more variables:
+## #   identified_name &lt;chr&gt;, identified_rank &lt;chr&gt;,
+## #   identified_no &lt;dbl&gt;, difference &lt;chr&gt;,
+## #   accepted_name &lt;chr&gt;, accepted_attr &lt;lgl&gt;, …
+```
+
+---
+# dplyr
+
+## `select()`
+
+
+```r
+select(carnivores, identified_rank, accepted_name, min_ma, max_ma)
+```
+
+```
+## # A tibble: 12,168 x 4
+##    identified_rank accepted_name         min_ma max_ma
+##    &lt;chr&gt;           &lt;chr&gt;                  &lt;dbl&gt;  &lt;dbl&gt;
+##  1 species         Cynodictis lacustris   33.9    37.2
+##  2 species         Enaliarctos mealsi     23.0    28.1
+##  3 species         Pinnarctidion bishopi  23.0    28.1
+##  4 species         Indarctos atticus       7.25   11.6
+##  5 genus           Protursus               7.25   11.6
+##  6 subfamily       Ursinae                 7.25   11.6
+##  7 species         Proputorius             7.25   11.6
+##  8 species         Sivaonyx bathygnathus   7.25   11.6
+##  9 genus           Lutra                   7.25   11.6
+## 10 species         Ictitherium             7.25   11.6
+## # … with 12,158 more rows
+```
+
+---
+# dplyr
+
+## `select()`
+
+
+```r
+select(carnivores, occurrence_no, record_type, reid_no, flags)
+
+select(carnivores, occurrence_no:flags)
+
+select(carnivores, 1:4)
+
+select(carnivores, starts_with("c"))
+
+?select_helpers
+```
+
+
+---
+# dplyr
+
+## `select()`
+
+## &lt;span style = 'color:#E69F00'&gt;&lt;code&gt;filter()&lt;/code&gt;&lt;/span&gt; = &lt;span style = 'color:#56B4E9'&gt;Subset rows by value&lt;/span&gt;
+
+## `mutate()`
+
+## `arrange()`
+
+## `summarize()`
+
+## `group_by()`
+
+---
+# dplyr
+
+## `filter()`
+
+
+```r
+filter(&lt;DATA&gt;, &lt;PREDICATES&gt;)
+```
+
+### Predicates: `TRUE/FALSE` statements
+
+--
+
+### Comparisons: `&gt;`, `&gt;=`, `&lt;`, `&lt;=`, `!=` (not equal), and `==` (equal). 
+
+--
+
+### Operators: `&amp;` is "and", `|` is "or", and `!` is "not"
+
+--
+
+### `%in%`
+
+---
+# dplyr
+
+## `filter()`
+
+
+```r
+filter(carnivores, accepted_rank == "species", max_ma &gt; 7)
+```
+
+```
+## # A tibble: 3,235 x 118
+##    occurrence_no record_type reid_no flags collection_no
+##            &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt; &lt;lgl&gt;         &lt;dbl&gt;
+##  1        117266 occ              NA NA             9070
+##  2        137493 occ              NA NA            11601
+##  3        137495 occ              NA NA            11601
+##  4        138737 occ              NA NA            11798
+##  5        138741 occ              NA NA            11798
+##  6        147936 occ              NA NA            13061
+##  7        149438 occ              NA NA            13192
+##  8        164284 occ              NA NA            14768
+##  9        165362 occ              NA NA            14906
+## 10        165688 occ              NA NA            14939
+## # … with 3,225 more rows, and 113 more variables:
+## #   identified_name &lt;chr&gt;, identified_rank &lt;chr&gt;,
+## #   identified_no &lt;dbl&gt;, difference &lt;chr&gt;,
+## #   accepted_name &lt;chr&gt;, accepted_attr &lt;lgl&gt;, …
+```
+
+---
+# The main verbs of *dplyr*
+
+## `select()`
+
+## `filter()`
+
+## &lt;span style = 'color:#E69F00'&gt;&lt;code&gt;mutate()&lt;/code&gt;&lt;/span&gt; = &lt;span style = 'color:#56B4E9'&gt;Change or add a variable&lt;/span&gt;
+
+## `arrange()`
+
+## `summarize()`
+
+## `group_by()`
+---
+# dplyr 
+
+## `mutate()`
+
+
+```r
+mutate(&lt;DATA&gt;, &lt;NAME&gt; = &lt;FUNCTION&gt;)
+```
+
+---
+# dplyr
+
+## `mutate()`
+
+
+```r
+mutate(carnivores, age_range = abs(max_ma - min_ma))
+```
+
+```
+## # A tibble: 12,168 x 119
+##    occurrence_no record_type reid_no flags collection_no
+##            &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt; &lt;lgl&gt;         &lt;dbl&gt;
+##  1        117266 occ              NA NA             9070
+##  2        137493 occ              NA NA            11601
+##  3        137495 occ              NA NA            11601
+##  4        138737 occ              NA NA            11798
+##  5        138738 occ              NA NA            11798
+##  6        138739 occ              NA NA            11798
+##  7        138740 occ              NA NA            11798
+##  8        138741 occ              NA NA            11798
+##  9        138742 occ              NA NA            11798
+## 10        138743 occ              NA NA            11798
+## # … with 12,158 more rows, and 114 more variables:
+## #   identified_name &lt;chr&gt;, identified_rank &lt;chr&gt;,
+## #   identified_no &lt;dbl&gt;, difference &lt;chr&gt;,
+## #   accepted_name &lt;chr&gt;, accepted_attr &lt;lgl&gt;, …
+```
+
+---
+# dplyr
+
+## `transmute()`
+
+
+```r
+transmute(carnivores, 
+          age_range = abs(max_ma - min_ma), 
+          age_range_sq = age_range^2)
+```
+
+```
+## # A tibble: 12,168 x 2
+##    age_range age_range_sq
+##        &lt;dbl&gt;        &lt;dbl&gt;
+##  1      3.3          10.9
+##  2      5.07         25.7
+##  3      5.07         25.7
+##  4      4.37         19.1
+##  5      4.37         19.1
+##  6      4.37         19.1
+##  7      4.37         19.1
+##  8      4.37         19.1
+##  9      4.37         19.1
+## 10      4.37         19.1
+## # … with 12,158 more rows
+```
+
+
+---
+# The main verbs of *dplyr*
+
+## `select()`
+
+## `filter()`
+
+## `mutate()`
+
+## &lt;span style = 'color:#E69F00'&gt;&lt;code&gt;arrange()&lt;/code&gt;&lt;/span&gt; = &lt;span style = 'color:#56B4E9'&gt;Sort the data set&lt;/span&gt;
+
+## `summarize()`
+
+## `group_by()`
+---
+# dplyr
+
+## `arrange()`
+
+
+```r
+arrange(&lt;DATA&gt;, &lt;SORTING VARIABLE&gt;)
+```
+
+---
+# dplyr
+
+## `arrange()`
+
+
+```r
+arrange(carnivores, max_ma) %&gt;% 
+  select(max_ma, everything())
+```
+
+```
+## # A tibble: 12,168 x 118
+##    max_ma occurrence_no record_type reid_no flags
+##     &lt;dbl&gt;         &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt; &lt;lgl&gt;
+##  1 0.0117        154618 occ              NA NA   
+##  2 0.0117        212868 occ              NA NA   
+##  3 0.0117        212869 occ              NA NA   
+##  4 0.0117        212870 occ              NA NA   
+##  5 0.0117        212871 occ              NA NA   
+##  6 0.0117        212872 occ              NA NA   
+##  7 0.0117        212873 occ              NA NA   
+##  8 0.0117        212918 occ              NA NA   
+##  9 0.0117        212932 occ              NA NA   
+## 10 0.0117        212933 occ              NA NA   
+## # … with 12,158 more rows, and 113 more variables:
+## #   collection_no &lt;dbl&gt;, identified_name &lt;chr&gt;,
+## #   identified_rank &lt;chr&gt;, identified_no &lt;dbl&gt;,
+## #   difference &lt;chr&gt;, accepted_name &lt;chr&gt;, …
+```
+
+---
+# dplyr
+
+## `arrange()`
+
+
+```r
+arrange(carnivores, max_ma, lng) %&gt;% 
+  select(max_ma, lng, everything())
+```
+
+```
+## # A tibble: 12,168 x 118
+##    max_ma   lng occurrence_no record_type reid_no flags
+##     &lt;dbl&gt; &lt;dbl&gt;         &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt; &lt;lgl&gt;
+##  1 0.0117 -177.        653974 occ              NA NA   
+##  2 0.0117 -177.        653975 occ              NA NA   
+##  3 0.0117 -177.        653976 occ              NA NA   
+##  4 0.0117 -176.       1447238 occ              NA NA   
+##  5 0.0117 -173.        819689 occ              NA NA   
+##  6 0.0117 -173.        819690 occ              NA NA   
+##  7 0.0117 -170.       1310863 occ              NA NA   
+##  8 0.0117 -170.       1310864 occ              NA NA   
+##  9 0.0117 -170.       1310865 occ              NA NA   
+## 10 0.0117 -170.       1310851 occ              NA NA   
+## # … with 12,158 more rows, and 112 more variables:
+## #   collection_no &lt;dbl&gt;, identified_name &lt;chr&gt;,
+## #   identified_rank &lt;chr&gt;, identified_no &lt;dbl&gt;,
+## #   difference &lt;chr&gt;, accepted_name &lt;chr&gt;, …
+```
+
+---
+# dplyr
+
+## `desc()`
+
+
+```r
+arrange(carnivores, max_ma, desc(lng)) %&gt;% 
+  select(max_ma, lng, everything())
+```
+
+```
+## # A tibble: 12,168 x 118
+##    max_ma   lng occurrence_no record_type reid_no flags
+##     &lt;dbl&gt; &lt;dbl&gt;         &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt; &lt;lgl&gt;
+##  1 0.0117  180.       1429298 occ              NA NA   
+##  2 0.0117  180.       1268080 occ              NA NA   
+##  3 0.0117  178.       1447237 occ              NA NA   
+##  4 0.0117  177.        653978 occ              NA NA   
+##  5 0.0117  177.        805370 occ              NA NA   
+##  6 0.0117  176.       1318554 occ              NA NA   
+##  7 0.0117  176.       1429299 occ              NA NA   
+##  8 0.0117  176.       1447239 occ              NA NA   
+##  9 0.0117  175.       1268186 occ              NA NA   
+## 10 0.0117  175.       1447240 occ              NA NA   
+## # … with 12,158 more rows, and 112 more variables:
+## #   collection_no &lt;dbl&gt;, identified_name &lt;chr&gt;,
+## #   identified_rank &lt;chr&gt;, identified_no &lt;dbl&gt;,
+## #   difference &lt;chr&gt;, accepted_name &lt;chr&gt;, …
+```
+
+---
+class:inverse, mline, center, middle
+# The pipe
+&lt;br&gt;
+## Passes the result on one function to another function
+
+---
+# The Pipe
+
+
+```r
+carnivores1 &lt;- arrange(carnivores, max_ma)
+carnivores2 &lt;- filter(carnivores, max_ma &gt; 7)
+carnivores3 &lt;- mutate(carnivores2, 
+                      age_range = abs(max_ma - min_ma))
+
+carnivores3
+```
+
+--
+&lt;html&gt;
+  &lt;div style='float:left'&gt;&lt;/div&gt;
+  &lt;hr color='#EB811B' size=1px width=720px&gt;
+&lt;/html&gt;
+
+```r
+mutate(
+  filter(
+    arrange(carnivores, max_ma), 
+    max_ma &gt; 7
+    ),
+  age_range = abs(max_ma - min_ma)
+  )
+```
+
+--
+&lt;html&gt;
+  &lt;div style='float:left'&gt;&lt;/div&gt;
+  &lt;hr color='#EB811B' size=1px width=720px&gt;
+&lt;/html&gt;
+&lt;br&gt;
+
+```r
+arrange(carnivores, max_ma) %&gt;% 
+  filter(max_ma &gt; 7) %&gt;% 
+  mutate(age_range = abs(max_ma - min_ma))
+```
+
+---
+# The Pipe
+
+## Insert with **`ctrl/cmd + shift + m`**
+
+---
+# The main verbs of *dplyr*
+
+## `select()`
+
+## `filter()`
+
+## `mutate()`
+
+## `arrange()`
+
+## &lt;span style = 'color:#E69F00'&gt;&lt;code&gt;summarize()&lt;/code&gt;&lt;/span&gt; = &lt;span style = 'color:#56B4E9'&gt;Summarize the data&lt;/span&gt;
+
+## &lt;span style = 'color:#E69F00'&gt;&lt;code&gt;group_by()&lt;/code&gt;&lt;/span&gt; = &lt;span style = 'color:#56B4E9'&gt;Group the data&lt;/span&gt;
+---
+# dplyr 
+
+## `summarize()`
+
+
+```r
+summarize(&lt;DATA&gt;, &lt;NAME&gt; = &lt;FUNCTION&gt;)
+```
+
+---
+# dplyr 
+
+## `summarize()`
+
+
+```r
+summarize(carnivores, mean_fad = mean(max_ma))
+```
+
+```
+## # A tibble: 1 x 1
+##   mean_fad
+##      &lt;dbl&gt;
+## 1     10.8
+```
+
+--
+&lt;html&gt;
+  &lt;div style='float:left'&gt;&lt;/div&gt;
+  &lt;hr color='#EB811B' size=1px width=720px&gt;
+&lt;/html&gt;
+&lt;br&gt;
+
+```r
+summarize(carnivores, 
+          mean_fad = mean(max_ma), 
+          sd_fad = sd(max_ma))
+```
+
+```
+## # A tibble: 1 x 2
+##   mean_fad sd_fad
+##      &lt;dbl&gt;  &lt;dbl&gt;
+## 1     10.8   12.7
+```
+
+---
+# dplyr
+
+## `group_by()`
+
+
+```r
+group_by(&lt;DATA&gt;, &lt;VARIABLE&gt;)
+```
+
+---
+# dplyr
+
+## `group_by()`
+
+
+```r
+carnivores %&gt;% 
+  group_by(accepted_rank)
+```
+
+```
+## # A tibble: 12,168 x 118
+## # Groups:   accepted_rank [12]
+##    occurrence_no record_type reid_no flags collection_no
+##            &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt; &lt;lgl&gt;         &lt;dbl&gt;
+##  1        117266 occ              NA NA             9070
+##  2        137493 occ              NA NA            11601
+##  3        137495 occ              NA NA            11601
+##  4        138737 occ              NA NA            11798
+##  5        138738 occ              NA NA            11798
+##  6        138739 occ              NA NA            11798
+##  7        138740 occ              NA NA            11798
+##  8        138741 occ              NA NA            11798
+##  9        138742 occ              NA NA            11798
+## 10        138743 occ              NA NA            11798
+## # … with 12,158 more rows, and 113 more variables:
+## #   identified_name &lt;chr&gt;, identified_rank &lt;chr&gt;,
+## #   identified_no &lt;dbl&gt;, difference &lt;chr&gt;,
+## #   accepted_name &lt;chr&gt;, accepted_attr &lt;lgl&gt;, …
+```
+
+---
+# dplyr
+
+## `group_by()`
+
+
+```r
+carnivores %&gt;% 
+  group_by(accepted_rank) %&gt;% 
+  summarise(n = n(),
+          mean_fad = mean(max_ma))
+```
+
+```
+## # A tibble: 12 x 3
+##    accepted_rank      n mean_fad
+##  * &lt;chr&gt;          &lt;int&gt;    &lt;dbl&gt;
+##  1 family           913   13.4  
+##  2 genus           3060   10.4  
+##  3 infraorder         7   20.5  
+##  4 order            172   20.8  
+##  5 species         7637   10.4  
+##  6 subfamily        277   13.1  
+##  7 subgenus           5    2.28 
+##  8 suborder           8   34.5  
+##  9 subspecies        27    0.467
+## 10 superfamily        8   23.0  
+## 11 tribe             26    7.87 
+## 12 unranked clade    28   15.0
+```
+
+---
+# dplyr 
+
+## `group_by()`
+
+
+```r
+carnivores %&gt;% 
+  group_by(accepted_rank) %&gt;% 
+  mutate(n = n(),
+         mean_fad = mean(max_ma)) %&gt;% 
+  select(n, mean_fad)
+```
+
+```
+## # A tibble: 12,168 x 3
+## # Groups:   accepted_rank [12]
+##    accepted_rank     n mean_fad
+##    &lt;chr&gt;         &lt;int&gt;    &lt;dbl&gt;
+##  1 species        7637     10.4
+##  2 species        7637     10.4
+##  3 species        7637     10.4
+##  4 species        7637     10.4
+##  5 genus          3060     10.4
+##  6 subfamily       277     13.1
+##  7 genus          3060     10.4
+##  8 species        7637     10.4
+##  9 genus          3060     10.4
+## 10 genus          3060     10.4
+## # … with 12,158 more rows
+```
+
+---
+class: inverse, mline, middle, center
+# Joins
+
+---
+# dplyr
+
+## Joining data
+
+### Use `left_join()`, `right_join()`, `full_join()`, or `inner_join()` to join datasets
+### Use `semi_join()` or `anti_join()` to filter datasets against each other
+
+---
+# Joins
+
+.center[
+![](https://raw.githubusercontent.com/gadenbuie/tidyexplain/master/images/left-join.gif)
+]
+
+---
+# Joins
+
+.center[
+![](https://raw.githubusercontent.com/gadenbuie/tidyexplain/master/images/right-join.gif)
+]
+
+---
+# Joins
+
+.center[
+![](https://raw.githubusercontent.com/gadenbuie/tidyexplain/master/images/full-join.gif)
+]
+
+---
+# Joins
+
+.center[
+![](https://raw.githubusercontent.com/gadenbuie/tidyexplain/master/images/inner-join.gif)
+]
+
+---
+# Joins
+
+.center[
+![](https://raw.githubusercontent.com/gadenbuie/tidyexplain/master/images/semi-join.gif)
+]
+
+---
+# Joins
+
+.center[
+![](https://raw.githubusercontent.com/gadenbuie/tidyexplain/master/images/anti-join.gif)
+]
+
+---
+# Reading list
+
+#### [Here package](https://github.com/jennybc/here_here), intro to the `here` package.
+#### [Happy git with R](https://happygitwithr.com/), how to use version control with Git/ GitHub as an R user.
+#### [R for Data Science](https://r4ds.had.co.nz/index.html), best intro to the tidyverse.
+#### [Project-oriented workflow](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/), good working habits by Jenny Bryan.
+#### [Modern Dive](https://moderndive.com/foreword.html), statistical inference via the tidyverse.
+#### [Cheatsheets](https://www.rstudio.com/resources/cheatsheets/), a compilation of cheatsheets for various packages.
+
+---
+class:inverse, mline, center, middle
+
+# It's your turn  
+  
+---
+# Task
+
+- read the [Introduction to ggplot2 (Part 1)](https://gregor-mathes.netlify.app/2020/06/29/introduction-to-ggplot2-part-1/)
+ 
+ 
+- follow along with the exercises at `exercise_ggplot.R`
+
+.center[&lt;img src="https://ak2.picdn.net/shutterstock/videos/15323182/thumb/8.jpg" alt="Allison Horsts visualisation of the here function" width="650"/&gt;
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "R",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
