@@ -8,7 +8,7 @@ tags: [Rethinking, Bayes, Statistics]
 subtitle: ''
 summary: 'Markov Chain Monte Carlo algorithms'
 authors: [Gregor Mathes]
-lastmod: "31 März, 2021"
+lastmod: "21 Oktober, 2021"
 featured: no
 projects: [Rethinking]
 output:
@@ -41,7 +41,7 @@ red &lt;- &quot;#C4977F&quot;
 grey &lt;- &quot;#ECDED2&quot;
 brown &lt;- &quot;#50473D&quot;</code></pre>
 <p><img src="/post/chapter9_files/figure-html/colour%20plot-1.png" width="672" /></p>
-<p>Note that I did not have time for practive questions 9H6 and 9H7, but I probably manage to add these soon(-ish).</p>
+<p>Note that I added the 9H6 and 9H7 a few weeks after the publication of this post.</p>
 </div>
 <div id="easy-practices" class="section level1">
 <h1>Easy practices</h1>
@@ -254,9 +254,9 @@ m9.1 &lt;- alist(
 ## Chain 1: Iteration: 900 / 1000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 1000 / 1000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 0.10648 seconds (Warm-up)
-## Chain 1:                0.040993 seconds (Sampling)
-## Chain 1:                0.147473 seconds (Total)
+## Chain 1:  Elapsed Time: 0.118896 seconds (Warm-up)
+## Chain 1:                0.036644 seconds (Sampling)
+## Chain 1:                0.15554 seconds (Total)
 ## Chain 1:</code></pre>
 <p>Looking at the coefficient estimates, we can already see that something happened to <code>b[2]</code>.</p>
 <pre class="r"><code>precis(m9.1.mod, depth = 2) %&gt;% 
@@ -297,7 +297,7 @@ a[1]
 0.89
 </td>
 <td style="text-align:right;">
-0.01
+0.02
 </td>
 <td style="text-align:right;">
 0.86
@@ -306,10 +306,10 @@ a[1]
 0.91
 </td>
 <td style="text-align:right;">
-308.74
+415.43
 </td>
 <td style="text-align:right;">
-1.02
+1.00
 </td>
 </tr>
 <tr>
@@ -329,7 +329,7 @@ a[2]
 1.07
 </td>
 <td style="text-align:right;">
-499.20
+468.42
 </td>
 <td style="text-align:right;">
 1.00
@@ -343,19 +343,19 @@ b[1]
 0.15
 </td>
 <td style="text-align:right;">
-0.07
+0.08
 </td>
 <td style="text-align:right;">
 0.04
 </td>
 <td style="text-align:right;">
-0.26
+0.28
 </td>
 <td style="text-align:right;">
-335.93
+247.14
 </td>
 <td style="text-align:right;">
-1.00
+1.01
 </td>
 </tr>
 <tr>
@@ -375,7 +375,7 @@ b[2]
 0.05
 </td>
 <td style="text-align:right;">
-531.35
+395.20
 </td>
 <td style="text-align:right;">
 1.00
@@ -392,16 +392,16 @@ sigma
 0.01
 </td>
 <td style="text-align:right;">
-0.10
+0.11
 </td>
 <td style="text-align:right;">
-0.13
+0.12
 </td>
 <td style="text-align:right;">
-328.71
+428.75
 </td>
 <td style="text-align:right;">
-1.01
+1.00
 </td>
 </tr>
 </tbody>
@@ -628,7 +628,7 @@ rhat
 a
 </td>
 <td style="text-align:right;">
-0.998
+1.000
 </td>
 </tr>
 <tr>
@@ -639,7 +639,7 @@ a
 bA
 </td>
 <td style="text-align:right;">
-0.999
+1.002
 </td>
 </tr>
 <tr>
@@ -650,7 +650,7 @@ bA
 sigma
 </td>
 <td style="text-align:right;">
-0.998
+1.008
 </td>
 </tr>
 <tr>
@@ -661,7 +661,7 @@ sigma
 a
 </td>
 <td style="text-align:right;">
-0.998
+1.008
 </td>
 </tr>
 <tr>
@@ -672,7 +672,7 @@ a
 bM
 </td>
 <td style="text-align:right;">
-0.998
+1.000
 </td>
 </tr>
 <tr>
@@ -683,7 +683,7 @@ bM
 sigma
 </td>
 <td style="text-align:right;">
-0.999
+1.000
 </td>
 </tr>
 <tr>
@@ -692,31 +692,31 @@ sigma
 </td>
 <td style="text-align:left;">
 a
+</td>
+<td style="text-align:right;">
+0.998
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5.3
+</td>
+<td style="text-align:left;">
+bA
+</td>
+<td style="text-align:right;">
+1.017
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5.3
+</td>
+<td style="text-align:left;">
+bM
 </td>
 <td style="text-align:right;">
 1.006
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-5.3
-</td>
-<td style="text-align:left;">
-bA
-</td>
-<td style="text-align:right;">
-0.998
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-5.3
-</td>
-<td style="text-align:left;">
-bM
-</td>
-<td style="text-align:right;">
-0.999
 </td>
 </tr>
 <tr>
@@ -769,10 +769,10 @@ weight
 m5.1
 </td>
 <td style="text-align:right;">
-125.30
+126.15
 </td>
 <td style="text-align:right;">
-12.42
+13.05
 </td>
 <td style="text-align:right;">
 0.00
@@ -781,10 +781,10 @@ m5.1
 NA
 </td>
 <td style="text-align:right;">
-3.31
+3.87
 </td>
 <td style="text-align:right;">
-0.79
+0.74
 </td>
 </tr>
 <tr>
@@ -792,22 +792,22 @@ NA
 m5.3
 </td>
 <td style="text-align:right;">
-127.92
+128.28
 </td>
 <td style="text-align:right;">
-12.91
+13.03
 </td>
 <td style="text-align:right;">
-2.61
+2.14
 </td>
 <td style="text-align:right;">
-0.76
+0.84
 </td>
 <td style="text-align:right;">
-4.87
+5.12
 </td>
 <td style="text-align:right;">
-0.21
+0.26
 </td>
 </tr>
 <tr>
@@ -815,19 +815,19 @@ m5.3
 m5.2
 </td>
 <td style="text-align:right;">
-138.94
+139.19
 </td>
 <td style="text-align:right;">
-9.94
+9.91
 </td>
 <td style="text-align:right;">
-13.64
+13.04
 </td>
 <td style="text-align:right;">
-8.78
+9.48
 </td>
 <td style="text-align:right;">
-2.79
+2.90
 </td>
 <td style="text-align:right;">
 0.00
@@ -934,22 +934,22 @@ m5.8s
 a
 </td>
 <td style="text-align:right;">
-1.008
+0.794
 </td>
 <td style="text-align:right;">
-0.304
+0.284
 </td>
 <td style="text-align:right;">
-0.531
+0.342
 </td>
 <td style="text-align:right;">
-1.492
+1.236
 </td>
 <td style="text-align:right;">
-1048.286
+835.337
 </td>
 <td style="text-align:right;">
-1.000
+1.001
 </td>
 </tr>
 <tr>
@@ -960,22 +960,22 @@ m5.8s2
 a
 </td>
 <td style="text-align:right;">
-1.002
+0.796
 </td>
 <td style="text-align:right;">
-0.297
+0.290
 </td>
 <td style="text-align:right;">
-0.515
+0.337
 </td>
 <td style="text-align:right;">
-1.470
+1.255
 </td>
 <td style="text-align:right;">
-1039.225
+881.540
 </td>
 <td style="text-align:right;">
-1.002
+1.001
 </td>
 </tr>
 <tr>
@@ -986,22 +986,22 @@ m5.8s
 bl
 </td>
 <td style="text-align:right;">
-0.332
+0.338
 </td>
 <td style="text-align:right;">
-2.216
+2.155
 </td>
 <td style="text-align:right;">
--3.116
+-3.095
 </td>
 <td style="text-align:right;">
-3.904
+3.617
 </td>
 <td style="text-align:right;">
-680.453
+603.926
 </td>
 <td style="text-align:right;">
-1.005
+1.004
 </td>
 </tr>
 <tr>
@@ -1012,22 +1012,22 @@ m5.8s2
 bl
 </td>
 <td style="text-align:right;">
--0.334
+-0.353
 </td>
 <td style="text-align:right;">
-1.517
+1.504
 </td>
 <td style="text-align:right;">
--3.009
+-2.905
 </td>
 <td style="text-align:right;">
-1.774
+1.659
 </td>
 <td style="text-align:right;">
-467.333
+533.978
 </td>
 <td style="text-align:right;">
-1.009
+1.004
 </td>
 </tr>
 <tr>
@@ -1038,22 +1038,22 @@ m5.8s
 br
 </td>
 <td style="text-align:right;">
-1.676
+1.690
 </td>
 <td style="text-align:right;">
-2.207
+2.158
 </td>
 <td style="text-align:right;">
--1.900
+-1.604
 </td>
 <td style="text-align:right;">
-5.117
+5.121
 </td>
 <td style="text-align:right;">
-682.848
+597.346
 </td>
 <td style="text-align:right;">
-1.005
+1.004
 </td>
 </tr>
 <tr>
@@ -1064,22 +1064,22 @@ m5.8s2
 br
 </td>
 <td style="text-align:right;">
-2.344
+2.382
 </td>
 <td style="text-align:right;">
-1.511
+1.504
 </td>
 <td style="text-align:right;">
-0.237
+0.357
 </td>
 <td style="text-align:right;">
-5.007
+4.920
 </td>
 <td style="text-align:right;">
-461.211
+544.298
 </td>
 <td style="text-align:right;">
-1.009
+1.004
 </td>
 </tr>
 <tr>
@@ -1090,22 +1090,22 @@ m5.8s
 sigma
 </td>
 <td style="text-align:right;">
-0.666
+0.619
 </td>
 <td style="text-align:right;">
-0.048
+0.047
 </td>
 <td style="text-align:right;">
-0.594
+0.548
 </td>
 <td style="text-align:right;">
-0.747
+0.695
 </td>
 <td style="text-align:right;">
-1024.013
+1131.295
 </td>
 <td style="text-align:right;">
-1.001
+1.000
 </td>
 </tr>
 <tr>
@@ -1116,22 +1116,22 @@ m5.8s2
 sigma
 </td>
 <td style="text-align:right;">
-0.665
+0.622
 </td>
 <td style="text-align:right;">
-0.048
+0.045
 </td>
 <td style="text-align:right;">
-0.592
+0.554
 </td>
 <td style="text-align:right;">
-0.745
+0.698
 </td>
 <td style="text-align:right;">
-959.761
+930.755
 </td>
 <td style="text-align:right;">
-1.001
+1.008
 </td>
 </tr>
 </tbody>
@@ -1209,10 +1209,10 @@ weight
 m5.8s2
 </td>
 <td style="text-align:right;">
-204.36
+190.02
 </td>
 <td style="text-align:right;">
-10.83
+11.04
 </td>
 <td style="text-align:right;">
 0.00
@@ -1221,10 +1221,10 @@ m5.8s2
 NA
 </td>
 <td style="text-align:right;">
-2.69
+2.84
 </td>
 <td style="text-align:right;">
-0.68
+0.61
 </td>
 </tr>
 <tr>
@@ -1232,22 +1232,22 @@ NA
 m5.8s
 </td>
 <td style="text-align:right;">
-205.89
+190.91
 </td>
 <td style="text-align:right;">
-10.81
+11.21
 </td>
 <td style="text-align:right;">
-1.53
+0.89
 </td>
 <td style="text-align:right;">
-0.61
+0.62
 </td>
 <td style="text-align:right;">
-3.47
+3.32
 </td>
 <td style="text-align:right;">
-0.32
+0.39
 </td>
 </tr>
 </tbody>
@@ -1561,11 +1561,214 @@ corr_plot_gif &lt;- animate(corr_plot, width = 240/2, height = 240)</code></pre>
 <p><img src="https://raw.githubusercontent.com/Ischi94/statistical-rethinking/master/walk_through_gif.gif" style="width:30.0%" /></p>
 <p><img src="https://raw.githubusercontent.com/Ischi94/statistical-rethinking/master/lollipop_gif.gif" style="width:15.0%" /> <img src="https://raw.githubusercontent.com/Ischi94/statistical-rethinking/master/corr_plot_gif.gif" style="width:15.0%" /></p>
 <p>Here we see the problem of the Metropolis algorithm. After 100 weeks, you start to see a pattern, but it does not really reflect the true posterior. It just needs more time to converge.</p>
+</div>
+<div id="h6" class="section level2">
+<h2>9H6</h2>
+<blockquote>
+<p>Modify the Metropolis algorithm code from the chapter to write your own simple MCMC estimator for globe tossing data and model from Chapter 2.</p>
+</blockquote>
+<p>So first let’s take a look at the model from chapter 6. We were tossing the globe 9 times (<em>N</em>) and it landed on water (<em>w</em>) 6 times out of these 9. We were assuming that every toss is independent of the other tosses and that the probability of <em>w</em> is the same on every toss. So we can describe <em>w</em> as being binomial distributed: <span class="math display">\[w~Binomial(N, p)\]</span>,
+where <em>N</em> is the sum of how many times it landed on water and on land. <em>p</em> is the probability and is an unobserved parameter:
+<span class="math display">\[p∼Uniform(0,1)\]</span><br />
+We give <em>p</em> a uniform prior, ranging from zero to one, which is obviously not the best. But we will stick to the chapter. Let’s define some parameters: We will run the algorithm for 100,000 steps. Our data is <em>w</em> = 6, and <em>n</em> = 9. Our starting point for <em>p</em> will be 0.5, which is in the middle of our prior on <em>p</em>. One proposal step size will be 0.1.<br />
+Let’s transform this into R code:</p>
+<pre class="r"><code># set seed
+set.seed(123)
+# iteration
+n_iter &lt;- 1e4
+# water count
+w &lt;- 6
+# total tosses
+n &lt;- 9
+# starting point
+current &lt;- 0.5
+# empty vector to record data
+positions &lt;- rep(NA, n_iter)
+
+sample_metro &lt;- function() {
+  
+  for (i in 1:n_iter) {
+  
+  # record current position
+  positions[i] &lt;- current
+  
+  # generate proposal 
+  proposal &lt;- current + runif(1, -0.1, 0.1)
+  
+  # make sure that the posterior is bounded between zero and one
+  if (proposal &lt; 0) proposal &lt;- abs(proposal)
+  if (proposal &gt; 1) proposal &lt;- 1-(proposal - 1)
+  
+  # compute likelihoods
+  lkhd_current &lt;- dbinom(w, n, prob = current)
+  lkhd_proposal &lt;- dbinom(w, n, prob = proposal)
+  
+  # compute posteriors
+  prob_current &lt;- lkhd_current * dunif(current)
+  prob_proposal &lt;- lkhd_proposal * dunif(proposal)
+  
+  
+  # move
+  prob_move &lt;- prob_proposal/prob_current
+  current &lt;- if_else(runif(1) &lt; prob_move, proposal, current)
+  }
+  
+  # print positions
+  positions
+}
+
+# run function
+results &lt;- sample_metro()</code></pre>
+<p>Let’s recap what we did. We first generated a proposal that is either a bit (0.01) on the left side of the current position (which was 0.5 at the start), or a bit on the right side. This means we treat the continuous posterior space ranging from zero to one as a discrete space with bins of 0.01 width. Think of it like there are 100 islands, each placed next to each other. When the King is at island 50 (the starting point), he can either go at island 49 or island 51 (the proposal), or stay at the current island. What happens when he reaches the first (1) or the last (100) island? He simply moves in the other direction. This is what we did at the section <em>make sure that the posterior is bounded between zero and one</em>. This just means that we do not have a circle of islands as in the chapter, but rather a straight line of islands placed next to each other. We then compute the likelihood for both the current position and the proposal, which we defined as being binomial distributed. We then transform the likelihood into the posterior for each, as always by multiplying it with the prior. As the prior is uniform, we multiply the likelihood by one. We then calculate the ratio of the posterior between the proposal and the current position. If this ratio is larger than a randomly sampled number between one and zero, we stay at the current position, if it is smaller we move to the proposal. I moved the for loop into a function, so we can call it repeatedly later and get some results printed.</p>
+<p>Now let’s take a look at the results. Here is each sample from the posterior over time:</p>
+<pre class="r"><code>tibble(results = results) %&gt;% 
+  ggplot() +
+  geom_line(aes(x = 1:1e4, results), 
+            colour = red) +
+  labs(y = &quot;Probability water&quot;, 
+       x = &quot;Step&quot;) +
+  theme_minimal()</code></pre>
+<p><img src="/post/chapter9_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>We can see that the chain is quite autocorrelated, which shouldn’t be a big problem for this easy example. We still explore the whole posterior and don’t get stuck anywhere. Let’s see what the posterior looks like:</p>
+<pre class="r"><code>tibble(results = results) %&gt;% 
+  ggplot() +
+  geom_density(aes(results), 
+               colour = red, fill = red, 
+               alpha = 0.8) +
+  theme_minimal() +
+  labs(x = &quot;Probability water&quot;, 
+       y = NULL) +
+  scale_y_continuous(breaks = NULL) +
+  geom_function(fun = dbeta, args = c(shape1 = 7, shape2 = 4),
+                colour = blue, size = 1.5)</code></pre>
+<p><img src="/post/chapter9_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>I added the analytically derived posterior for this model in blue. We can see that we get quite a nice fit. We can even improve this by sampling from more chains:</p>
+<pre class="r"><code>results2 &lt;- sample_metro()
+results3 &lt;- sample_metro()
+results4 &lt;- sample_metro()
+
+multi_chains &lt;- tibble(p_samples = c(results, results2, 
+                     results3, results4), 
+       chain = as_factor(rep(1:4, each = 1e4)))
+
+multi_chains %&gt;%
+  add_column(steps = rep(1:1e4, 4)) %&gt;% 
+  ggplot() +
+  geom_line(aes(steps, p_samples, 
+                colour = chain), 
+            alpha = 0.8) +
+  scale_colour_manual(values = c(red, blue, brown, grey)) +
+  labs(y = &quot;Probability water&quot;, 
+       x = &quot;Step&quot;) +
+  theme_minimal()</code></pre>
+<p><img src="/post/chapter9_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>And here’s the posterior with the samples from all 4 chains:</p>
+<pre class="r"><code>multi_chains %&gt;% 
+  ggplot() +
+  geom_density(aes(p_samples), 
+               colour = red, fill = red, 
+               alpha = 0.8) +
+  theme_minimal() +
+  geom_function(fun = dbeta, args = c(shape1 = 7, shape2 = 4),
+       colour = blue, size = 1.5) +
+  scale_y_continuous(breaks = NULL) +
+  labs(x = &quot;Probability water&quot;, 
+       y = NULL) </code></pre>
+<p><img src="/post/chapter9_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+</div>
+<div id="h6-1" class="section level2">
+<h2>9H6</h2>
+<blockquote>
+<p>Can you write your own Hamiltonian Monte Carlo algorithm for the globe tossing data, using the R code in the chapter? You will have to write your own functions for the likelihood and gradient, but you can use the <code>HMC2</code> function.</p>
+</blockquote>
+<p>So what we need to start with is a function <code>neg_log_prob</code> that returns the negative log-probability of the data at the current position (parameter values). We get that by summing the log likelihood to log priors, to get the posterior probability at the current position <em>q</em>.</p>
+<pre class="r"><code>neg_log_prob &lt;- function(q) {
+  
+  # calculate log-probability at q
+  U &lt;- dbinom(w, n, q, log = TRUE) + dunif(q, log = TRUE)
+  
+  # return negative probability
+  -U
+}</code></pre>
+<p>Then we need the gradient function, which is the derivative of the logarithm of the binomial. I simply stole this one from McElreath:</p>
+<pre class="r"><code>neg_log_gradient &lt;- function(q) {
+  
+  # calculate the derivative of the binomial log-probability
+  G &lt;- (w - n*q) / (q*(1 - q))
+  
+  # return the negative
+  -G
+  
+}</code></pre>
+<p>Now we can simply modify the code from the chapter to run the Hamiltonian Monte Carlo simulation.</p>
+<pre class="r"><code># the data from chapter 2
+w &lt;- 6
+n &lt;- 9
+
+# set up Q for HMC2
+Q &lt;- list()
+Q$q &lt;- 0.5
+
+# the number of samples
+n_samples &lt;- 1000
+
+# size of the leapfrog step
+epsilon &lt;- 0.03
+
+# number of leapfrog steps
+L &lt;- 10
+
+# initalize empty vectors to store data
+samples &lt;- rep(NA, n_samples)
+accepted &lt;- rep(NA, n_samples)
+
+
+# start the simulation
+for (i in 1:n_samples) {
+  Q &lt;- HMC2(U = neg_log_prob,
+          grad_U = neg_log_gradient,
+          epsilon = epsilon,
+          L = L,
+          current_q = Q$q)
+  
+  samples[i] &lt;- Q$q  
+  accepted[i] &lt;- Q$accept
+}</code></pre>
+<p>We end up with two vectors, one with the actual samples, and the other one indicating whether the focal sample is accepted or not. Let’s plot:</p>
+<pre class="r"><code>tibble(samples = samples, 
+       accepted = accepted, 
+       time = 1:1000) %&gt;% 
+  ggplot(aes(time, samples, 
+             colour = as_factor(accepted)), ) +
+  geom_point() +
+  scale_color_manual(values = c(red, blue), 
+                     name = NULL, 
+                     labels = c(&quot;rejected&quot;, &quot;accepted&quot;)) +
+  labs(x = &quot;Step&quot;, 
+       y = &quot;Probability water&quot;) +
+  theme_minimal()</code></pre>
+<p><img src="/post/chapter9_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p>As we can see, we rejected only a tiny bit of samples, indeed 6 out of 1000. Let’s see how the posterior looks:</p>
+<pre class="r"><code>tibble(samples = samples, 
+       accepted = accepted) %&gt;% 
+  filter(accepted == 1) %&gt;% 
+  ggplot() +
+  geom_density(aes(samples), 
+               colour = red, fill = red, 
+               alpha = 0.8) +
+  theme_minimal() +
+  geom_function(fun = dbeta, args = c(shape1 = 7, shape2 = 4),
+       colour = blue, size = 1.5) +
+  scale_y_continuous(breaks = NULL) +
+  labs(x = &quot;Probability water&quot;, 
+       y = NULL) </code></pre>
+<p><img src="/post/chapter9_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p>We can see that we can get a very good representation of the posterior with a low number of samples, and this in a very fast fashion.</p>
 <hr />
 <pre class="r"><code>sessionInfo()</code></pre>
-<pre><code>## R version 4.0.4 (2021-02-15)
+<pre><code>## R version 4.1.1 (2021-08-10)
 ## Platform: x86_64-pc-linux-gnu (64-bit)
-## Running under: Linux Mint 20.1
+## Running under: Linux Mint 20.2
 ## 
 ## Matrix products: default
 ## BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.9.0
@@ -1584,31 +1787,33 @@ corr_plot_gif &lt;- animate(corr_plot, width = 240/2, height = 240)</code></pre>
 ## [8] base     
 ## 
 ## other attached packages:
-##  [1] kableExtra_1.3.4     knitr_1.30           rethinking_2.13     
-##  [4] rstan_2.21.2         StanHeaders_2.21.0-7 forcats_0.5.0       
-##  [7] stringr_1.4.0        dplyr_1.0.3          purrr_0.3.4         
-## [10] readr_1.4.0          tidyr_1.1.2          tibble_3.0.5        
-## [13] ggplot2_3.3.3        tidyverse_1.3.0     
+##  [1] kableExtra_1.3.4     knitr_1.36           rethinking_2.13     
+##  [4] rstan_2.21.2         StanHeaders_2.21.0-7 forcats_0.5.1       
+##  [7] stringr_1.4.0        dplyr_1.0.7          purrr_0.3.4         
+## [10] readr_2.0.1          tidyr_1.1.3          tibble_3.1.4        
+## [13] ggplot2_3.3.5        tidyverse_1.3.1     
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] matrixStats_0.57.0 fs_1.5.0           lubridate_1.7.9.2  webshot_0.5.2     
-##  [5] httr_1.4.2         tools_4.0.4        backports_1.2.1    R6_2.5.0          
-##  [9] DBI_1.1.1          colorspace_2.0-0   withr_2.4.1        tidyselect_1.1.0  
-## [13] gridExtra_2.3      prettyunits_1.1.1  processx_3.4.5     curl_4.3          
-## [17] compiler_4.0.4     cli_2.2.0          rvest_0.3.6        xml2_1.3.2        
-## [21] labeling_0.4.2     bookdown_0.21      scales_1.1.1       mvtnorm_1.1-1     
-## [25] callr_3.5.1        systemfonts_1.0.1  digest_0.6.27      rmarkdown_2.6     
-## [29] svglite_2.0.0      pkgconfig_2.0.3    htmltools_0.5.1.1  dbplyr_2.0.0      
-## [33] highr_0.8          rlang_0.4.10       readxl_1.3.1       rstudioapi_0.13   
-## [37] shape_1.4.5        generics_0.1.0     farver_2.0.3       jsonlite_1.7.2    
-## [41] inline_0.3.17      magrittr_2.0.1     loo_2.4.1          Rcpp_1.0.6        
-## [45] munsell_0.5.0      fansi_0.4.2        lifecycle_0.2.0    stringi_1.5.3     
-## [49] yaml_2.2.1         MASS_7.3-53.1      pkgbuild_1.2.0     grid_4.0.4        
-## [53] crayon_1.3.4       lattice_0.20-41    haven_2.3.1        hms_1.0.0         
-## [57] ps_1.5.0           pillar_1.4.7       codetools_0.2-18   stats4_4.0.4      
-## [61] reprex_1.0.0       glue_1.4.2         evaluate_0.14      blogdown_1.1      
-## [65] V8_3.4.0           RcppParallel_5.0.2 modelr_0.1.8       vctrs_0.3.6       
-## [69] cellranger_1.1.0   gtable_0.3.0       assertthat_0.2.1   xfun_0.20         
-## [73] broom_0.7.3        coda_0.19-4        viridisLite_0.3.0  ellipsis_0.3.1</code></pre>
+##  [1] matrixStats_0.61.0 fs_1.5.0           lubridate_1.7.10   webshot_0.5.2     
+##  [5] httr_1.4.2         tools_4.1.1        backports_1.2.1    bslib_0.3.0       
+##  [9] utf8_1.2.2         R6_2.5.1           DBI_1.1.1          colorspace_2.0-2  
+## [13] withr_2.4.2        tidyselect_1.1.1   gridExtra_2.3      prettyunits_1.1.1 
+## [17] processx_3.5.2     curl_4.3.2         compiler_4.1.1     cli_3.0.1         
+## [21] rvest_1.0.2        xml2_1.3.2         labeling_0.4.2     bookdown_0.24     
+## [25] sass_0.4.0         scales_1.1.1       mvtnorm_1.1-3      callr_3.7.0       
+## [29] systemfonts_1.0.3  digest_0.6.27      svglite_2.0.0      rmarkdown_2.11    
+## [33] pkgconfig_2.0.3    htmltools_0.5.2    highr_0.9          dbplyr_2.1.1      
+## [37] fastmap_1.1.0      rlang_0.4.11       readxl_1.3.1       rstudioapi_0.13   
+## [41] farver_2.1.0       shape_1.4.6        jquerylib_0.1.4    generics_0.1.0    
+## [45] jsonlite_1.7.2     inline_0.3.19      magrittr_2.0.1     loo_2.4.1         
+## [49] Rcpp_1.0.7         munsell_0.5.0      fansi_0.5.0        lifecycle_1.0.1   
+## [53] stringi_1.7.5      yaml_2.2.1         MASS_7.3-54        pkgbuild_1.2.0    
+## [57] grid_4.1.1         crayon_1.4.1       lattice_0.20-45    haven_2.4.3       
+## [61] hms_1.1.0          ps_1.6.0           pillar_1.6.3       codetools_0.2-18  
+## [65] stats4_4.1.1       reprex_2.0.1       glue_1.4.2         evaluate_0.14     
+## [69] blogdown_1.5       V8_3.4.2           RcppParallel_5.1.4 modelr_0.1.8      
+## [73] vctrs_0.3.8        tzdb_0.1.2         cellranger_1.1.0   gtable_0.3.0      
+## [77] assertthat_0.2.1   xfun_0.26          broom_0.7.9        coda_0.19-4       
+## [81] viridisLite_0.4.0  ellipsis_0.3.2</code></pre>
 </div>
 </div>
