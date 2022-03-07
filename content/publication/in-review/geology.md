@@ -28,7 +28,7 @@ tags:
 - Isotopes
 - Geology
 - Climate
-title: Siberian Trap outgassing triggered five million years of elevated atmospheric CO2
+title: Five million years of high atmospheric CO2 in the aftermath of the Permian-Triassic mass extinction
 ---
 
 
