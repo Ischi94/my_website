@@ -19,6 +19,16 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 [[item]]
+  organization = "Intergovernmental Panel on Climate Change (IPCC)"
+  organization_url = "https://www.ipcc.ch/"
+  title = "Cited in the IPCC's sixth assessment report"
+  url = "https://www.ipcc.ch/report/ar6/wg2/"
+  certificate_url = ""
+  date_start = "2022-03-05"
+  date_end = ""
+  description = "Citation for our paper on complex cascading effects in the climate system ([Mathes et al. 2021](https://doi.org/10.1038/s41559-020-01377-w)) in chapter 1 of the Working Group 2 SPM"
+
+[[item]]
   organization = "Bayreuther Zentrum für Ökologie und Umweltforschung (BayCEER)"
   organization_url = "http://www.bayceer.uni-bayreuth.de/bayceer/?lang=de"
   title = "BayCEER Workshop Talk Award winner"
