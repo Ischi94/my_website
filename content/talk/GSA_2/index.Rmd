@@ -1,0 +1,29 @@
+---
+abstract: Past climate is an important driver for current biodiversity and ecosystem processes. Analysis of deep-time fossil records spanning millions of years suggests that preceding long-term climate trends influence the impact of short-term climate change on evolutionary turnover. Here we show that vegetation dynamics over ecological timescales (centuries to millennia) are similarly affected by this interaction of long-term and short-term climate change. We assess how terrestrial plant assemblages respond to the compound effect of climate legacies and interactions over the past 21,000 years. Based on a global compilation of 1,748 fossil pollen sequences, we evaluate within a Bayesian framework how rates of palynological change, a proxy for vegetation change, are driven by the interaction between long-term temperature trends with short-term temperature change. We find that a synergistic climate interaction (a short-term temperature change adding to a long-term trend in the same direction) substantially increases global rates of vegetation change. Plant assemblages experiencing synergistic climate interactions over periods of 100 to 1,000 years are, on average, 22% more likely to show high turnover. We further show that tropical climate zones are particularly prone to this effect of climate interactions, while cold and dry areas are less susceptible. Using climate estimates during the last 1,000 years together with climate estimates under various shared socioeconomic pathways until 2100, we predict an increase in global rates of vegetation change between 81% and 113%. Our results illustrate that the response of ecosystems to climate change is strongly dependent on the preceding climate state, i.e. carry a strong climate legacy, and highlight the role of niche width as a buffer to extinction risk. Ecological studies might therefore substantially underestimate the impact of the current climate warming when ecological memory is not taken into consideration..
+all_day: false
+authors: []
+date: "2022-10-10T12:45:00Z"
+date_end: "2022-10-10T13:00:00Z"
+event: "GSA Connects 2022 meeting in Denver, Colorado"
+event_url: https://gsa.confex.com/gsa/2022AM/webprogram/Paper377457.html
+featured: false
+image: 
+  caption: 'Image credit: GSA'
+  focal_point: Right
+links: null
+location: Denver, USA
+math: true
+projects: null
+publishDate: "2022-05-15T00:00:00Z"
+slides: null
+summary: Deck slides for my presentation.
+tags: []
+title: Climate legacies and interactions accelerate turnover in terrestrial plant assemblages over the past 21,000 years
+url_code: ""
+url_pdf: ""
+url_slides: "https://docs.google.com/presentation/d/1TyRe9OjWcmiyinaxxFMbYZmPYG4i-nbh4jFpzM3TUvM/edit#slide=id.g15e876a422a_2_75"
+url_video: ""
+---
+
+
+Click on the orange *slides* button above to see my presentation. 

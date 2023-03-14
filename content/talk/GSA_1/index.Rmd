@@ -11,7 +11,7 @@ image:
   caption: 'Image credit: GSA'
   focal_point: Right
 links: null
-location: Online
+location: Denver, USA
 math: true
 projects: null
 publishDate: "2022-05-15T00:00:00Z"
