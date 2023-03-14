@@ -19,7 +19,7 @@ projects: null
 publication: '*Global Ecology and Biogeography*'
 publication_short:
 publication_types:
-- "2"
+- "1"
 publishDate: "2021-04-16T00:00:00Z"
 tags:
 - Foraminifera

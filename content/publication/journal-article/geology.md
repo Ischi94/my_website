@@ -12,7 +12,7 @@ authors:
 - Jinnan N. Tong
 date: "2022-06-1T00:00:00Z"
 doi: ""
-featured: true
+featured: false
 image:
   caption: ''
   focal_point: ""
