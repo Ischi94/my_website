@@ -10,9 +10,11 @@ display_education: true
 education:
   courses:
   - course: PhD student in PastKey project of the TERSANE research unit with Prof. Dr. Manuel Steinbauer, University of Bayreuth and GeoZentrum Erlangen (Germany)
-    year: since 2019
+    year: 2019 - 2022
+    grade: Summa cum laude
   - course: M.Sc. in Analytical Paleobiology, Department of Geosciences, Friedrich-Alexander University Erlangen-Nuremberg (Germany)
     year: 2017 to 2019
+    grade: 1.1
   - course: B.Sc. in Geosciences, Department of Geosciences, Friedrich-Alexander University Erlangen-Nuremberg (Germany)
     year: 2013 to 2017
 email: "gregor.mathes@uni-bayreuth.de"
