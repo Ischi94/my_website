@@ -1,16 +1,13 @@
 ---
 abstract: "" 
 authors:
-- Michael Joachimski
-- Johann Müller
-- Daoliang Chu
-- Timothy Gallagher
-- Vladimir Silantiev
-- Fedor Mouraviev
-- Yadong Sung
 - admin
-- J. Tong  
-date: "2021-04-16T00:00:00Z"
+- Carl J. Reddin
+- Wolfgang Kiessling
+- Gwen S. Antell
+- Erin E. Saupe
+- Manuel J. Steinbauer  
+date: "2023-02-16T00:00:00Z"
 doi: ""
 featured: true
 image:
@@ -19,16 +16,16 @@ image:
   preview_only: true
 links: null
 projects: null
-publication: '*Geology*'
+publication: '*Global Ecology and Biogeography*'
 publication_short:
 publication_types:
 - "2"
 publishDate: "2021-04-16T00:00:00Z"
 tags:
-- Isotopes
-- Geology
+- Foraminifera
 - Climate
-title: Five million years of high atmospheric CO2 in the aftermath of the Permian-Triassic mass extinction
+- Migration
+title: Spatially heterogenous responses of planktonic foraminifera assemblages over 700,000 years of climate change
 ---
 
 
