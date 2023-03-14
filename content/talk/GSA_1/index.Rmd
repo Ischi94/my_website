@@ -1,0 +1,29 @@
+---
+abstract: Marine ecosystems are increasingly affected by anthropogenic climate change. It is unknown whether marine assemblages are able to shift their distributions fast enough to track suitable climate. We investigate the capacity of planktonic assemblages to keep pace with temperature changes using a 700,000 years fossil record of globally ubiquitous available marine zooplankton (2,657 planktonic foraminifera assemblages). By integrating across spatiotemporal scales, we provide powerful insights into faunal responses to a wide variety of climate change. Comparisons with paleoclimate reconstructions show that planktonic foraminifera assemblages are able to track changes in temperature. However, disproportionally large climatic debt is accumulated by assemblages in high latitudes responding to climate warming and assemblages in low latitudes responding to climate cooling. We found that high magnitudes of temperature changes led to large and often irreversible changes, pointing towards the presence of critical tipping points within these marine assemblages. The inability to move ranges fast enough to track shifts in suitable climates led to average range debts up to 554 km. How well assemblages react to climate warming or cooling was dependent on the long-term climatic context. Our observations show that the vulnerability of marine assemblages to climate change may be more extensive than previously anticipated, with planktonic foraminifera assemblages in high latitudes being particularly at risk under anthropogenic climate change.
+all_day: false
+authors: []
+date: "2022-10-10T12:45:00Z"
+date_end: "2022-10-10T13:00:00Z"
+event: "GSA Connects 2022 meeting in Denver, Colorado"
+event_url: https://gsa.confex.com/gsa/2022AM/webprogram/Paper377456.html
+featured: false
+image: 
+  caption: 'Image credit: GSA'
+  focal_point: Right
+links: null
+location: Online
+math: true
+projects: null
+publishDate: "2022-05-15T00:00:00Z"
+slides: null
+summary: Deck slides for my presentation.
+tags: []
+title: Range shifts of planktonic foraminifera assemblages in response to climate change over the past 700,000 years
+url_code: ""
+url_pdf: ""
+url_slides: "https://docs.google.com/presentation/d/1w2LWyOKTotVFGqRciywZCjIb_zywEEcGbsk41qTS0jQ/edit#slide=id.gff786dcb47_2_75"
+url_video: ""
+---
+
+
+Click on the orange *slides* button above to see my presentation. 
