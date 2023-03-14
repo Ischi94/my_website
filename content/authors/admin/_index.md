@@ -17,20 +17,22 @@ education:
     grade: 1.1
   - course: B.Sc. in Geosciences, Department of Geosciences, Friedrich-Alexander University Erlangen-Nuremberg (Germany)
     year: 2013 to 2017
-email: "gregor.mathes@uni-bayreuth.de"
+email: "gregor.mathes@pim.uzh.ch"
 interests:
 - Conservation Palaeontology
 - Macroecology and Evolution
-- Data Science/ Statistics
+- Data Science/ Bayesian Statistics
 name: Gregor Mathes
 organizations:
+- name: University of Zurich
+  url: "https://www.pim.uzh.ch/apps/cms/pageframes/staff.php?show=1266"
 - name: University of Bayreuth
   url: "https://www.spowi5.uni-bayreuth.de/de/team/Mathes/index.php"
 - name: Friedrich-Alexander University Erlangen-Nuremberg
   url: "https://www.gzn.nat.fau.eu/palaeontologie/team/wissenschaftler/gregor-mathes/"
 - name: Tersane Research Unit
   url: "http://tersane.palaeobiology.de/"
-role: PhD student
+role: PostDoc
 social:
 - icon: envelope
   icon_pack: fas
@@ -50,7 +52,7 @@ user_groups:
 - Visitors
 ---
 
-Gregor Mathes is a PhD student and analytical palaeontologist at the University of Bayreuth and Friedrich-Alexander University Erlangen-Nuremberg. His research interests include conservation palaeontology, analytical macroecology, and data science. He applies novel statistical tools to the fossil record to gain insights about Earths history. Using this information about the past, he focuses on the conservation of recent biodiversity under current climate change. 
+Gregor Mathes is a PostDoc and analytical palaeontologist at the University of Zurich. His research interests include conservation palaeontology, analytical macroecology, and data science. He applies novel statistical tools to the fossil record to gain insights about Earths history. Using this information about the past, he focuses on the conservation of recent biodiversity under current climate change. 
 
 He is a member of the Conservation Paleobiology Network and currently chair of the training series sub-committee. He is a private lecturer at the Hanns-Seidel-Stiftung e.V. providing talks and classes on climate change and Earths system. 
   
