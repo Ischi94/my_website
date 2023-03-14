@@ -19,6 +19,16 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 [[item]]
+  organization = "University of Bayreuth"
+  organization_url = "https://www.uni-bayreuth.de/"
+  title = "Defended my PhD with highest honors"
+  url = "https://www.spowi5.uni-bayreuth.de/de/news/2023/Rigorosum-Gregor-Mathes/index.html"
+  certificate_url = ""
+  date_start = "2023-03-05"
+  date_end = ""
+  description = "Summa cum laude for my PhD"
+  
+[[item]]
   organization = "Intergovernmental Panel on Climate Change (IPCC)"
   organization_url = "https://www.ipcc.ch/"
   title = "Cited in the IPCC's sixth assessment report"
