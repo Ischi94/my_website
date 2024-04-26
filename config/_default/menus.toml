@@ -12,31 +12,26 @@
   name = "Publications"
   url = "#publications"
   weight = 20
-
-[[main]]
-  name = "Presentations"
-  url = "#featured"
-  weight = 30
   
 [[main]]
   name = "Presentations"
   url = "#talks"
-  weight = 40
+  weight = 30
 
 [[main]]
   name = "Honors"
   url = "#accomplishments"
-  weight = 50
+  weight = 40
 
 [[main]]
   name = "Skills"
   url = "#skills"
-  weight = 60
+  weight = 50
 
 [[main]]
   name = "Posts"
   url = "#posts"
-  weight = 70
+  weight = 60
 
 [[main]]
   name = "Resume"
