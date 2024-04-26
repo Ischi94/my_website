@@ -19,7 +19,10 @@ publication_types:
 - "2"
 publishDate: "2021-09-01T00:00:00Z"
 summary: 
-tags: Remote Sensing, Skying, Publication]
+tags: 
+- Remote Sensing
+- Skying
+- Publication
 title: Global reduction of snow cover in ski areas under climate change
 buttons:
     - text: Read the publication here

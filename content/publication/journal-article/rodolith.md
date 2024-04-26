@@ -20,7 +20,10 @@ publication_types:
 - "2"
 publishDate: "2021-09-01T00:00:00Z"
 summary: 
-tags: Remote Sensing, Biodiversity, Publication]
+tags: 
+- Remote Sensing
+- Biodiversity
+- Publication
 title: Bayesian analysis of biodiversity patterns via beam trawl versus video transect—a comparative case study of Svalbard rhodolith beds
 buttons:
     - text: Read the publication here

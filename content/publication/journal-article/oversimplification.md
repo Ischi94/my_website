@@ -23,7 +23,10 @@ publication_types:
 - "2"
 publishDate: "2021-09-01T00:00:00Z"
 summary: 
-tags: Mass Extinction, Machine Learning, Publication]
+tags: 
+- Mass Extinction
+- Machine Learning
+- Publication
 title: Oversimplification risks too much, a response to ‘How predictable are mass extinction events?'
 buttons:
     - text: Read the publication here

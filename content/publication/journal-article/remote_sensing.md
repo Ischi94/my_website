@@ -23,7 +23,10 @@ publication_types:
 - "2"
 publishDate: "2021-09-01T00:00:00Z"
 summary: 
-tags: Remote Sensing, Machine Learning, Publication]
+tags:
+- Remote Sensing
+- Machine Learning
+- Publication
 title: Automated visitor and wildlife monitoring with camera traps and machine learning
 buttons:
     - text: Read the publication here
