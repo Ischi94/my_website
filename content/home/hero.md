@@ -44,4 +44,4 @@ hero_media = "user-2.jpg"
 +++
 ## My name is **Gregor Mathes** and I'm a PostDoc in **Analytical Palaeontology** applying novel statistical tools to the fossil record.  
 
-The goal of my research is to explore how life on Earth interacts with climate, with emphasis on applying this knowledge of the past to the current climate crisis. My PostDoc project is embedded in the research team of [Catalina Pimiento](https://www.catalinapimiento.com/), working jointly with [Manuel Steinbauer](https://www.spowi5.uni-bayreuth.de/de/team/steinbauer/index.php) and [Wolfgang Kiessling](https://www.gzn.nat.fau.de/palaeontologie/team/professors/kiessling/). 
+The goal of my research is to explore how life on Earth interacts with climate, with emphasis on applying this knowledge of the past to the current climate crisis. I approach research with the belief that truth isn't inherently embedded in data alone. It requires careful consideration, leveraging expertise, prior knowledge, and appropriate tools, echoing the perspectives of scholars like Judea Pearl and Richard McElreath.

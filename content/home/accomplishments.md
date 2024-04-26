@@ -19,14 +19,44 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 [[item]]
+  organization = "Bayreuther Zentrum für Ökologie und Umweltforschung (BayCEER)"
+  organization_url = "http://www.bayceer.uni-bayreuth.de/bayceer/?lang=de"
+  title = "Early career research award"
+  url = "http://www.bayceer.uni-bayreuth.de/bayceer/?lang=de"
+  certificate_url = ""
+  date_start = "2023-07-05"
+  date_end = ""
+  description = "For outstanding achievements during the dissertation"
+
+[[item]]
+  organization = "University of Bayreuth"
+  organization_url = "https://www.uni-bayreuth.de/"
+  title = "Nominated for the Bayrische Kulturpreis by the faculty for Geosciensces"
+  url = "https://www.bayernwerk.de/de/ueber-uns/engagement/kultur-und-tradition/kulturpreis-bayern/2023.html#:~:text=Der%20Kulturpreis%20Bayern%20ist%20eine,bayerische%20Kunst%2D%20und%20Kulturlandschaft%20bereichern"
+  certificate_url = ""
+  date_start = "2023-05-05"
+  date_end = ""
+  description = "Awarded as best Dissertation of the Faculty 2023"
+
+[[item]]
+  organization = "Commision of the Swiss Journal of Palaeontology"
+  organization_url = "https://ksjp.scnat.ch/en"
+  title = "Palaeo-Price"
+  url = "https://www.linkedin.com/posts/gregor-mathes-2595311b6_this-week-i-got-awarded-the-paleo-price-of-activity-7133900381276749824-wUtD?utm_source=share&utm_medium=member_desktop"
+  certificate_url = ""
+  date_start = "2023-06-05"
+  date_end = ""
+  description = "Awarded for excellent contributions to the field of Palaeontology"
+
+[[item]]
   organization = "University of Bayreuth"
   organization_url = "https://www.uni-bayreuth.de/"
   title = "Defended my PhD with highest honors"
-  url = "https://www.spowi5.uni-bayreuth.de/de/news/2023/Rigorosum-Gregor-Mathes/index.html"
+  url = "https://www.bayernwerk.de/de/ueber-uns/engagement/kultur-und-tradition/kulturpreis-bayern/2023.html#:~:text=Der%20Kulturpreis%20Bayern%20ist%20eine,bayerische%20Kunst%2D%20und%20Kulturlandschaft%20bereichern"
   certificate_url = ""
-  date_start = "2023-03-05"
+  date_start = "2023-04-05"
   date_end = ""
-  description = "Summa cum laude for my PhD"
+  description = "Awarded as best Dissertation of the Faculty 2023"
   
 [[item]]
   organization = "Intergovernmental Panel on Climate Change (IPCC)"
