@@ -12,7 +12,7 @@ day_night = true
 font = "default"
 
 # Description for social sharing and search engines. If undefined, superuser role is used in place.
-description = "Website for PhD student Gregor Mathes, a researcher on mass extinctions, evolutiond, and data science"
+description = "Website for Gregor Mathes, a researcher on mass extinctions, evolutiond, and data science"
 
 # Default image for social sharing and search engines. Place image in `static/img/` folder and specify image name here.
 sharing_image = "user.jpg"
@@ -50,8 +50,8 @@ time_format = "15:04"
 ############################
 
 # Enter contact details (optional). To hide a field, clear it to "".
-email = "Gregor.Mathes@uni-bayreuth.de"
-phone = "+49 9131 85-23489"
+email = "gmathes94@gmx.de"
+phone = ""
 address = "Henkestraße 91, Haus 8, Raum 0.272, 91054 Erlangen"
 
 # Office hours: use `<br>` to insert a line break, or set to "" to remove office hours
