@@ -1,0 +1,819 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        9,
+        24
+      ]
+    ],
+    "date-time": "2026-09-24T06:28:14Z",
+    "timestamp": 1790231294326,
+    "version": "4.1.0"
+  },
+  "reference-count": 57,
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "3",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2021,
+            1,
+            18
+          ]
+        ],
+        "date-time": "2021-01-18T00:00:00Z",
+        "timestamp": 1610928000000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2021,
+            1,
+            18
+          ]
+        ],
+        "date-time": "2021-01-18T00:00:00Z",
+        "timestamp": 1610928000000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "link.springer.com"
+    ],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "Nat Ecol Evol"
+  ],
+  "DOI": "10.1038/s41559-020-01377-w",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2021,
+        1,
+        18
+      ]
+    ],
+    "date-time": "2021-01-18T17:04:35Z",
+    "timestamp": 1610989475000
+  },
+  "page": "304-310",
+  "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 34,
+  "title": [
+    "Extinction risk controlled by interaction of long-term and short-term climate change"
+  ],
+  "prefix": "10.1038",
+  "volume": "5",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0002-2788-1173",
+      "authenticated-orcid": false,
+      "given": "Gregor H.",
+      "family": "Mathes",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Jeroen",
+      "family": "van Dijk",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-1088-2014",
+      "authenticated-orcid": false,
+      "given": "Wolfgang",
+      "family": "Kiessling",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Manuel J.",
+      "family": "Steinbauer",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "297",
+  "published-online": {
+    "date-parts": [
+      [
+        2021,
+        1,
+        18
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "1377_CR1",
+      "first-page": "83–87",
+      "volume": "6",
+      "author": "JG Molinos",
+      "year": "2016",
+      "unstructured": "Molinos, J. G. et al. Climate velocity and the future global redistribution of marine biodiversity. Nat. Clim. Change 6, 83–87 (2016).",
+      "journal-title": "Nat. Clim. Change"
+    },
+    {
+      "key": "1377_CR2",
+      "doi-asserted-by": "publisher",
+      "first-page": "eaai9214",
+      "DOI": "10.1126/science.aai9214",
+      "volume": "355",
+      "author": "GT Pecl",
+      "year": "2017",
+      "unstructured": "Pecl, G. T. et al. Biodiversity redistribution under climate change: impacts on ecosystems and human well-being. Science 355, eaai9214 (2017).",
+      "journal-title": "Science"
+    },
+    {
+      "key": "1377_CR3",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Brook, B. W. & Alroy, J. Pattern, Process, Inference and Prediction in Extinction Biology (Royal Society, 2017).",
+      "DOI": "10.1098/rsbl.2016.0828"
+    },
+    {
+      "key": "1377_CR4",
+      "doi-asserted-by": "publisher",
+      "first-page": "51–57",
+      "DOI": "10.1038/nature09678",
+      "volume": "471",
+      "author": "AD Barnosky",
+      "year": "2011",
+      "unstructured": "Barnosky, A. D. et al. Has the Earth’s sixth mass extinction already arrived? Nature 471, 51–57 (2011).",
+      "journal-title": "Nature"
+    },
+    {
+      "key": "1377_CR5",
+      "doi-asserted-by": "publisher",
+      "first-page": "145–148",
+      "DOI": "10.1038/nature02121",
+      "volume": "427",
+      "author": "CD Thomas",
+      "year": "2004",
+      "unstructured": "Thomas, C. D. et al. Extinction risk from climate change. Nature 427, 145–148 (2004).",
+      "journal-title": "Nature"
+    },
+    {
+      "key": "1377_CR6",
+      "doi-asserted-by": "publisher",
+      "first-page": "571",
+      "DOI": "10.1126/science.aaa4984",
+      "volume": "348",
+      "author": "MC Urban",
+      "year": "2015",
+      "unstructured": "Urban, M. C. Accelerating extinction risk from climate change. Science 348, 571–573 (2015).",
+      "journal-title": "Science"
+    },
+    {
+      "key": "1377_CR7",
+      "first-page": "20181698",
+      "volume": "285",
+      "author": "KS Collins",
+      "year": "2018",
+      "unstructured": "Collins, K. S., Edie, S. M., Hunt, G., Roy, K. & Jablonski, D. Extinction risk in extant marine species integrating palaeontological and biodistributional data. Proc. Biol. Sci. 285, 20181698 (2018).",
+      "journal-title": "Proc. Biol. Sci."
+    },
+    {
+      "key": "1377_CR8",
+      "doi-asserted-by": "publisher",
+      "first-page": "567",
+      "DOI": "10.1126/science.aaa6635",
+      "volume": "348",
+      "author": "S Finnegan",
+      "year": "2015",
+      "unstructured": "Finnegan, S. et al. Paleontological baselines for evaluating extinction risk in the modern oceans. Science 348, 567–570 (2015).",
+      "journal-title": "Science"
+    },
+    {
+      "key": "1377_CR9",
+      "doi-asserted-by": "publisher",
+      "first-page": "2448",
+      "DOI": "10.1098/rspb.2011.2621",
+      "volume": "279",
+      "author": "R van Woesik",
+      "year": "2012",
+      "unstructured": "van Woesik, R. et al. Hosts of the Plio-Pleistocene past reflect modern-day coral vulnerability. Proc. R. Soc. B 279, 2448–2456 (2012).",
+      "journal-title": "Proc. R. Soc. B"
+    },
+    {
+      "key": "1377_CR10",
+      "doi-asserted-by": "publisher",
+      "first-page": "608",
+      "DOI": "10.1016/j.tree.2012.07.010",
+      "volume": "27",
+      "author": "PG Harnik",
+      "year": "2012",
+      "unstructured": "Harnik, P. G. et al. Extinctions in ancient and modern seas. Trends Ecol. Evol. 27, 608–617 (2012).",
+      "journal-title": "Trends Ecol. Evol."
+    },
+    {
+      "key": "1377_CR11",
+      "doi-asserted-by": "publisher",
+      "first-page": "20150813",
+      "DOI": "10.1098/rsbl.2015.0813",
+      "volume": "12",
+      "author": "W Kiessling",
+      "year": "2016",
+      "unstructured": "Kiessling, W. & Kocsis, Á. T. Adding fossil occupancy trajectories to the assessment of modern extinction risk. Biol. Lett. 12, 20150813 (2016).",
+      "journal-title": "Biol. Lett."
+    },
+    {
+      "key": "1377_CR12",
+      "doi-asserted-by": "publisher",
+      "first-page": "369",
+      "DOI": "10.1146/annurev-marine-010318-095106",
+      "volume": "11",
+      "author": "P Calosi",
+      "year": "2019",
+      "unstructured": "Calosi, P., Putnam, H. M., Twitchett, R. J. & Vermandele, F. Marine metazoan modern mass extinction: improving predictions by integrating fossil, modern, and physiological data. Annu. Rev. Mar. Sci. 11, 369–390 (2019).",
+      "journal-title": "Annu. Rev. Mar. Sci."
+    },
+    {
+      "key": "1377_CR13",
+      "doi-asserted-by": "publisher",
+      "first-page": "519",
+      "DOI": "10.1146/annurev.ecolsys.36.102803.095431",
+      "volume": "36",
+      "author": "JJ Wiens",
+      "year": "2005",
+      "unstructured": "Wiens, J. J. & Graham, C. H. Niche conservatism: integrating evolution, ecology, and conservation biology. Annu. Rev. Ecol. Evol. Syst. 36, 519–539 (2005).",
+      "journal-title": "Annu. Rev. Ecol. Evol. Syst."
+    },
+    {
+      "key": "1377_CR14",
+      "doi-asserted-by": "publisher",
+      "first-page": "20130264",
+      "DOI": "10.1098/rstb.2013.0264",
+      "volume": "370",
+      "author": "G Beaugrand",
+      "year": "2015",
+      "unstructured": "Beaugrand, G. Theoretical basis for predicting climate-induced abrupt shifts in the oceans. Philos. Trans. R. Soc. B 370, 20130264 (2015).",
+      "journal-title": "Philos. Trans. R. Soc. B"
+    },
+    {
+      "key": "1377_CR15",
+      "doi-asserted-by": "publisher",
+      "first-page": "1",
+      "DOI": "10.3354/meps12148",
+      "volume": "571",
+      "author": "JP Lord",
+      "year": "2017",
+      "unstructured": "Lord, J. P., Barry, J. P. & Graves, D. Impact of climate change on direct and indirect species interactions. Mar. Ecol. Prog. Ser. 571, 1–11 (2017).",
+      "journal-title": "Mar. Ecol. Prog. Ser."
+    },
+    {
+      "key": "1377_CR16",
+      "doi-asserted-by": "publisher",
+      "first-page": "3",
+      "DOI": "10.1016/j.palaeo.2016.11.005",
+      "volume": "478",
+      "author": "DPG Bond",
+      "year": "2017",
+      "unstructured": "Bond, D. P. G. & Grasby, S. E. On the causes of mass extinctions. Palaeogeogr. Palaeoclimatol. Palaeoecol. 478, 3–29 (2017).",
+      "journal-title": "Palaeogeogr. Palaeoclimatol. Palaeoecol."
+    },
+    {
+      "key": "1377_CR17",
+      "doi-asserted-by": "publisher",
+      "first-page": "eaat1327",
+      "DOI": "10.1126/science.aat1327",
+      "volume": "362",
+      "author": "JL Penn",
+      "year": "2018",
+      "unstructured": "Penn, J. L., Deutsch, C., Payne, J. L. & Sperling, E. A. Temperature-dependent hypoxia explains biogeography and severity of end-Permian marine mass extinction. Science 362, eaat1327 (2018).",
+      "journal-title": "Science"
+    },
+    {
+      "key": "1377_CR18",
+      "doi-asserted-by": "publisher",
+      "first-page": "249",
+      "DOI": "10.1038/s41558-020-0690-7",
+      "volume": "10",
+      "author": "CJ Reddin",
+      "year": "2020",
+      "unstructured": "Reddin, C. J., Nätscher, P. S., Kocsis, Á. T., Pörtner, H.-O. & Kiessling, W. Marine clade sensitivities to climate change conform across timescales. Nat. Clim. Change 10, 249–253 (2020).",
+      "journal-title": "Nat. Clim. Change"
+    },
+    {
+      "key": "1377_CR19",
+      "doi-asserted-by": "publisher",
+      "first-page": "127",
+      "DOI": "10.1016/j.tree.2008.10.008",
+      "volume": "24",
+      "author": "BM Bolker",
+      "year": "2009",
+      "unstructured": "Bolker, B. M. et al. Generalized linear mixed models: a practical guide for ecology and evolution. Trends Ecol. Evol. 24, 127–135 (2009).",
+      "journal-title": "Trends Ecol. Evol."
+    },
+    {
+      "key": "1377_CR20",
+      "unstructured": "Burnham, K. P. & Anderson, D. R. Model Selection and Multimodel Inference. A Practical Information-Theoretic Approach 2nd edn (Springer, 2010)."
+    },
+    {
+      "key": "1377_CR21",
+      "doi-asserted-by": "publisher",
+      "first-page": "495",
+      "DOI": "10.1146/annurev.ecolsys.28.1.495",
+      "volume": "28",
+      "author": "ML McKinney",
+      "year": "1997",
+      "unstructured": "McKinney, M. L. Extinction vulnerability and selectivity: combining ecological and paleontological views. Annu. Rev. Ecol. Syst. 28, 495–516 (1997).",
+      "journal-title": "Annu. Rev. Ecol. Syst."
+    },
+    {
+      "key": "1377_CR22",
+      "doi-asserted-by": "publisher",
+      "first-page": "421",
+      "DOI": "10.1666/08023.1",
+      "volume": "34",
+      "author": "M Foote",
+      "year": "2008",
+      "unstructured": "Foote, M., Crampton, J. S., Beu, A. G. & Cooper, R. A. On the bidirectional relationship between geographic range and taxonomic duration. Paleobiology 34, 421–433 (2008).",
+      "journal-title": "Paleobiology"
+    },
+    {
+      "key": "1377_CR23",
+      "doi-asserted-by": "publisher",
+      "first-page": "616",
+      "DOI": "10.1666/10037.1",
+      "volume": "37",
+      "author": "JL Payne",
+      "year": "2011",
+      "unstructured": "Payne, J. L., Truebe, S., Nützel, A. & Chang, E. T. Local and global abundance associated with extinction risk in late Paleozoic and early Mesozoic gastropods. Paleobiology 37, 616–632 (2011).",
+      "journal-title": "Paleobiology"
+    },
+    {
+      "key": "1377_CR24",
+      "doi-asserted-by": "publisher",
+      "first-page": "13594",
+      "DOI": "10.1073/pnas.1100572108",
+      "volume": "108",
+      "author": "PG Harnik",
+      "year": "2011",
+      "unstructured": "Harnik, P. G. Direct and indirect effects of biological factors on extinction risk in fossil bivalves. Proc. Natl Acad. Sci. USA 108, 13594–13599 (2011).",
+      "journal-title": "Proc. Natl Acad. Sci. USA"
+    },
+    {
+      "key": "1377_CR25",
+      "doi-asserted-by": "publisher",
+      "first-page": "4969",
+      "DOI": "10.1098/rspb.2012.1902",
+      "volume": "279",
+      "author": "PG Harnik",
+      "year": "2012",
+      "unstructured": "Harnik, P. G., Simpson, C. & Payne, J. L. Long-term differences in extinction risk among the seven forms of rarity. Proc. R. Soc. B 279, 4969–4976 (2012).",
+      "journal-title": "Proc. R. Soc. B"
+    },
+    {
+      "key": "1377_CR26",
+      "doi-asserted-by": "publisher",
+      "first-page": "314",
+      "DOI": "10.1111/ele.12232",
+      "volume": "17",
+      "author": "MJ Hopkins",
+      "year": "2014",
+      "unstructured": "Hopkins, M. J., Simpson, C. & Kiessling, W. Differential niche dynamics among major marine invertebrate clades. Ecol. Lett. 17, 314–323 (2014).",
+      "journal-title": "Ecol. Lett."
+    },
+    {
+      "key": "1377_CR27",
+      "doi-asserted-by": "publisher",
+      "first-page": "565",
+      "DOI": "10.1111/j.1461-0248.2004.00614.x",
+      "volume": "7",
+      "author": "J‐C Svenning",
+      "year": "2004",
+      "unstructured": "Svenning, J. ‐C. & Skov, F. Limited filling of the potential range in European tree species. Ecol. Lett. 7, 565–573 (2004).",
+      "journal-title": "Ecol. Lett."
+    },
+    {
+      "key": "1377_CR28",
+      "doi-asserted-by": "publisher",
+      "first-page": "3644",
+      "DOI": "10.1098/rspb.2010.2769",
+      "volume": "278",
+      "author": "S Normand",
+      "year": "2011",
+      "unstructured": "Normand, S. et al. Postglacial migration supplements climate in determining plant species ranges in Europe. Proc. R. Soc. B 278, 3644–3653 (2011).",
+      "journal-title": "Proc. R. Soc. B"
+    },
+    {
+      "key": "1377_CR29",
+      "doi-asserted-by": "crossref",
+      "first-page": "1123",
+      "DOI": "10.1111/ecog.00719",
+      "volume": "37",
+      "author": "AL Stigall",
+      "year": "2014",
+      "unstructured": "Stigall, A. L. When and how do species achieve niche stability over long time scales? Ecography 37, 1123–1132 (2014).",
+      "journal-title": "Ecography"
+    },
+    {
+      "key": "1377_CR30",
+      "doi-asserted-by": "publisher",
+      "first-page": "792",
+      "DOI": "10.1111/geb.12425",
+      "volume": "25",
+      "author": "MJ Steinbauer",
+      "year": "2016",
+      "unstructured": "Steinbauer, M. J. et al. Biogeographic ranges do not support niche theory in radiating Canary Island plant clades. Glob. Ecol. Biogeogr. 25, 792–804 (2016).",
+      "journal-title": "Glob. Ecol. Biogeogr."
+    },
+    {
+      "key": "1377_CR31",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Foster, G. L., Hull, P., Lunt, D. J. & Zachos, J. C. Placing our Current ‘Hyperthermal’ in the Context of Rapid Climate Change in our Geological Past (The Royal Society Publishing, 2018).",
+      "DOI": "10.1098/rsta.2017.0086"
+    },
+    {
+      "key": "1377_CR32",
+      "doi-asserted-by": "publisher",
+      "first-page": "13-1",
+      "DOI": "10.1029/2001PA000623",
+      "volume": "17",
+      "author": "RM Leckie",
+      "year": "2002",
+      "unstructured": "Leckie, R. M., Bralower, T. J. & Cashman, R. Oceanic anoxic events and plankton evolution: biotic response to tectonic forcing during the mid‐Cretaceous. Paleoceanography 17, 13-1–13-29 (2002).",
+      "journal-title": "Paleoceanography"
+    },
+    {
+      "key": "1377_CR33",
+      "unstructured": "Coxall, H. K. & Pearson, P. N. in Deep Time Perspectives on Climate Change: Marrying the Signal From Computer Models and Biological Proxies Vol. 2 (eds Williams, M. et al.) 351–387 (Geological Society of London, 2007)."
+    },
+    {
+      "key": "1377_CR34",
+      "doi-asserted-by": "publisher",
+      "first-page": "209",
+      "DOI": "10.1017/pab.2016.25",
+      "volume": "43",
+      "author": "KA Ritterbush",
+      "year": "2017",
+      "unstructured": "Ritterbush, K. A. & Foote, M. Association between geographic range and initial survival of Mesozoic marine animal genera: circumventing the confounding effects of temporal and taxonomic heterogeneity. Paleobiology 43, 209–223 (2017).",
+      "journal-title": "Paleobiology"
+    },
+    {
+      "key": "1377_CR35",
+      "doi-asserted-by": "publisher",
+      "first-page": "1225",
+      "DOI": "10.1111/pala.12003",
+      "volume": "56",
+      "author": "AL Stigall",
+      "year": "2013",
+      "unstructured": "Stigall, A. L. Analysing links between biogeography, niche stability and speciation: the impact of complex feedbacks on macroevolutionary patterns. Palaeontology 56, 1225–1238 (2013).",
+      "journal-title": "Palaeontology"
+    },
+    {
+      "key": "1377_CR36",
+      "doi-asserted-by": "crossref",
+      "unstructured": "BouDagher-Fadel, M. K. Evolution and Geological Significance of Larger Benthic Foraminifera (UCL Press, 2018).",
+      "DOI": "10.2307/j.ctvqhsq3"
+    },
+    {
+      "key": "1377_CR37",
+      "doi-asserted-by": "publisher",
+      "first-page": "704",
+      "DOI": "10.1111/geb.12732",
+      "volume": "27",
+      "author": "CJ Reddin",
+      "year": "2018",
+      "unstructured": "Reddin, C. J., Kocsis, Á. T. & Kiessling, W. Marine invertebrate migrations trace climate change over 450 million years. Glob. Ecol. Biogeogr. 27, 704–713 (2018).",
+      "journal-title": "Glob. Ecol. Biogeogr."
+    },
+    {
+      "key": "1377_CR38",
+      "unstructured": "Valentine, J. W. Temporal bias in extinctions among taxonomic categories. J. Paleontol. 48, 549–552 (1974)."
+    },
+    {
+      "key": "1377_CR39",
+      "doi-asserted-by": "publisher",
+      "first-page": "735",
+      "DOI": "10.1111/2041-210X.13161",
+      "volume": "10",
+      "author": "ÁT Kocsis",
+      "year": "2019",
+      "unstructured": "Kocsis, Á. T., Reddin, C. J., Alroy, J. & Kiessling, W. The r package divDyn for quantifying diversity dynamics using fossil sampling data. Methods Ecol. Evol. 10, 735–743 (2019).",
+      "journal-title": "Methods Ecol. Evol."
+    },
+    {
+      "key": "1377_CR40",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Gradstein, F. M., Ogg, J. G., Schmitz, M. & Ogg, G. The Geologic Time Scale 2012 (Elsevier, 2012).",
+      "DOI": "10.1127/0078-0421/2012/0020"
+    },
+    {
+      "key": "1377_CR41",
+      "doi-asserted-by": "publisher",
+      "first-page": "74",
+      "DOI": "10.1666/0094-8373(2000)26[74:OAECOT]2.0.CO;2",
+      "volume": "26",
+      "author": "M Foote",
+      "year": "2000",
+      "unstructured": "Foote, M. Origination and extinction components of taxonomic diversity: general problems. Paleobiology 26, 74–102 (2000).",
+      "journal-title": "Paleobiology"
+    },
+    {
+      "key": "1377_CR42",
+      "doi-asserted-by": "publisher",
+      "first-page": "92",
+      "DOI": "10.1016/j.earscirev.2015.03.008",
+      "volume": "146",
+      "author": "J Veizer",
+      "year": "2015",
+      "unstructured": "Veizer, J. & Prokoph, A. Temperatures and oxygen isotopic composition of Phanerozoic oceans. Earth Sci. Rev. 146, 92–104 (2015).",
+      "journal-title": "Earth Sci. Rev."
+    },
+    {
+      "key": "1377_CR43",
+      "doi-asserted-by": "publisher",
+      "first-page": "236",
+      "DOI": "10.1007/s12583-018-1002-2",
+      "volume": "30",
+      "author": "H Song",
+      "year": "2019",
+      "unstructured": "Song, H., Wignall, P. B., Song, H., Dai, X. & Chu, D. Seawater temperature and dissolved oxygen over the past 500 million years. J. Earth Sci. 30, 236–243 (2019).",
+      "journal-title": "J. Earth Sci."
+    },
+    {
+      "key": "1377_CR44",
+      "doi-asserted-by": "publisher",
+      "first-page": "39",
+      "DOI": "10.1017/S1089332600002540",
+      "volume": "18",
+      "author": "EL Grossman",
+      "year": "2012",
+      "unstructured": "Grossman, E. L. Applying oxygen isotope paleothermometry in deep time. Paleontol. Soc. Pap. 18, 39–68 (2012).",
+      "journal-title": "Paleontol. Soc. Pap."
+    },
+    {
+      "key": "1377_CR45",
+      "doi-asserted-by": "publisher",
+      "first-page": "40",
+      "DOI": "10.1016/j.epsl.2018.02.001",
+      "volume": "490",
+      "author": "GA Henkes",
+      "year": "2018",
+      "unstructured": "Henkes, G. A. et al. Temperature evolution and the oxygen isotope composition of Phanerozoic oceans from carbonate clumped isotope thermometry. Earth Planet. Sci. Lett. 490, 40–50 (2018).",
+      "journal-title": "Earth Planet. Sci. Lett."
+    },
+    {
+      "key": "1377_CR46",
+      "doi-asserted-by": "publisher",
+      "first-page": "6602",
+      "DOI": "10.1073/pnas.1719681115",
+      "volume": "115",
+      "author": "U Ryb",
+      "year": "2018",
+      "unstructured": "Ryb, U. & Eiler, J. M. Oxygen isotope composition of the Phanerozoic ocean and a possible solution to the dolomite problem. Proc. Natl Acad. Sci. USA 115, 6602–6607 (2018).",
+      "journal-title": "Proc. Natl Acad. Sci. USA"
+    },
+    {
+      "key": "1377_CR47",
+      "unstructured": "R Core Team. R: A Language and Environment for Statistical Computing (R Foundation for Statistical Computing, 2019)."
+    },
+    {
+      "key": "1377_CR48",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Bates, D., Mächler, M., Bolker, B. & Walker, S. Fitting linear mixed-effects models using lme4. J. Stat. Soft. https://doi.org/10.18637/jss.v067.i01 (2015).",
+      "DOI": "10.18637/jss.v067.i01"
+    },
+    {
+      "key": "1377_CR49",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Wickham, H. ggplot2: Elegant Graphics for Data Analysis (Springer, 2016).",
+      "DOI": "10.1007/978-3-319-24277-4"
+    },
+    {
+      "key": "1377_CR50",
+      "doi-asserted-by": "publisher",
+      "first-page": "413",
+      "DOI": "10.1016/j.jml.2008.02.002",
+      "volume": "59",
+      "author": "H Quené",
+      "year": "2008",
+      "unstructured": "Quené, H. & van den Bergh, H. Examples of mixed-effects modeling with crossed random effects and with binomial data. J. Mem. Lang. 59, 413–425 (2008).",
+      "journal-title": "J. Mem. Lang."
+    },
+    {
+      "key": "1377_CR51",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Malik, W. A., Marco-Llorca, C., Berendzen, K. & Piepho, H.-P. Choice of link and variance function for generalized linear mixed models: a case study with binomial response in proteomics. Commun. Stat. Theory Methods 49, 1–20 (2019).",
+      "DOI": "10.1080/03610926.2019.1599021"
+    },
+    {
+      "key": "1377_CR52",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Zuur, A., Ieno, E. N., Walker, N., Saveliev, A. A. & Smith, G. M. Mixed Effects Models and Extensions in Ecology with R (Springer Science & Business Media, 2009).",
+      "DOI": "10.1007/978-0-387-87458-6"
+    },
+    {
+      "key": "1377_CR53",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Fox, G. A., Negrete-Yankelevich, S. & Sosa, V. J. Ecological Statistics: Contemporary Theory and Application (Oxford Univ. Press, 2015).",
+      "DOI": "10.1093/acprof:oso/9780199672547.001.0001"
+    },
+    {
+      "key": "1377_CR54",
+      "doi-asserted-by": "publisher",
+      "first-page": "423",
+      "DOI": "10.1093/scan/nsp052",
+      "volume": "4",
+      "author": "MD Lieberman",
+      "year": "2009",
+      "unstructured": "Lieberman, M. D. & Cunningham, W. A. Type I and Type II error concerns in fMRI research: re-balancing the scale. Soc. Cogn. Affect. Neurosci. 4, 423–428 (2009).",
+      "journal-title": "Soc. Cogn. Affect. Neurosci."
+    },
+    {
+      "key": "1377_CR55",
+      "first-page": "1",
+      "volume": "58",
+      "author": "J Durbin",
+      "year": "1971",
+      "unstructured": "Durbin, J. & Watson, G. S. Testing for serial correlation in least squares regression. Biometrika 58, 1–19 (1971).",
+      "journal-title": "Biometrika"
+    },
+    {
+      "key": "1377_CR56",
+      "doi-asserted-by": "publisher",
+      "first-page": "20170213",
+      "DOI": "10.1098/rsif.2017.0213",
+      "volume": "14",
+      "author": "S Nakagawa",
+      "year": "2017",
+      "unstructured": "Nakagawa, S., Johnson, P. C. D. & Schielzeth, H. The coefficient of determination R2 and intra-class correlation coefficient from generalized linear mixed-effects models revisited and expanded. J. R. Soc. Interface 14, 20170213 (2017).",
+      "journal-title": "J. R. Soc. Interface"
+    },
+    {
+      "key": "1377_CR57",
+      "unstructured": "IPCC. Special Report on Global Warming of 1.5 °C (eds Masson-Delmotte, V. et al.) (WMO, 2018)."
+    }
+  ],
+  "container-title": [
+    "Nature Ecology &amp; Evolution"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://www.nature.com/articles/s41559-020-01377-w.pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://www.nature.com/articles/s41559-020-01377-w",
+      "content-type": "text/html",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://www.nature.com/articles/s41559-020-01377-w.pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2023,
+        10,
+        17
+      ]
+    ],
+    "date-time": "2023-10-17T23:12:24Z",
+    "timestamp": 1697584344000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://www.nature.com/articles/s41559-020-01377-w"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2021,
+        1,
+        18
+      ]
+    ]
+  },
+  "references-count": 57,
+  "journal-issue": {
+    "issue": "3",
+    "published-online": {
+      "date-parts": [
+        [
+          2021,
+          3
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "1377"
+  ],
+  "URL": "https://doi.org/10.1038/s41559-020-01377-w",
+  "relation": {},
+  "ISSN": [
+    "2397-334X"
+  ],
+  "issn-type": [
+    {
+      "value": "2397-334X",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2021,
+        1,
+        18
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "15 April 2020",
+      "order": 1,
+      "name": "received",
+      "label": "Received",
+      "group": {
+        "name": "ArticleHistory",
+        "label": "Article History"
+      }
+    },
+    {
+      "value": "3 December 2020",
+      "order": 2,
+      "name": "accepted",
+      "label": "Accepted",
+      "group": {
+        "name": "ArticleHistory",
+        "label": "Article History"
+      }
+    },
+    {
+      "value": "18 January 2021",
+      "order": 3,
+      "name": "first_online",
+      "label": "First Online",
+      "group": {
+        "name": "ArticleHistory",
+        "label": "Article History"
+      }
+    },
+    {
+      "value": "The authors declare no competing interests.",
+      "order": 1,
+      "name": "Ethics",
+      "group": {
+        "name": "EthicsHeading",
+        "label": "Competing interests"
+      }
+    }
+  ]
+}

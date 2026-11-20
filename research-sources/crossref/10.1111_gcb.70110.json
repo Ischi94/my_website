@@ -1,0 +1,824 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        9,
+        23
+      ]
+    ],
+    "date-time": "2026-09-23T02:57:36Z",
+    "timestamp": 1790132256822,
+    "version": "4.0.1"
+  },
+  "reference-count": 86,
+  "publisher": "Wiley",
+  "issue": "3",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2025,
+            3,
+            7
+          ]
+        ],
+        "date-time": "2025-03-07T00:00:00Z",
+        "timestamp": 1741305600000
+      },
+      "content-version": "vor",
+      "delay-in-days": 6,
+      "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+    }
+  ],
+  "funder": [
+    {
+      "DOI": "10.13039/501100001711",
+      "name": "Schweizerischer Nationalfonds zur Förderung der Wissenschaftlichen Forschung",
+      "doi-asserted-by": "publisher",
+      "award": [
+        "31003A_166448"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "31003A_166448"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/501100001711",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    },
+    {
+      "DOI": "10.13039/501100001711",
+      "name": "Schweizerischer Nationalfonds zur Förderung der Wissenschaftlichen Forschung",
+      "doi-asserted-by": "publisher",
+      "award": [
+        "PCEFP3_187012"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "PCEFP3_187012"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/501100001711",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    },
+    {
+      "DOI": "10.13039/501100004359",
+      "name": "Vetenskapsrådet",
+      "doi-asserted-by": "publisher",
+      "award": [
+        "2019‐04739"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "2019‐04739"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/501100004359",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    },
+    {
+      "DOI": "10.13039/501100001809",
+      "name": "National Natural Science Foundation of China",
+      "doi-asserted-by": "publisher",
+      "award": [
+        "32201438"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "32201438"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/501100001809",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "onlinelibrary.wiley.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "Global Change Biology"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2025,
+        3
+      ]
+    ]
+  },
+  "abstract": "<jats:title>ABSTRACT</jats:title><jats:p>Plant–soil feedbacks (PSFs) can contribute to the success of invasive plants. Despite strong evidence that plant genetic traits influence soil microbial communities and vice versa, empirical evidence exploring these feedbacks over evolutionary timescales, especially under climate change, remains limited. We conducted a 5‐year field study of the annual invasive plant, <jats:styled-content style=\"fixed-case\"><jats:italic>Ambrosia artemisiifolia</jats:italic></jats:styled-content> L., to examine how selection under climate warming and biocontrol insect herbivory shapes plant population genetics, soil properties, and microbial communities. After four generations under warming and herbivory, we collected seeds of the F<jats:sub>4</jats:sub> plant populations together with their conditioned soil for a common garden PSF experiment to explore how resulting PSFs patterns are influencing the performance and spread potential of <jats:italic>Ambrosia</jats:italic> under changing environmental conditions. This is especially relevant because our recent predictions point to a northward spread of <jats:italic>Ambrosia</jats:italic> in Europe and Asia under climate change, outpacing the spread of its insect biocontrol agent. We discovered that warming and herbivory significantly but differentially altered plant genetic composition and its soil microbial communities, with less pronounced effects on soil physicochemical properties. Our results indicate that both herbivory and warming generated negative PSFs. These negative PSFs favored plant growth of the seeds from the persistent soil seed bank growing in the conditioned soil under insect herbivory, and by this maintaining the <jats:italic>Ambrosia</jats:italic> population genetic diversity. They also enhanced the spread potential of warming‐selected plant offspring, especially from warmer (southern) to colder (northern) climates. This can be explained by the observed decrease in soil pathogens occurrence under insect herbivory and by the especially strong genetic changes in plant populations under climate warming. Our findings provide insights into how climate warming and biocontrol management affect eco‐evolutionary interactions between invasive plant populations and their soil environments, which are critical for predicting invasion dynamics in the context of global change.</jats:p>",
+  "DOI": "10.1111/gcb.70110",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2025,
+        3,
+        7
+      ]
+    ],
+    "date-time": "2025-03-07T14:02:56Z",
+    "timestamp": 1741356176000
+  },
+  "update-policy": "https://doi.org/10.1002/crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 6,
+  "title": [
+    "Eco‐Evolutionary Dynamics of Plant–Soil Feedbacks Explain the Spread Potential of a Plant Invader Under Climate Warming and Biocontrol Herbivory"
+  ],
+  "prefix": "10.1111",
+  "volume": "31",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0002-6439-266X",
+      "authenticated-orcid": false,
+      "given": "Yan",
+      "family": "Sun",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "College of Resources and Environment Huazhong Agricultural University  Wuhan China"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Daniele",
+      "family": "Silvestro",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Biosystems Science and Engineering ETH Zurich  Basel Switzerland"
+        },
+        {
+          "name": "Swiss Institute of Bioinformatics  Basel Switzerland"
+        },
+        {
+          "name": "Department of Biological and Environmental Sciences and Global Gothenburg Biodiversity Centre University of Gothenburg  Gothenburg Sweden"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Gregor H.",
+      "family": "Mathes",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "GeoZentrum Nordbayern Friedrich‐Alexander‐Universität Erlangen‐Nürnberg  Erlangen Germany"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Marcel G. A.",
+      "family": "van der Heijden",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Agroscope, Plant–Soil Interactions Group  Zurich Switzerland"
+        },
+        {
+          "name": "Department of Plant and Microbial Biology University of Zurich  Zurich Switzerland"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Heinz",
+      "family": "Müller‐Schärer",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "College of Resources and Environment Huazhong Agricultural University  Wuhan China"
+        },
+        {
+          "name": "Department of Biology/Ecology and Evolution University of Fribourg  Fribourg Switzerland"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "311",
+  "published-online": {
+    "date-parts": [
+      [
+        2025,
+        3,
+        7
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "e_1_2_10_2_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/s41467‐021‐23030‐1"
+    },
+    {
+      "key": "e_1_2_10_3_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1126/science.adf2027"
+    },
+    {
+      "key": "e_1_2_10_4_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1139/f01‐004"
+    },
+    {
+      "key": "e_1_2_10_5_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/ecm.1554"
+    },
+    {
+      "key": "e_1_2_10_6_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/eap.2003"
+    },
+    {
+      "key": "e_1_2_10_7_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/s41579‐022‐00779‐w"
+    },
+    {
+      "key": "e_1_2_10_8_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/S0038‐0717(98)00069‐8"
+    },
+    {
+      "key": "e_1_2_10_9_1",
+      "unstructured": "Barton K.2009.“MuMIn: Multi‐Model Inference.”R Package Version 0.12.2/r18.http://R‐Forge.R‐project.org/projects/mumin/."
+    },
+    {
+      "key": "e_1_2_10_10_1",
+      "unstructured": "Bates D. M.Maechler B.Bolker et al.2014.“Package ‘lme4’.”R Foundation for Statistical Computing Vienna."
+    },
+    {
+      "key": "e_1_2_10_11_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.2307/2960528"
+    },
+    {
+      "key": "e_1_2_10_12_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1126/sciadv.abo5115"
+    },
+    {
+      "key": "e_1_2_10_13_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1146/annurev‐phyto‐080615‐100245"
+    },
+    {
+      "key": "e_1_2_10_14_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1086/282105"
+    },
+    {
+      "key": "e_1_2_10_15_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.18637/jss.v080.i01"
+    },
+    {
+      "key": "e_1_2_10_16_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/nature02322"
+    },
+    {
+      "key": "e_1_2_10_17_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1073/pnas.2201911120"
+    },
+    {
+      "key": "e_1_2_10_18_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/gcb.12380"
+    },
+    {
+      "key": "e_1_2_10_19_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/nph.19490"
+    },
+    {
+      "key": "e_1_2_10_20_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/nmeth.2604"
+    },
+    {
+      "key": "e_1_2_10_21_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/1365‐2745.12424"
+    },
+    {
+      "key": "e_1_2_10_22_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/0006-3207(92)91201-3"
+    },
+    {
+      "key": "e_1_2_10_23_1",
+      "unstructured": "FAL FAW andRAC.1996.“Referenzmethoden der Eidg. Landwirtschaftlichen Forschungsanstalten. 1. Bodenuntersuchung zur Dungeberatung.”Zurich‐Reckenholz."
+    },
+    {
+      "key": "e_1_2_10_24_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1890/14‐2333.1"
+    },
+    {
+      "key": "e_1_2_10_25_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1080/09583157.2013.775218"
+    },
+    {
+      "key": "e_1_2_10_26_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1371/journal.pone.0049114"
+    },
+    {
+      "key": "e_1_2_10_27_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/j.1558‐5646.1990.tb04298.x"
+    },
+    {
+      "key": "e_1_2_10_28_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/nclimate2652"
+    },
+    {
+      "key": "e_1_2_10_29_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.7717/peerj.616"
+    },
+    {
+      "key": "e_1_2_10_30_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/ncomms9159"
+    },
+    {
+      "key": "e_1_2_10_31_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1093/molbev/msaa120"
+    },
+    {
+      "key": "e_1_2_10_32_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/1365‐2745.13319"
+    },
+    {
+      "key": "e_1_2_10_33_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s00442‐013‐2813‐6"
+    },
+    {
+      "key": "e_1_2_10_34_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/j.1461-0248.2006.00949.x"
+    },
+    {
+      "key": "e_1_2_10_35_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.3897/neobiota.39.23398"
+    },
+    {
+      "key": "e_1_2_10_36_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s10530‐017‐1640‐9"
+    },
+    {
+      "key": "e_1_2_10_37_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/nph.16754"
+    },
+    {
+      "key": "e_1_2_10_38_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1186/s13059‐014‐0550‐8"
+    },
+    {
+      "key": "e_1_2_10_39_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1371/journal.pcbi.1003531"
+    },
+    {
+      "key": "e_1_2_10_40_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.cois.2020.02.006"
+    },
+    {
+      "key": "e_1_2_10_41_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/wre.12072"
+    },
+    {
+      "key": "e_1_2_10_42_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.baae.2018.08.003"
+    },
+    {
+      "key": "e_1_2_10_43_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/j.1469‐8137.1987.tb00175.x"
+    },
+    {
+      "key": "e_1_2_10_44_1",
+      "unstructured": "Oksanen F. J. M.Friendly R.Kindt et al.2018.“Vegan: Community Ecology Package.”R Package Version 2(6)."
+    },
+    {
+      "key": "e_1_2_10_45_1",
+      "first-page": "115",
+      "article-title": "The Host Range of Ophraella communa Lesage (Coleoptera: Chrysomelidae)",
+      "volume": "45",
+      "author": "Palmer W.",
+      "year": "1991",
+      "journal-title": "Coleopterists' Bulletin"
+    },
+    {
+      "key": "e_1_2_10_46_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/nature01286"
+    },
+    {
+      "key": "e_1_2_10_47_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1093/biomet/82.4.669"
+    },
+    {
+      "key": "e_1_2_10_48_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1017/CBO9780511803161"
+    },
+    {
+      "key": "e_1_2_10_49_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1371/journal.pone.0009490"
+    },
+    {
+      "key": "e_1_2_10_50_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/s41558‐023‐01744‐y"
+    },
+    {
+      "key": "e_1_2_10_51_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s12571‐012‐0200‐5"
+    },
+    {
+      "key": "e_1_2_10_52_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/s41467‐020‐15586‐1"
+    },
+    {
+      "key": "e_1_2_10_53_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1126/sciadv.aau4578"
+    },
+    {
+      "key": "e_1_2_10_54_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/nph.17604"
+    },
+    {
+      "key": "e_1_2_10_55_1",
+      "first-page": "11",
+      "article-title": "Expansion of Ophraella Communa LeSage in East Asia",
+      "volume": "40",
+      "author": "Shiyake S.",
+      "year": "2005",
+      "journal-title": "Kontyu to Shizen"
+    },
+    {
+      "key": "e_1_2_10_56_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1186/1471‐2288‐8‐70"
+    },
+    {
+      "key": "e_1_2_10_57_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s11104‐011‐0992‐7"
+    },
+    {
+      "key": "e_1_2_10_58_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/j.1365‐2745.2011.01830.x"
+    },
+    {
+      "key": "e_1_2_10_59_1",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Sun Y.2025.“Data From: Eco‐Evolutionary Dynamics of Plant‐Soil Feedbacks Explain the Spread Potential of a Plant Invader Under Climate Warming and Biocontrol Herbivory.”Figshare Digital Repository.https://doi.org/10.6084/m9.figshare.27265287.",
+      "DOI": "10.1111/gcb.70110"
+    },
+    {
+      "key": "e_1_2_10_60_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/gcb.15291"
+    },
+    {
+      "key": "e_1_2_10_61_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/ecs2.1731"
+    },
+    {
+      "key": "e_1_2_10_62_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.17520/biods.2017096"
+    },
+    {
+      "key": "e_1_2_10_63_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/ele.14000"
+    },
+    {
+      "key": "e_1_2_10_64_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1890/07‐0337.1"
+    },
+    {
+      "key": "e_1_2_10_65_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1126/science.aba1223"
+    },
+    {
+      "key": "e_1_2_10_66_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/1365‐2435.12671"
+    },
+    {
+      "key": "e_1_2_10_67_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1097/EDE.0b013e318225c2be"
+    },
+    {
+      "key": "e_1_2_10_68_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.tree.2021.03.011"
+    },
+    {
+      "key": "e_1_2_10_69_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/0167‐7012(96)00843‐3"
+    },
+    {
+      "key": "e_1_2_10_70_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/nph.15564"
+    },
+    {
+      "key": "e_1_2_10_71_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/1365‐2435.12657"
+    },
+    {
+      "key": "e_1_2_10_72_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/S0169‐5347(01)02265‐0"
+    },
+    {
+      "key": "e_1_2_10_73_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/s41559‐017‐0150"
+    },
+    {
+      "key": "e_1_2_10_74_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/1365‐2435.12690"
+    },
+    {
+      "key": "e_1_2_10_75_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s11222‐016‐9696‐4"
+    },
+    {
+      "key": "e_1_2_10_76_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1088/1748‐9326/ab4932"
+    },
+    {
+      "key": "e_1_2_10_77_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.scitotenv.2020.142449"
+    },
+    {
+      "key": "e_1_2_10_78_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/1365‐2435.13267"
+    },
+    {
+      "key": "e_1_2_10_79_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.2307/2408641"
+    },
+    {
+      "key": "e_1_2_10_80_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/j.1537‐2197.1975.tb12333.x"
+    },
+    {
+      "key": "e_1_2_10_81_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.tree.2008.10.007"
+    },
+    {
+      "key": "e_1_2_10_82_1",
+      "volume-title": "Biological Control of Weeds: A World Catalogue of Agents and Their Target Weeds",
+      "author": "Winston R. L.",
+      "year": "2020"
+    },
+    {
+      "key": "e_1_2_10_83_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1214/17‐BA1091"
+    },
+    {
+      "key": "e_1_2_10_84_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.apsoil.2019.103438"
+    },
+    {
+      "key": "e_1_2_10_85_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/s41559‐020‐01311‐0"
+    },
+    {
+      "key": "e_1_2_10_86_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1080/09583157.2014.897305"
+    },
+    {
+      "key": "e_1_2_10_87_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.16409/j.cnki.2095‐039x.2015.05.006"
+    }
+  ],
+  "container-title": [
+    "Global Change Biology"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/gcb.70110",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        6,
+        6
+      ]
+    ],
+    "date-time": "2025-06-06T07:14:15Z",
+    "timestamp": 1749194055000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://onlinelibrary.wiley.com/doi/10.1111/gcb.70110"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2025,
+        3
+      ]
+    ]
+  },
+  "references-count": 86,
+  "journal-issue": {
+    "issue": "3",
+    "published-print": {
+      "date-parts": [
+        [
+          2025,
+          3
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "10.1111/gcb.70110"
+  ],
+  "URL": "https://doi.org/10.1111/gcb.70110",
+  "archive": [
+    "Portico"
+  ],
+  "relation": {},
+  "ISSN": [
+    "1354-1013",
+    "1365-2486"
+  ],
+  "issn-type": [
+    {
+      "value": "1354-1013",
+      "type": "print"
+    },
+    {
+      "value": "1365-2486",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2025,
+        3
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "2024-10-30",
+      "order": 0,
+      "name": "received",
+      "label": "Received",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    },
+    {
+      "value": "2025-02-12",
+      "order": 2,
+      "name": "accepted",
+      "label": "Accepted",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    },
+    {
+      "value": "2025-03-07",
+      "order": 3,
+      "name": "published",
+      "label": "Published",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    }
+  ],
+  "article-number": "e70110"
+}

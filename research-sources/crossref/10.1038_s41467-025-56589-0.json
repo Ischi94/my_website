@@ -1,0 +1,1274 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        9,
+        24
+      ]
+    ],
+    "date-time": "2026-09-24T04:27:50Z",
+    "timestamp": 1790224070597,
+    "version": "4.1.0"
+  },
+  "reference-count": 89,
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "1",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2025,
+            2,
+            5
+          ]
+        ],
+        "date-time": "2025-02-05T00:00:00Z",
+        "timestamp": 1738713600000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://creativecommons.org/licenses/by/4.0"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2025,
+            2,
+            5
+          ]
+        ],
+        "date-time": "2025-02-05T00:00:00Z",
+        "timestamp": 1738713600000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "https://creativecommons.org/licenses/by/4.0"
+    }
+  ],
+  "funder": [
+    {
+      "DOI": "10.13039/501100001659",
+      "name": "Deutsche Forschungsgemeinschaft",
+      "doi-asserted-by": "publisher",
+      "award": [
+        "AB 109/11-1"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "AB 109/11-1"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/501100001659",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    },
+    {
+      "DOI": "10.13039/501100001659",
+      "name": "Deutsche Forschungsgemeinschaft",
+      "doi-asserted-by": "publisher",
+      "award": [
+        "FOR 2332"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "FOR 2332"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/501100001659",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "link.springer.com"
+    ],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "Nat Commun"
+  ],
+  "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>A mismatch of species’ thermal preferences to their environment may indicate how they will respond to future climate change. Averaging this mismatch across species may forewarn that some assemblages will undergo greater reorganization, extirpation, and possibly extinction, than others. Here, we examine how regional warming determines species occupancy and assemblage composition of marine bivalves, brachiopods, and gastropods over one-million-year time steps during the Early Jurassic. Thermal bias, the difference between modelled regional temperatures and species’ long-term thermal optima, predicts a gradient of species occupancy response to warming. Species that become extirpated or extinct tend to have cooler temperature preferences than immigrating species, while regionally persisting species fell midway. Larger regional changes in summer seawater temperatures (up to +10 °C) strengthen the relationship between species thermal bias and the response gradient, which is also stronger for brachiopods than for bivalves, while the relationship collapses during severe seawater deoxygenation. At +3 °C regional seawater warming, around 5 % of pre-existing benthic species in a regional assemblage are extirpated, and immigrating species comprise around one-fourth of the new assemblage. Our results validate thermal bias as an indicator of immigration, persistence, extirpation, and extinction of marine benthic species and assemblages under modern-like magnitudes of climate change.</jats:p>",
+  "DOI": "10.1038/s41467-025-56589-0",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2025,
+        2,
+        5
+      ]
+    ],
+    "date-time": "2025-02-05T07:01:42Z",
+    "timestamp": 1738738902000
+  },
+  "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 7,
+  "title": [
+    "Marine species and assemblage change foreshadowed by their thermal bias over Early Jurassic warming"
+  ],
+  "prefix": "10.1038",
+  "volume": "16",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0001-5930-1164",
+      "authenticated-orcid": false,
+      "given": "Carl J.",
+      "family": "Reddin",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-6142-2237",
+      "authenticated-orcid": false,
+      "given": "Jan P.",
+      "family": "Landwehrs",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Gregor H.",
+      "family": "Mathes",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-5865-7289",
+      "authenticated-orcid": false,
+      "given": "Clemens V.",
+      "family": "Ullmann",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0001-9215-5517",
+      "authenticated-orcid": false,
+      "given": "Georg",
+      "family": "Feulner",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Martin",
+      "family": "Aberhan",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "297",
+  "published-online": {
+    "date-parts": [
+      [
+        2025,
+        2,
+        5
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "56589_CR1",
+      "doi-asserted-by": "publisher",
+      "first-page": "1098",
+      "DOI": "10.1038/nature09329",
+      "volume": "466",
+      "author": "DP Tittensor",
+      "year": "2010",
+      "unstructured": "Tittensor, D. P. et al. Global patterns and predictors of marine biodiversity across taxa. Nature 466, 1098–1101 (2010).",
+      "journal-title": "Nature"
+    },
+    {
+      "key": "56589_CR2",
+      "doi-asserted-by": "publisher",
+      "unstructured": "IPCC. Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change. https://doi.org/10.1017/9781009157896 (Cambridge University Press, 2021).",
+      "DOI": "10.1017/9781009157896"
+    },
+    {
+      "key": "56589_CR3",
+      "doi-asserted-by": "publisher",
+      "first-page": "652",
+      "DOI": "10.1126/science.1210288",
+      "volume": "334",
+      "author": "MT Burrows",
+      "year": "2011",
+      "unstructured": "Burrows, M. T. et al. The pace of shifting climate in marine and terrestrial ecosystems. Science 334, 652–655 (2011).",
+      "journal-title": "Science"
+    },
+    {
+      "key": "56589_CR4",
+      "doi-asserted-by": "publisher",
+      "first-page": "919",
+      "DOI": "10.1038/nclimate1958",
+      "volume": "3",
+      "author": "ES Poloczanska",
+      "year": "2013",
+      "unstructured": "Poloczanska, E. S. et al. Global imprint of climate change on marine life. Nat. Clim. Chang. 3, 919–925 (2013).",
+      "journal-title": "Nat. Clim. Chang."
+    },
+    {
+      "key": "56589_CR5",
+      "doi-asserted-by": "publisher",
+      "unstructured": "IPCC. Changing ocean, marine ecosystems, and dependent communities. In IPCC special report on the ocean and cryosphere in a changing climate (eds. Pörtner, H.-O. et al.) 755. https://doi.org/10.1017/9781009157964 (Cambridge University Press, 2019).",
+      "DOI": "10.1017/9781009157964"
+    },
+    {
+      "key": "56589_CR6",
+      "doi-asserted-by": "publisher",
+      "first-page": "e2015094118",
+      "DOI": "10.1073/pnas.2015094118",
+      "volume": "118",
+      "author": "C Chaudhary",
+      "year": "2021",
+      "unstructured": "Chaudhary, C., Richardson, A. J., Schoeman, D. S. & Costello, M. J. Global warming is causing a more pronounced dip in marine species richness around the equator. Proc. Natl Acad. Sci. USA 118, e2015094118 (2021).",
+      "journal-title": "Proc. Natl Acad. Sci. USA"
+    },
+    {
+      "key": "56589_CR7",
+      "doi-asserted-by": "publisher",
+      "first-page": "eaai9214",
+      "DOI": "10.1126/science.aai9214",
+      "volume": "355",
+      "author": "GT Pecl",
+      "year": "2017",
+      "unstructured": "Pecl, G. T. et al. Biodiversity redistribution under climate change: Impacts on ecosystems and human well-being. Science 355, eaai9214 (2017).",
+      "journal-title": "Science"
+    },
+    {
+      "key": "56589_CR8",
+      "doi-asserted-by": "publisher",
+      "first-page": "349",
+      "DOI": "10.1111/gcb.15871",
+      "volume": "28",
+      "author": "C Lyon",
+      "year": "2022",
+      "unstructured": "Lyon, C. et al. Climate change research and action must look beyond 2100. Glob. Chang. Biol. 28, 349–361 (2022).",
+      "journal-title": "Glob. Chang. Biol."
+    },
+    {
+      "key": "56589_CR9",
+      "doi-asserted-by": "publisher",
+      "first-page": "20180792",
+      "DOI": "10.1098/rspb.2018.0792",
+      "volume": "285",
+      "author": "T Newbold",
+      "year": "2018",
+      "unstructured": "Newbold, T. Future effects of climate and land-use change on terrestrial vertebrate community diversity under different scenarios. Proc. R. Soc. B 285, 20180792 (2018).",
+      "journal-title": "Proc. R. Soc. B"
+    },
+    {
+      "key": "56589_CR10",
+      "first-page": "351",
+      "volume": "15",
+      "author": "AE Bates",
+      "year": "2014",
+      "unstructured": "Bates, A. E. et al. Defining and observing stages of climate-mediated range shifts in marine systems. Glob. Environ. Chang. 15, 351–389 (2014).",
+      "journal-title": "Glob. Environ. Chang."
+    },
+    {
+      "key": "56589_CR11",
+      "doi-asserted-by": "publisher",
+      "first-page": "1036",
+      "DOI": "10.1111/ddi.12753",
+      "volume": "24",
+      "author": "PB Day",
+      "year": "2018",
+      "unstructured": "Day, P. B., Graham, R. D. S. & Amanda, J. E. Species’ thermal ranges predict changes in reef fish community structure during 8 years of extreme temperature variation. Divers. Distrib. 24, 1036–1046 (2018).",
+      "journal-title": "Divers. Distrib."
+    },
+    {
+      "key": "56589_CR12",
+      "doi-asserted-by": "publisher",
+      "first-page": "20122829",
+      "DOI": "10.1098/rspb.2012.2829",
+      "volume": "280",
+      "author": "DA Smale",
+      "year": "2013",
+      "unstructured": "Smale, D. A. & Wernberg, T. Extreme climatic event drives range contraction of a habitat-forming species. Proc. R. Soc. B Biol. Sci. 280, 20122829 (2013).",
+      "journal-title": "Proc. R. Soc. B Biol. Sci."
+    },
+    {
+      "key": "56589_CR13",
+      "doi-asserted-by": "publisher",
+      "first-page": "4211",
+      "DOI": "10.1073/pnas.1913007117",
+      "volume": "117",
+      "author": "C Román-Palacios",
+      "year": "2020",
+      "unstructured": "Román-Palacios, C. & Wiens, J. J. Recent responses to climate change reveal the drivers of species extinction and survival. Proc. Natl Acad. Sci. USA 117, 4211–4217 (2020).",
+      "journal-title": "Proc. Natl Acad. Sci. USA"
+    },
+    {
+      "key": "56589_CR14",
+      "doi-asserted-by": "publisher",
+      "first-page": "15",
+      "DOI": "10.1111/ecog.00967",
+      "volume": "38",
+      "author": "J Lenoir",
+      "year": "2015",
+      "unstructured": "Lenoir, J. & Svenning, J. C. Climate-related range shifts - a global multidimensional synthesis and new research directions. Ecography 38, 15–28 (2015).",
+      "journal-title": "Ecography"
+    },
+    {
+      "key": "56589_CR15",
+      "doi-asserted-by": "publisher",
+      "first-page": "708",
+      "DOI": "10.1111/ele.13688",
+      "volume": "24",
+      "author": "JA Bonachela",
+      "year": "2021",
+      "unstructured": "Bonachela, J. A., Burrows, M. T. & Pinsky, M. L. Shape of species climate response curves affects community response to climate change. Ecol. Lett. 24, 708–718 (2021).",
+      "journal-title": "Ecol. Lett."
+    },
+    {
+      "key": "56589_CR16",
+      "doi-asserted-by": "publisher",
+      "first-page": "686",
+      "DOI": "10.1038/nclimate1539",
+      "volume": "2",
+      "author": "JM Sunday",
+      "year": "2012",
+      "unstructured": "Sunday, J. M., Bates, A. E. & Dulvy, N. K. Thermal tolerance and the global redistribution of animals. Nat. Clim. Chang. 2, 686–690 (2012).",
+      "journal-title": "Nat. Clim. Chang."
+    },
+    {
+      "key": "56589_CR17",
+      "doi-asserted-by": "publisher",
+      "first-page": "e2201926119",
+      "DOI": "10.1073/pnas.2201926119",
+      "volume": "120",
+      "author": "W Kiessling",
+      "year": "2023",
+      "unstructured": "Kiessling, W., Smith, J. A. & Raja, N. B. Improving the relevance of paleontology to climate change policy. Proc. Natl Acad. Sci. USA 120, e2201926119 (2023).",
+      "journal-title": "Proc. Natl Acad. Sci. USA"
+    },
+    {
+      "key": "56589_CR18",
+      "first-page": "20170086",
+      "volume": "376",
+      "author": "GL Foster",
+      "year": "2018",
+      "unstructured": "Foster, G. L., Hull, P., Lunt, D. J. & Zachos, J. C. Placing our current ‘hyperthermal’ in the context of rapid climate change in our geological past. Philos. Trans. A. Math. Phys. Eng. Sci. 376, 20170086 (2018).",
+      "journal-title": "Philos. Trans. A. Math. Phys. Eng. Sci."
+    },
+    {
+      "key": "56589_CR19",
+      "doi-asserted-by": "publisher",
+      "first-page": "1",
+      "DOI": "10.1038/s41467-021-25019-2",
+      "volume": "12",
+      "author": "H Song",
+      "year": "2021",
+      "unstructured": "Song, H. et al. Thresholds of temperature change for mass extinctions. Nat. Commun. 12, 1–8 (2021).",
+      "journal-title": "Nat. Commun."
+    },
+    {
+      "key": "56589_CR20",
+      "doi-asserted-by": "publisher",
+      "first-page": "330",
+      "DOI": "10.1017/pab.2014.20",
+      "volume": "41",
+      "author": "MG Powell",
+      "year": "2015",
+      "unstructured": "Powell, M. G., Moore, B. R. & Smith, T. J. Origination, extinction, invasion, and extirpation components of the brachiopod latitudinal biodiversity gradient through the Phanerozoic Eon. Paleobiology 41, 330–341 (2015).",
+      "journal-title": "Paleobiology"
+    },
+    {
+      "key": "56589_CR21",
+      "doi-asserted-by": "publisher",
+      "first-page": "704",
+      "DOI": "10.1111/geb.12732",
+      "volume": "27",
+      "author": "CJ Reddin",
+      "year": "2018",
+      "unstructured": "Reddin, C. J., Kocsis, Á. T. & Kiessling, W. Marine invertebrate migrations trace climate change over 450 million years. Glob. Ecol. Biogeogr. 27, 704–713 (2018).",
+      "journal-title": "Glob. Ecol. Biogeogr."
+    },
+    {
+      "key": "56589_CR22",
+      "doi-asserted-by": "publisher",
+      "first-page": "21378",
+      "DOI": "10.1073/pnas.1214037110",
+      "volume": "109",
+      "author": "W Kiessling",
+      "year": "2012",
+      "unstructured": "Kiessling, W., Simpson, C., Beck, B., Mewis, H. & Pandolfi, J. M. Equatorial decline of reef corals during the last Pleistocene interglacial. Proc. Natl Acad. Sci. USA 109, 21378–21383 (2012).",
+      "journal-title": "Proc. Natl Acad. Sci. USA"
+    },
+    {
+      "key": "56589_CR23",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/geb.13905",
+      "volume": "33",
+      "author": "GH Mathes",
+      "year": "2024",
+      "unstructured": "Mathes, G. H. et al. Spatially Heterogeneous Responses of Planktonic Foraminiferal Assemblages Over 700,000 Years of Climate Change. Glob. Ecol. Biogeogr. 33, e13905 (2024).",
+      "journal-title": "Glob. Ecol. Biogeogr."
+    },
+    {
+      "key": "56589_CR24",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1126/science.aam7240",
+      "volume": "359",
+      "author": "D Breitburg",
+      "year": "2018",
+      "unstructured": "Breitburg, D. et al. Declining oxygen in the global ocean and coastal waters. Science 359, eaam7240 (2018).",
+      "journal-title": "Science"
+    },
+    {
+      "key": "56589_CR25",
+      "doi-asserted-by": "publisher",
+      "first-page": "249",
+      "DOI": "10.1038/s41558-020-0690-7",
+      "volume": "10",
+      "author": "CJ Reddin",
+      "year": "2020",
+      "unstructured": "Reddin, C. J., Nätscher, P. N., Kocsis, Á. T., Pörtner, H. O. & Kiessling, W. Marine clade sensitivities to climate change conform across time scales. Nat. Clim. Chang. Chang. 10, 249–253 (2020).",
+      "journal-title": "Nat. Clim. Chang. Chang."
+    },
+    {
+      "key": "56589_CR26",
+      "doi-asserted-by": "publisher",
+      "first-page": "e56255",
+      "DOI": "10.1371/journal.pone.0056255",
+      "volume": "8",
+      "author": "S Danise",
+      "year": "2013",
+      "unstructured": "Danise, S., Twitchett, R. J., Little, C. T. S. & Clémence, M. E. The Impact of Global Warming and Anoxia on Marine Benthic Community Dynamics: An Example from the Toarcian (Early Jurassic). PLoS One 8, e56255 (2013).",
+      "journal-title": "PLoS One"
+    },
+    {
+      "key": "56589_CR27",
+      "doi-asserted-by": "publisher",
+      "first-page": "20141995",
+      "DOI": "10.1098/rspb.2014.1995",
+      "volume": "281",
+      "author": "EE Saupe",
+      "year": "2014",
+      "unstructured": "Saupe, E. E. et al. Macroevolutionary consequences of profound climate change on niche evolution in marine molluscs over the past three million years. Proc. R. Soc. B Biol. Sci. 281, 20141995–20141995 (2014).",
+      "journal-title": "Proc. R. Soc. B Biol. Sci."
+    },
+    {
+      "key": "56589_CR28",
+      "doi-asserted-by": "publisher",
+      "first-page": "2743",
+      "DOI": "10.1098/rspb.2008.0878",
+      "volume": "275",
+      "author": "V Devictor",
+      "year": "2008",
+      "unstructured": "Devictor, V., Julliard, R., Couvet, D., Jiguet, F. & B, P. R. S. Birds are tracking climate warming, but not fast enough Birds are tracking climate warming, but not fast enough. Proc. R. Soc. B Biol. Sci. 275, 2743–2748 (2008).",
+      "journal-title": "Proc. R. Soc. B Biol. Sci."
+    },
+    {
+      "key": "56589_CR29",
+      "doi-asserted-by": "publisher",
+      "first-page": "88",
+      "DOI": "10.1038/nature16144",
+      "volume": "528",
+      "author": "RD Stuart-Smith",
+      "year": "2015",
+      "unstructured": "Stuart-Smith, R. D., Edgar, G. J., Barrett, N. S., Kininmonth, S. J. & Bates, A. E. Thermal biases and vulnerability to warming in the world’s marine fauna. Nature 528, 88–92 (2015).",
+      "journal-title": "Nature"
+    },
+    {
+      "key": "56589_CR30",
+      "doi-asserted-by": "publisher",
+      "first-page": "959",
+      "DOI": "10.1038/s41558-019-0631-5",
+      "volume": "9",
+      "author": "MT Burrows",
+      "year": "2019",
+      "unstructured": "Burrows, M. T. et al. Ocean community warming responses explained by thermal affinities and temperature gradients. Nat. Clim. Chang. 9, 959–963 (2019).",
+      "journal-title": "Nat. Clim. Chang."
+    },
+    {
+      "key": "56589_CR31",
+      "doi-asserted-by": "publisher",
+      "first-page": "868",
+      "DOI": "10.1111/gcb.15434",
+      "volume": "27",
+      "author": "CJ Reddin",
+      "year": "2021",
+      "unstructured": "Reddin, C. J., Kocsis, Á. T., Aberhan, M. & Kiessling, W. Victims of ancient hyperthermal events herald the fates of marine clades and traits under global warming. Glob. Chang. Biol. 27, 868–878 (2021).",
+      "journal-title": "Glob. Chang. Biol."
+    },
+    {
+      "key": "56589_CR32",
+      "doi-asserted-by": "publisher",
+      "first-page": "495",
+      "DOI": "10.1130/0091-7613(1995)023<0495:EJMEAG>2.3.CO;2",
+      "volume": "23",
+      "author": "CTS Little",
+      "year": "1995",
+      "unstructured": "Little, C. T. S. & Benton, M. J. Early Jurassic mass extinction: A global long-term event. Geology 23, 495–498 (1995).",
+      "journal-title": "Geology"
+    },
+    {
+      "key": "56589_CR33",
+      "doi-asserted-by": "publisher",
+      "first-page": "214",
+      "DOI": "10.1111/ecog.03961",
+      "volume": "42",
+      "author": "PH Flanagan",
+      "year": "2019",
+      "unstructured": "Flanagan, P. H., Jensen, O. P., Morley, J. W. & Pinsky, M. L. Response of marine communities to local temperature changes. Ecography 42, 214–224 (2019).",
+      "journal-title": "Ecography"
+    },
+    {
+      "key": "56589_CR34",
+      "doi-asserted-by": "publisher",
+      "first-page": "1529",
+      "DOI": "10.5194/bg-10-1529-2013",
+      "volume": "10",
+      "author": "N Wright",
+      "year": "2013",
+      "unstructured": "Wright, N., Zahirovic, S., Müller, R. D. & Seton, M. Towards community-driven paleogeographic reconstructions: Integrating open-access paleogeographic and paleobiology data with plate tectonics. Biogeosciences 10, 1529–1541 (2013).",
+      "journal-title": "Biogeosciences"
+    },
+    {
+      "key": "56589_CR35",
+      "doi-asserted-by": "publisher",
+      "first-page": "359",
+      "DOI": "10.1144/SP514-2021-11",
+      "volume": "514",
+      "author": "W Ruebsam",
+      "year": "2021",
+      "unstructured": "Ruebsam, W. & Schwark, L. Impact of a northern-hemispherical cryosphere on late pliensbachian–early toarcian climate and environment evolution. Geol. Soc. Spec. Publ. 514, 359–385 (2021).",
+      "journal-title": "Geol. Soc. Spec. Publ."
+    },
+    {
+      "key": "56589_CR36",
+      "doi-asserted-by": "publisher",
+      "first-page": "54",
+      "DOI": "10.1038/s41561-021-00858-2",
+      "volume": "15",
+      "author": "L Nordt",
+      "year": "2022",
+      "unstructured": "Nordt, L., Breecker, D. & White, J. Jurassic greenhouse ice-sheet fluctuations sensitive to atmospheric CO2 dynamics. Nat. Geosci. 15, 54–59 (2022).",
+      "journal-title": "Nat. Geosci."
+    },
+    {
+      "key": "56589_CR37",
+      "doi-asserted-by": "publisher",
+      "first-page": "215",
+      "DOI": "10.1130/G31579.1",
+      "volume": "39",
+      "author": "G Dera",
+      "year": "2011",
+      "unstructured": "Dera, G. et al. Climatic ups and downs in a disturbed Jurassic world. Geology 39, 215–218 (2011).",
+      "journal-title": "Geology"
+    },
+    {
+      "key": "56589_CR38",
+      "doi-asserted-by": "publisher",
+      "first-page": "479",
+      "DOI": "10.1038/nature03618",
+      "volume": "435",
+      "author": "JC McElwain",
+      "year": "2005",
+      "unstructured": "McElwain, J. C., Wade-Murphy, J. & Hesselbo, S. P. Changes in carbon dioxide during an oceanic anoxic event linked to intrusion into Gondwana coals. Nature 435, 479–482 (2005).",
+      "journal-title": "Nature"
+    },
+    {
+      "key": "56589_CR39",
+      "doi-asserted-by": "publisher",
+      "first-page": "5905",
+      "DOI": "10.5194/gmd-15-5905-2022",
+      "volume": "15",
+      "author": "M Willeit",
+      "year": "2022",
+      "unstructured": "Willeit, M., Ganopolski, A., Robinson, A. & Edwards, N. R. The Earth system model CLIMBER-X v1.0 – Part 1: Climate model description and validation. Geosci. Model Dev. 15, 5905–5948 (2022).",
+      "journal-title": "Geosci. Model Dev."
+    },
+    {
+      "key": "56589_CR40",
+      "doi-asserted-by": "publisher",
+      "first-page": "e8",
+      "DOI": "10.1017/ext.2023.5",
+      "volume": "1",
+      "author": "D Zurell",
+      "year": "2023",
+      "unstructured": "Zurell, D., Fritz, S. A., Rönnfeldt, A. & Steinbauer, M. J. Predicting extinctions with species distribution models. Camb. Prism. Extinction 1, e8 (2023).",
+      "journal-title": "Camb. Prism. Extinction"
+    },
+    {
+      "key": "56589_CR41",
+      "doi-asserted-by": "publisher",
+      "first-page": "29",
+      "DOI": "10.1016/j.palaeo.2009.08.023",
+      "volume": "284",
+      "author": "SD Morten",
+      "year": "2009",
+      "unstructured": "Morten, S. D. & Twitchett, R. J. Fluctuations in the body size of marine invertebrates through the Pliensbachian–Toarcian extinction event. Palaeogeogr. Palaeoclimatol. Palaeoecol. 284, 29–38 (2009).",
+      "journal-title": "Palaeogeogr. Palaeoclimatol. Palaeoecol."
+    },
+    {
+      "key": "56589_CR42",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/s41598-021-93850-0",
+      "volume": "11",
+      "author": "PS Nätscher",
+      "year": "2021",
+      "unstructured": "Nätscher, P. S., Dera, G., Reddin, C. J., Rita, P. & De Baets, K. Morphological response accompanying size reduction of belemnites during an Early Jurassic hyperthermal event modulated by life history. Sci. Rep. 11, 14480 (2021).",
+      "journal-title": "Sci. Rep."
+    },
+    {
+      "key": "56589_CR43",
+      "doi-asserted-by": "publisher",
+      "first-page": "1",
+      "DOI": "10.1038/s41598-020-61393-5",
+      "volume": "10",
+      "author": "V Piazza",
+      "year": "2020",
+      "unstructured": "Piazza, V., Ullmann, C. V. & Aberhan, M. Temperature-related body size change of marine benthic macroinvertebrates across the Early Toarcian Anoxic Event. Sci. Rep. 10, 1–13 (2020).",
+      "journal-title": "Sci. Rep."
+    },
+    {
+      "key": "56589_CR44",
+      "doi-asserted-by": "publisher",
+      "first-page": "296",
+      "DOI": "10.1017/pab.2019.11",
+      "volume": "45",
+      "author": "V Piazza",
+      "year": "2019",
+      "unstructured": "Piazza, V., Duarte, L. V., Renaudie, J. & Aberhan, M. Reductions in body size of benthic macroinvertebrates as a precursor of the early Toarcian (Early Jurassic) extinction event in the Lusitanian Basin, Portugal. Paleobiology 45, 296–316 (2019).",
+      "journal-title": "Paleobiology"
+    },
+    {
+      "key": "56589_CR45",
+      "doi-asserted-by": "publisher",
+      "first-page": "2685",
+      "DOI": "10.1242/jeb.134585",
+      "volume": "220",
+      "author": "H-O Pörtner",
+      "year": "2017",
+      "unstructured": "Pörtner, H.-O., Bock, C. & Mark, F. C. Oxygen- and capacity-limited thermal tolerance: bridging ecology and physiology. J. Exp. Biol. 220, 2685–2696 (2017).",
+      "journal-title": "J. Exp. Biol."
+    },
+    {
+      "key": "56589_CR46",
+      "doi-asserted-by": "publisher",
+      "first-page": "1132",
+      "DOI": "10.1126/science.aaa1605",
+      "volume": "348",
+      "author": "C Deutsch",
+      "year": "2015",
+      "unstructured": "Deutsch, C., Ferrel, A., Seibel, B., Pörtner, H.-O. & Huey, R. Climate change tightens a metabolic constraint on marine habitats. Science 348, 1132–1136 (2015).",
+      "journal-title": "Science"
+    },
+    {
+      "key": "56589_CR47",
+      "doi-asserted-by": "publisher",
+      "first-page": "318",
+      "DOI": "10.1111/gcb.13357",
+      "volume": "23",
+      "author": "MS Clark",
+      "year": "2017",
+      "unstructured": "Clark, M. S. et al. Biodiversity in marine invertebrate responses to acute warming revealed by a comparative multi-omics approach. Glob. Chang. Biol. 23, 318–330 (2017).",
+      "journal-title": "Glob. Chang. Biol."
+    },
+    {
+      "key": "56589_CR48",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1126/science.aat1327",
+      "volume": "362",
+      "author": "JL Penn",
+      "year": "2018",
+      "unstructured": "Penn, J. L., Deutsch, C., Payne, J. L. & Sperling, E. A. Temperature-dependent hypoxia explains biogeography and severity of end-Permian marine mass extinction. Science 362, eaat1327 (2018).",
+      "journal-title": "Science"
+    },
+    {
+      "key": "56589_CR49",
+      "doi-asserted-by": "publisher",
+      "first-page": "5793",
+      "DOI": "10.1111/gcb.16333",
+      "volume": "28",
+      "author": "CJ Reddin",
+      "year": "2022",
+      "unstructured": "Reddin, C. J., Aberhan, M., Raja, N. B., Kocsis, Á. & T Global warming generates predictable extinctions of warm- and cold-water marine benthic invertebrates via thermal habitat loss. Glob. Chang. Biol. 28, 5793–5807 (2022).",
+      "journal-title": "Glob. Chang. Biol."
+    },
+    {
+      "key": "56589_CR50",
+      "doi-asserted-by": "publisher",
+      "first-page": "524",
+      "DOI": "10.1126/science.abe9039",
+      "volume": "376",
+      "author": "JL Penn",
+      "year": "2022",
+      "unstructured": "Penn, J. L. & Deutsch, C. Avoiding ocean mass extinction from climate warming. Science 376, 524–526 (2022).",
+      "journal-title": "Science"
+    },
+    {
+      "key": "56589_CR51",
+      "doi-asserted-by": "publisher",
+      "first-page": "eadg7679",
+      "DOI": "10.1126/sciadv.adg7679",
+      "volume": "9",
+      "author": "A Pohl",
+      "year": "2023",
+      "unstructured": "Pohl, A. et al. Why the Early Paleozoic was intrinsically prone to marine extinction. Sci. Adv. 9, eadg7679 (2023).",
+      "journal-title": "Sci. Adv."
+    },
+    {
+      "key": "56589_CR52",
+      "doi-asserted-by": "publisher",
+      "first-page": "304",
+      "DOI": "10.1038/s41559-020-01377-w",
+      "volume": "5",
+      "author": "GH Mathes",
+      "year": "2021",
+      "unstructured": "Mathes, G. H., van Dijk, J., Kiessling, W. & Steinbauer, M. J. Extinction risk controlled by interaction of long-term and short-term climate change. Nat. Ecol. Evol. 5, 304–310 (2021).",
+      "journal-title": "Nat. Ecol. Evol."
+    },
+    {
+      "key": "56589_CR53",
+      "doi-asserted-by": "publisher",
+      "first-page": "994",
+      "DOI": "10.1029/2018PA003394",
+      "volume": "33",
+      "author": "I Ruvalcaba Baroni",
+      "year": "2018",
+      "unstructured": "Ruvalcaba Baroni, I. et al. Ocean Circulation in the Toarcian (Early Jurassic): A Key Control on Deoxygenation and Carbon Burial on the European Shelf. Paleoceanogr. Paleoclimatol. 33, 994–1012 (2018).",
+      "journal-title": "Paleoceanogr. Paleoclimatol."
+    },
+    {
+      "key": "56589_CR54",
+      "doi-asserted-by": "publisher",
+      "first-page": "10506",
+      "DOI": "10.1073/pnas.0701257104",
+      "volume": "104",
+      "author": "JL Payne",
+      "year": "2007",
+      "unstructured": "Payne, J. L. & Finnegan, S. The effect of geographic range on extinction risk during background and mass extinction. Proc. Natl Acad. Sci. 104, 10506–10511 (2007).",
+      "journal-title": "Proc. Natl Acad. Sci."
+    },
+    {
+      "key": "56589_CR55",
+      "doi-asserted-by": "publisher",
+      "first-page": "65",
+      "DOI": "10.1038/s41561-019-0504-6",
+      "volume": "13",
+      "author": "EE Saupe",
+      "year": "2020",
+      "unstructured": "Saupe, E. E. et al. Extinction intensity during Ordovician and Cenozoic glaciations explained by cooling and palaeogeography. Nat. Geosci. 13, 65–70 (2020).",
+      "journal-title": "Nat. Geosci."
+    },
+    {
+      "key": "56589_CR56",
+      "doi-asserted-by": "publisher",
+      "first-page": "6596",
+      "DOI": "10.1073/pnas.1803478115",
+      "volume": "115",
+      "author": "TR Them",
+      "year": "2018",
+      "unstructured": "Them, T. R. et al. Thallium isotopes reveal protracted anoxia during the Toarcian (Early Jurassic) associated with volcanism, carbon burial, and mass extinction. Proc. Natl Acad. Sci. USA 115, 6596–6601 (2018).",
+      "journal-title": "Proc. Natl Acad. Sci. USA"
+    },
+    {
+      "key": "56589_CR57",
+      "doi-asserted-by": "publisher",
+      "first-page": "176",
+      "DOI": "10.1016/j.palaeo.2011.04.018",
+      "volume": "306",
+      "author": "JJ Gómez",
+      "year": "2011",
+      "unstructured": "Gómez, J. J. & Goy, A. Warming-driven mass extinction in the Early Toarcian (Early Jurassic) of northern and central Spain. Correlation with other time-equivalent European sections. Palaeogeogr. Palaeoclimatol. Palaeoecol. 306, 176–195 (2011).",
+      "journal-title": "Palaeogeogr. Palaeoclimatol. Palaeoecol."
+    },
+    {
+      "key": "56589_CR58",
+      "doi-asserted-by": "publisher",
+      "first-page": "110438",
+      "DOI": "10.1016/j.cbpb.2020.110438",
+      "volume": "243–244",
+      "author": "S Götze",
+      "year": "2020",
+      "unstructured": "Götze, S. et al. Single and combined effects of the “Deadly trio” hypoxia, hypercapnia and warming on the cellular metabolism of the great scallop Pecten maximus. Comp. Biochem. Physiol. Part B Biochem. Mol. Biol. 243–244, 110438 (2020).",
+      "journal-title": "Comp. Biochem. Physiol. Part B Biochem. Mol. Biol."
+    },
+    {
+      "key": "56589_CR59",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Atkinson, J. W., Little, C. T. S. & Dunhill, A. M. Long duration of benthic ecological recovery from the early Toarcian (Early Jurassic) mass extinction event in the Cleveland Basin, UK. J. Geol. Soc.. 180, jgs2022–126 (2023).",
+      "DOI": "10.1144/jgs2022-126"
+    },
+    {
+      "key": "56589_CR60",
+      "doi-asserted-by": "publisher",
+      "first-page": "103254",
+      "DOI": "10.1016/j.earscirev.2020.103254",
+      "volume": "208",
+      "author": "FN Krencker",
+      "year": "2020",
+      "unstructured": "Krencker, F. N. et al. Two-phased collapse of the shallow-water carbonate factory during the late Pliensbachian–Toarcian driven by changing climate and enhanced continental weathering in the Northwestern Gondwana Margin. Earth Sci. Rev. 208, 103254 (2020).",
+      "journal-title": "Earth Sci. Rev."
+    },
+    {
+      "key": "56589_CR61",
+      "doi-asserted-by": "publisher",
+      "first-page": "390",
+      "DOI": "10.1029/2000PA000512",
+      "volume": "16",
+      "author": "CJ Bjerrum",
+      "year": "2001",
+      "unstructured": "Bjerrum, C. J., Surlyk, F., Callomon, J. H. & Slingerland, R. L. Numerical paleoceanographic study of the Early Jurassic Transcontinental Laurasian Seaway. Paleoceanography 16, 390–404 (2001).",
+      "journal-title": "Paleoceanography"
+    },
+    {
+      "key": "56589_CR62",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Judd, E. J., Bhattacharya, T. & Ivany, L. C. A Dynamical Framework for Interpreting Ancient Sea Surface Temperatures. Geophys. Res. Lett. 47, e2020GL089044 (2020).",
+      "DOI": "10.1029/2020GL089044"
+    },
+    {
+      "key": "56589_CR63",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Dera, G. & Donnadieu, Y. Modeling evidences for global warming, Arctic seawater freshening, and sluggish oceanic circulation during the Early Toarcian anoxic event. Paleoceanography 27, https://doi.org/10.1029/2012PA002283 (2012).",
+      "DOI": "10.1029/2012PA002283"
+    },
+    {
+      "key": "56589_CR64",
+      "doi-asserted-by": "publisher",
+      "first-page": "448",
+      "DOI": "10.1016/j.epsl.2009.12.047",
+      "volume": "290",
+      "author": "G Suan",
+      "year": "2010",
+      "unstructured": "Suan, G. et al. Secular environmental precursors to Early Toarcian (Jurassic) extreme climate changes. Earth Planet. Sci. Lett. 290, 448–458 (2010).",
+      "journal-title": "Earth Planet. Sci. Lett."
+    },
+    {
+      "key": "56589_CR65",
+      "doi-asserted-by": "publisher",
+      "first-page": "121",
+      "DOI": "10.1038/nclimate1347",
+      "volume": "2",
+      "author": "V Devictor",
+      "year": "2012",
+      "unstructured": "Devictor, V. et al. Differences in the climatic debts of birds and butterflies at a continental scale. Nat. Clim. Chang. 2, 121–124 (2012).",
+      "journal-title": "Nat. Clim. Chang."
+    },
+    {
+      "key": "56589_CR66",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Cornes, R. C. et al. Climate change impacts on temperature around the UK and Ireland. MCCIP Sci. Rev. https://doi.org/10.14465/2022.reu08.tem (2023).",
+      "DOI": "10.14465/2022.reu08.tem"
+    },
+    {
+      "key": "56589_CR67",
+      "doi-asserted-by": "publisher",
+      "first-page": "695",
+      "DOI": "10.1038/nclimate2650",
+      "volume": "5",
+      "author": "G Beaugrand",
+      "year": "2015",
+      "unstructured": "Beaugrand, G., Edwards, M., Raybaud, V., Goberville, E. & Kirby, R. R. Future vulnerability of marine biodiversity compared with contemporary and past changes. Nat. Clim. Chang. 5, 695–701 (2015).",
+      "journal-title": "Nat. Clim. Chang."
+    },
+    {
+      "key": "56589_CR68",
+      "doi-asserted-by": "publisher",
+      "first-page": "83",
+      "DOI": "10.1038/nclimate2769",
+      "volume": "6",
+      "author": "J Garciá Molinos",
+      "year": "2015",
+      "unstructured": "Garciá Molinos, J. et al. Climate velocity and the future global redistribution of marine biodiversity. Nat. Clim. Chang. 6, 83–88 (2015).",
+      "journal-title": "Nat. Clim. Chang."
+    },
+    {
+      "key": "56589_CR69",
+      "doi-asserted-by": "publisher",
+      "first-page": "1058",
+      "DOI": "10.1126/science.1208277",
+      "volume": "335",
+      "author": "B Hönisch",
+      "year": "2012",
+      "unstructured": "Hönisch, B. et al. The geological record of ocean acidification. Science 335, 1058–1063 (2012).",
+      "journal-title": "Science"
+    },
+    {
+      "key": "56589_CR70",
+      "doi-asserted-by": "publisher",
+      "first-page": "1",
+      "DOI": "10.1038/ncomms14845",
+      "volume": "8",
+      "author": "GL Foster",
+      "year": "2017",
+      "unstructured": "Foster, G. L., Royer, D. L. & Lunt, D. J. Future climate forcing potentially without precedent in the last 420 million years. Nat. Commun. 8, 1–8 (2017).",
+      "journal-title": "Nat. Commun."
+    },
+    {
+      "key": "56589_CR71",
+      "doi-asserted-by": "publisher",
+      "first-page": "1184",
+      "DOI": "10.1130/G47781.1",
+      "volume": "48",
+      "author": "T Müller",
+      "year": "2020",
+      "unstructured": "Müller, T. et al. Ocean acidification during the early Toarcian extinction event: Evidence from boron isotopes in brachiopods. Geology 48, 1184–1188 (2020).",
+      "journal-title": "Geology"
+    },
+    {
+      "key": "56589_CR72",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/s41598-020-63487-6",
+      "volume": "10",
+      "author": "CV Ullmann",
+      "year": "2020",
+      "unstructured": "Ullmann, C. V. et al. Warm afterglow from the Toarcian Oceanic Anoxic Event drives the success of deep-adapted brachiopods. Sci. Rep. 10, 6549 (2020).",
+      "journal-title": "Sci. Rep."
+    },
+    {
+      "key": "56589_CR73",
+      "doi-asserted-by": "publisher",
+      "first-page": "PA1202",
+      "DOI": "10.1029/2007PA001459",
+      "volume": "23",
+      "author": "G Suan",
+      "year": "2008",
+      "unstructured": "Suan, G., Mattioli, E., Pittet, B., Mailliot, S. & Lécuyer, C. Evidence for major environmental perturbation prior to and during the Toarcian (Early Jurassic) oceanic anoxic event from the Lusitanian Basin, Portugal. Paleoceanography 23, PA1202 (2008).",
+      "journal-title": "Paleoceanography"
+    },
+    {
+      "key": "56589_CR74",
+      "doi-asserted-by": "publisher",
+      "first-page": "747",
+      "DOI": "10.1130/0091-7613(2000)28<747:SBEJEO>2.0.CO;2",
+      "volume": "28",
+      "author": "J Pálfy",
+      "year": "2000",
+      "unstructured": "Pálfy, J. & Smith, P. L. Synchrony between Early Jurassic extinction, oceanic anoxic event, and the Karoo-Ferrar flood basalt volcanism. Geology 28, 747–750 (2000).",
+      "journal-title": "Geology"
+    },
+    {
+      "key": "56589_CR75",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.ringeo.2020.100005",
+      "volume": "1",
+      "author": "ND Greber",
+      "year": "2020",
+      "unstructured": "Greber, N. D. et al. New high precision U-Pb ages and Hf isotope data from the Karoo large igneous province; implications for pulsed magmatism and early Toarcian environmental perturbations. Results Geochem. 1, 100005 (2020).",
+      "journal-title": "Results Geochem."
+    },
+    {
+      "key": "56589_CR76",
+      "doi-asserted-by": "publisher",
+      "first-page": "451",
+      "DOI": "10.1127/nos/2022/0690",
+      "volume": "55",
+      "author": "E Erba",
+      "year": "2022",
+      "unstructured": "Erba, E. et al. Carbon-and oxygen-isotope signature of the Toarcian Oceanic Anoxic Event: insights from two Tethyan pelagic sequences (Gajum and Sogno Cores – Lombardy Basin, northern Italy). Newsl. Stratigr. 55, 451–477 (2022).",
+      "journal-title": "Newsl. Stratigr."
+    },
+    {
+      "key": "56589_CR77",
+      "doi-asserted-by": "publisher",
+      "first-page": "1",
+      "DOI": "10.1016/j.epsl.2018.04.007",
+      "volume": "493",
+      "author": "FZ Ait-Itto",
+      "year": "2018",
+      "unstructured": "Ait-Itto, F. Z., Martinez, M., Price, G. D. & Ait Addi, A. Synchronization of the astronomical time scales in the Early Toarcian: A link between anoxia, carbon-cycle perturbation, mass extinction and volcanism. Earth Planet. Sci. Lett. 493, 1–11 (2018).",
+      "journal-title": "Earth Planet. Sci. Lett."
+    },
+    {
+      "key": "56589_CR78",
+      "doi-asserted-by": "publisher",
+      "first-page": "392",
+      "DOI": "10.1038/35019044",
+      "volume": "406",
+      "author": "SP Hesselbo",
+      "year": "2000",
+      "unstructured": "Hesselbo, S. P. et al. Massive dissociation of gas hydrate during a Jurassic oceanic anoxic event. Nature 406, 392–395 (2000).",
+      "journal-title": "Nature"
+    },
+    {
+      "key": "56589_CR79",
+      "doi-asserted-by": "publisher",
+      "first-page": "1593",
+      "DOI": "10.1017/S0016756819001262",
+      "volume": "157",
+      "author": "B Van De Schootbrugge",
+      "year": "2020",
+      "unstructured": "Van De Schootbrugge, B. et al. Enhanced Arctic-Tethys connectivity ended the Toarcian Oceanic Anoxic Event in NW Europe. Geol. Mag. 157, 1593–1611 (2020).",
+      "journal-title": "Geol. Mag."
+    },
+    {
+      "key": "56589_CR80",
+      "doi-asserted-by": "publisher",
+      "first-page": "103463",
+      "DOI": "10.1016/j.earscirev.2020.103463",
+      "volume": "213",
+      "author": "ÁT Kocsis",
+      "year": "2021",
+      "unstructured": "Kocsis, Á. T. & Scotese, C. R. Mapping paleocoastlines and continental flooding during the Phanerozoic. Earth Sci. Rev. 213, 103463 (2021).",
+      "journal-title": "Earth Sci. Rev."
+    },
+    {
+      "key": "56589_CR81",
+      "doi-asserted-by": "publisher",
+      "first-page": "3715",
+      "DOI": "10.5194/gmd-10-3715-2017",
+      "volume": "10",
+      "author": "PJ Valdes",
+      "year": "2017",
+      "unstructured": "Valdes, P. J. et al. The BRIDGE HadCM3 family of climate models: HadCM3@Bristol v1.0. Geosci. Model Dev. 10, 3715–3743 (2017).",
+      "journal-title": "Geosci. Model Dev."
+    },
+    {
+      "key": "56589_CR82",
+      "doi-asserted-by": "publisher",
+      "first-page": "735",
+      "DOI": "10.1111/2041-210X.13161",
+      "volume": "10",
+      "author": "ÁT Kocsis",
+      "year": "2019",
+      "unstructured": "Kocsis, Á. T., Reddin, C. J. C. J., Alroy, J. & Kiessling, W. The R package divDyn for quantifying diversity dynamics using fossil sampling data. Methods Ecol. Evol. 10, 735–743 (2019).",
+      "journal-title": "Methods Ecol. Evol."
+    },
+    {
+      "key": "56589_CR83",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Kocsis, Á. T. & Raja, N. B. rgplates: R interface for the GPlates web service and desktop application. at https://rdrr.io/cran/rgplates/ (2021).",
+      "DOI": "10.32614/CRAN.package.rgplates"
+    },
+    {
+      "key": "56589_CR84",
+      "doi-asserted-by": "publisher",
+      "first-page": "2243",
+      "DOI": "10.1029/2018GC007584",
+      "volume": "19",
+      "author": "RD Müller",
+      "year": "2018",
+      "unstructured": "Müller, R. D. et al. GPlates: Building a Virtual Earth Through Deep Time. Geochem. Geophys. Geosyst. 19, 2243–2261 (2018).",
+      "journal-title": "Geochem. Geophys. Geosyst."
+    },
+    {
+      "key": "56589_CR85",
+      "doi-asserted-by": "publisher",
+      "first-page": "11536",
+      "DOI": "10.1073/pnas.0802597105",
+      "volume": "105",
+      "author": "J Alroy",
+      "year": "2008",
+      "unstructured": "Alroy, J. Dynamics of origination and extinction in the marine fossil record. Proc. Natl Acad. Sci. 105, 11536–11542 (2008).",
+      "journal-title": "Proc. Natl Acad. Sci."
+    },
+    {
+      "key": "56589_CR86",
+      "unstructured": "R Development Core Team. R: A language and environment for statistical computing (R Foundation for Statistical Computing, 2023)."
+    },
+    {
+      "key": "56589_CR87",
+      "unstructured": "Pinheiro J., Bates D., DebRoy S., Sarkar D. & R Core Team. nlme: Linear and Nonlinear Mixed Effects Models. R package version 3.1-131.1. (2018)."
+    },
+    {
+      "key": "56589_CR88",
+      "unstructured": "Oksanen J., Kindt R., Legendre P., O’Hara B. & Stevens, M. The vegan package. Community ecology package. at http://cran.r-project.org/package=VEGAN (2007)."
+    },
+    {
+      "key": "56589_CR89",
+      "doi-asserted-by": "publisher",
+      "first-page": "149",
+      "DOI": "10.1016/j.epsl.2016.08.038",
+      "volume": "455",
+      "author": "M Ruhl",
+      "year": "2016",
+      "unstructured": "Ruhl, M. et al. Astronomical constraints on the duration of the Early Jurassic Pliensbachian Stage and global climatic fluctuations. Earth Planet. Sci. Lett. 455, 149–165 (2016).",
+      "journal-title": "Earth Planet. Sci. Lett."
+    }
+  ],
+  "container-title": [
+    "Nature Communications"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://www.nature.com/articles/s41467-025-56589-0.pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://www.nature.com/articles/s41467-025-56589-0",
+      "content-type": "text/html",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://www.nature.com/articles/s41467-025-56589-0.pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        2,
+        5
+      ]
+    ],
+    "date-time": "2025-02-05T10:14:48Z",
+    "timestamp": 1738750488000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://www.nature.com/articles/s41467-025-56589-0"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2025,
+        2,
+        5
+      ]
+    ]
+  },
+  "references-count": 89,
+  "journal-issue": {
+    "issue": "1",
+    "published-online": {
+      "date-parts": [
+        [
+          2025,
+          12
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "56589"
+  ],
+  "URL": "https://doi.org/10.1038/s41467-025-56589-0",
+  "relation": {
+    "has-preprint": [
+      {
+        "id-type": "doi",
+        "id": "10.21203/rs.3.rs-3796284/v1",
+        "asserted-by": "object"
+      }
+    ]
+  },
+  "ISSN": [
+    "2041-1723"
+  ],
+  "issn-type": [
+    {
+      "value": "2041-1723",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2025,
+        2,
+        5
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "23 December 2023",
+      "order": 1,
+      "name": "received",
+      "label": "Received",
+      "group": {
+        "name": "ArticleHistory",
+        "label": "Article History"
+      }
+    },
+    {
+      "value": "23 January 2025",
+      "order": 2,
+      "name": "accepted",
+      "label": "Accepted",
+      "group": {
+        "name": "ArticleHistory",
+        "label": "Article History"
+      }
+    },
+    {
+      "value": "5 February 2025",
+      "order": 3,
+      "name": "first_online",
+      "label": "First Online",
+      "group": {
+        "name": "ArticleHistory",
+        "label": "Article History"
+      }
+    },
+    {
+      "value": "The authors declare no competing interests.",
+      "order": 1,
+      "name": "Ethics",
+      "group": {
+        "name": "EthicsHeading",
+        "label": "Competing interests"
+      }
+    }
+  ],
+  "article-number": "1370"
+}

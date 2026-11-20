@@ -8,3 +8,6 @@ Thumbs.db
 /public
 /resources
 /resources/
+/public-check/
+/public-preview-check/
+/.hugo_build.lock

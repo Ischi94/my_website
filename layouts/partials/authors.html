@@ -1,0 +1,1 @@
+<p class="authors">{{ range $i,$author := .authors }}{{ if $i }}, {{ end }}{{ if $author.self }}<strong>{{ $author.name }}</strong>{{ else }}{{ $author.name }}{{ end }}{{ end }}</p>

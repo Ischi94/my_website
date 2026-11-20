@@ -1,0 +1,514 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        2,
+        27
+      ]
+    ],
+    "date-time": "2026-02-27T01:34:01Z",
+    "timestamp": 1772156041318,
+    "version": "3.50.1"
+  },
+  "reference-count": 22,
+  "publisher": "The Royal Society",
+  "issue": "8",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2023,
+            8,
+            1
+          ]
+        ],
+        "date-time": "2023-08-01T00:00:00Z",
+        "timestamp": 1690848000000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://royalsociety.org/journals/ethics-policies/data-sharing-mining/"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "royalsocietypublishing.org"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "R. Soc. open sci."
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2023,
+        8
+      ]
+    ]
+  },
+  "DOI": "10.1098/rsos.230400",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2023,
+        8,
+        23
+      ]
+    ],
+    "date-time": "2023-08-23T03:05:34Z",
+    "timestamp": 1692759934000
+  },
+  "update-policy": "https://doi.org/10.1098/crossmark-policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+    "Oversimplification risks too much: a response to ‘How predictable are mass extinction events?'"
+  ],
+  "prefix": "10.1098",
+  "volume": "10",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0001-5930-1164",
+      "authenticated-orcid": true,
+      "given": "Carl J.",
+      "family": "Reddin",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Museum für Naturkunde, Leibniz Institute for Evolution and Biodiversity Science, Berlin, Germany"
+        },
+        {
+          "name": "GeoZentrum Nordbayern, Universität Erlangen-Nürnberg, Erlangen, Germany"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-0364-9695",
+      "authenticated-orcid": false,
+      "given": "Martin",
+      "family": "Aberhan",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Museum für Naturkunde, Leibniz Institute for Evolution and Biodiversity Science, Berlin, Germany"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-1311-0474",
+      "authenticated-orcid": false,
+      "given": "Danijela",
+      "family": "Dimitrijević",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "GeoZentrum Nordbayern, Universität Erlangen-Nürnberg, Erlangen, Germany"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-2423-8254",
+      "authenticated-orcid": true,
+      "given": "Elizabeth M.",
+      "family": "Dowding",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "GeoZentrum Nordbayern, Universität Erlangen-Nürnberg, Erlangen, Germany"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-9028-665X",
+      "authenticated-orcid": true,
+      "given": "Ádám T.",
+      "family": "Kocsis",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "GeoZentrum Nordbayern, Universität Erlangen-Nürnberg, Erlangen, Germany"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-2788-1173",
+      "authenticated-orcid": true,
+      "given": "Gregor",
+      "family": "Mathes",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Paleontological Institute and Museum, University of Zurich, Zurich, Switzerland"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0001-5121-3055",
+      "authenticated-orcid": true,
+      "given": "Paulina S.",
+      "family": "Nätscher",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "GeoZentrum Nordbayern, Universität Erlangen-Nürnberg, Erlangen, Germany"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-1761-3298",
+      "authenticated-orcid": false,
+      "given": "Mark E.",
+      "family": "Patzkowsky",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Geosciences, Pennsylvania State University, University Park, PA, USA"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-1088-2014",
+      "authenticated-orcid": true,
+      "given": "Wolfgang",
+      "family": "Kiessling",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "GeoZentrum Nordbayern, Universität Erlangen-Nürnberg, Erlangen, Germany"
+        }
+      ],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "175",
+  "published-online": {
+    "date-parts": [
+      [
+        2023,
+        8,
+        23
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "e_1_3_7_2_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/s41586-019-1132-4"
+    },
+    {
+      "key": "e_1_3_7_3_2",
+      "unstructured": "Bindoff NL et al. 2019 Changing ocean marine ecosystems and dependent communities. In IPCC special report on the ocean and cryosphere in a changing climate pp. 477-587. Geneva Switzerland: IPCC."
+    },
+    {
+      "key": "e_1_3_7_4_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1098/rsta.2017.0086"
+    },
+    {
+      "key": "e_1_3_7_5_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1098/rsos.221507"
+    },
+    {
+      "key": "e_1_3_7_6_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1073/pnas.2201926119"
+    },
+    {
+      "key": "e_1_3_7_7_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/j.1365-2486.2010.02204.x"
+    },
+    {
+      "key": "e_1_3_7_8_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.palaeo.2016.11.005"
+    },
+    {
+      "key": "e_1_3_7_9_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/gcb.15434"
+    },
+    {
+      "key": "e_1_3_7_10_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/gcb.16333"
+    },
+    {
+      "key": "e_1_3_7_11_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1126/science.aay8309"
+    },
+    {
+      "key": "e_1_3_7_12_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1017/pab.2018.34"
+    },
+    {
+      "key": "e_1_3_7_13_2",
+      "first-page": "291",
+      "article-title": "Sampling bias, gradual extinction patterns, and catastrophes in the fossil record",
+      "volume": "190",
+      "author": "Signor PW",
+      "year": "1982",
+      "unstructured": "Signor PWIII, Lipps JH. 1982 Sampling bias, gradual extinction patterns, and catastrophes in the fossil record. Geol. Soc. Am. Spec. Publ. 190, 291-296. (doi:10.1130/SPE190-p291)",
+      "journal-title": "Geol. Soc. Am. Spec. Publ."
+    },
+    {
+      "key": "e_1_3_7_14_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.ejvs.2018.02.028"
+    },
+    {
+      "key": "e_1_3_7_15_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/s41591-022-01847-7"
+    },
+    {
+      "key": "e_1_3_7_16_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1126/science.aaa6635"
+    },
+    {
+      "key": "e_1_3_7_17_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1017/S0094837300011866"
+    },
+    {
+      "key": "e_1_3_7_18_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1126/science.aat1327"
+    },
+    {
+      "key": "e_1_3_7_19_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/gcb.12963"
+    },
+    {
+      "key": "e_1_3_7_20_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/s41558-020-0690-7"
+    },
+    {
+      "key": "e_1_3_7_21_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1073/pnas.2006087117"
+    },
+    {
+      "key": "e_1_3_7_22_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/nature07032"
+    },
+    {
+      "key": "e_1_3_7_23_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/nature09678"
+    }
+  ],
+  "container-title": [
+    "Royal Society Open Science"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://royalsocietypublishing.org/doi/pdf/10.1098/rsos.230400",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://royalsocietypublishing.org/doi/full-xml/10.1098/rsos.230400",
+      "content-type": "application/xml",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://royalsocietypublishing.org/doi/pdf/10.1098/rsos.230400",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2023,
+        8,
+        25
+      ]
+    ],
+    "date-time": "2023-08-25T15:07:13Z",
+    "timestamp": 1692976033000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://royalsocietypublishing.org/doi/10.1098/rsos.230400"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2023,
+        8
+      ]
+    ]
+  },
+  "references-count": 22,
+  "journal-issue": {
+    "issue": "8",
+    "published-print": {
+      "date-parts": [
+        [
+          2023,
+          8
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "10.1098/rsos.230400"
+  ],
+  "URL": "https://doi.org/10.1098/rsos.230400",
+  "relation": {
+    "has-review": [
+      {
+        "id-type": "doi",
+        "id": "10.1098/RSOS.230400/v1/review1",
+        "asserted-by": "object"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.1098/RSOS.230400/v1/review2",
+        "asserted-by": "object"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.1098/RSOS.230400/v1/review3",
+        "asserted-by": "object"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.1098/RSOS.230400/v2/decision1",
+        "asserted-by": "object"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.1098/RSOS.230400/v1/decision1",
+        "asserted-by": "object"
+      }
+    ]
+  },
+  "ISSN": [
+    "2054-5703"
+  ],
+  "issn-type": [
+    {
+      "value": "2054-5703",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2023,
+        8
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "2023-03-29",
+      "order": 0,
+      "name": "received",
+      "label": "Received",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    },
+    {
+      "value": "2023-08-04",
+      "order": 1,
+      "name": "accepted",
+      "label": "Accepted",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    },
+    {
+      "value": "2023-08-23",
+      "order": 2,
+      "name": "published",
+      "label": "Published",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    }
+  ],
+  "article-number": "230400"
+}

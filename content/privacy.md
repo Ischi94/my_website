@@ -1,25 +1,9 @@
 ---
-date: "2020-07-01T00:00:00+01:00"
-draft: false
-header:
-  caption: "2020 Gregor Mathes"
-  image: ""
-share: false
-title: Privacy Policy
+title: Privacy
+description: "Information about this website's hosting, external resources and contact links."
 ---
-  Last revised on 2020-07-01    
-  
-  
-  To better protect your privacy, I provide this privacy policy notice explaining the way your personal information is collected and used.  
+This personal academic website is hosted on Netlify. The main website does not include analytics, advertising, a contact form, or tracking cookies. Netlify processes requests to serve the site; see [Netlify's privacy statement](https://www.netlify.com/privacy/).
 
-  **Collection of Routine Information**  
-  This website tracks basic information about its visitors. This information includes, but is not limited to, IP addresses, browser details, timestamps and referring pages. None of this information can personally identify specific visitors to this website. The information is tracked for routine administration and maintenance purposes.  
-  
-  **Cookies**  
-  Where necessary, this website uses cookies to store information about a visitor’s preferences and history in order to better serve the visitor and/or present the visitor with customized content.  
-  
-  **Links to Third Party Websites**  
-  I included links on this website for your use and reference. I am not responsible for the privacy policies on these websites. You should be aware that the privacy policies of these websites may differ from my own.  
-  
-  **Contact Information**  
-  For any questions or concerns regarding the privacy policy, please send me an email via the contact formular on this website.
+Archived tutorials and presentation materials may load external resources, including mathematical typesetting libraries. Following an external link takes you to a service with its own privacy practices.
+
+Email links open your email application. Messages you choose to send are handled through the university email service. For questions about this website, contact [Gregor.Mathes@uni-passau.de](mailto:Gregor.Mathes@uni-passau.de).

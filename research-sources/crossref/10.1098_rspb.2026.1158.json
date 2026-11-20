@@ -1,0 +1,1400 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        8,
+        19
+      ]
+    ],
+    "date-time": "2026-08-19T00:28:26Z",
+    "timestamp": 1787099306316,
+    "version": "build-2736575974"
+  },
+  "reference-count": 106,
+  "publisher": "The Royal Society",
+  "issue": "2077",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2026,
+            8,
+            19
+          ]
+        ],
+        "date-time": "2026-08-19T00:00:00Z",
+        "timestamp": 1787097600000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "http://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "funder": [
+    {
+      "name": "German Federal Ministry of Research, Technology and Space (BMFTR) as a Research for Sustainability initiative (FONA) through the AGELESS project",
+      "award": [
+        "03F0974D"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "03F0974D"
+          ]
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+    "date-parts": [
+      [
+        2026,
+        8,
+        19
+      ]
+    ]
+  },
+  "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>The marine plankton record offers a unique archive of deep-time ecological and evolutionary dynamics in the open ocean. With distinct biomineral compositions, trophic modes and other diverse ecological and geographic preferences, fossilized marine unicellular plankton groups (diatoms, calcareous nannofossils/coccolithophores, radiolarians, planktonic foraminifera and dinoflagellates) allow for the identification of traits affecting extinction risk over millions of years. Here, we demonstrate that over the Cenozoic era, trophic mode, classified as either autotrophic, mixotrophic or heterotrophic, is highly influential on the long-term biodiversity dynamics of marine plankton. This trophic distinction is associated with up to a 38% lower Cenozoic extinction rate in autotrophs than in other trophic groups. Correspondingly, autotrophs tend to persist longer and exhibit less volatile extinction dynamics. These patterns hold across multiple levels of comparison: between fully autotrophic and fully heterotrophic groups, within dinoflagellates that include both strategies, and in composite groupings based on trophic mode or biomineral composition. By identifying trophic mode as a key determinant of extinction risk, our results provide a deep-time context for predicting plankton responses to ongoing ocean change.</jats:p>",
+  "DOI": "10.1098/rspb.2026.1158",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2026,
+        8,
+        19
+      ]
+    ],
+    "date-time": "2026-08-19T00:14:37Z",
+    "timestamp": 1787098477000
+  },
+  "source": "Crossref",
+  "is-referenced-by-count": 0,
+  "title": [
+    "Reduced extinction risk for autotrophs in the open ocean"
+  ],
+  "prefix": "10.1098",
+  "volume": "293",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0003-0324-0088",
+      "authenticated-orcid": false,
+      "given": "Isaiah E.",
+      "family": "Smith",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "GeoZentrum Nordbayern, Friedrich-Alexander-Universität Erlangen-Nürnberg 1 , Erlangen, Germany"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-2788-1173",
+      "authenticated-orcid": false,
+      "given": "Gregor Hans",
+      "family": "Mathes",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "GeoZentrum Nordbayern, Friedrich-Alexander-Universität Erlangen-Nürnberg 1 , Erlangen, Germany"
+        },
+        {
+          "name": "Chair of Physical Geography, University of Passau 2 , Passau, Germany"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-8562-3746",
+      "authenticated-orcid": false,
+      "given": "Tasnuva Ming",
+      "family": "Khan",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "GeoZentrum Nordbayern, Friedrich-Alexander-Universität Erlangen-Nürnberg 1 , Erlangen, Germany"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-2471-0002",
+      "authenticated-orcid": false,
+      "given": "Marina C.",
+      "family": "Rillo",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "GeoZentrum Nordbayern, Friedrich-Alexander-Universität Erlangen-Nürnberg 1 , Erlangen, Germany"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-1088-2014",
+      "authenticated-orcid": false,
+      "given": "Wolfgang",
+      "family": "Kiessling",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "GeoZentrum Nordbayern, Friedrich-Alexander-Universität Erlangen-Nürnberg 1 , Erlangen, Germany"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "175",
+  "published-online": {
+    "date-parts": [
+      [
+        2026,
+        8,
+        19
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "2026081820143230800_RSPB20261158C1",
+      "doi-asserted-by": "crossref",
+      "first-page": "141",
+      "DOI": "10.1144/SP358.10",
+      "article-title": "The deep-sea microfossil record of macroevolutionary change in plankton and its study",
+      "volume": "358",
+      "author": "Lazarus",
+      "year": "2011",
+      "journal-title": "Geol. Soc."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C2",
+      "doi-asserted-by": "crossref",
+      "first-page": "16",
+      "DOI": "10.5670/oceanog.2020.225",
+      "article-title": "Time machine biology: cross-timescale integration of ecology, evolution, and oceanography",
+      "volume": "33",
+      "author": "Yasuhara",
+      "year": "2020",
+      "journal-title": "Oceanography"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C3",
+      "doi-asserted-by": "crossref",
+      "first-page": "1300",
+      "DOI": "10.1098/rspb.2011.1439",
+      "article-title": "Diversity-dependence brings molecular phylogenies closer to agreement with the fossil record",
+      "volume": "279",
+      "author": "Etienne",
+      "year": "2012",
+      "journal-title": "Proc. R. Soc. B"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C4",
+      "doi-asserted-by": "crossref",
+      "first-page": "349",
+      "DOI": "10.1126/science.1203060",
+      "article-title": "Interplay between changing climate and species' ecology drives macroevolutionary dynamics",
+      "volume": "332",
+      "author": "Ezard",
+      "year": "2011",
+      "journal-title": "Science"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C5",
+      "doi-asserted-by": "crossref",
+      "first-page": "e84857",
+      "DOI": "10.1371/journal.pone.0084857",
+      "article-title": "Cenozoic planktonic marine diatom diversity and correlation to climate change",
+      "volume": "9",
+      "author": "Lazarus",
+      "year": "2014",
+      "journal-title": "PloS ONE"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C6",
+      "doi-asserted-by": "crossref",
+      "first-page": "5069",
+      "DOI": "10.1038/s41467-020-18879-7",
+      "article-title": "Marine plankton show threshold extinction response to Neogene climate change",
+      "volume": "11",
+      "author": "Trubovitz",
+      "year": "2020",
+      "journal-title": "Nat. Commun."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C7",
+      "doi-asserted-by": "crossref",
+      "first-page": "e12615",
+      "DOI": "10.1111/pala.12615",
+      "article-title": "Diversity dynamics of microfossils from the Cretaceous to the Neogene show mixed responses to events",
+      "volume": "65",
+      "author": "Jamson",
+      "year": "2022",
+      "journal-title": "Palaeontology"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C8",
+      "doi-asserted-by": "crossref",
+      "first-page": "403",
+      "DOI": "10.1146/annurev-earth-081619-052818",
+      "article-title": "Ecological response of plankton to environmental change: thresholds for extinction",
+      "volume": "48",
+      "author": "Lowery",
+      "year": "2020",
+      "journal-title": "Annu. Rev. Earth Planet Sci."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C9",
+      "doi-asserted-by": "crossref",
+      "first-page": "5372",
+      "DOI": "10.1038/s41467-021-25699-w",
+      "article-title": "Future phytoplankton diversity in a changing climate",
+      "volume": "12",
+      "author": "Henson",
+      "year": "2021",
+      "journal-title": "Nat. Commun."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C10",
+      "doi-asserted-by": "crossref",
+      "first-page": "106",
+      "DOI": "10.1016/j.protis.2016.01.003",
+      "article-title": "Defining planktonic protist functional groups on mechanisms for energy and nutrient acquisition: incorporation of diverse mixotrophic strategies",
+      "volume": "167",
+      "author": "Mitra",
+      "year": "2016",
+      "journal-title": "Protist"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C11",
+      "doi-asserted-by": "crossref",
+      "first-page": "311",
+      "DOI": "10.1146/annurev-marine-010816-060617",
+      "article-title": "Mixotrophy in the marine plankton",
+      "volume": "9",
+      "author": "Stoecker",
+      "year": "2017",
+      "journal-title": "Annu. Rev. Mar. Sci."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C12",
+      "doi-asserted-by": "crossref",
+      "first-page": "517",
+      "DOI": "10.1016/j.jtbi.2009.10.027",
+      "article-title": "Coexistence of mixotrophs, autotrophs, and heterotrophs in planktonic microbial communities",
+      "volume": "262",
+      "author": "Crane",
+      "year": "2010",
+      "journal-title": "J. Theor. Biol."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C13",
+      "first-page": "1",
+      "article-title": "NSB (Neptune Sandbox Berlin): an expanded and improved database of marine planktonic microfossil data and deep-sea stratigraphy",
+      "volume": "23",
+      "author": "Renaudie",
+      "year": "2020",
+      "journal-title": "Palaeontol. Electron."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C14",
+      "doi-asserted-by": "crossref",
+      "first-page": "397",
+      "DOI": "10.1111/j.1550-7408.1999.tb04619.x",
+      "article-title": "Mixotrophy among dinoflagellates 1",
+      "volume": "46",
+      "author": "Stoecker",
+      "year": "1999",
+      "journal-title": "J. Eukaryot. Microbiol."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C15",
+      "doi-asserted-by": "crossref",
+      "first-page": "254",
+      "DOI": "10.1111/jpy.12170",
+      "article-title": "Differences in the chemical composition of organic-walled dinoflagellate resting cysts from phototrophic and heterotrophic dinoflagellates",
+      "volume": "50",
+      "author": "Bogus",
+      "year": "2014",
+      "journal-title": "J. Phycol."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C16",
+      "doi-asserted-by": "crossref",
+      "first-page": "231",
+      "DOI": "10.1016/0377-8398(94)90014-0",
+      "article-title": "Dinoflagellate cysts, paleoproductivity and upwelling systems: a Late Cretaceous example from Israel",
+      "volume": "23",
+      "author": "Eshet",
+      "year": "1994",
+      "journal-title": "Mar. Micropaleontol."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C17",
+      "doi-asserted-by": "crossref",
+      "first-page": "91",
+      "DOI": "10.1016/j.marmicro.2007.04.001",
+      "article-title": "Distribution of organic-walled dinoflagellate cysts in shelf surface sediments of the Benguela upwelling system in relationship to environmental conditions",
+      "volume": "64",
+      "author": "Holzwarth",
+      "year": "2007",
+      "journal-title": "Mar. Micropaleontol."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C18",
+      "doi-asserted-by": "crossref",
+      "first-page": "53",
+      "DOI": "10.1007/BF03021753",
+      "article-title": "Organic-walled dinoflagellate cysts as paleoenvironmental indicators in the Paleogene; a synopsis of concepts",
+      "volume": "79",
+      "author": "Pross",
+      "year": "2005",
+      "journal-title": "Paläontol. Z."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C19",
+      "doi-asserted-by": "crossref",
+      "first-page": "240",
+      "DOI": "10.1016/j.marpetgeo.2018.05.030",
+      "article-title": "The use of cyclic stratigraphic pattern of peridinioid and gonyaulacoid dinoflagellate cysts in differentiating potential thick monotonous carbonate reservoirs: a possible ecostratigraphic tool under test",
+      "volume": "96",
+      "author": "Tahoun",
+      "year": "2018",
+      "journal-title": "Mar. Pet. Geol."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C20",
+      "doi-asserted-by": "crossref",
+      "first-page": "329",
+      "DOI": "10.1146/annurev-marine-040722-115226",
+      "article-title": "Quantifying the ocean's biological pump and its carbon cycle impacts on global scales",
+      "volume": "15",
+      "author": "Siegel",
+      "year": "2023",
+      "journal-title": "Annu. Rev. Mar. Sci."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C21",
+      "doi-asserted-by": "crossref",
+      "first-page": "413",
+      "DOI": "10.1146/annurev-marine-010814-015924",
+      "article-title": "Zooplankton and the ocean carbon cycle",
+      "volume": "9",
+      "author": "Steinberg",
+      "year": "2017",
+      "journal-title": "Annu. Rev. Mar. Sci."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C22",
+      "doi-asserted-by": "crossref",
+      "first-page": "235",
+      "DOI": "10.1007/BF00014586",
+      "article-title": "The role of phytoplankton photosynthesis in global biogeochemical cycles",
+      "volume": "39",
+      "author": "Falkowski",
+      "year": "1994",
+      "journal-title": "Photosynth. Res."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C23",
+      "doi-asserted-by": "crossref",
+      "first-page": "325",
+      "DOI": "10.1093/icesjms/fsn013",
+      "article-title": "The trophic roles of microzooplankton in marine systems",
+      "volume": "65",
+      "author": "Calbet",
+      "year": "2008",
+      "journal-title": "ICES J. Mar. Sci."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C24",
+      "doi-asserted-by": "crossref",
+      "first-page": "279",
+      "DOI": "10.1093/icesjms/fsn028",
+      "article-title": "In hot water: zooplankton and climate change",
+      "volume": "65",
+      "author": "Richardson",
+      "year": "2008",
+      "journal-title": "ICES J. Mar. Sci."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C25",
+      "doi-asserted-by": "crossref",
+      "first-page": "5",
+      "DOI": "10.1007/s10750-012-1149-2",
+      "article-title": "Phytoplankton response to a changing climate",
+      "volume": "698",
+      "author": "Winder",
+      "year": "2012",
+      "journal-title": "Hydrobiologia"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C26",
+      "doi-asserted-by": "crossref",
+      "first-page": "299",
+      "DOI": "10.2113/gsmicropal.51.4.299",
+      "article-title": "Calcareous nannoplankton evolution: a tale of two oceans",
+      "volume": "51",
+      "author": "Bown",
+      "year": "2005",
+      "journal-title": "Micropaleontology"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C27",
+      "doi-asserted-by": "crossref",
+      "first-page": "3503",
+      "DOI": "10.5194/bg-22-3503-2025",
+      "article-title": "Occupancy history influences extinction risk of fossil marine microplankton groups",
+      "volume": "22",
+      "author": "Smith",
+      "year": "2025",
+      "journal-title": "Biogeosciences"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C28",
+      "doi-asserted-by": "crossref",
+      "first-page": "e13841",
+      "DOI": "10.1111/geb.13841",
+      "article-title": "Coherent response of zooplankton and phytoplankton assemblages to global warming since the last glacial maximum",
+      "volume": "33",
+      "author": "Strack",
+      "year": "2024",
+      "journal-title": "Glob. Ecol. Biogeogr."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C29",
+      "doi-asserted-by": "crossref",
+      "first-page": "919",
+      "DOI": "10.1038/nclimate1958",
+      "article-title": "Global imprint of climate change on marine life",
+      "volume": "3",
+      "author": "Poloczanska",
+      "year": "2013",
+      "journal-title": "Nat. Clim. Change"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C30",
+      "doi-asserted-by": "crossref",
+      "first-page": "62",
+      "DOI": "10.3389/fmars.2016.00062",
+      "article-title": "Responses of marine organisms to climate change across oceans",
+      "volume": "3",
+      "author": "Poloczanska",
+      "year": "2016",
+      "journal-title": "Front. Mar. Sci."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C31",
+      "doi-asserted-by": "crossref",
+      "first-page": "5226",
+      "DOI": "10.1038/s41467-021-25385-x",
+      "article-title": "Major restructuring of marine plankton assemblages under global warming",
+      "volume": "12",
+      "author": "Benedetti",
+      "year": "2021",
+      "journal-title": "Nat. Commun."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C32",
+      "doi-asserted-by": "crossref",
+      "first-page": "579",
+      "DOI": "10.5194/essd-14-579-2022",
+      "article-title": "DINOSTRAT: a global database of the stratigraphic and paleolatitudinal distribution of Mesozoic–Cenozoic organic-walled dinoflagellate cysts",
+      "volume": "14",
+      "author": "Bijl",
+      "year": "2022",
+      "journal-title": "Earth Syst. Sci. Data"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C33",
+      "doi-asserted-by": "crossref",
+      "first-page": "817",
+      "DOI": "10.1007/BF02083119",
+      "article-title": "Neptune: a marine micropaleontology database",
+      "volume": "26",
+      "author": "Lazarus",
+      "year": "1994",
+      "journal-title": "Math Geol."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C34",
+      "volume-title": "R: a language and environment for statistical computing",
+      "author": "R Core Team",
+      "year": "2025"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C35",
+      "article-title": "chronosphere: evolving earth system variables",
+      "author": "Kocsis",
+      "year": "2023"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C36",
+      "doi-asserted-by": "crossref",
+      "first-page": "739",
+      "DOI": "10.1029/94PA01456",
+      "article-title": "How synchronous are Neogene marine plankton events?",
+      "volume": "9",
+      "author": "Spencer-Cervato",
+      "year": "1994",
+      "journal-title": "Paleoceanography"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C37",
+      "doi-asserted-by": "crossref",
+      "first-page": "407",
+      "DOI": "10.1007/s10531-007-9258-3",
+      "article-title": "Dinoflagellate diversity and distribution",
+      "volume": "17",
+      "author": "Taylor",
+      "year": "2008",
+      "journal-title": "Biodivers. Conserv."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C38",
+      "doi-asserted-by": "crossref",
+      "first-page": "253",
+      "DOI": "10.3354/meps073253",
+      "article-title": "Quantitative importance and trophic role of heterotrophic dinoflagellates in a coastal pelagial food web",
+      "volume": "73",
+      "author": "Hansen",
+      "year": "1991",
+      "journal-title": "Mar. Ecol. Prog. Ser."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C39",
+      "doi-asserted-by": "crossref",
+      "first-page": "2291",
+      "DOI": "10.1093/plankt/20.12.2291",
+      "article-title": "Dinoflagellate cyst production at a coastal Mediterranean site",
+      "volume": "20",
+      "author": "Montresor",
+      "year": "1998",
+      "journal-title": "J. Plankton. Res."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C40",
+      "doi-asserted-by": "crossref",
+      "first-page": "1",
+      "DOI": "10.3390/jmse11010001",
+      "article-title": "A review of the dinoflagellates and their evolution from fossils to modern",
+      "volume": "11",
+      "author": "Riding",
+      "year": "2022",
+      "journal-title": "J. Mar. Sci. Eng."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C41",
+      "doi-asserted-by": "crossref",
+      "first-page": "144",
+      "DOI": "10.1666/10067.1",
+      "article-title": "Pacman profiling: a simple procedure to identify stratigraphic outliers in high-density deep-sea microfossil data",
+      "volume": "38",
+      "author": "Lazarus",
+      "year": "2012",
+      "journal-title": "Paleobiology"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C42",
+      "doi-asserted-by": "crossref",
+      "first-page": "160",
+      "DOI": "10.1038/s41597-021-00942-7",
+      "article-title": "Triton, a new species-level database of Cenozoic planktonic foraminiferal occurrences",
+      "volume": "8",
+      "author": "Fenton",
+      "year": "2021",
+      "journal-title": "Sci. Data"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C43",
+      "first-page": "1",
+      "article-title": "Cenozoic radiolarian biostratigraphy: a magnetobiostratigraphic chronology of Cenozoic sequences from ODP sites 1218, 1219, and 1220, equatorial Pacific",
+      "volume-title": "Proc. ODP, Sci. Results",
+      "author": "Nigrini",
+      "year": "2005"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C44",
+      "volume-title": "Nannotax3 - introduction",
+      "author": "Young"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C45",
+      "doi-asserted-by": "crossref",
+      "first-page": "38",
+      "DOI": "10.1016/j.marmicro.2013.09.003",
+      "article-title": "Diversification patterns of planktic foraminifera in the fossil record",
+      "volume": "104",
+      "author": "Cermeño",
+      "year": "2013",
+      "journal-title": "Mar. Micropaleontol."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C46",
+      "volume-title": "World register of marine species (WoRMS)",
+      "author": "WoRMS Editorial Board",
+      "year": "2026"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C47",
+      "doi-asserted-by": "crossref",
+      "first-page": "191",
+      "DOI": "10.12688/f1000research.2-191.v1",
+      "article-title": "taxize: taxonomic search and retrieval in R",
+      "volume": "2",
+      "author": "Chamberlain",
+      "year": "2013",
+      "journal-title": "F1000Research"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C48",
+      "article-title": "worrms: World Register of Marine Species (WoRMS) client",
+      "author": "Chamberlain",
+      "year": "2024"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C49",
+      "doi-asserted-by": "crossref",
+      "first-page": "2669255",
+      "DOI": "10.1080/14772019.2026.2669255",
+      "article-title": "Phylogeny of the Cenozoic planktonic foraminifera",
+      "volume": "24",
+      "author": "Lamyman",
+      "year": "2026",
+      "journal-title": "J. Syst. Palaeontol."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C50",
+      "doi-asserted-by": "crossref",
+      "first-page": "2179",
+      "DOI": "10.1111/1462-2920.16004",
+      "article-title": "Diversity and ecology of Radiolaria in modern oceans",
+      "volume": "24",
+      "author": "Biard",
+      "year": "2022",
+      "journal-title": "Environ. Microbiol."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C51",
+      "doi-asserted-by": "crossref",
+      "first-page": "405",
+      "DOI": "10.5252/geodiversitas2021v43a15",
+      "article-title": "A new integrated morpho-and molecular systematic classification of Cenozoic radiolarians (Class Polycystinea)–suprageneric taxonomy and logical nomenclatorial acts",
+      "volume": "43",
+      "author": "Suzuki",
+      "year": "2021",
+      "journal-title": "Geodiversitas"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C52",
+      "doi-asserted-by": "crossref",
+      "first-page": "735",
+      "DOI": "10.1111/2041-210X.13161",
+      "article-title": "The R package divDyn for quantifying diversity dynamics using fossil sampling data",
+      "volume": "10",
+      "author": "Kocsis",
+      "year": "2019",
+      "journal-title": "Methods Ecol. Evol."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C53",
+      "doi-asserted-by": "crossref",
+      "first-page": "74",
+      "DOI": "10.1666/0094-8373(2000)26[74:OAECOT]2.0.CO;2",
+      "article-title": "Origination and extinction components of taxonomic diversity: general problems",
+      "volume": "26",
+      "author": "Foote",
+      "year": "2000",
+      "journal-title": "Paleobiology"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C54",
+      "doi-asserted-by": "crossref",
+      "first-page": "414",
+      "DOI": "10.1666/06069.1",
+      "article-title": "Environmental determinants of marine benthic biodiversity dynamics through Triassic–Jurassic time",
+      "volume": "33",
+      "author": "Kiessling",
+      "year": "2007",
+      "journal-title": "Paleobiology"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C55",
+      "doi-asserted-by": "crossref",
+      "first-page": "139",
+      "DOI": "10.1146/annurev-earth-060614-105059",
+      "article-title": "Macroevolutionary history of the planktic foraminifera",
+      "volume": "43",
+      "author": "Fraass",
+      "year": "2015",
+      "journal-title": "Annu. Rev. Earth Planet Sci."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C56",
+      "doi-asserted-by": "crossref",
+      "first-page": "139",
+      "DOI": "10.2113/gsjfr.51.3.139",
+      "article-title": "Oligocene planktic foraminiferal taxonomy and evolution: an illustrated revision of Ocean Drilling Program site 803",
+      "volume": "51",
+      "author": "Fraass",
+      "year": "2021",
+      "journal-title": "J. Foraminifer. Res."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C57",
+      "doi-asserted-by": "crossref",
+      "first-page": "196",
+      "DOI": "10.1017/pab.2016.38",
+      "article-title": "Asymmetric geographic range expansion explains the latitudinal diversity gradients of four major taxa of marine plankton",
+      "volume": "43",
+      "author": "Powell",
+      "year": "2017",
+      "journal-title": "Paleobiology"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C58",
+      "doi-asserted-by": "crossref",
+      "first-page": "15",
+      "DOI": "10.5194/bg-3-15-2006",
+      "article-title": "Towards an unbiased estimate of fluctuations in reef abundance and volume during the Phanerozoic",
+      "volume": "3",
+      "author": "Kiessling",
+      "year": "2006",
+      "journal-title": "Biogeosciences"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C59",
+      "doi-asserted-by": "crossref",
+      "first-page": "6003",
+      "DOI": "10.5194/bg-13-6003-2016",
+      "article-title": "Quantifying the Cenozoic marine diatom deposition history: links to the C and Si cycles",
+      "volume": "13",
+      "author": "Renaudie",
+      "year": "2016",
+      "journal-title": "Biogeosciences"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C60",
+      "doi-asserted-by": "crossref",
+      "first-page": "183",
+      "DOI": "10.5194/fr-21-183-2018",
+      "article-title": "The Paleocene record of marine diatoms in deep-sea sediments",
+      "volume": "21",
+      "author": "Renaudie",
+      "year": "2018",
+      "journal-title": "Foss. Rec."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C61",
+      "doi-asserted-by": "crossref",
+      "first-page": "11536",
+      "DOI": "10.1073/pnas.0802597105",
+      "article-title": "Dynamics of origination and extinction in the marine fossil record",
+      "volume": "105",
+      "author": "Alroy",
+      "year": "2008",
+      "journal-title": "Proc. Natl Acad. Sci. USA"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C62",
+      "doi-asserted-by": "crossref",
+      "first-page": "3",
+      "DOI": "10.1016/S0377-8398(96)00021-7",
+      "article-title": "Spatial distribution pattern of living polycystine radiolarian taxa—baseline study for paleoenvironmental reconstructions in the Southern Ocean (Atlantic sector)",
+      "volume": "30",
+      "author": "Abelmann",
+      "year": "1997",
+      "journal-title": "Mar. Micropaleontol."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C63",
+      "doi-asserted-by": "crossref",
+      "first-page": "83",
+      "DOI": "10.1016/S0012-8252(00)00024-6",
+      "article-title": "Radiolarian palaeoecology and radiolarites: is the present the key to the past?",
+      "volume": "52",
+      "author": "Racki",
+      "year": "2000",
+      "journal-title": "Earth-Sci. Rev."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C64",
+      "doi-asserted-by": "crossref",
+      "first-page": "25",
+      "DOI": "10.1016/j.seares.2004.01.007",
+      "article-title": "Growth physiology and fate of diatoms in the ocean: a review",
+      "volume": "53",
+      "author": "Sarthou",
+      "year": "2005",
+      "journal-title": "J. Sea Res."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C65",
+      "doi-asserted-by": "crossref",
+      "first-page": "1687",
+      "DOI": "10.1139/b96-205",
+      "article-title": "Fossil dinoflagellate diversity, originations, and extinctions and their significance",
+      "volume": "74",
+      "author": "MacRae",
+      "year": "1996",
+      "journal-title": "Can J. Bot."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C66",
+      "doi-asserted-by": "crossref",
+      "first-page": "20210545",
+      "DOI": "10.1098/rspb.2021.0545",
+      "article-title": "Out of the extratropics: the evolution of the latitudinal diversity gradient of Cenozoic marine plankton",
+      "volume": "288",
+      "author": "Raja",
+      "year": "2021",
+      "journal-title": "Proc. R. Soc. B."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C67",
+      "doi-asserted-by": "crossref",
+      "first-page": "351",
+      "DOI": "10.1038/s43017-024-00527-z",
+      "article-title": "Mechanisms, detection and impacts of species redistributions under climate change",
+      "volume": "5",
+      "author": "Lawlor",
+      "year": "2024",
+      "journal-title": "Nat. Rev. Earth Environ."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C68",
+      "doi-asserted-by": "crossref",
+      "first-page": "1044",
+      "DOI": "10.1038/s41559-020-1198-2",
+      "article-title": "Species better track climate warming in the oceans than on land",
+      "volume": "4",
+      "author": "Lenoir",
+      "year": "2020",
+      "journal-title": "Nat. Ecol. Evol."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C69",
+      "doi-asserted-by": "crossref",
+      "first-page": "153",
+      "DOI": "10.1146/annurev-marine-010419-010916",
+      "article-title": "Climate-driven shifts in marine species ranges: scaling from organisms to communities",
+      "volume": "12",
+      "author": "Pinsky",
+      "year": "2020",
+      "journal-title": "Annu. Rev. Mar. Sci."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C70",
+      "doi-asserted-by": "crossref",
+      "first-page": "6829",
+      "DOI": "10.1073/pnas.1117039109",
+      "article-title": "Climate change and the selective signature of the Late Ordovician mass extinction",
+      "volume": "109",
+      "author": "Finnegan",
+      "year": "2012",
+      "journal-title": "Proc. Natl Acad. Sci. USA"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C71",
+      "doi-asserted-by": "crossref",
+      "first-page": "1473",
+      "DOI": "10.1111/j.1365-2699.2007.01709.x",
+      "article-title": "Geographical distribution and extinction risk: lessons from Triassic–Jurassic marine benthic organisms",
+      "volume": "34",
+      "author": "Kiessling",
+      "year": "2007",
+      "journal-title": "J. Biogeogr."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C72",
+      "doi-asserted-by": "crossref",
+      "first-page": "eaat1327",
+      "DOI": "10.1126/science.aat1327",
+      "article-title": "Temperature-dependent hypoxia explains biogeography and severity of end-Permian marine mass extinction",
+      "volume": "362",
+      "author": "Penn",
+      "year": "2018",
+      "journal-title": "Science"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C73",
+      "doi-asserted-by": "crossref",
+      "first-page": "70",
+      "DOI": "10.1017/pab.2018.34",
+      "article-title": "Climate change and the latitudinal selectivity of ancient marine extinctions",
+      "volume": "45",
+      "author": "Reddin",
+      "year": "2019",
+      "journal-title": "Paleobiology"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C74",
+      "doi-asserted-by": "crossref",
+      "first-page": "863",
+      "DOI": "10.1038/nature02593",
+      "article-title": "Global biodiversity patterns of marine phytoplankton and zooplankton",
+      "volume": "429",
+      "author": "Irigoien",
+      "year": "2004",
+      "journal-title": "Nature"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C75",
+      "doi-asserted-by": "crossref",
+      "first-page": "1",
+      "DOI": "10.3390/rs6010001",
+      "article-title": "Interannual variation in phytoplankton primary production at a global scale",
+      "volume": "6",
+      "author": "Rousseaux",
+      "year": "2013",
+      "journal-title": "Remote Sens."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C76",
+      "doi-asserted-by": "crossref",
+      "first-page": "54",
+      "DOI": "10.1017/pab.2020.52",
+      "article-title": "The effects of geographic range size and abundance on extinction during a time of “sluggish” evolution",
+      "volume": "47",
+      "author": "Casey",
+      "year": "2021",
+      "journal-title": "Paleobiology"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C77",
+      "doi-asserted-by": "crossref",
+      "first-page": "616",
+      "DOI": "10.1666/10037.1",
+      "article-title": "Local and global abundance associated with extinction risk in late Paleozoic and early Mesozoic gastropods",
+      "volume": "37",
+      "author": "Payne",
+      "year": "2011",
+      "journal-title": "Paleobiology"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C78",
+      "doi-asserted-by": "crossref",
+      "first-page": "631",
+      "DOI": "10.1666/0094-8373-35.4.631",
+      "article-title": "Assessing the role of abundance in marine bivalve extinction over the post-Paleozoic",
+      "volume": "35",
+      "author": "Simpson",
+      "year": "2009",
+      "journal-title": "Paleobiology"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C79",
+      "doi-asserted-by": "crossref",
+      "first-page": "4969",
+      "DOI": "10.1098/rspb.2012.1902",
+      "article-title": "Long-term differences in extinction risk among the seven forms of rarity",
+      "volume": "279",
+      "author": "Harnik",
+      "year": "2012",
+      "journal-title": "Proc. R. Soc. B"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C80",
+      "doi-asserted-by": "crossref",
+      "first-page": "554",
+      "DOI": "10.1038/s42003-023-04871-6",
+      "article-title": "Abundance does not predict extinction risk in the fossil record of marine plankton",
+      "volume": "6",
+      "author": "Trubovitz",
+      "year": "2023",
+      "journal-title": "Commun. Biol."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C81",
+      "doi-asserted-by": "crossref",
+      "first-page": "315",
+      "DOI": "10.1111/j.1461-0248.2007.01020.x",
+      "article-title": "Evolution and the latitudinal diversity gradient: speciation, extinction and biogeography",
+      "volume": "10",
+      "author": "Mittelbach",
+      "year": "2007",
+      "journal-title": "Ecol. Lett."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C82",
+      "doi-asserted-by": "crossref",
+      "first-page": "e0186934",
+      "DOI": "10.1371/journal.pone.0186934",
+      "article-title": "Geography of current and future global mammal extinction risk",
+      "volume": "12",
+      "author": "Davidson",
+      "year": "2017",
+      "journal-title": "PLoS ONE"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C83",
+      "doi-asserted-by": "crossref",
+      "first-page": "1790",
+      "DOI": "10.1038/srep01790",
+      "article-title": "Bivalve network reveals latitudinal selectivity gradient at the end-cretaceous mass extinction",
+      "volume": "3",
+      "author": "Vilhena",
+      "year": "2013",
+      "journal-title": "Sci. Rep."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C84",
+      "doi-asserted-by": "crossref",
+      "first-page": "e2321068121.",
+      "DOI": "10.1073/pnas.2321068121",
+      "article-title": "A global map of species at risk of extinction due to natural hazards",
+      "volume": "121",
+      "author": "Gonçalves",
+      "year": "2024",
+      "journal-title": "Proc. Natl Acad. Sci. USA"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C85",
+      "doi-asserted-by": "crossref",
+      "first-page": "514",
+      "DOI": "10.2307/3545569",
+      "article-title": "Latitudinal gradients in species diversity: the search for the primary cause",
+      "volume": "65",
+      "author": "Rohde",
+      "year": "1992",
+      "journal-title": "Oikos"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C86",
+      "doi-asserted-by": "crossref",
+      "first-page": "1545",
+      "DOI": "10.1126/science.1072380",
+      "article-title": "Global biodiversity, biochemical kinetics, and the energetic-equivalence rule",
+      "volume": "297",
+      "author": "Allen",
+      "year": "2002",
+      "journal-title": "Science"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C87",
+      "doi-asserted-by": "crossref",
+      "first-page": "947",
+      "DOI": "10.1111/j.1461-0248.2006.00946.x",
+      "article-title": "Assessing latitudinal gradients in speciation rates and biodiversity at the global scale",
+      "volume": "9",
+      "author": "Allen",
+      "year": "2006",
+      "journal-title": "Ecol. Lett."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C88",
+      "doi-asserted-by": "crossref",
+      "first-page": "1823",
+      "DOI": "10.1098/rspb.2010.1295",
+      "article-title": "Global analysis of thermal tolerance and latitude in ectotherms",
+      "volume": "278",
+      "author": "Sunday",
+      "year": "2011",
+      "journal-title": "Proc. R. Soc. B"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C89",
+      "doi-asserted-by": "crossref",
+      "first-page": "112",
+      "DOI": "10.1002/ecy.1623",
+      "article-title": "Planktonic equatorial diversity troughs: fact or artifact? Latitudinal diversity gradients in Radiolaria",
+      "volume": "98",
+      "author": "Boltovskoy",
+      "year": "2017",
+      "journal-title": "Ecology"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C90",
+      "first-page": "1",
+      "article-title": "Deep-sea sediments of the global ocean",
+      "volume": "2020",
+      "author": "Diesing",
+      "year": "2020",
+      "journal-title": "Earth Syst. Sci. Data Discuss."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C91",
+      "doi-asserted-by": "crossref",
+      "first-page": "e0165522",
+      "DOI": "10.1371/journal.pone.0165522",
+      "article-title": "Environmental predictors of diversity in recent planktonic foraminifera as recorded in marine sediments",
+      "volume": "11",
+      "author": "Fenton",
+      "year": "2016",
+      "journal-title": "PLoS ONE"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C92",
+      "doi-asserted-by": "crossref",
+      "first-page": "e13905",
+      "DOI": "10.1111/geb.13905",
+      "article-title": "Spatially heterogeneous responses of planktonic foraminiferal assemblages over 700,000 years of climate change",
+      "volume": "33",
+      "author": "Mathes",
+      "year": "2024",
+      "journal-title": "Glob. Ecol. Biogeogr."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C93",
+      "doi-asserted-by": "crossref",
+      "first-page": "749",
+      "DOI": "10.1038/23449",
+      "article-title": "Environmental controls on the geographic distribution of zooplankton diversity",
+      "volume": "400",
+      "author": "Rutherford",
+      "year": "1999",
+      "journal-title": "Nature"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C94",
+      "doi-asserted-by": "crossref",
+      "first-page": "3452",
+      "DOI": "10.1038/s41467-025-58027-7",
+      "article-title": "Patterns and drivers of diatom diversity and abundance in the global ocean",
+      "volume": "16",
+      "author": "Pierella Karlusich",
+      "year": "2025",
+      "journal-title": "Nat. Commun."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C95",
+      "doi-asserted-by": "crossref",
+      "first-page": "93",
+      "DOI": "10.1007/BF03021756",
+      "article-title": "The significance of extant coccolithophores as indicators of ocean water masses, surface water temperature, and palaeoproductivity: a review",
+      "volume": "79",
+      "author": "Baumann",
+      "year": "2005",
+      "journal-title": "Paläontol Z."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C96",
+      "doi-asserted-by": "crossref",
+      "first-page": "59",
+      "DOI": "10.5670/oceanog.1995.21",
+      "article-title": "Global distribution of coccolithophore blooms",
+      "volume": "8",
+      "author": "Brown",
+      "year": "1995",
+      "journal-title": "Oceanography"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C97",
+      "first-page": "103737",
+      "article-title": "Biogeography of living coccolithophores in ocean waters",
+      "volume": "245",
+      "author": "Winter",
+      "year": "1994",
+      "journal-title": "Coccolithophores"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C98",
+      "doi-asserted-by": "crossref",
+      "first-page": "135",
+      "DOI": "10.1016/0079-6611(94)90006-X",
+      "article-title": "The sedimentary record of pelagic biogeography",
+      "volume": "34",
+      "author": "Boltovskoy",
+      "year": "1994",
+      "journal-title": "Prog. Oceanogr."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C99",
+      "doi-asserted-by": "crossref",
+      "first-page": "3075",
+      "DOI": "10.1002/2016GC006428",
+      "article-title": "Controls on the distribution of deep-sea sediments",
+      "volume": "17",
+      "author": "Dutkiewicz",
+      "year": "2016",
+      "journal-title": "Geochem. Geophys. Geosystems."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C100",
+      "doi-asserted-by": "crossref",
+      "first-page": "9333",
+      "DOI": "10.1073/pnas.0812979106",
+      "article-title": "Radiolarians decreased silicification as an evolutionary response to reduced Cenozoic ocean silica availability",
+      "volume": "106",
+      "author": "Lazarus",
+      "year": "2009",
+      "journal-title": "Proc. Natl Acad. Sci. USA"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C101",
+      "doi-asserted-by": "crossref",
+      "first-page": "1129",
+      "DOI": "10.1016/S0967-0645(96)00112-9",
+      "article-title": "Biogenic silica dissolution in sediments of the Southern Ocean. II. Kinetics",
+      "volume": "44",
+      "author": "Van Cappellen",
+      "year": "1997",
+      "journal-title": "Deep Sea Res. Part II Top Stud. Oceanogr."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C102",
+      "doi-asserted-by": "crossref",
+      "first-page": "56",
+      "DOI": "10.1111/j.1365-2486.2010.02204.x",
+      "article-title": "On the potential for ocean acidification to be a general cause of ancient reef crises",
+      "volume": "17",
+      "author": "Kiessling",
+      "year": "2011",
+      "journal-title": "Glob. Change Biol."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C103",
+      "doi-asserted-by": "crossref",
+      "first-page": "179",
+      "DOI": "10.1016/j.marmicro.2008.01.015",
+      "article-title": "Preservation and organic chemistry of late Cenozoic organic-walled dinoflagellate cysts: a review",
+      "volume": "68",
+      "author": "Zonneveld",
+      "year": "2008",
+      "journal-title": "Mar. Micropaleontol."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C104",
+      "doi-asserted-by": "crossref",
+      "first-page": "1218",
+      "DOI": "10.1111/brv.13065",
+      "article-title": "The global genetic diversity of planktonic foraminifera reveals the structure of cryptic speciation in plankton",
+      "volume": "99",
+      "author": "Morard",
+      "year": "2024",
+      "journal-title": "Biol. Rev."
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C105",
+      "article-title": "Supplementary code and data for: Reduced extinction risk for autotrophs in the open ocean",
+      "author": "Smith",
+      "year": "2026"
+    },
+    {
+      "key": "2026081820143230800_RSPB20261158C106",
+      "article-title": "Supplementary material from: Reduced extinction risk for autotrophs in the open ocean",
+      "author": "Smith",
+      "year": "2026"
+    }
+  ],
+  "container-title": [
+    "Proceedings of the Royal Society B: Biological Sciences"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://royalsocietypublishing.org/rspb/article-pdf/doi/10.1098/rspb.2026.1158/6158858/rspb.2026.1158.pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "syndication"
+    },
+    {
+      "URL": "https://royalsocietypublishing.org/rspb/article-pdf/doi/10.1098/rspb.2026.1158/6158858/rspb.2026.1158.pdf",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2026,
+        8,
+        19
+      ]
+    ],
+    "date-time": "2026-08-19T00:14:49Z",
+    "timestamp": 1787098489000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://royalsocietypublishing.org/rspb/article/293/2077/20261158/482821/Reduced-extinction-risk-for-autotrophs-in-the-open"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2026,
+        8,
+        19
+      ]
+    ]
+  },
+  "references-count": 106,
+  "journal-issue": {
+    "issue": "2077",
+    "published-print": {
+      "date-parts": [
+        [
+          2026,
+          8,
+          19
+        ]
+      ]
+    }
+  },
+  "URL": "https://doi.org/10.1098/rspb.2026.1158",
+  "relation": {},
+  "ISSN": [
+    "0962-8452",
+    "1471-2954"
+  ],
+  "issn-type": [
+    {
+      "value": "0962-8452",
+      "type": "print"
+    },
+    {
+      "value": "1471-2954",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2026,
+        8,
+        19
+      ]
+    ]
+  },
+  "article-number": "20261158"
+}

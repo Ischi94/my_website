@@ -1,0 +1,22 @@
+{{ define "main" }}
+{{ $pub := false }}{{ with .Params.doi }}{{ $matches := where site.Data.publications "doi" . }}{{ if $matches }}{{ $pub = index $matches 0 }}{{ end }}{{ end }}
+<article class="container article {{ if eq .Section "post" }}tutorial{{ end }}">
+  <header class="article-header"><p class="eyebrow">{{ if $pub }}Journal publication · {{ $pub.year }}{{ else if eq .Section "post" }}Resources · Archive{{ else if eq .Section "talk" }}Talks · Archive{{ else }}Gregor Mathes{{ end }}</p><h1>{{ .Title }}</h1></header>
+  {{ if $pub }}
+  {{ partial "authors.html" $pub }}
+  <p class="journal"><em>{{ $pub.journal }}</em> {{ $pub.volume }}{{ with $pub.issue }} ({{ . }}){{ end }}{{ with $pub.pages }}, {{ . }}{{ end }} ({{ $pub.year }}).</p>
+  <p><a class="button" href="https://doi.org/{{ $pub.doi }}">Read the published paper</a></p>
+  <p class="metadata">DOI: {{ $pub.doi }}{{ with $pub.online_year }} · First published online in {{ . }}{{ end }}</p>
+  {{ with $pub.correction }}<p class="notice">A <a href="{{ . }}">published correction (2025)</a> accompanies this article.</p>{{ end }}
+  {{ with .Params.abstract }}<h2>Abstract</h2><div class="prose">{{ . | markdownify }}</div>{{ end }}
+  <div class="prose">{{ .Content }}</div>
+  <p><a href="{{ "/publication/" | relURL }}">All publications</a></p>
+  {{ $authors := slice }}{{ range $pub.authors }}{{ $authors = $authors | append (dict "@type" "Person" "name" .name) }}{{ end }}
+  {{ $schema := dict "@context" "https://schema.org" "@type" "ScholarlyArticle" "headline" $pub.title "author" $authors "datePublished" (printf "%d" (int $pub.year)) "identifier" $pub.doi "sameAs" (printf "https://doi.org/%s" $pub.doi) "isPartOf" (dict "@type" "Periodical" "name" $pub.journal) }}
+  <script type="application/ld+json">{{ $schema | jsonify | safeJS }}</script>
+  {{ else }}
+  {{ if or (eq .Section "post") (eq .Section "talk") }}<p class="notice">Archived material · {{ .Date.Format "2 January 2006" }}. Examples and software reflect their original context.</p>{{ end }}
+  <div class="prose">{{ .Content }}</div>
+  {{ end }}
+</article>
+{{ end }}

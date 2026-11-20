@@ -1,0 +1,18 @@
+{{ define "main" }}
+<section class="container article">
+  <header class="article-header"><p class="eyebrow">Gregor Mathes</p><h1>{{ .Title }}</h1></header>
+  {{ if eq .Section "publication" }}
+  <p class="intro">Peer-reviewed journal publications, from deep-time biodiversity to contemporary environmental change.</p>
+  <div class="actions"><a class="button" href="{{ "files/publications.bib" | relURL }}" download>Download bibliography</a><a href="{{ site.Params.scholar }}">Google Scholar</a><a href="{{ site.Params.orcid }}">ORCID</a></div>
+  <p class="metadata">Journal-volume years are used where assigned. Earlier online publication is noted. The correction is linked with its original article.</p>
+  {{ $year := 0 }}
+  {{ range site.Data.publications }}
+    {{ if ne $year .year }}{{ $year = .year }}<h2 class="year-heading" id="year-{{ .year }}">{{ .year }}</h2>{{ end }}
+    <article class="bibliography-entry"><h3><a href="{{ .url | relURL }}">{{ .title }}</a></h3>{{ partial "authors.html" . }}<p><em>{{ .journal }}</em> {{ .volume }}{{ with .issue }} ({{ . }}){{ end }}{{ with .pages }}, {{ . }}{{ end }}.</p><p class="metadata"><a href="https://doi.org/{{ .doi }}">{{ .doi }}</a>{{ with .online_year }} · Online {{ . }}{{ end }}{{ with .correction }} · <a href="{{ . }}">Correction (2025)</a>{{ end }}</p></article>
+  {{ end }}
+  {{ else }}
+  <div class="prose">{{ .Content }}</div>
+  {{ range .Pages.ByDate.Reverse }}<article class="archive-entry"><p class="metadata">{{ .Date.Format "January 2006" }}</p><h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>{{ with .Params.summary }}<p>{{ . | markdownify }}</p>{{ end }}</article>{{ end }}
+  {{ end }}
+</section>
+{{ end }}

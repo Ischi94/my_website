@@ -10,7 +10,7 @@ authors:
 - Anna Walentowitz
 - admin
 - Manuel J. Steinbauer  
-date: "2021-05-06T00:00:00Z"
+date: "2021-05-06"
 doi: "10.1371/journal.pone.0249268"
 image:
   caption: ''
@@ -22,13 +22,13 @@ publication: '*Plos one* <br> [Read the publication](https://journals.plos.org/p
 publication_short: "*Plos one*. DOI: 10.1371/journal.pone.0249268. [Read the publication](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0249268)"
 publication_types:
 - "2"
-publishDate: "2021-05-06T00:00:00Z"
+publishDate: "2021-05-06"
 summary: 
 tags:
 - Sport Ecology
 - Covid
 - Corona
-title: Outdoor cycling activity affected by COVID-19 related epidemic-control decisions
+title: "Outdoor cycling activity affected by COVID-19 related epidemic-control-decisions"
 buttons:
     - text: Read the publication here
       url: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0249268"

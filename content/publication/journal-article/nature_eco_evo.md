@@ -5,7 +5,7 @@ authors:
 - Jeroen van Dijk
 - Wolfgang Kiessling
 - Manuel J. Steinbauer
-date: "2021-01-18T00:00:00Z"
+date: "2021-01-18"
 doi: "10.1038/s41559-020-01377-w"
 image:
   caption: ''
@@ -17,10 +17,10 @@ publication: '*Nature Ecology and Evolution* <br> [Read the publication](https:/
 publication_short: "*Nature Ecology and Evolution*. DOI: 10.1038/s41559-020-01377-w. [Read the publication](https://rdcu.be/cdMkz)"
 publication_types:
 - "2"
-publishDate: "2021-01-18T00:00:00Z"
+publishDate: "2021-01-18"
 summary: 
 tags: [Palaeoclimate Interaction, Nature, Publication]
-title: Extinction risk controlled by interaction of long-term and short-term climate change
+title: "Extinction risk controlled by interaction of long-term and short-term climate change"
 buttons:
     - text: Read the publication here
       url: "https://rdcu.be/cdMkz"

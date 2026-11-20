@@ -1,0 +1,33 @@
+{{ define "main" }}
+<section class="hero container">
+  <div class="hero-copy">
+    <p class="eyebrow">Physical geography · Palaeobiology · Quantitative ecology</p>
+    <h1>Quantitative biodiversity science across space and deep time.</h1>
+    <p class="intro">I’m Gregor Mathes, a researcher and lecturer in Physical Geography at the University of Passau. I investigate how climate and environmental change shape biodiversity, extinction and ecological communities.</p>
+    <div class="actions"><a class="button" href="{{ "/research/" | relURL }}">Explore my research</a><a class="text-link" href="{{ "/publication/" | relURL }}">View publications</a></div>
+  </div>
+  <figure class="hero-portrait">
+    {{ $image := resources.Get "images/portrait.jpg" }}{{ $large := $image.Fit "800x1000 webp q85" }}{{ $small := $image.Fit "480x600 webp q85" }}
+    <img src="{{ $large.RelPermalink }}" srcset="{{ $small.RelPermalink }} {{ $small.Width }}w, {{ $large.RelPermalink }} {{ $large.Width }}w" sizes="(max-width: 760px) 90vw, 34vw" alt="Gregor Mathes" width="{{ $large.Width }}" height="{{ $large.Height }}" fetchpriority="high">
+    <figcaption>Gregor Mathes <span>University of Passau, Germany</span></figcaption>
+  </figure>
+</section>
+<section class="research-band" aria-labelledby="research-heading">
+  <div class="container">
+    <div class="section-heading"><p class="eyebrow">A connected research programme</p><h2 id="research-heading">Understanding change.<br>Accounting for history.</h2><p>I combine fossil records, modern ecological questions and statistical modelling to distinguish ecological signals from biases in the data.</p></div>
+    <div class="research-grid">
+      <article><h3>Life through deep time</h3><p>How climate legacies shape extinction, origination and the assembly of ecological communities.</p><a href="{{ "/research/#deep-time-biodiversity" | relURL }}">Deep-time biodiversity</a></article>
+      <article><h3>Biodiversity in a changing world</h3><p>Connecting environmental history with contemporary climate change, conservation and human–environment research.</p><a href="{{ "/research/#climate-change-and-conservation" | relURL }}">Climate & conservation</a></article>
+      <article><h3>Evidence and inference</h3><p>Bayesian modelling and causal inference to address observation bias and strengthen ecological explanations.</p><a href="{{ "/research/#quantitative-methods-and-causal-inference" | relURL }}">Quantitative methods</a></article>
+    </div>
+  </div>
+</section>
+<section class="container selected-section" aria-labelledby="selected-heading">
+  <div class="section-top"><div><p class="eyebrow">Selected contributions</p><h2 id="selected-heading">Research in focus</h2></div><a class="text-link" href="{{ "/publication/" | relURL }}">All publications</a></div>
+  {{ range where site.Data.publications "selected" true }}
+    <article class="selected-publication"><div class="pub-year">{{ .year }}<span>{{ .journal }}</span></div><div><p class="pub-focus">{{ .focus }}</p><h3><a href="{{ .url | relURL }}">{{ .title }}</a></h3>{{ partial "authors.html" . }}<a class="doi" href="https://doi.org/{{ .doi }}">Read the paper</a></div></article>
+  {{ end }}
+</section>
+<section class="teaching-band"><div class="container teaching-inner"><div><p class="eyebrow">Teaching & exchange</p><h2>From environmental questions<br>to quantitative reasoning.</h2></div><div><p>Teaching in physical geography, climatology and biodiversity, supported by open resources in R and statistics.</p><a class="button light" href="{{ "/teaching/" | relURL }}">Teaching & mentoring</a></div></div></section>
+<section class="container contact-strip" id="contact"><h2>Let’s connect.</h2><p>For research collaborations, teaching and scientific exchange.</p><a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></section>
+{{ end }}

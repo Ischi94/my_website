@@ -1,0 +1,777 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        4
+      ]
+    ],
+    "date-time": "2026-10-04T12:10:44Z",
+    "timestamp": 1791115844418,
+    "version": "4.1.0"
+  },
+  "reference-count": 71,
+  "publisher": "Public Library of Science (PLoS)",
+  "issue": "5",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2021,
+            5,
+            6
+          ]
+        ],
+        "date-time": "2021-05-06T00:00:00Z",
+        "timestamp": 1620259200000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "http://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "funder": [
+    {
+      "DOI": "10.13039/501100001659",
+      "name": "German Research Foundation",
+      "doi-asserted-by": "crossref",
+      "id": [
+        {
+          "id": "10.13039/501100001659",
+          "id-type": "DOI",
+          "asserted-by": "crossref"
+        }
+      ]
+    },
+    {
+      "name": "University of Bayreuth in the funding programme Open Access Publishing"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "www.plosone.org"
+    ],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "PLoS ONE"
+  ],
+  "abstract": "<jats:sec id=\"sec001\"><jats:title>Aim</jats:title><jats:p>The lockdown of sports infrastructure due to the COVID-19 pandemic has substantially shifted people’s physical activity towards public green spaces. With Germany’s lockdown as one of the more severe governmentally imposed epidemic-control-decisions, we tested to what extent the frequency of outdoor cycling activities changed from March to June 2020.</jats:p></jats:sec><jats:sec id=\"sec002\"><jats:title>Methods</jats:title><jats:p>User behaviour and frequency in 15 urban and 7 rural German public green spaces was quantified using cycling data from the fitness application Strava. Changes in cycling activities were analysed with four different generalised linear models, correcting for factors like weather conditions and temporal changes in the user base of the fitness application.</jats:p></jats:sec><jats:sec id=\"sec003\"><jats:title>Results</jats:title><jats:p>We found a clear increase in outdoor cycling sport activities in urban public green spaces in response to epidemic-control decisions (e.g. increase by 81% in April relative to the expected value (95% CI [48%, 110%])). In contrast, biking in rural areas showed no significant change with epidemic-control-decisions in place.</jats:p></jats:sec><jats:sec id=\"sec004\"><jats:title>Conclusion</jats:title><jats:p>Fitness App data, e.g. from Strava, can be used to monitor visitor behaviour and frequency. The increase in outdoor cycling activities during epidemic control decisions likely reflects a shift of sport activities from indoor and team sports to outdoor and individual sports. This highlights the importance of accessible green space for maintaining physical fitness and health. Beyond this shift, it is likely that outdoor activities may be of particularly importance for stress relief in times of crisis such as the current COVID-19 pandemic.</jats:p></jats:sec>",
+  "DOI": "10.1371/journal.pone.0249268",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2021,
+        5,
+        6
+      ]
+    ],
+    "date-time": "2021-05-06T17:54:53Z",
+    "timestamp": 1620323693000
+  },
+  "page": "e0249268",
+  "update-policy": "https://doi.org/10.1371/journal.pone.corrections_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 52,
+  "title": [
+    "Outdoor cycling activity affected by COVID-19 related epidemic-control-decisions"
+  ],
+  "prefix": "10.1371",
+  "volume": "16",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0001-7579-5686",
+      "authenticated-orcid": true,
+      "given": "Anne-Maria",
+      "family": "Schweizer",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Anna",
+      "family": "Leiderer",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Veronika",
+      "family": "Mitterwallner",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Anna",
+      "family": "Walentowitz",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Gregor Hans",
+      "family": "Mathes",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Manuel Jonas",
+      "family": "Steinbauer",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "340",
+  "published-online": {
+    "date-parts": [
+      [
+        2021,
+        5,
+        6
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "pone.0249268.ref001",
+      "unstructured": "Robert-Koch-Institut RKI (2020). SARS-CoV-2 Steckbrief zur Coronavirus-Krankheit-2019 (COVID-19) [Internet]. Verfügbar unter: https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Steckbrief.html."
+    },
+    {
+      "key": "pone.0249268.ref002",
+      "doi-asserted-by": "crossref",
+      "first-page": "138820",
+      "DOI": "10.1016/j.scitotenv.2020.138820",
+      "article-title": "COVID-19 pandemic and environmental pollution: A blessing in disguise?",
+      "volume": "728",
+      "author": "S Muhammad",
+      "year": "2020",
+      "journal-title": "Sci Total Environ"
+    },
+    {
+      "issue": "32",
+      "key": "pone.0249268.ref003",
+      "doi-asserted-by": "crossref",
+      "first-page": "18984",
+      "DOI": "10.1073/pnas.2006853117",
+      "article-title": "COVID-19 lockdowns cause global air pollution declines with implications for public health risk",
+      "volume": "117",
+      "author": "ZS Venter",
+      "year": "2020",
+      "journal-title": "Proc Natl Acad Sci USA"
+    },
+    {
+      "key": "pone.0249268.ref004",
+      "unstructured": "Bundesregierung. Besprechung der Bundeskanzlerin mit den Länderchefs [Internet]. Bundesregierung. [zitiert 25. Mai 2020]. Verfügbar unter: https://www.bundesregierung.de/breg-de/themen/coronavirus/beschluss-zu-corona-1730292."
+    },
+    {
+      "key": "pone.0249268.ref005",
+      "unstructured": "Presse- und Informationsamt der Bundesregierung (BPA). Vereinbarung zwischen der Bundesregierung und den Regierungschefinnen und Regierungschefs der Bundesländer angesichts der Corona-Epidemie in Deutschland [Internet]. Bundesregierung. [zitiert 25. Mai 2020]. Verfügbar unter: https://www.bundesregierung.de/breg-de/aktuelles/vereinbarung-zwischen-der-bundesregierung-und-den-regierungschefinnen-und-regierungschefs-der-bundeslaender-angesichts-der-corona-epidemie-in-deutschland-1730934."
+    },
+    {
+      "issue": "10",
+      "key": "pone.0249268.ref006",
+      "doi-asserted-by": "crossref",
+      "first-page": "28",
+      "DOI": "10.1088/1748-9326/abb396",
+      "article-title": "Urban nature in a time of crisis: recreational use of green space increases during the COVID-19 outbreak in Oslo, Norway",
+      "volume": "15",
+      "author": "ZS Venter",
+      "year": "2020",
+      "journal-title": "Environ Res Lett"
+    },
+    {
+      "key": "pone.0249268.ref007",
+      "article-title": "Bleiben Sie zu Hause. Bitte. Alle. Zwei Befragungen zum Freizeitverhalten der Bevölkerung in Bezug auf Frei- und Grünräume während der Coronakrise in der Schweiz",
+      "volume": "18",
+      "author": "M Egeter",
+      "year": "2020",
+      "journal-title": "Schriftenreihe des Instituts für Landschaft und Freiraum"
+    },
+    {
+      "key": "pone.0249268.ref008",
+      "article-title": "Urban nature as a source of resilience during social distancing amidst the coronavirus pandemic",
+      "author": "K Samuelsson",
+      "year": "2020",
+      "journal-title": "Open Science Framework"
+    },
+    {
+      "issue": "12",
+      "key": "pone.0249268.ref009",
+      "doi-asserted-by": "crossref",
+      "first-page": "1138",
+      "DOI": "10.4065/mcp.2010.0444",
+      "article-title": "Sedentary Behavior: Emerging Evidence for a New Health Risk",
+      "volume": "85",
+      "author": "N Owen",
+      "year": "2010",
+      "journal-title": "Mayo Clin Proc"
+    },
+    {
+      "issue": "6",
+      "key": "pone.0249268.ref010",
+      "doi-asserted-by": "crossref",
+      "first-page": "1583",
+      "DOI": "10.3390/nu12061583",
+      "article-title": "u. a. Effects of COVID-19 Home Confinement on Eating Behaviour and Physical Activity: Results of the ECLB-COVID19 International Online Survey",
+      "volume": "12",
+      "author": "A Ammar",
+      "year": "2020",
+      "journal-title": "utrients"
+    },
+    {
+      "key": "pone.0249268.ref011",
+      "volume": "14",
+      "author": "JE Barkley",
+      "year": "2020",
+      "journal-title": "The Acute Effects of the COVID-19 Pandemic on Physical Activity and Sedentary Behavior in University Students and Employees"
+    },
+    {
+      "issue": "14",
+      "key": "pone.0249268.ref012",
+      "doi-asserted-by": "crossref",
+      "first-page": "5708",
+      "DOI": "10.3390/su12145708",
+      "article-title": "Immediate Impact of the COVID-19 Confinement on Physical Activity Levels in Spanish Adults",
+      "volume": "12",
+      "author": "R López-Bueno",
+      "year": "2020",
+      "journal-title": "Sustainability"
+    },
+    {
+      "key": "pone.0249268.ref013",
+      "article-title": "Changes in physical activity and sedentary behaviour due to the COVID-19 outbreak and associations with mental health in 3,052 US adults",
+      "author": "J Meyer",
+      "year": "2020",
+      "journal-title": "Psychiatry"
+    },
+    {
+      "issue": "2",
+      "key": "pone.0249268.ref014",
+      "doi-asserted-by": "crossref",
+      "first-page": "103",
+      "DOI": "10.1016/j.jshs.2020.02.001",
+      "article-title": "Coronavirus disease (COVID-19): The need to maintain regular physical activity while taking precautions",
+      "volume": "9",
+      "author": "P Chen",
+      "year": "2020",
+      "journal-title": "J Sport Health Sci"
+    },
+    {
+      "issue": "4",
+      "key": "pone.0249268.ref015",
+      "doi-asserted-by": "crossref",
+      "first-page": "83",
+      "DOI": "10.5960/dzsm.2020.432",
+      "article-title": "Sport in Zeiten von Corona",
+      "volume": "71",
+      "author": "W Bloch",
+      "year": "2020",
+      "journal-title": "Dtsch Z Sportmed"
+    },
+    {
+      "key": "pone.0249268.ref016",
+      "volume-title": "Health economic assessment tool (HEAT) for walking and for cycling",
+      "author": "S Kahlmeier",
+      "year": "2017"
+    },
+    {
+      "key": "pone.0249268.ref017",
+      "doi-asserted-by": "crossref",
+      "first-page": "77",
+      "DOI": "10.1007/s40572-018-0179-y",
+      "article-title": "A Review of Epidemiologic Studies on Greenness and Health: Updated Literature Through 2017.",
+      "volume": "5",
+      "author": "KC Fong",
+      "year": "2018",
+      "journal-title": "Curr Environ Health Rep. März"
+    },
+    {
+      "key": "pone.0249268.ref018",
+      "doi-asserted-by": "crossref",
+      "first-page": "456",
+      "DOI": "10.1186/1471-2458-10-456",
+      "article-title": "A systematic review of evidence for the added benefits to health of exposure to natural environments",
+      "volume": "10",
+      "author": "DE Bowler",
+      "year": "2010",
+      "journal-title": "BMC Public Health"
+    },
+    {
+      "issue": "11",
+      "key": "pone.0249268.ref019",
+      "doi-asserted-by": "crossref",
+      "first-page": "5188",
+      "DOI": "10.1073/pnas.1807504116",
+      "article-title": "Residential green space in childhood is associated with lower risk of psychiatric disorders from adolescence into adulthood",
+      "volume": "116",
+      "author": "K Engemann",
+      "year": "2019",
+      "journal-title": "Proc Natl Acad Sci USA"
+    },
+    {
+      "issue": "1",
+      "key": "pone.0249268.ref020",
+      "doi-asserted-by": "crossref",
+      "first-page": "207",
+      "DOI": "10.1146/annurev-publhealth-032013-182443",
+      "article-title": "Nature and Health",
+      "volume": "35",
+      "author": "T Hartig",
+      "year": "2014",
+      "journal-title": "Annu Rev Public Health"
+    },
+    {
+      "key": "pone.0249268.ref021",
+      "article-title": "The Growth of Home Fitness Apps",
+      "author": "C Ang",
+      "year": "2020",
+      "journal-title": "Visual Capitalist"
+    },
+    {
+      "key": "pone.0249268.ref022",
+      "doi-asserted-by": "crossref",
+      "first-page": "109413",
+      "DOI": "10.1016/j.jenvman.2019.109413",
+      "article-title": "Factors influencing park popularity for mountain bikers, walkers and runners as indicated by social media route data",
+      "volume": "249",
+      "author": "P Norman",
+      "year": "2019",
+      "journal-title": "J Environ Manage"
+    },
+    {
+      "key": "pone.0249268.ref023",
+      "first-page": "38",
+      "article-title": "Geolocated social media as a rapid indicator of park visitation and equitable park access. Comput Environ Urban Syst",
+      "volume": "72",
+      "author": "ZA Hamstead",
+      "year": "2018",
+      "journal-title": "November"
+    },
+    {
+      "issue": "8",
+      "key": "pone.0249268.ref024",
+      "doi-asserted-by": "crossref",
+      "first-page": "2153",
+      "DOI": "10.1890/15-0113.1",
+      "article-title": "Where have all the people gone? Enhancing global conservation using night lights and social media.",
+      "volume": "25",
+      "author": "N Levin",
+      "year": "2015",
+      "journal-title": "Ecol Appl"
+    },
+    {
+      "key": "pone.0249268.ref025",
+      "unstructured": "Mota VT da, Pickering C. How can we use social media to know more about visitors to natural areas? In: Dehez J, Herausgeber. Bordeaux; 2012."
+    },
+    {
+      "key": "pone.0249268.ref026",
+      "doi-asserted-by": "crossref",
+      "first-page": "781",
+      "DOI": "10.1007/s13280-018-1020-4",
+      "article-title": "Using crowd-sourced photos to assess seasonal patterns of visitor use in mountain-protected areas",
+      "volume": "47",
+      "author": "C Walden-Schreiner",
+      "year": "2018",
+      "journal-title": "Ambio"
+    },
+    {
+      "key": "pone.0249268.ref027",
+      "doi-asserted-by": "crossref",
+      "first-page": "2976",
+      "DOI": "10.1038/srep02976",
+      "article-title": "Using social media to quantify nature-based tourism and recreation",
+      "volume": "3",
+      "author": "SA Wood",
+      "year": "2013",
+      "journal-title": "Sci Rep"
+    },
+    {
+      "key": "pone.0249268.ref028",
+      "unstructured": "Strava, Inc. Strava [Internet]. Strava Inc; Verfügbar unter: strava.com."
+    },
+    {
+      "key": "pone.0249268.ref029",
+      "unstructured": "Slavonia M. Sampling Strava | Mark Slavonia [Internet]. 2020 [zitiert 9. Dezember 2020]. Verfügbar unter: http://markslavonia.com/sampling-strava/."
+    },
+    {
+      "key": "pone.0249268.ref030",
+      "unstructured": "Haden J. Strava Has 42 Million Users and Adds 1 Million More Each Month. Will It Be the Next Great Sports Brand? [Internet]. Inc.com. 2019 [zitiert 15. Mai 2020]. Verfügbar unter: https://www.inc.com/jeff-haden/10-years-in-strava-now-adds-1-million-users-a-month-but-can-it-become-next-great-sports-brand.html."
+    },
+    {
+      "key": "pone.0249268.ref031",
+      "unstructured": "Strava Inc. Strava Milestones: 50 Million Athletes and 3 Billion Activity Uploads [Internet]. Strava. 2020 [zitiert 9. Dezember 2020]. Verfügbar unter: https://blog.strava.com/press/strava-milestones-50-million-athletes-and-3-billion-activity-uploads/."
+    },
+    {
+      "key": "pone.0249268.ref032",
+      "unstructured": "Bundesinstitut für Bau, Stadt- und Raumforschung. BBSR—Komponenten der Raumbeobachtung—Städte und Gemeinden [Internet]. [zitiert 4. Juni 2020]. Verfügbar unter: https://www.bbsr.bund.de/BBSR/DE/forschung/raumbeobachtung/Komponenten/VergleichendeStadtbeobachtung/staedte-gemeinden/staedte-gemeinden.html."
+    },
+    {
+      "key": "pone.0249268.ref033",
+      "unstructured": "National Centers for Environmental Information. State of the Climate | National Centers for Environmental Information (NCEI) [Internet]. 2020 [zitiert 9. Dezember 2020]. Verfügbar unter: https://www.ncdc.noaa.gov/sotc/."
+    },
+    {
+      "key": "pone.0249268.ref034",
+      "unstructured": "Verband Deutscher Naturparke e.V. Naturparke finden: VDN—Verband Deutscher Naturparke e.V. [Internet]. 2020 [zitiert 9. Dezember 2020]. Verfügbar unter: https://www.naturparke.de/naturparke/naturparke-finden.html?tx_fenatureparks_search%5Bcontroller%5D=Search&cHash=7ff6b89e5efb624f1ebd3a3359a3039b."
+    },
+    {
+      "key": "pone.0249268.ref035",
+      "unstructured": "Statistisches Bundesamt. 25 Quadratmeter Grünanlage stehen Bewohnerinnen und Bewohnern deutscher Metropolen im Schnitt zur Verfügung [Internet]. Statistisches Bundesamt. 2020a [zitiert 9. Dezember 2020]. Verfügbar unter: https://www.destatis.de/DE/Presse/Pressemitteilungen/Zahl-der-Woche/2020/PD20_37_p002.html."
+    },
+    {
+      "key": "pone.0249268.ref036",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1007/978-3-658-06473-0",
+      "volume-title": "Sportkonsum in Deutschland: Empirische Analysen zur Allokation von Zeit und Geld für Sport",
+      "author": "C Alfs",
+      "year": "2014"
+    },
+    {
+      "issue": "12",
+      "key": "pone.0249268.ref037",
+      "article-title": "Temporal, seasonal and weather effects on cycle volume: an ecological study",
+      "volume": "11",
+      "author": "S Tin Tin",
+      "year": "2012",
+      "journal-title": "Environ Health"
+    },
+    {
+      "key": "pone.0249268.ref038",
+      "unstructured": "Thomas T, Jaarsma R, Tutert B. Temporal variations of bicycle demand in the Netherlands: The influence of weather on cycling. In: 88th TRB Annual Meeting, 11–15 January 2009, Washington DC, USA. Washington, United States; 2009. S. 17."
+    },
+    {
+      "key": "pone.0249268.ref039",
+      "volume-title": "Akaike information criterion statistics",
+      "author": "Y Sakamoto",
+      "year": "1986"
+    },
+    {
+      "issue": "3",
+      "key": "pone.0249268.ref040",
+      "first-page": "189",
+      "article-title": "u. a. Bootstrap confidence intervalsCommentCommentCommentCommentRejoinder",
+      "volume": "11",
+      "author": "TJ DiCiccio",
+      "year": "1996",
+      "journal-title": "Statistical Science. September"
+    },
+    {
+      "key": "pone.0249268.ref041",
+      "author": "A Canty",
+      "year": "2019",
+      "journal-title": "boot: Bootstrap R (S-Plus) Functions"
+    },
+    {
+      "key": "pone.0249268.ref042",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1017/CBO9780511802843",
+      "volume-title": "Bootstrap methods and their application",
+      "author": "AC Davison",
+      "year": "1997"
+    },
+    {
+      "key": "pone.0249268.ref043",
+      "unstructured": "Gohel D. flextable: Functions for Tabular Reporting [Internet]. 2020. Verfügbar unter: https://CRAN.R-project.org/package=flextable."
+    },
+    {
+      "key": "pone.0249268.ref044",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Müller K. here: A Simpler Way to Find Your Files [Internet]. 2017. Verfügbar unter: https://CRAN.R-project.org/package=here.",
+      "DOI": "10.32614/CRAN.package.here"
+    },
+    {
+      "key": "pone.0249268.ref045",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Grolemund G, Wickham H. Dates and Times Made Easy with lubridate [Internet]. 2011. Verfügbar unter: http://www.jstatsoft.org/v40/i03/.",
+      "DOI": "10.18637/jss.v040.i03"
+    },
+    {
+      "key": "pone.0249268.ref046",
+      "unstructured": "Barton K. MuMIn: Multi-Model Inference. 2020."
+    },
+    {
+      "key": "pone.0249268.ref047",
+      "unstructured": "Gohel D. officer: Manipulation of Microsoft Word and PowerPoint Document [Internet]. 2020. Verfügbar unter: https://CRAN.R-project.org/package=officer."
+    },
+    {
+      "key": "pone.0249268.ref048",
+      "author": "H Wickham",
+      "year": "2019",
+      "journal-title": "readxl: Read Excel Files"
+    },
+    {
+      "issue": "43",
+      "key": "pone.0249268.ref049",
+      "doi-asserted-by": "crossref",
+      "first-page": "1686",
+      "DOI": "10.21105/joss.01686",
+      "article-title": "Welcome to the Tidyverse",
+      "volume": "4",
+      "author": "H Wickham",
+      "year": "2019",
+      "journal-title": "JOSS"
+    },
+    {
+      "key": "pone.0249268.ref050",
+      "author": "J Hamman",
+      "year": "2020",
+      "journal-title": "ciTools: Confidence or Prediction Intervals, Quantiles, and Probabilities for Statistical Models"
+    },
+    {
+      "key": "pone.0249268.ref051",
+      "author": "P Murrell",
+      "year": "2014",
+      "journal-title": "gridBase: Integration of base and grid graphics"
+    },
+    {
+      "key": "pone.0249268.ref052",
+      "volume-title": "Lattice: Multivariate Data Visualization with R",
+      "author": "Springer",
+      "year": "2008"
+    },
+    {
+      "key": "pone.0249268.ref053",
+      "author": "RJ Hijmans",
+      "year": "2020",
+      "journal-title": "raster: Geographic Data Analysis and Modeling"
+    },
+    {
+      "key": "pone.0249268.ref054",
+      "unstructured": "Bundesamt für Naturschutz. Naturparke 2020. BfN, Bonn, Germany; 2020."
+    },
+    {
+      "key": "pone.0249268.ref055",
+      "unstructured": "Eisenberger D. Pressemitteilung—Fahrrad-und E-Bike-Industrie trotzen der Corona-Krise [Internet]. ZIV Zweirad-Industrie-Verband; 2020 Sep. Verfügbar unter: https://www.ziv-zweirad.de/fileadmin/redakteure/Downloads/PDFs/PM_2020_02.09._Fahrradmarkt_Stimmungsbarometer_1._HJ_2020.pdf."
+    },
+    {
+      "key": "pone.0249268.ref056",
+      "unstructured": "Google LLC. Google COVID-19 Community Mobility Report [Internet]. 2020 Mai [zitiert 25. Mai 2020]. Verfügbar unter: https://www.google.com/covid19/mobility/."
+    },
+    {
+      "key": "pone.0249268.ref057",
+      "unstructured": "Wichert J. Definition: Kurzarbeit [Internet]. https://wirtschaftslexikon.gabler.de/definition/kurzarbeit-39815. Springer Fachmedien Wiesbaden GmbH; [zitiert 9. Dezember 2020]. Verfügbar unter: https://wirtschaftslexikon.gabler.de/definition/kurzarbeit-39815/version-263215."
+    },
+    {
+      "key": "pone.0249268.ref058",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Bundesagentur für Arbeit. Statistik der Bundesagentur für Arbeit [Internet]. [zitiert 26. April 2020]. Verfügbar unter: https://statistik.arbeitsagentur.de/.",
+      "DOI": "10.5771/0947-9856-2020-2-78"
+    },
+    {
+      "key": "pone.0249268.ref059",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Porsch R, Porsch T. Fernunterricht als Ausnahmesituation. In: Fickermann D, Edelstein B, Herausgeber. „Langsam vermisse ich die Schule.”[Internet]. Waxmann Verlag GmbH; 2020 [zitiert 7. September 2020]. S. 61–78. Verfügbar unter: https://www.waxmann.com/dds_beiheft_16/.",
+      "DOI": "10.31244/9783830992318.03"
+    },
+    {
+      "key": "pone.0249268.ref060",
+      "unstructured": "Lerch I. Umfrage bei Eltern: Stress durch Homeschooling [Internet]. 2020 Juni [zitiert 18. Juni 2020]. Verfügbar unter: https://www.ndr.de/nachrichten/info/Corona-Umfrage-Eltern-durch-Kinderbetreuung-gestresst,kinderbetreuung220.html."
+    },
+    {
+      "key": "pone.0249268.ref061",
+      "unstructured": "Deutscher Olympischer Sportbund e.V. Bestandserhebung 2019 [Internet]. 2020 Jan [zitiert 16. September 2020]. Verfügbar unter: https://cdn.dosb.de/user_upload/www.dosb.de/medien/BE/BE-Heft_2019.pdf."
+    },
+    {
+      "key": "pone.0249268.ref062",
+      "unstructured": "Sholeh. Deutscher Fitnessmarkt [Internet]. Arbeitgeberverband deutscher Fitness- und Gesundheits-Anlagen. [zitiert 16. September 2020]. Verfügbar unter: https://dssv.de/presse/statistik/deutscher-fitnessmarkt/."
+    },
+    {
+      "key": "pone.0249268.ref063",
+      "unstructured": "Bayer A. Häusliche Gewalt in Brandenburg während Lockdown angestiegen [Internet]. 2020 Juli [zitiert 7. Juli 2020]. Verfügbar unter: https://www.rbb24.de/studiofrankfurt/panorama/coronavirus/beitraege_neu/2020/07/corona-gewalt-gegen-frauen-lockerungen-lockdown-partnerschaft-brandenburg-haeuslich-gewalt.html."
+    },
+    {
+      "key": "pone.0249268.ref064",
+      "unstructured": "Hecht P. Häusliche Gewalt und Corona: Eine doppelte Bedrohung [Internet]. 2020 Mai [zitiert 7. Juli 2020]. Verfügbar unter: https://taz.de/Haeusliche-Gewalt-und-Corona/!5682407/."
+    },
+    {
+      "key": "pone.0249268.ref065",
+      "doi-asserted-by": "crossref",
+      "first-page": "102176",
+      "DOI": "10.1016/j.ajp.2020.102176",
+      "article-title": "The role of mental health services during the COVID-19 outbreak in China",
+      "volume": "52",
+      "author": "C Kang",
+      "year": "2020",
+      "journal-title": "Asian Journal of Psychiatry. August"
+    },
+    {
+      "key": "pone.0249268.ref066",
+      "unstructured": "Statistisches Bundesamt (Destatis). Daten aus dem Gemeindeverzeichnis: Städte in Deutschland nach Fläche, Bevölkerung und Bevölkerungsdichte [Internet]. 2020b. Verfügbar unter: https://www.destatis.de/DE/Themen/Laender-Regionen/Regionales/Gemeindeverzeichnis/Administrativ/05-staedte.html."
+    },
+    {
+      "issue": "8",
+      "key": "pone.0249268.ref067",
+      "doi-asserted-by": "crossref",
+      "first-page": "430",
+      "DOI": "10.1016/j.tree.2005.05.013",
+      "article-title": "Biodiversity conservation and the extinction of experience",
+      "volume": "20",
+      "author": "JR Miller",
+      "year": "2005",
+      "journal-title": "Trends Ecol Evol"
+    },
+    {
+      "key": "pone.0249268.ref068",
+      "unstructured": "Strava Inc. Strava—Das Sportjahr in Zahlen. 2018."
+    },
+    {
+      "issue": "4",
+      "key": "pone.0249268.ref069",
+      "doi-asserted-by": "crossref",
+      "first-page": "495",
+      "DOI": "10.1080/01441640701806612",
+      "article-title": "Making Cycling Irresistible: Lessons from The Netherlands, Denmark and Germany",
+      "volume": "28",
+      "author": "J Pucher",
+      "year": "2008",
+      "journal-title": "Transp Rev"
+    },
+    {
+      "issue": "5",
+      "key": "pone.0249268.ref070",
+      "doi-asserted-by": "crossref",
+      "first-page": "1637",
+      "DOI": "10.3982/ECTA6690",
+      "article-title": "Gender Differences in Competition: Evidence\\\\ From a Matrilineal and a Patriarchal Society",
+      "volume": "77",
+      "author": "U Gneezy",
+      "year": "2009",
+      "journal-title": "Econometrica"
+    },
+    {
+      "key": "pone.0249268.ref071",
+      "doi-asserted-by": "crossref",
+      "first-page": "601",
+      "DOI": "10.1146/annurev-economics-111809-125122",
+      "article-title": "Gender and Competition",
+      "volume": "3",
+      "author": "M Niederle",
+      "year": "2011",
+      "journal-title": "Annu Rev Econ"
+    }
+  ],
+  "container-title": [
+    "PLOS ONE"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://dx.plos.org/10.1371/journal.pone.0249268",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2024,
+        8,
+        30
+      ]
+    ],
+    "date-time": "2024-08-30T08:40:19Z",
+    "timestamp": 1725007219000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://dx.plos.org/10.1371/journal.pone.0249268"
+    }
+  },
+  "subtitle": [],
+  "editor": [
+    {
+      "given": "Pasquale",
+      "family": "Avino",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "editor"
+        }
+      ]
+    }
+  ],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2021,
+        5,
+        6
+      ]
+    ]
+  },
+  "references-count": 71,
+  "journal-issue": {
+    "issue": "5",
+    "published-online": {
+      "date-parts": [
+        [
+          2021,
+          5,
+          6
+        ]
+      ]
+    }
+  },
+  "URL": "https://doi.org/10.1371/journal.pone.0249268",
+  "relation": {},
+  "ISSN": [
+    "1932-6203"
+  ],
+  "issn-type": [
+    {
+      "value": "1932-6203",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2021,
+        5,
+        6
+      ]
+    ]
+  }
+}

@@ -1,0 +1,3471 @@
+{
+  "last-modified-date": {
+    "value": 1793209610393
+  },
+  "group": [
+    {
+      "last-modified-date": {
+        "value": 1793209610393
+      },
+      "external-ids": {
+        "external-id": [
+          {
+            "external-id-type": "doi",
+            "external-id-value": "10.64898/2026.10.22.761025",
+            "external-id-normalized": {
+              "value": "10.64898/2026.10.22.761025",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": {
+              "value": "https://doi.org/10.64898/2026.10.22.761025"
+            },
+            "external-id-relationship": "self"
+          }
+        ]
+      },
+      "work-summary": [
+        {
+          "put-code": 231196267,
+          "created-date": {
+            "value": 1792946461759
+          },
+          "last-modified-date": {
+            "value": 1793209610393
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0001-9884-1913",
+              "path": "0000-0001-9884-1913",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Crossref"
+            },
+            "assertion-origin-orcid": null,
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": null
+          },
+          "title": {
+            "title": {
+              "value": "Causal analysis of rock–biodiversity relationships over the global Phanerozoic challenges rock record bias and common cause hypothesis"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.64898/2026.10.22.761025",
+                "external-id-normalized": {
+                  "value": "10.64898/2026.10.22.761025",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": {
+                  "value": "https://doi.org/10.64898/2026.10.22.761025"
+                },
+                "external-id-relationship": "self"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://doi.org/10.64898/2026.10.22.761025"
+          },
+          "type": "preprint",
+          "publication-date": {
+            "year": {
+              "value": "2026"
+            },
+            "month": {
+              "value": "10"
+            },
+            "day": {
+              "value": "25"
+            }
+          },
+          "journal-title": null,
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/231196267",
+          "display-index": "1"
+        }
+      ]
+    },
+    {
+      "last-modified-date": {
+        "value": 1791528487300
+      },
+      "external-ids": {
+        "external-id": [
+          {
+            "external-id-type": "doi",
+            "external-id-value": "10.1111/geb.70315",
+            "external-id-normalized": {
+              "value": "10.1111/geb.70315",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": {
+              "value": "https://doi.org/10.1111/geb.70315"
+            },
+            "external-id-relationship": "self"
+          }
+        ]
+      },
+      "work-summary": [
+        {
+          "put-code": 229271143,
+          "created-date": {
+            "value": 1791528487300
+          },
+          "last-modified-date": {
+            "value": 1791528487300
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0001-9884-1913",
+              "path": "0000-0001-9884-1913",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Crossref"
+            },
+            "assertion-origin-orcid": null,
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": null
+          },
+          "title": {
+            "title": {
+              "value": "FINS—A Global Occurrence Dataset of Fossil Neoselachians From the Cretaceous to the Quaternary"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.1111/geb.70315",
+                "external-id-normalized": {
+                  "value": "10.1111/geb.70315",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": {
+                  "value": "https://doi.org/10.1111/geb.70315"
+                },
+                "external-id-relationship": "self"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://doi.org/10.1111/geb.70315"
+          },
+          "type": "journal-article",
+          "publication-date": {
+            "year": {
+              "value": "2026"
+            },
+            "month": {
+              "value": "10"
+            },
+            "day": null
+          },
+          "journal-title": {
+            "value": "Global Ecology and Biogeography"
+          },
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/229271143",
+          "display-index": "1"
+        }
+      ]
+    },
+    {
+      "last-modified-date": {
+        "value": 1787106772037
+      },
+      "external-ids": {
+        "external-id": [
+          {
+            "external-id-type": "doi",
+            "external-id-value": "10.1098/rspb.2026.1158",
+            "external-id-normalized": {
+              "value": "10.1098/rspb.2026.1158",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": {
+              "value": "https://doi.org/10.1098/rspb.2026.1158"
+            },
+            "external-id-relationship": "self"
+          }
+        ]
+      },
+      "work-summary": [
+        {
+          "put-code": 224218601,
+          "created-date": {
+            "value": 1787106772037
+          },
+          "last-modified-date": {
+            "value": 1787106772037
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0001-9884-1913",
+              "path": "0000-0001-9884-1913",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Crossref"
+            },
+            "assertion-origin-orcid": null,
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": null
+          },
+          "title": {
+            "title": {
+              "value": "Reduced extinction risk for autotrophs in the open ocean"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.1098/rspb.2026.1158",
+                "external-id-normalized": {
+                  "value": "10.1098/rspb.2026.1158",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": {
+                  "value": "https://doi.org/10.1098/rspb.2026.1158"
+                },
+                "external-id-relationship": "self"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://doi.org/10.1098/rspb.2026.1158"
+          },
+          "type": "journal-article",
+          "publication-date": {
+            "year": {
+              "value": "2026"
+            },
+            "month": {
+              "value": "08"
+            },
+            "day": {
+              "value": "19"
+            }
+          },
+          "journal-title": {
+            "value": "Proceedings of the Royal Society B: Biological Sciences"
+          },
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/224218601",
+          "display-index": "1"
+        }
+      ]
+    },
+    {
+      "last-modified-date": {
+        "value": 1785221351731
+      },
+      "external-ids": {
+        "external-id": [
+          {
+            "external-id-type": "doi",
+            "external-id-value": "10.64898/2026.04.08.716966",
+            "external-id-normalized": {
+              "value": "10.64898/2026.04.08.716966",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": {
+              "value": "https://doi.org/10.64898/2026.04.08.716966"
+            },
+            "external-id-relationship": "self"
+          }
+        ]
+      },
+      "work-summary": [
+        {
+          "put-code": 211355922,
+          "created-date": {
+            "value": 1775868158570
+          },
+          "last-modified-date": {
+            "value": 1785221351731
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0001-9884-1913",
+              "path": "0000-0001-9884-1913",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Crossref"
+            },
+            "assertion-origin-orcid": null,
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": null
+          },
+          "title": {
+            "title": {
+              "value": "Robust evidence for modest neoselachian diversity loss across the K/Pg: Response to Guinot et al"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.64898/2026.04.08.716966",
+                "external-id-normalized": {
+                  "value": "10.64898/2026.04.08.716966",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": {
+                  "value": "https://doi.org/10.64898/2026.04.08.716966"
+                },
+                "external-id-relationship": "self"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://doi.org/10.64898/2026.04.08.716966"
+          },
+          "type": "preprint",
+          "publication-date": {
+            "year": {
+              "value": "2026"
+            },
+            "month": {
+              "value": "04"
+            },
+            "day": {
+              "value": "10"
+            }
+          },
+          "journal-title": null,
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/211355922",
+          "display-index": "1"
+        }
+      ]
+    },
+    {
+      "last-modified-date": {
+        "value": 1774511672250
+      },
+      "external-ids": {
+        "external-id": [
+          {
+            "external-id-type": "doi",
+            "external-id-value": "10.1111/geb.70226",
+            "external-id-normalized": {
+              "value": "10.1111/geb.70226",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": {
+              "value": "https://doi.org/10.1111/geb.70226"
+            },
+            "external-id-relationship": "self"
+          }
+        ]
+      },
+      "work-summary": [
+        {
+          "put-code": 209750810,
+          "created-date": {
+            "value": 1774511672250
+          },
+          "last-modified-date": {
+            "value": 1774511672250
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0001-9884-1913",
+              "path": "0000-0001-9884-1913",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Crossref"
+            },
+            "assertion-origin-orcid": null,
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": null
+          },
+          "title": {
+            "title": {
+              "value": "The Extinction Risk–Range Change Relationship: Evidence From the Fossil Record"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.1111/geb.70226",
+                "external-id-normalized": {
+                  "value": "10.1111/geb.70226",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": {
+                  "value": "https://doi.org/10.1111/geb.70226"
+                },
+                "external-id-relationship": "self"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://doi.org/10.1111/geb.70226"
+          },
+          "type": "journal-article",
+          "publication-date": {
+            "year": {
+              "value": "2026"
+            },
+            "month": {
+              "value": "03"
+            },
+            "day": null
+          },
+          "journal-title": {
+            "value": "Global Ecology and Biogeography"
+          },
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/209750810",
+          "display-index": "1"
+        }
+      ]
+    },
+    {
+      "last-modified-date": {
+        "value": 1768469760190
+      },
+      "external-ids": {
+        "external-id": [
+          {
+            "external-id-type": "doi",
+            "external-id-value": "10.1098/rspb.2025.2272",
+            "external-id-normalized": {
+              "value": "10.1098/rspb.2025.2272",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": {
+              "value": "https://doi.org/10.1098/rspb.2025.2272"
+            },
+            "external-id-relationship": "self"
+          }
+        ]
+      },
+      "work-summary": [
+        {
+          "put-code": 202507826,
+          "created-date": {
+            "value": 1768469760190
+          },
+          "last-modified-date": {
+            "value": 1768469760190
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0001-9884-1913",
+              "path": "0000-0001-9884-1913",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Crossref"
+            },
+            "assertion-origin-orcid": null,
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": null
+          },
+          "title": {
+            "title": {
+              "value": "Global extinction events and persistent age-dependency in sharks and rays over the past 145 million years"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.1098/rspb.2025.2272",
+                "external-id-normalized": {
+                  "value": "10.1098/rspb.2025.2272",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": {
+                  "value": "https://doi.org/10.1098/rspb.2025.2272"
+                },
+                "external-id-relationship": "self"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://doi.org/10.1098/rspb.2025.2272"
+          },
+          "type": "journal-article",
+          "publication-date": {
+            "year": {
+              "value": "2025"
+            },
+            "month": {
+              "value": "12"
+            },
+            "day": {
+              "value": "17"
+            }
+          },
+          "journal-title": {
+            "value": "Proceedings of the Royal Society B: Biological Sciences"
+          },
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/202507826",
+          "display-index": "1"
+        }
+      ]
+    },
+    {
+      "last-modified-date": {
+        "value": 1763874152528
+      },
+      "external-ids": {
+        "external-id": [
+          {
+            "external-id-type": "doi",
+            "external-id-value": "10.1101/2025.11.21.689757",
+            "external-id-normalized": {
+              "value": "10.1101/2025.11.21.689757",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": {
+              "value": "https://doi.org/10.1101/2025.11.21.689757"
+            },
+            "external-id-relationship": "self"
+          }
+        ]
+      },
+      "work-summary": [
+        {
+          "put-code": 197680461,
+          "created-date": {
+            "value": 1763874152528
+          },
+          "last-modified-date": {
+            "value": 1763874152528
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0001-9884-1913",
+              "path": "0000-0001-9884-1913",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Crossref"
+            },
+            "assertion-origin-orcid": null,
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": null
+          },
+          "title": {
+            "title": {
+              "value": "FINS - A global occurrence dataset of fossil neoselachians from the Cretaceous to the Quaternary"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.1101/2025.11.21.689757",
+                "external-id-normalized": {
+                  "value": "10.1101/2025.11.21.689757",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": {
+                  "value": "https://doi.org/10.1101/2025.11.21.689757"
+                },
+                "external-id-relationship": "self"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://doi.org/10.1101/2025.11.21.689757"
+          },
+          "type": "preprint",
+          "publication-date": {
+            "year": {
+              "value": "2025"
+            },
+            "month": {
+              "value": "11"
+            },
+            "day": {
+              "value": "22"
+            }
+          },
+          "journal-title": null,
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/197680461",
+          "display-index": "1"
+        }
+      ]
+    },
+    {
+      "last-modified-date": {
+        "value": 1745395348249
+      },
+      "external-ids": {
+        "external-id": [
+          {
+            "external-id-type": "doi",
+            "external-id-value": "10.21425/fob.18.135081",
+            "external-id-normalized": {
+              "value": "10.21425/fob.18.135081",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": {
+              "value": "https://doi.org/10.21425/fob.18.135081"
+            },
+            "external-id-relationship": "self"
+          }
+        ]
+      },
+      "work-summary": [
+        {
+          "put-code": 182748478,
+          "created-date": {
+            "value": 1745395348249
+          },
+          "last-modified-date": {
+            "value": 1745395348249
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0001-9884-1913",
+              "path": "0000-0001-9884-1913",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Crossref"
+            },
+            "assertion-origin-orcid": null,
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": null
+          },
+          "title": {
+            "title": {
+              "value": "Europe’s lost landscape sculptors: Today’s potential range of the extinct elephant Palaeoloxodon antiquus"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.21425/fob.18.135081",
+                "external-id-normalized": {
+                  "value": "10.21425/fob.18.135081",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": {
+                  "value": "https://doi.org/10.21425/fob.18.135081"
+                },
+                "external-id-relationship": "self"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://doi.org/10.21425/fob.18.135081"
+          },
+          "type": "journal-article",
+          "publication-date": {
+            "year": {
+              "value": "2025"
+            },
+            "month": {
+              "value": "04"
+            },
+            "day": {
+              "value": "23"
+            }
+          },
+          "journal-title": {
+            "value": "Frontiers of Biogeography"
+          },
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/182748478",
+          "display-index": "1"
+        }
+      ]
+    },
+    {
+      "last-modified-date": {
+        "value": 1737384174796
+      },
+      "external-ids": {
+        "external-id": [
+          {
+            "external-id-type": "doi",
+            "external-id-value": "10.5194/egusphere-egu24-19127",
+            "external-id-normalized": {
+              "value": "10.5194/egusphere-egu24-19127",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": {
+              "value": "https://doi.org/10.5194/egusphere-egu24-19127"
+            },
+            "external-id-relationship": "self"
+          }
+        ]
+      },
+      "work-summary": [
+        {
+          "put-code": 155145369,
+          "created-date": {
+            "value": 1710162378958
+          },
+          "last-modified-date": {
+            "value": 1737384174796
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0001-9884-1913",
+              "path": "0000-0001-9884-1913",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Crossref"
+            },
+            "assertion-origin-orcid": null,
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": null
+          },
+          "title": {
+            "title": {
+              "value": "Climate legacies in macroevolutionary dynamics"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.5194/egusphere-egu24-19127",
+                "external-id-normalized": {
+                  "value": "10.5194/egusphere-egu24-19127",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": {
+                  "value": "https://doi.org/10.5194/egusphere-egu24-19127"
+                },
+                "external-id-relationship": "self"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://doi.org/10.5194/egusphere-egu24-19127"
+          },
+          "type": "preprint",
+          "publication-date": {
+            "year": {
+              "value": "2025"
+            },
+            "month": {
+              "value": "01"
+            },
+            "day": {
+              "value": "20"
+            }
+          },
+          "journal-title": null,
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/155145369",
+          "display-index": "0"
+        }
+      ]
+    },
+    {
+      "last-modified-date": {
+        "value": 1737373499269
+      },
+      "external-ids": {
+        "external-id": [
+          {
+            "external-id-type": "doi",
+            "external-id-value": "10.5194/egusphere-egu24-413",
+            "external-id-normalized": {
+              "value": "10.5194/egusphere-egu24-413",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": {
+              "value": "https://doi.org/10.5194/egusphere-egu24-413"
+            },
+            "external-id-relationship": "self"
+          }
+        ]
+      },
+      "work-summary": [
+        {
+          "put-code": 154948035,
+          "created-date": {
+            "value": 1709895124264
+          },
+          "last-modified-date": {
+            "value": 1737373499269
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0001-9884-1913",
+              "path": "0000-0001-9884-1913",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Crossref"
+            },
+            "assertion-origin-orcid": null,
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": null
+          },
+          "title": {
+            "title": {
+              "value": "Predicting extinction risk by range loss: Evidence from the fossil record"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.5194/egusphere-egu24-413",
+                "external-id-normalized": {
+                  "value": "10.5194/egusphere-egu24-413",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": {
+                  "value": "https://doi.org/10.5194/egusphere-egu24-413"
+                },
+                "external-id-relationship": "self"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://doi.org/10.5194/egusphere-egu24-413"
+          },
+          "type": "preprint",
+          "publication-date": {
+            "year": {
+              "value": "2025"
+            },
+            "month": {
+              "value": "01"
+            },
+            "day": {
+              "value": "20"
+            }
+          },
+          "journal-title": null,
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/154948035",
+          "display-index": "0"
+        }
+      ]
+    },
+    {
+      "last-modified-date": {
+        "value": 1762433462200
+      },
+      "external-ids": {
+        "external-id": [
+          {
+            "external-id-type": "doi",
+            "external-id-value": "10.1111/gcb.70110",
+            "external-id-normalized": {
+              "value": "10.1111/gcb.70110",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": null,
+            "external-id-relationship": "self"
+          },
+          {
+            "external-id-type": "eid",
+            "external-id-value": "2-s2.0-86000584568",
+            "external-id-normalized": {
+              "value": "2-s2.0-86000584568",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": null,
+            "external-id-relationship": "self"
+          }
+        ]
+      },
+      "work-summary": [
+        {
+          "put-code": 196203766,
+          "created-date": {
+            "value": 1762433462200
+          },
+          "last-modified-date": {
+            "value": 1762433462200
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0002-5982-8983",
+              "path": "0000-0002-5982-8983",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Scopus - Elsevier"
+            },
+            "assertion-origin-orcid": {
+              "uri": "https://orcid.org/0000-0002-2788-1173",
+              "path": "0000-0002-2788-1173",
+              "host": "orcid.org"
+            },
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": {
+              "value": "Gregor Hans Mathes"
+            }
+          },
+          "title": {
+            "title": {
+              "value": "Eco-Evolutionary Dynamics of Plant–Soil Feedbacks Explain the Spread Potential of a Plant Invader Under Climate Warming and Biocontrol Herbivory"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.1111/gcb.70110",
+                "external-id-normalized": {
+                  "value": "10.1111/gcb.70110",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "self"
+              },
+              {
+                "external-id-type": "eid",
+                "external-id-value": "2-s2.0-86000584568",
+                "external-id-normalized": {
+                  "value": "2-s2.0-86000584568",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "self"
+              },
+              {
+                "external-id-type": "issn",
+                "external-id-value": "13541013 13652486",
+                "external-id-normalized": {
+                  "value": "1354-1013",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "part-of"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://www.scopus.com/inward/record.url?eid=2-s2.0-86000584568&partnerID=MN8TOARS"
+          },
+          "type": "journal-article",
+          "publication-date": {
+            "year": {
+              "value": "2025"
+            },
+            "month": null,
+            "day": null
+          },
+          "journal-title": {
+            "value": "Global Change Biology"
+          },
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/196203766",
+          "display-index": "1"
+        }
+      ]
+    },
+    {
+      "last-modified-date": {
+        "value": 1762433461933
+      },
+      "external-ids": {
+        "external-id": [
+          {
+            "external-id-type": "doi",
+            "external-id-value": "10.1038/s41467-025-56589-0",
+            "external-id-normalized": {
+              "value": "10.1038/s41467-025-56589-0",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": null,
+            "external-id-relationship": "self"
+          },
+          {
+            "external-id-type": "eid",
+            "external-id-value": "2-s2.0-85218228393",
+            "external-id-normalized": {
+              "value": "2-s2.0-85218228393",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": null,
+            "external-id-relationship": "self"
+          }
+        ]
+      },
+      "work-summary": [
+        {
+          "put-code": 196203759,
+          "created-date": {
+            "value": 1762433461933
+          },
+          "last-modified-date": {
+            "value": 1762433461933
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0002-5982-8983",
+              "path": "0000-0002-5982-8983",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Scopus - Elsevier"
+            },
+            "assertion-origin-orcid": {
+              "uri": "https://orcid.org/0000-0002-2788-1173",
+              "path": "0000-0002-2788-1173",
+              "host": "orcid.org"
+            },
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": {
+              "value": "Gregor Hans Mathes"
+            }
+          },
+          "title": {
+            "title": {
+              "value": "Marine species and assemblage change foreshadowed by their thermal bias over Early Jurassic warming"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.1038/s41467-025-56589-0",
+                "external-id-normalized": {
+                  "value": "10.1038/s41467-025-56589-0",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "self"
+              },
+              {
+                "external-id-type": "eid",
+                "external-id-value": "2-s2.0-85218228393",
+                "external-id-normalized": {
+                  "value": "2-s2.0-85218228393",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "self"
+              },
+              {
+                "external-id-type": "issn",
+                "external-id-value": "20411723",
+                "external-id-normalized": {
+                  "value": "2041-1723",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "part-of"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85218228393&partnerID=MN8TOARS"
+          },
+          "type": "journal-article",
+          "publication-date": {
+            "year": {
+              "value": "2025"
+            },
+            "month": null,
+            "day": null
+          },
+          "journal-title": {
+            "value": "Nature Communications"
+          },
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/196203759",
+          "display-index": "1"
+        }
+      ]
+    },
+    {
+      "last-modified-date": {
+        "value": 1762433461551
+      },
+      "external-ids": {
+        "external-id": [
+          {
+            "external-id-type": "eid",
+            "external-id-value": "2-s2.0-105006727178",
+            "external-id-normalized": {
+              "value": "2-s2.0-105006727178",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": null,
+            "external-id-relationship": "self"
+          },
+          {
+            "external-id-type": "doi",
+            "external-id-value": "10.1017/ext.2025.2",
+            "external-id-normalized": {
+              "value": "10.1017/ext.2025.2",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": {
+              "value": "https://doi.org/10.1017/ext.2025.2"
+            },
+            "external-id-relationship": "self"
+          }
+        ]
+      },
+      "work-summary": [
+        {
+          "put-code": 180225626,
+          "created-date": {
+            "value": 1742202319181
+          },
+          "last-modified-date": {
+            "value": 1742818341414
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0001-9884-1913",
+              "path": "0000-0001-9884-1913",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Crossref"
+            },
+            "assertion-origin-orcid": null,
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": null
+          },
+          "title": {
+            "title": {
+              "value": "The effect of climate legacies on extinction dynamics: A systematic review"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.1017/ext.2025.2",
+                "external-id-normalized": {
+                  "value": "10.1017/ext.2025.2",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": {
+                  "value": "https://doi.org/10.1017/ext.2025.2"
+                },
+                "external-id-relationship": "self"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://doi.org/10.1017/ext.2025.2"
+          },
+          "type": "journal-article",
+          "publication-date": {
+            "year": {
+              "value": "2025"
+            },
+            "month": null,
+            "day": null
+          },
+          "journal-title": {
+            "value": "Cambridge Prisms: Extinction"
+          },
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/180225626",
+          "display-index": "1"
+        },
+        {
+          "put-code": 196203739,
+          "created-date": {
+            "value": 1762433461551
+          },
+          "last-modified-date": {
+            "value": 1762433461551
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0002-5982-8983",
+              "path": "0000-0002-5982-8983",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Scopus - Elsevier"
+            },
+            "assertion-origin-orcid": {
+              "uri": "https://orcid.org/0000-0002-2788-1173",
+              "path": "0000-0002-2788-1173",
+              "host": "orcid.org"
+            },
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": {
+              "value": "Gregor Hans Mathes"
+            }
+          },
+          "title": {
+            "title": {
+              "value": "The effect of climate legacies on extinction dynamics: A systematic review"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.1017/ext.2025.2",
+                "external-id-normalized": {
+                  "value": "10.1017/ext.2025.2",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "self"
+              },
+              {
+                "external-id-type": "eid",
+                "external-id-value": "2-s2.0-105006727178",
+                "external-id-normalized": {
+                  "value": "2-s2.0-105006727178",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "self"
+              },
+              {
+                "external-id-type": "issn",
+                "external-id-value": "27550958",
+                "external-id-normalized": {
+                  "value": "2755-0958",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "part-of"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://www.scopus.com/inward/record.url?eid=2-s2.0-105006727178&partnerID=MN8TOARS"
+          },
+          "type": "journal-article",
+          "publication-date": {
+            "year": {
+              "value": "2025"
+            },
+            "month": null,
+            "day": null
+          },
+          "journal-title": {
+            "value": "Cambridge Prisms Extinction"
+          },
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/196203739",
+          "display-index": "1"
+        }
+      ]
+    },
+    {
+      "last-modified-date": {
+        "value": 1762433461764
+      },
+      "external-ids": {
+        "external-id": [
+          {
+            "external-id-type": "eid",
+            "external-id-value": "2-s2.0-85201572505",
+            "external-id-normalized": {
+              "value": "2-s2.0-85201572505",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": null,
+            "external-id-relationship": "self"
+          },
+          {
+            "external-id-type": "doi",
+            "external-id-value": "10.1111/geb.13905",
+            "external-id-normalized": {
+              "value": "10.1111/geb.13905",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": {
+              "value": "https://doi.org/10.1111/geb.13905"
+            },
+            "external-id-relationship": "self"
+          }
+        ]
+      },
+      "work-summary": [
+        {
+          "put-code": 165819483,
+          "created-date": {
+            "value": 1724129914284
+          },
+          "last-modified-date": {
+            "value": 1757060926723
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0001-9884-1913",
+              "path": "0000-0001-9884-1913",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Crossref"
+            },
+            "assertion-origin-orcid": null,
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": null
+          },
+          "title": {
+            "title": {
+              "value": "Spatially Heterogeneous Responses of Planktonic Foraminiferal Assemblages Over 700,000 Years of Climate Change"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.1111/geb.13905",
+                "external-id-normalized": {
+                  "value": "10.1111/geb.13905",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": {
+                  "value": "https://doi.org/10.1111/geb.13905"
+                },
+                "external-id-relationship": "self"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://doi.org/10.1111/geb.13905"
+          },
+          "type": "journal-article",
+          "publication-date": {
+            "year": {
+              "value": "2024"
+            },
+            "month": {
+              "value": "11"
+            },
+            "day": null
+          },
+          "journal-title": {
+            "value": "Global Ecology and Biogeography"
+          },
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/165819483",
+          "display-index": "1"
+        },
+        {
+          "put-code": 196203752,
+          "created-date": {
+            "value": 1762433461764
+          },
+          "last-modified-date": {
+            "value": 1762433461764
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0002-5982-8983",
+              "path": "0000-0002-5982-8983",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Scopus - Elsevier"
+            },
+            "assertion-origin-orcid": {
+              "uri": "https://orcid.org/0000-0002-2788-1173",
+              "path": "0000-0002-2788-1173",
+              "host": "orcid.org"
+            },
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": {
+              "value": "Gregor Hans Mathes"
+            }
+          },
+          "title": {
+            "title": {
+              "value": "Spatially Heterogeneous Responses of Planktonic Foraminiferal Assemblages Over 700,000 Years of Climate Change"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.1111/geb.13905",
+                "external-id-normalized": {
+                  "value": "10.1111/geb.13905",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "self"
+              },
+              {
+                "external-id-type": "eid",
+                "external-id-value": "2-s2.0-85201572505",
+                "external-id-normalized": {
+                  "value": "2-s2.0-85201572505",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "self"
+              },
+              {
+                "external-id-type": "issn",
+                "external-id-value": "1466822X 14668238",
+                "external-id-normalized": {
+                  "value": "1466-822X",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "part-of"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85201572505&partnerID=MN8TOARS"
+          },
+          "type": "journal-article",
+          "publication-date": {
+            "year": {
+              "value": "2024"
+            },
+            "month": null,
+            "day": null
+          },
+          "journal-title": {
+            "value": "Global Ecology and Biogeography"
+          },
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/196203752",
+          "display-index": "1"
+        }
+      ]
+    },
+    {
+      "last-modified-date": {
+        "value": 1762433461677
+      },
+      "external-ids": {
+        "external-id": [
+          {
+            "external-id-type": "doi",
+            "external-id-value": "10.1002/rse2.367",
+            "external-id-normalized": {
+              "value": "10.1002/rse2.367",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": null,
+            "external-id-relationship": "self"
+          },
+          {
+            "external-id-type": "eid",
+            "external-id-value": "2-s2.0-85169330377",
+            "external-id-normalized": {
+              "value": "2-s2.0-85169330377",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": null,
+            "external-id-relationship": "self"
+          }
+        ]
+      },
+      "work-summary": [
+        {
+          "put-code": 196203748,
+          "created-date": {
+            "value": 1762433461677
+          },
+          "last-modified-date": {
+            "value": 1762433461677
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0002-5982-8983",
+              "path": "0000-0002-5982-8983",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Scopus - Elsevier"
+            },
+            "assertion-origin-orcid": {
+              "uri": "https://orcid.org/0000-0002-2788-1173",
+              "path": "0000-0002-2788-1173",
+              "host": "orcid.org"
+            },
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": {
+              "value": "Gregor Hans Mathes"
+            }
+          },
+          "title": {
+            "title": {
+              "value": "Automated visitor and wildlife monitoring with camera traps and machine learning"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.1002/rse2.367",
+                "external-id-normalized": {
+                  "value": "10.1002/rse2.367",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "self"
+              },
+              {
+                "external-id-type": "eid",
+                "external-id-value": "2-s2.0-85169330377",
+                "external-id-normalized": {
+                  "value": "2-s2.0-85169330377",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "self"
+              },
+              {
+                "external-id-type": "issn",
+                "external-id-value": "20563485",
+                "external-id-normalized": {
+                  "value": "2056-3485",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "part-of"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85169330377&partnerID=MN8TOARS"
+          },
+          "type": "journal-article",
+          "publication-date": {
+            "year": {
+              "value": "2024"
+            },
+            "month": null,
+            "day": null
+          },
+          "journal-title": {
+            "value": "Remote Sensing in Ecology and Conservation"
+          },
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/196203748",
+          "display-index": "1"
+        }
+      ]
+    },
+    {
+      "last-modified-date": {
+        "value": 1762433461720
+      },
+      "external-ids": {
+        "external-id": [
+          {
+            "external-id-type": "doi",
+            "external-id-value": "10.1007/s10531-024-02788-y",
+            "external-id-normalized": {
+              "value": "10.1007/s10531-024-02788-y",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": null,
+            "external-id-relationship": "self"
+          },
+          {
+            "external-id-type": "eid",
+            "external-id-value": "2-s2.0-85186423899",
+            "external-id-normalized": {
+              "value": "2-s2.0-85186423899",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": null,
+            "external-id-relationship": "self"
+          }
+        ]
+      },
+      "work-summary": [
+        {
+          "put-code": 196203750,
+          "created-date": {
+            "value": 1762433461720
+          },
+          "last-modified-date": {
+            "value": 1762433461720
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0002-5982-8983",
+              "path": "0000-0002-5982-8983",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Scopus - Elsevier"
+            },
+            "assertion-origin-orcid": {
+              "uri": "https://orcid.org/0000-0002-2788-1173",
+              "path": "0000-0002-2788-1173",
+              "host": "orcid.org"
+            },
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": {
+              "value": "Gregor Hans Mathes"
+            }
+          },
+          "title": {
+            "title": {
+              "value": "Bayesian analysis of biodiversity patterns via beam trawl versus video transect—a comparative case study of Svalbard rhodolith beds"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.1007/s10531-024-02788-y",
+                "external-id-normalized": {
+                  "value": "10.1007/s10531-024-02788-y",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "self"
+              },
+              {
+                "external-id-type": "eid",
+                "external-id-value": "2-s2.0-85186423899",
+                "external-id-normalized": {
+                  "value": "2-s2.0-85186423899",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "self"
+              },
+              {
+                "external-id-type": "issn",
+                "external-id-value": "09603115 15729710",
+                "external-id-normalized": {
+                  "value": "0960-3115",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "part-of"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85186423899&partnerID=MN8TOARS"
+          },
+          "type": "journal-article",
+          "publication-date": {
+            "year": {
+              "value": "2024"
+            },
+            "month": null,
+            "day": null
+          },
+          "journal-title": {
+            "value": "Biodiversity and Conservation"
+          },
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/196203750",
+          "display-index": "1"
+        },
+        {
+          "put-code": 154561974,
+          "created-date": {
+            "value": 1709519858237
+          },
+          "last-modified-date": {
+            "value": 1710234709747
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0001-9884-1913",
+              "path": "0000-0001-9884-1913",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Crossref"
+            },
+            "assertion-origin-orcid": null,
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": null
+          },
+          "title": {
+            "title": {
+              "value": "Bayesian analysis of biodiversity patterns via beam trawl versus video transect—a comparative case study of Svalbard rhodolith beds"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.1007/s10531-024-02788-y",
+                "external-id-normalized": {
+                  "value": "10.1007/s10531-024-02788-y",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": {
+                  "value": "https://doi.org/10.1007/s10531-024-02788-y"
+                },
+                "external-id-relationship": "self"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://doi.org/10.1007/s10531-024-02788-y"
+          },
+          "type": "journal-article",
+          "publication-date": {
+            "year": {
+              "value": "2024"
+            },
+            "month": {
+              "value": "03"
+            },
+            "day": null
+          },
+          "journal-title": {
+            "value": "Biodiversity and Conservation"
+          },
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/154561974",
+          "display-index": "0"
+        }
+      ]
+    },
+    {
+      "last-modified-date": {
+        "value": 1762433461849
+      },
+      "external-ids": {
+        "external-id": [
+          {
+            "external-id-type": "doi",
+            "external-id-value": "10.1371/journal.pone.0299735",
+            "external-id-normalized": {
+              "value": "10.1371/journal.pone.0299735",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": null,
+            "external-id-relationship": "self"
+          },
+          {
+            "external-id-type": "eid",
+            "external-id-value": "2-s2.0-85187760243",
+            "external-id-normalized": {
+              "value": "2-s2.0-85187760243",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": null,
+            "external-id-relationship": "self"
+          }
+        ]
+      },
+      "work-summary": [
+        {
+          "put-code": 196203756,
+          "created-date": {
+            "value": 1762433461849
+          },
+          "last-modified-date": {
+            "value": 1762433461849
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0002-5982-8983",
+              "path": "0000-0002-5982-8983",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Scopus - Elsevier"
+            },
+            "assertion-origin-orcid": {
+              "uri": "https://orcid.org/0000-0002-2788-1173",
+              "path": "0000-0002-2788-1173",
+              "host": "orcid.org"
+            },
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": {
+              "value": "Gregor Hans Mathes"
+            }
+          },
+          "title": {
+            "title": {
+              "value": "Global reduction of snow cover in ski areas under climate change"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.1371/journal.pone.0299735",
+                "external-id-normalized": {
+                  "value": "10.1371/journal.pone.0299735",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "self"
+              },
+              {
+                "external-id-type": "eid",
+                "external-id-value": "2-s2.0-85187760243",
+                "external-id-normalized": {
+                  "value": "2-s2.0-85187760243",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "self"
+              },
+              {
+                "external-id-type": "issn",
+                "external-id-value": "19326203",
+                "external-id-normalized": {
+                  "value": "1932-6203",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "part-of"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85187760243&partnerID=MN8TOARS"
+          },
+          "type": "journal-article",
+          "publication-date": {
+            "year": {
+              "value": "2024"
+            },
+            "month": null,
+            "day": null
+          },
+          "journal-title": {
+            "value": "Plos One"
+          },
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/196203756",
+          "display-index": "1"
+        }
+      ]
+    },
+    {
+      "last-modified-date": {
+        "value": 1762433461976
+      },
+      "external-ids": {
+        "external-id": [
+          {
+            "external-id-type": "doi",
+            "external-id-value": "10.21203/rs.3.rs-3796284/v1",
+            "external-id-normalized": {
+              "value": "10.21203/rs.3.rs-3796284/v1",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": null,
+            "external-id-relationship": "self"
+          },
+          {
+            "external-id-type": "eid",
+            "external-id-value": "2-s2.0-85189901010",
+            "external-id-normalized": {
+              "value": "2-s2.0-85189901010",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": null,
+            "external-id-relationship": "self"
+          }
+        ]
+      },
+      "work-summary": [
+        {
+          "put-code": 196203761,
+          "created-date": {
+            "value": 1762433461976
+          },
+          "last-modified-date": {
+            "value": 1762433461976
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0002-5982-8983",
+              "path": "0000-0002-5982-8983",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Scopus - Elsevier"
+            },
+            "assertion-origin-orcid": {
+              "uri": "https://orcid.org/0000-0002-2788-1173",
+              "path": "0000-0002-2788-1173",
+              "host": "orcid.org"
+            },
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": {
+              "value": "Gregor Hans Mathes"
+            }
+          },
+          "title": {
+            "title": {
+              "value": "Marine occupancy responses escalate according to species thermal bias over Early Jurassic warming"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.21203/rs.3.rs-3796284/v1",
+                "external-id-normalized": {
+                  "value": "10.21203/rs.3.rs-3796284/v1",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "self"
+              },
+              {
+                "external-id-type": "eid",
+                "external-id-value": "2-s2.0-85189901010",
+                "external-id-normalized": {
+                  "value": "2-s2.0-85189901010",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "self"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85189901010&partnerID=MN8TOARS"
+          },
+          "type": "other",
+          "publication-date": {
+            "year": {
+              "value": "2024"
+            },
+            "month": null,
+            "day": null
+          },
+          "journal-title": {
+            "value": "Research Square"
+          },
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/196203761",
+          "display-index": "1"
+        }
+      ]
+    },
+    {
+      "last-modified-date": {
+        "value": 1762433462158
+      },
+      "external-ids": {
+        "external-id": [
+          {
+            "external-id-type": "eid",
+            "external-id-value": "2-s2.0-85192204570",
+            "external-id-normalized": {
+              "value": "2-s2.0-85192204570",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": null,
+            "external-id-relationship": "self"
+          },
+          {
+            "external-id-type": "doi",
+            "external-id-value": "10.1101/2024.03.08.584139",
+            "external-id-normalized": {
+              "value": "10.1101/2024.03.08.584139",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": null,
+            "external-id-relationship": "self"
+          }
+        ]
+      },
+      "work-summary": [
+        {
+          "put-code": 196203765,
+          "created-date": {
+            "value": 1762433462158
+          },
+          "last-modified-date": {
+            "value": 1762433462158
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0002-5982-8983",
+              "path": "0000-0002-5982-8983",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Scopus - Elsevier"
+            },
+            "assertion-origin-orcid": {
+              "uri": "https://orcid.org/0000-0002-2788-1173",
+              "path": "0000-0002-2788-1173",
+              "host": "orcid.org"
+            },
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": {
+              "value": "Gregor Hans Mathes"
+            }
+          },
+          "title": {
+            "title": {
+              "value": "Spatially heterogeneous responses of planktonic foraminifera assemblages over 700,000 years of climate change"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.1101/2024.03.08.584139",
+                "external-id-normalized": {
+                  "value": "10.1101/2024.03.08.584139",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "self"
+              },
+              {
+                "external-id-type": "eid",
+                "external-id-value": "2-s2.0-85192204570",
+                "external-id-normalized": {
+                  "value": "2-s2.0-85192204570",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "self"
+              },
+              {
+                "external-id-type": "issn",
+                "external-id-value": "26928205",
+                "external-id-normalized": {
+                  "value": "2692-8205",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "part-of"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85192204570&partnerID=MN8TOARS"
+          },
+          "type": "other",
+          "publication-date": {
+            "year": {
+              "value": "2024"
+            },
+            "month": null,
+            "day": null
+          },
+          "journal-title": {
+            "value": "Biorxiv"
+          },
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/196203765",
+          "display-index": "1"
+        },
+        {
+          "put-code": 155354627,
+          "created-date": {
+            "value": 1710351317032
+          },
+          "last-modified-date": {
+            "value": 1710557274401
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0001-9884-1913",
+              "path": "0000-0001-9884-1913",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Crossref"
+            },
+            "assertion-origin-orcid": null,
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": null
+          },
+          "title": {
+            "title": {
+              "value": "Spatially heterogeneous responses of planktonic foraminifera assemblages over 700,000 years of climate change"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.1101/2024.03.08.584139",
+                "external-id-normalized": {
+                  "value": "10.1101/2024.03.08.584139",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": {
+                  "value": "https://doi.org/10.1101/2024.03.08.584139"
+                },
+                "external-id-relationship": "self"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://doi.org/10.1101/2024.03.08.584139"
+          },
+          "type": "preprint",
+          "publication-date": {
+            "year": {
+              "value": "2024"
+            },
+            "month": {
+              "value": "03"
+            },
+            "day": {
+              "value": "13"
+            }
+          },
+          "journal-title": null,
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/155354627",
+          "display-index": "0"
+        }
+      ]
+    },
+    {
+      "last-modified-date": {
+        "value": 1762433462113
+      },
+      "external-ids": {
+        "external-id": [
+          {
+            "external-id-type": "doi",
+            "external-id-value": "10.1017/ext.2024.12",
+            "external-id-normalized": {
+              "value": "10.1017/ext.2024.12",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": null,
+            "external-id-relationship": "self"
+          },
+          {
+            "external-id-type": "eid",
+            "external-id-value": "2-s2.0-105006749451",
+            "external-id-normalized": {
+              "value": "2-s2.0-105006749451",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": null,
+            "external-id-relationship": "self"
+          }
+        ]
+      },
+      "work-summary": [
+        {
+          "put-code": 196203764,
+          "created-date": {
+            "value": 1762433462113
+          },
+          "last-modified-date": {
+            "value": 1762433462113
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0002-5982-8983",
+              "path": "0000-0002-5982-8983",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Scopus - Elsevier"
+            },
+            "assertion-origin-orcid": {
+              "uri": "https://orcid.org/0000-0002-2788-1173",
+              "path": "0000-0002-2788-1173",
+              "host": "orcid.org"
+            },
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": {
+              "value": "Gregor Hans Mathes"
+            }
+          },
+          "title": {
+            "title": {
+              "value": "The extinct marine megafauna of the Phanerozoic"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.1017/ext.2024.12",
+                "external-id-normalized": {
+                  "value": "10.1017/ext.2024.12",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "self"
+              },
+              {
+                "external-id-type": "eid",
+                "external-id-value": "2-s2.0-105006749451",
+                "external-id-normalized": {
+                  "value": "2-s2.0-105006749451",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "self"
+              },
+              {
+                "external-id-type": "issn",
+                "external-id-value": "27550958",
+                "external-id-normalized": {
+                  "value": "2755-0958",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "part-of"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://www.scopus.com/inward/record.url?eid=2-s2.0-105006749451&partnerID=MN8TOARS"
+          },
+          "type": "journal-article",
+          "publication-date": {
+            "year": {
+              "value": "2024"
+            },
+            "month": null,
+            "day": null
+          },
+          "journal-title": {
+            "value": "Cambridge Prisms Extinction"
+          },
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/196203764",
+          "display-index": "1"
+        },
+        {
+          "put-code": 159784108,
+          "created-date": {
+            "value": 1715935483260
+          },
+          "last-modified-date": {
+            "value": 1717487389170
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0001-9884-1913",
+              "path": "0000-0001-9884-1913",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Crossref"
+            },
+            "assertion-origin-orcid": null,
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": null
+          },
+          "title": {
+            "title": {
+              "value": "The extinct marine megafauna of the Phanerozoic"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.1017/ext.2024.12",
+                "external-id-normalized": {
+                  "value": "10.1017/ext.2024.12",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": {
+                  "value": "https://doi.org/10.1017/ext.2024.12"
+                },
+                "external-id-relationship": "self"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://doi.org/10.1017/ext.2024.12"
+          },
+          "type": "journal-article",
+          "publication-date": {
+            "year": {
+              "value": "2024"
+            },
+            "month": null,
+            "day": null
+          },
+          "journal-title": {
+            "value": "Cambridge Prisms: Extinction"
+          },
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/159784108",
+          "display-index": "0"
+        }
+      ]
+    },
+    {
+      "last-modified-date": {
+        "value": 1763516445972
+      },
+      "external-ids": {
+        "external-id": [
+          {
+            "external-id-type": "doi",
+            "external-id-value": "10.1071/PC21027",
+            "external-id-normalized": {
+              "value": "10.1071/pc21027",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": null,
+            "external-id-relationship": "self"
+          },
+          {
+            "external-id-type": "eid",
+            "external-id-value": "2-s2.0-85128948745",
+            "external-id-normalized": {
+              "value": "2-s2.0-85128948745",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": null,
+            "external-id-relationship": "self"
+          }
+        ]
+      },
+      "work-summary": [
+        {
+          "put-code": 196203742,
+          "created-date": {
+            "value": 1762433461592
+          },
+          "last-modified-date": {
+            "value": 1762433461592
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0002-5982-8983",
+              "path": "0000-0002-5982-8983",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Scopus - Elsevier"
+            },
+            "assertion-origin-orcid": {
+              "uri": "https://orcid.org/0000-0002-2788-1173",
+              "path": "0000-0002-2788-1173",
+              "host": "orcid.org"
+            },
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": {
+              "value": "Gregor Hans Mathes"
+            }
+          },
+          "title": {
+            "title": {
+              "value": "Benthic foraminifera as bioindicators for assessing reef condition in Kāne'ohe Bay, O'ahu, Hawai'i"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.1071/PC21027",
+                "external-id-normalized": {
+                  "value": "10.1071/pc21027",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "self"
+              },
+              {
+                "external-id-type": "eid",
+                "external-id-value": "2-s2.0-85128948745",
+                "external-id-normalized": {
+                  "value": "2-s2.0-85128948745",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "self"
+              },
+              {
+                "external-id-type": "issn",
+                "external-id-value": "10382097 22044604",
+                "external-id-normalized": {
+                  "value": "1038-2097",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "part-of"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85128948745&partnerID=MN8TOARS"
+          },
+          "type": "journal-article",
+          "publication-date": {
+            "year": {
+              "value": "2023"
+            },
+            "month": null,
+            "day": null
+          },
+          "journal-title": {
+            "value": "Pacific Conservation Biology"
+          },
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/196203742",
+          "display-index": "1"
+        },
+        {
+          "put-code": 111314227,
+          "created-date": {
+            "value": 1649785226096
+          },
+          "last-modified-date": {
+            "value": 1763516445972
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0001-9884-1913",
+              "path": "0000-0001-9884-1913",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Crossref"
+            },
+            "assertion-origin-orcid": null,
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": null
+          },
+          "title": {
+            "title": {
+              "value": "Benthic foraminifera as bioindicators for assessing reef condition in Kāne‘ohe Bay, O‘ahu, Hawai‘i"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.1071/PC21027",
+                "external-id-normalized": {
+                  "value": "10.1071/pc21027",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": {
+                  "value": "https://doi.org/10.1071/PC21027"
+                },
+                "external-id-relationship": "self"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://doi.org/10.1071/PC21027"
+          },
+          "type": "journal-article",
+          "publication-date": {
+            "year": {
+              "value": "2023"
+            },
+            "month": {
+              "value": "06"
+            },
+            "day": {
+              "value": "01"
+            }
+          },
+          "journal-title": {
+            "value": "Pacific Conservation Biology"
+          },
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/111314227",
+          "display-index": "0"
+        }
+      ]
+    },
+    {
+      "last-modified-date": {
+        "value": 1762433462025
+      },
+      "external-ids": {
+        "external-id": [
+          {
+            "external-id-type": "doi",
+            "external-id-value": "10.1098/rsos.230400",
+            "external-id-normalized": {
+              "value": "10.1098/rsos.230400",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": null,
+            "external-id-relationship": "self"
+          },
+          {
+            "external-id-type": "eid",
+            "external-id-value": "2-s2.0-85169935207",
+            "external-id-normalized": {
+              "value": "2-s2.0-85169935207",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": null,
+            "external-id-relationship": "self"
+          }
+        ]
+      },
+      "work-summary": [
+        {
+          "put-code": 196203762,
+          "created-date": {
+            "value": 1762433462025
+          },
+          "last-modified-date": {
+            "value": 1762433462025
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0002-5982-8983",
+              "path": "0000-0002-5982-8983",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Scopus - Elsevier"
+            },
+            "assertion-origin-orcid": {
+              "uri": "https://orcid.org/0000-0002-2788-1173",
+              "path": "0000-0002-2788-1173",
+              "host": "orcid.org"
+            },
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": {
+              "value": "Gregor Hans Mathes"
+            }
+          },
+          "title": {
+            "title": {
+              "value": "Oversimplification risks too much: A response to 'How predictable are mass extinction events?'"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.1098/rsos.230400",
+                "external-id-normalized": {
+                  "value": "10.1098/rsos.230400",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "self"
+              },
+              {
+                "external-id-type": "eid",
+                "external-id-value": "2-s2.0-85169935207",
+                "external-id-normalized": {
+                  "value": "2-s2.0-85169935207",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "self"
+              },
+              {
+                "external-id-type": "issn",
+                "external-id-value": "20545703",
+                "external-id-normalized": {
+                  "value": "2054-5703",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "part-of"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85169935207&partnerID=MN8TOARS"
+          },
+          "type": "journal-article",
+          "publication-date": {
+            "year": {
+              "value": "2023"
+            },
+            "month": null,
+            "day": null
+          },
+          "journal-title": {
+            "value": "Royal Society Open Science"
+          },
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/196203762",
+          "display-index": "1"
+        },
+        {
+          "put-code": 141014007,
+          "created-date": {
+            "value": 1692777271641
+          },
+          "last-modified-date": {
+            "value": 1692777271641
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0001-9884-1913",
+              "path": "0000-0001-9884-1913",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Crossref"
+            },
+            "assertion-origin-orcid": null,
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": null
+          },
+          "title": {
+            "title": {
+              "value": "Oversimplification risks too much: a response to ‘How predictable are mass extinction events?'"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.1098/rsos.230400",
+                "external-id-normalized": {
+                  "value": "10.1098/rsos.230400",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": {
+                  "value": "https://doi.org/10.1098/rsos.230400"
+                },
+                "external-id-relationship": "self"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://doi.org/10.1098/rsos.230400"
+          },
+          "type": "journal-article",
+          "publication-date": {
+            "year": {
+              "value": "2023"
+            },
+            "month": {
+              "value": "08"
+            },
+            "day": null
+          },
+          "journal-title": {
+            "value": "Royal Society Open Science"
+          },
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/141014007",
+          "display-index": "0"
+        }
+      ]
+    },
+    {
+      "last-modified-date": {
+        "value": 1762433461633
+      },
+      "external-ids": {
+        "external-id": [
+          {
+            "external-id-type": "eid",
+            "external-id-value": "2-s2.0-85131047620",
+            "external-id-normalized": {
+              "value": "2-s2.0-85131047620",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": null,
+            "external-id-relationship": "self"
+          },
+          {
+            "external-id-type": "doi",
+            "external-id-value": "10.1130/G49714.1",
+            "external-id-normalized": {
+              "value": "10.1130/g49714.1",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": null,
+            "external-id-relationship": "self"
+          }
+        ]
+      },
+      "work-summary": [
+        {
+          "put-code": 196203746,
+          "created-date": {
+            "value": 1762433461633
+          },
+          "last-modified-date": {
+            "value": 1762433461633
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0002-5982-8983",
+              "path": "0000-0002-5982-8983",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Scopus - Elsevier"
+            },
+            "assertion-origin-orcid": {
+              "uri": "https://orcid.org/0000-0002-2788-1173",
+              "path": "0000-0002-2788-1173",
+              "host": "orcid.org"
+            },
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": {
+              "value": "Gregor Hans Mathes"
+            }
+          },
+          "title": {
+            "title": {
+              "value": "Five million years of high atmospheric CO2 in the aftermath of the Permian-Triassic mass extinction"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.1130/G49714.1",
+                "external-id-normalized": {
+                  "value": "10.1130/g49714.1",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "self"
+              },
+              {
+                "external-id-type": "eid",
+                "external-id-value": "2-s2.0-85131047620",
+                "external-id-normalized": {
+                  "value": "2-s2.0-85131047620",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "self"
+              },
+              {
+                "external-id-type": "issn",
+                "external-id-value": "00917613 19432682",
+                "external-id-normalized": {
+                  "value": "0091-7613",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "part-of"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85131047620&partnerID=MN8TOARS"
+          },
+          "type": "journal-article",
+          "publication-date": {
+            "year": {
+              "value": "2022"
+            },
+            "month": null,
+            "day": null
+          },
+          "journal-title": {
+            "value": "Geology"
+          },
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/196203746",
+          "display-index": "1"
+        }
+      ]
+    },
+    {
+      "last-modified-date": {
+        "value": 1762433461891
+      },
+      "external-ids": {
+        "external-id": [
+          {
+            "external-id-type": "doi",
+            "external-id-value": "10.1073/pnas.2105769118",
+            "external-id-normalized": {
+              "value": "10.1073/pnas.2105769118",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": null,
+            "external-id-relationship": "self"
+          },
+          {
+            "external-id-type": "eid",
+            "external-id-value": "2-s2.0-85114121619",
+            "external-id-normalized": {
+              "value": "2-s2.0-85114121619",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": null,
+            "external-id-relationship": "self"
+          }
+        ]
+      },
+      "work-summary": [
+        {
+          "put-code": 196203758,
+          "created-date": {
+            "value": 1762433461891
+          },
+          "last-modified-date": {
+            "value": 1762433461891
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0002-5982-8983",
+              "path": "0000-0002-5982-8983",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Scopus - Elsevier"
+            },
+            "assertion-origin-orcid": {
+              "uri": "https://orcid.org/0000-0002-2788-1173",
+              "path": "0000-0002-2788-1173",
+              "host": "orcid.org"
+            },
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": {
+              "value": "Gregor Hans Mathes"
+            }
+          },
+          "title": {
+            "title": {
+              "value": "Deep-time climate legacies affect origination rates of marine genera"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.1073/pnas.2105769118",
+                "external-id-normalized": {
+                  "value": "10.1073/pnas.2105769118",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "self"
+              },
+              {
+                "external-id-type": "eid",
+                "external-id-value": "2-s2.0-85114121619",
+                "external-id-normalized": {
+                  "value": "2-s2.0-85114121619",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "self"
+              },
+              {
+                "external-id-type": "issn",
+                "external-id-value": "00278424 10916490",
+                "external-id-normalized": {
+                  "value": "0027-8424",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "part-of"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85114121619&partnerID=MN8TOARS"
+          },
+          "type": "journal-article",
+          "publication-date": {
+            "year": {
+              "value": "2021"
+            },
+            "month": null,
+            "day": null
+          },
+          "journal-title": {
+            "value": "Proceedings of the National Academy of Sciences of the United States of America"
+          },
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/196203758",
+          "display-index": "1"
+        },
+        {
+          "put-code": 99934787,
+          "created-date": {
+            "value": 1631640208075
+          },
+          "last-modified-date": {
+            "value": 1654139191005
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0001-9884-1913",
+              "path": "0000-0001-9884-1913",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Crossref"
+            },
+            "assertion-origin-orcid": null,
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": null
+          },
+          "title": {
+            "title": {
+              "value": "Deep-time climate legacies affect origination rates of marine genera"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.1073/pnas.2105769118",
+                "external-id-normalized": {
+                  "value": "10.1073/pnas.2105769118",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": {
+                  "value": "https://doi.org/10.1073/pnas.2105769118"
+                },
+                "external-id-relationship": "self"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://doi.org/10.1073/pnas.2105769118"
+          },
+          "type": "journal-article",
+          "publication-date": {
+            "year": {
+              "value": "2021"
+            },
+            "month": {
+              "value": "09"
+            },
+            "day": {
+              "value": "07"
+            }
+          },
+          "journal-title": {
+            "value": "Proceedings of the National Academy of Sciences"
+          },
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/99934787",
+          "display-index": "0"
+        }
+      ]
+    },
+    {
+      "last-modified-date": {
+        "value": 1762433462067
+      },
+      "external-ids": {
+        "external-id": [
+          {
+            "external-id-type": "doi",
+            "external-id-value": "10.1038/s41559-020-01377-w",
+            "external-id-normalized": {
+              "value": "10.1038/s41559-020-01377-w",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": null,
+            "external-id-relationship": "self"
+          },
+          {
+            "external-id-type": "eid",
+            "external-id-value": "2-s2.0-85100119739",
+            "external-id-normalized": {
+              "value": "2-s2.0-85100119739",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": null,
+            "external-id-relationship": "self"
+          }
+        ]
+      },
+      "work-summary": [
+        {
+          "put-code": 196203763,
+          "created-date": {
+            "value": 1762433462067
+          },
+          "last-modified-date": {
+            "value": 1762433462067
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0002-5982-8983",
+              "path": "0000-0002-5982-8983",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Scopus - Elsevier"
+            },
+            "assertion-origin-orcid": {
+              "uri": "https://orcid.org/0000-0002-2788-1173",
+              "path": "0000-0002-2788-1173",
+              "host": "orcid.org"
+            },
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": {
+              "value": "Gregor Hans Mathes"
+            }
+          },
+          "title": {
+            "title": {
+              "value": "Extinction risk controlled by interaction of long-term and short-term climate change"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.1038/s41559-020-01377-w",
+                "external-id-normalized": {
+                  "value": "10.1038/s41559-020-01377-w",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "self"
+              },
+              {
+                "external-id-type": "eid",
+                "external-id-value": "2-s2.0-85100119739",
+                "external-id-normalized": {
+                  "value": "2-s2.0-85100119739",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "self"
+              },
+              {
+                "external-id-type": "issn",
+                "external-id-value": "2397334X",
+                "external-id-normalized": {
+                  "value": "2397-334X",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "part-of"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85100119739&partnerID=MN8TOARS"
+          },
+          "type": "journal-article",
+          "publication-date": {
+            "year": {
+              "value": "2021"
+            },
+            "month": null,
+            "day": null
+          },
+          "journal-title": {
+            "value": "Nature Ecology and Evolution"
+          },
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/196203763",
+          "display-index": "1"
+        },
+        {
+          "put-code": 87056157,
+          "created-date": {
+            "value": 1610996804745
+          },
+          "last-modified-date": {
+            "value": 1674835620902
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0001-9884-1913",
+              "path": "0000-0001-9884-1913",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Crossref"
+            },
+            "assertion-origin-orcid": null,
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": null
+          },
+          "title": {
+            "title": {
+              "value": "Extinction risk controlled by interaction of long-term and short-term climate change"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.1038/s41559-020-01377-w",
+                "external-id-normalized": {
+                  "value": "10.1038/s41559-020-01377-w",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": {
+                  "value": "https://doi.org/10.1038/s41559-020-01377-w"
+                },
+                "external-id-relationship": "self"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://doi.org/10.1038/s41559-020-01377-w"
+          },
+          "type": "journal-article",
+          "publication-date": {
+            "year": {
+              "value": "2021"
+            },
+            "month": {
+              "value": "01"
+            },
+            "day": {
+              "value": "18"
+            }
+          },
+          "journal-title": {
+            "value": "Nature Ecology & Evolution"
+          },
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/87056157",
+          "display-index": "0"
+        }
+      ]
+    },
+    {
+      "last-modified-date": {
+        "value": 1762433461806
+      },
+      "external-ids": {
+        "external-id": [
+          {
+            "external-id-type": "doi",
+            "external-id-value": "10.1371/journal.pone.0249268",
+            "external-id-normalized": {
+              "value": "10.1371/journal.pone.0249268",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": null,
+            "external-id-relationship": "self"
+          },
+          {
+            "external-id-type": "eid",
+            "external-id-value": "2-s2.0-85105535336",
+            "external-id-normalized": {
+              "value": "2-s2.0-85105535336",
+              "transient": true
+            },
+            "external-id-normalized-error": null,
+            "external-id-url": null,
+            "external-id-relationship": "self"
+          }
+        ]
+      },
+      "work-summary": [
+        {
+          "put-code": 196203754,
+          "created-date": {
+            "value": 1762433461806
+          },
+          "last-modified-date": {
+            "value": 1762433461806
+          },
+          "source": {
+            "source-orcid": null,
+            "source-client-id": {
+              "uri": "https://orcid.org/client/0000-0002-5982-8983",
+              "path": "0000-0002-5982-8983",
+              "host": "orcid.org"
+            },
+            "source-name": {
+              "value": "Scopus - Elsevier"
+            },
+            "assertion-origin-orcid": {
+              "uri": "https://orcid.org/0000-0002-2788-1173",
+              "path": "0000-0002-2788-1173",
+              "host": "orcid.org"
+            },
+            "assertion-origin-client-id": null,
+            "assertion-origin-name": {
+              "value": "Gregor Hans Mathes"
+            }
+          },
+          "title": {
+            "title": {
+              "value": "Outdoor cycling activity affected by COVID-19 related epidemic-control-decisions"
+            },
+            "subtitle": null,
+            "translated-title": null
+          },
+          "external-ids": {
+            "external-id": [
+              {
+                "external-id-type": "doi",
+                "external-id-value": "10.1371/journal.pone.0249268",
+                "external-id-normalized": {
+                  "value": "10.1371/journal.pone.0249268",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "self"
+              },
+              {
+                "external-id-type": "eid",
+                "external-id-value": "2-s2.0-85105535336",
+                "external-id-normalized": {
+                  "value": "2-s2.0-85105535336",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "self"
+              },
+              {
+                "external-id-type": "issn",
+                "external-id-value": "19326203",
+                "external-id-normalized": {
+                  "value": "1932-6203",
+                  "transient": true
+                },
+                "external-id-normalized-error": null,
+                "external-id-url": null,
+                "external-id-relationship": "part-of"
+              }
+            ]
+          },
+          "url": {
+            "value": "https://www.scopus.com/inward/record.url?eid=2-s2.0-85105535336&partnerID=MN8TOARS"
+          },
+          "type": "journal-article",
+          "publication-date": {
+            "year": {
+              "value": "2021"
+            },
+            "month": null,
+            "day": null
+          },
+          "journal-title": {
+            "value": "Plos One"
+          },
+          "visibility": "public",
+          "path": "/0000-0002-2788-1173/work/196203754",
+          "display-index": "1"
+        }
+      ]
+    }
+  ],
+  "path": "/0000-0002-2788-1173/works"
+}

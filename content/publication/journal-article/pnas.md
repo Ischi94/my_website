@@ -4,7 +4,7 @@ authors:
 - admin
 - Wolfgang Kiessling
 - Manuel J. Steinbauer
-date: "2021-09-01T00:00:00Z"
+date: "2021-09-07"
 doi: "10.1073/pnas.2105769118"
 image:
   caption: ''
@@ -16,10 +16,10 @@ publication: '*PNAS* <br> [Read the publication](https://www.pnas.org/content/11
 publication_short: "*PNAS*. DOI: 10.1073/pnas.2105769118. [Read the publication](https://www.pnas.org/content/118/36/e2105769118)"
 publication_types:
 - "2"
-publishDate: "2021-09-01T00:00:00Z"
+publishDate: "2021-09-07"
 summary: 
 tags: [Palaeoclimate Interaction, PNAS, Publication]
-title: Deep-time climate legacies affect origination rates of marine genera
+title: "Deep-time climate legacies affect origination rates of marine genera"
 buttons:
     - text: Read the publication here
       url: "https://www.pnas.org/content/118/36/e2105769118"

@@ -1,14 +1,21 @@
 [build]
-command = "hugo"
+command = "hugo --gc --minify"
 publish = "public"
 [build.environment]
-HUGO_VERSION = "0.76.5"
-
-[context]
-[context.branch-deploy]
-command = "hugo -F -b $DEPLOY_PRIME_URL"
+HUGO_VERSION = "0.147.9"
+HUGO_ENVIRONMENT = "production"
+TZ = "Europe/Berlin"
 [context.deploy-preview]
-command = "hugo -F -b $DEPLOY_PRIME_URL"
-[context.production]
-[context.production.environment]
-HUGO_ENV = "production"
+command = "hugo --gc --minify --baseURL $DEPLOY_PRIME_URL"
+[context.deploy-preview.environment]
+HUGO_ENVIRONMENT = "preview"
+[context.branch-deploy]
+command = "hugo --gc --minify --baseURL $DEPLOY_PRIME_URL"
+[context.branch-deploy.environment]
+HUGO_ENVIRONMENT = "preview"
+[[headers]]
+for = "/*"
+[headers.values]
+X-Content-Type-Options = "nosniff"
+Referrer-Policy = "strict-origin-when-cross-origin"
+X-Frame-Options = "SAMEORIGIN"

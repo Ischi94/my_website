@@ -6,7 +6,7 @@ authors:
 - Max Wisshak
 - admin
 - Sebastian Teichert
-date: "2024-03-04T00:00:00Z"
+date: "2024-03-01"
 doi: "10.1007/s10531-024-02788-y"
 image:
   caption: ''
@@ -18,13 +18,13 @@ publication: '*Biodiversity and Conservation* <br> [Read the publication](https:
 publication_short: "*Biodiversity and Conservation*. DOI: 10.1007/s10531-024-02788-y. [Read the publication](https://link.springer.com/article/10.1007/s10531-024-02788-y)"
 publication_types:
 - "2"
-publishDate: "2021-09-01T00:00:00Z"
+publishDate: "2024-03-01"
 summary: 
 tags: 
 - Remote Sensing
 - Biodiversity
 - Publication
-title: Bayesian analysis of biodiversity patterns via beam trawl versus video transect—a comparative case study of Svalbard rhodolith beds
+title: "Bayesian analysis of biodiversity patterns via beam trawl versus video transect—a comparative case study of Svalbard rhodolith beds"
 buttons:
     - text: Read the publication here
       url: "https://link.springer.com/article/10.1007/s10531-024-02788-y"

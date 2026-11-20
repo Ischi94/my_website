@@ -1,0 +1,535 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        29
+      ]
+    ],
+    "date-time": "2026-10-29T00:04:37Z",
+    "timestamp": 1793232277629,
+    "version": "4.5.0"
+  },
+  "reference-count": 49,
+  "publisher": "National Academy of Sciences",
+  "issue": "36",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2022,
+            3,
+            2
+          ]
+        ],
+        "date-time": "2022-03-02T00:00:00Z",
+        "timestamp": 1646179200000
+      },
+      "content-version": "vor",
+      "delay-in-days": 181,
+      "URL": "https://www.pnas.org/site/aboutpnas/licenses.xhtml"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "www.pnas.org"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "Proc. Natl. Acad. Sci. U.S.A."
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2021,
+        9,
+        7
+      ]
+    ]
+  },
+  "abstract": "<jats:title>Significance</jats:title>\n                  <jats:p>The effect of climate change on biodiversity is dependent on previous climatic trends. For example, climate warming is more deleterious when added to a long-term warming trend. We tested how the interaction of short- and long-term climate change affects origination rates through time. Using data from the marine fossil record, we show that origination rates in the last 485 million years tend to increase when climate cooling is superimposed on longer-term cooling trends. These findings might clarify the ongoing debate on the relationship between climate and origination and underline the complexity of evolutionary dynamics and the presence of intricate interactions in Earth’s system.</jats:p>",
+  "DOI": "10.1073/pnas.2105769118",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2021,
+        9,
+        14
+      ]
+    ],
+    "date-time": "2021-09-14T12:46:34Z",
+    "timestamp": 1631623594000
+  },
+  "update-policy": "https://doi.org/10.1073/pnas.cm10313",
+  "source": "Crossref",
+  "is-referenced-by-count": 9,
+  "title": [
+    "Deep-time climate legacies affect origination rates of marine genera"
+  ],
+  "prefix": "10.1073",
+  "volume": "118",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0002-2788-1173",
+      "authenticated-orcid": false,
+      "given": "Gregor H.",
+      "family": "Mathes",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Department of Geography and Geosciences, GeoZentrum Nordbayern, Friedrich-Alexander University Erlangen-Nürnberg, 91054 Erlangen, Germany;"
+        },
+        {
+          "name": "Bayreuth Center of Ecology and Environmental Research, University of Bayreuth, 95440 Bayreuth, Germany;"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-1088-2014",
+      "authenticated-orcid": false,
+      "given": "Wolfgang",
+      "family": "Kiessling",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Geography and Geosciences, GeoZentrum Nordbayern, Friedrich-Alexander University Erlangen-Nürnberg, 91054 Erlangen, Germany;"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-7142-9272",
+      "authenticated-orcid": false,
+      "given": "Manuel J.",
+      "family": "Steinbauer",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Bayreuth Center of Ecology and Environmental Research, University of Bayreuth, 95440 Bayreuth, Germany;"
+        },
+        {
+          "name": "Department of Biological Sciences, University of Bergen, N-5020 Bergen, Norway"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "341",
+  "published-online": {
+    "date-parts": [
+      [
+        2021,
+        9,
+        2
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "e_1_3_4_1_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/s41559-020-1185-7"
+    },
+    {
+      "key": "e_1_3_4_2_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/s41559-020-01377-w"
+    },
+    {
+      "key": "e_1_3_4_3_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1146/annurev-ecolsys-112414-054314"
+    },
+    {
+      "key": "e_1_3_4_4_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1098/rstb.2003.1436"
+    },
+    {
+      "key": "e_1_3_4_5_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/j.1095-8312.2011.01823.x"
+    },
+    {
+      "key": "e_1_3_4_6_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.revpalbo.2010.02.015"
+    },
+    {
+      "key": "e_1_3_4_7_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/ele.12232"
+    },
+    {
+      "key": "e_1_3_4_8_2",
+      "doi-asserted-by": "crossref",
+      "first-page": "1123",
+      "DOI": "10.1111/ecog.00719",
+      "article-title": "When and how do species achieve niche stability over long time scales?",
+      "volume": "37",
+      "author": "Stigall A. L.",
+      "year": "2014",
+      "unstructured": "A. L. Stigall, When and how do species achieve niche stability over long time scales? Ecography 37, 1123–1132 (2014).",
+      "journal-title": "Ecography"
+    },
+    {
+      "key": "e_1_3_4_9_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1146/annurev.ecolsys.36.102803.095431"
+    },
+    {
+      "key": "e_1_3_4_10_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/s41467-017-00827-7"
+    },
+    {
+      "key": "e_1_3_4_11_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.tree.2010.03.002"
+    },
+    {
+      "key": "e_1_3_4_12_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1126/science.206.4415.217"
+    },
+    {
+      "key": "e_1_3_4_13_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/bies.20745"
+    },
+    {
+      "key": "e_1_3_4_14_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1093/genetics/162.2.961"
+    },
+    {
+      "key": "e_1_3_4_15_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/ece3.2858"
+    },
+    {
+      "key": "e_1_3_4_16_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.2307/1939377"
+    },
+    {
+      "key": "e_1_3_4_17_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1130/0016-7606(1968)79[273:CROSDA]2.0.CO;2"
+    },
+    {
+      "key": "e_1_3_4_18_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1073/pnas.0802597105"
+    },
+    {
+      "key": "e_1_3_4_19_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/j.1558-5646.1986.tb05717.x"
+    },
+    {
+      "key": "e_1_3_4_20_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1073/pnas.0502616102"
+    },
+    {
+      "key": "e_1_3_4_21_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1098/rspb.2007.1302"
+    },
+    {
+      "key": "e_1_3_4_22_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1666/0094-8373(2000)26[259:GCCANA]2.0.CO;2"
+    },
+    {
+      "key": "e_1_3_4_23_2",
+      "first-page": "1",
+      "article-title": "Does climatic change drive mammalian evolution?",
+      "volume": "9",
+      "author": "Prothero D. R.",
+      "year": "1999",
+      "unstructured": "D. R. Prothero, Does climatic change drive mammalian evolution? GSA Today 9, 1 (1999).",
+      "journal-title": "GSA Today"
+    },
+    {
+      "key": "e_1_3_4_24_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1073/pnas.1200844109"
+    },
+    {
+      "key": "e_1_3_4_25_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1666/05081.1"
+    },
+    {
+      "key": "e_1_3_4_26_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/ngeo869"
+    },
+    {
+      "key": "e_1_3_4_27_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/ngeo874"
+    },
+    {
+      "key": "e_1_3_4_28_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/228657a0"
+    },
+    {
+      "key": "e_1_3_4_29_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1073/pnas.1702297114"
+    },
+    {
+      "key": "e_1_3_4_30_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/j.1558-5646.1971.tb01868.x"
+    },
+    {
+      "key": "e_1_3_4_31_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.4159/harvard.9780674865327"
+    },
+    {
+      "key": "e_1_3_4_32_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.gloplacha.2016.12.008"
+    },
+    {
+      "key": "e_1_3_4_33_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1073/pnas.0801919105"
+    },
+    {
+      "key": "e_1_3_4_34_2",
+      "first-page": "1",
+      "article-title": "A compendium of fossil marine animal genera",
+      "volume": "363",
+      "author": "Sepkoski J. J.",
+      "year": "2002",
+      "unstructured": "J. J. Sepkoski, A compendium of fossil marine animal genera. Bull. Am. Paleontol. 363, 1–560 (2002).",
+      "journal-title": "Bull. Am. Paleontol."
+    },
+    {
+      "key": "e_1_3_4_35_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/2041-210X.13161"
+    },
+    {
+      "key": "e_1_3_4_36_2",
+      "volume-title": "A Concise Geologic Time Scale: 2016",
+      "author": "Ogg J. G.",
+      "year": "2016",
+      "unstructured": "J. G. Ogg, G. M. Ogg, F. M. Gradstein, A Concise Geologic Time Scale: 2016 (Elsevier, 2016)."
+    },
+    {
+      "key": "e_1_3_4_37_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1666/0094-8373(2000)26[74:OAECOT]2.0.CO;2"
+    },
+    {
+      "key": "e_1_3_4_38_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.earscirev.2015.03.008"
+    },
+    {
+      "key": "e_1_3_4_39_2",
+      "volume-title": "R: A Language and Environment for Statistical Computing",
+      "author": "R Core Team",
+      "year": "2021",
+      "unstructured": "R Core Team, R: A Language and Environment for Statistical Computing (R Foundation for Statistical Computing, 2021)."
+    },
+    {
+      "key": "e_1_3_4_40_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.18637/jss.v067.i01"
+    },
+    {
+      "key": "e_1_3_4_41_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.21105/joss.01686"
+    },
+    {
+      "key": "e_1_3_4_42_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.tree.2008.10.008"
+    },
+    {
+      "key": "e_1_3_4_43_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1198/106186006X96962"
+    },
+    {
+      "key": "e_1_3_4_44_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.2307/2111639"
+    },
+    {
+      "key": "e_1_3_4_45_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1037/a0029146"
+    },
+    {
+      "key": "e_1_3_4_46_2",
+      "unstructured": "A. Bray C. Ismay E. Chasnovski B. Baumer M. Cetinkaya-Rundel infer: Tidy Statistical Inference (2021). https://infer.netlify.app/. Accessed 14 January 2021."
+    },
+    {
+      "key": "e_1_3_4_47_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.18637/jss.v080.i01"
+    },
+    {
+      "key": "e_1_3_4_48_2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1201/9780429029608"
+    },
+    {
+      "key": "e_1_3_4_49_2",
+      "unstructured": "A. Zaffos S. Finnegan S. E. Peters Data from \"Plate tectonic regulation of global marine animal diversity.\" GitHub. https://github.com/UW-Macrostrat/PNAS_201702297/blob/master/FinalData/ContinuousTimeSeries.csv. Accessed 21 April 2021."
+    }
+  ],
+  "container-title": [
+    "Proceedings of the National Academy of Sciences"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "http://www.pnas.org/syndication/doi/10.1073/pnas.2105769118",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "syndication"
+    },
+    {
+      "URL": "https://pnas.org/doi/pdf/10.1073/pnas.2105769118",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2023,
+        11,
+        8
+      ]
+    ],
+    "date-time": "2023-11-08T15:02:15Z",
+    "timestamp": 1699455735000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://pnas.org/doi/full/10.1073/pnas.2105769118"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2021,
+        9,
+        2
+      ]
+    ]
+  },
+  "references-count": 49,
+  "journal-issue": {
+    "issue": "36",
+    "published-print": {
+      "date-parts": [
+        [
+          2021,
+          9,
+          7
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "10.1073/pnas.2105769118"
+  ],
+  "URL": "https://doi.org/10.1073/pnas.2105769118",
+  "relation": {},
+  "ISSN": [
+    "0027-8424",
+    "1091-6490"
+  ],
+  "issn-type": [
+    {
+      "value": "0027-8424",
+      "type": "print"
+    },
+    {
+      "value": "1091-6490",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2021,
+        9,
+        2
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "2021-08-06",
+      "order": 0,
+      "name": "received",
+      "label": "Received",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    },
+    {
+      "value": "2021-08-04",
+      "order": 1,
+      "name": "accepted",
+      "label": "Accepted",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    },
+    {
+      "value": "2021-09-02",
+      "order": 2,
+      "name": "published",
+      "label": "Published",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    }
+  ],
+  "article-number": "e2105769118"
+}

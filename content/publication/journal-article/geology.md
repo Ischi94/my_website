@@ -10,8 +10,8 @@ authors:
 - Vladimir Silantiev
 - Yadong Sung
 - Jinnan N. Tong
-date: "2022-06-1T00:00:00Z"
-doi: ""
+date: "2022-06-01"
+doi: "10.1130/g49714.1"
 featured: false
 image:
   caption: ''
@@ -23,13 +23,13 @@ publication: '*Geology* <br> [Read the publication](https://pubs.geoscienceworld
 publication_short: "*Geology*. DOI: https://doi.org/10.1130/G49714.1. [Read the publication](https://pubs.geoscienceworld.org/gsa/geology/article/50/6/650/612995)"
 publication_types:
 - "2"
-publishDate: "2022-06-01T00:00:00Z"
+publishDate: "2022-06-01"
 summary: 
 tags:
 - Geology
 - Isotopes
 - Climate
-title: Five million years of high atmospheric CO2 in the aftermath of the Permian-Triassic mass extinction
+title: "Five million years of high atmospheric CO2 in the aftermath of the Permian-Triassic mass extinction"
 buttons:
     - text: Read the publication here
       url: "https://pubs.geoscienceworld.org/gsa/geology/article/50/6/650/612995"

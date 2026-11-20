@@ -1,0 +1,735 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        8,
+        17
+      ]
+    ],
+    "date-time": "2026-08-17T22:25:47Z",
+    "timestamp": 1787005547882,
+    "version": "build-2736575974"
+  },
+  "reference-count": 54,
+  "publisher": "CSIRO Publishing",
+  "issue": "3",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2025,
+            5,
+            22
+          ]
+        ],
+        "date-time": "2025-05-22T00:00:00Z",
+        "timestamp": 1747872000000
+      },
+      "content-version": "vor",
+      "delay-in-days": 1136,
+      "URL": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+    "date-parts": [
+      [
+        2023,
+        6,
+        1
+      ]
+    ]
+  },
+  "abstract": "<jats:sec>\n                    <jats:title>Context</jats:title>\n                    <jats:p>Tropical coral reef environments provide a wide variety of goods and ecosystem services but are experiencing growing pressure from coastal development and tourism. Assessing the status of reef communities along gradients of human pressure is therefore necessary to predict recovery and resilience capacity of reefs.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Aims</jats:title>\n                    <jats:p>First, to determine the overall water quality in Kāne‘ohe Bay, O’ahu, Hawai‘i, by employing a low-cost monitoring approach for anthropogenic stress on coral reef areas. Second, to assess the suitability of the monitoring approach to complement existing monitoring programmes.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Methods</jats:title>\n                    <jats:p>Sediment samples containing benthic foraminifera were used to determine water quality and stressor sources in Kāne‘ohe Bay, O’ahu, Hawai‘i, by applying the Foram Index (FI) and Bayesian regression analysis. The FI is based on relative abundance of functional groups of larger benthic foraminifera.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Key results</jats:title>\n                    <jats:p>Overall water quality in Kāne‘ohe Bay may support active growth and recovery of coral reefs in the northern sector but deteriorates around Kāne‘ohe City.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Conclusions</jats:title>\n                    <jats:p>Benthic foraminifera can be used as bio-indicators in Hawaiian reefs, providing an easy and fast-to-apply method for assessing short-term changes in water quality and stress sources. Implementing benthic foraminifera studies within existing long-term monitoring programs of Hawaiian reefs can be beneficial for conservation efforts.</jats:p>\n                  </jats:sec>\n                  <jats:sec>\n                    <jats:title>Implications</jats:title>\n                    <jats:p>Within a historic context, our findings illustrate the modest recovery of an ecosystem following pollution control measures but highlight the need of conservation efforts for reef environments adjacent to major human settlements.</jats:p>\n                  </jats:sec>",
+  "DOI": "10.1071/pc21027",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2022,
+        4,
+        12
+      ]
+    ],
+    "date-time": "2022-04-12T01:35:53Z",
+    "timestamp": 1649727353000
+  },
+  "page": "238-245",
+  "source": "Crossref",
+  "is-referenced-by-count": 3,
+  "title": [
+    "Benthic foraminifera as bioindicators for assessing reef condition in Kāne‘ohe Bay, O‘ahu, Hawai‘i"
+  ],
+  "prefix": "10.1071",
+  "volume": "29",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0002-2788-1173",
+      "authenticated-orcid": true,
+      "given": "Gregor H.",
+      "family": "Mathes",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "ABayreuth Center of Ecology and Environmental Research, University of Bayreuth, Bayreuth, Germany."
+        },
+        {
+          "name": "BDepartment of Sport Science, University of Bayreuth, Bayreuth, Germany."
+        },
+        {
+          "name": "CGeoZentrum Nordbayern, Friedrich-Alexander-Universitat Erlangen-Nürnberg, Erlangen, Bayern, Germany."
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Manuel J.",
+      "family": "Steinbauer",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "ABayreuth Center of Ecology and Environmental Research, University of Bayreuth, Bayreuth, Germany."
+        },
+        {
+          "name": "BDepartment of Sport Science, University of Bayreuth, Bayreuth, Germany."
+        },
+        {
+          "name": "DDepartment of Biological Sciences, University of Bergen, Bergen, Hordaland, Norway."
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Laura",
+      "family": "Cotton",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "EDepartment of Geological Sciences, University of Florida, Gainesville, FL, USA."
+        },
+        {
+          "name": "FNatural History Museum of Denmark, University of Copenhagen, Copenhagen, Denmark."
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "67",
+  "published-online": {
+    "date-parts": [
+      [
+        2022,
+        4,
+        12
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "2025111820234320400_R1",
+      "doi-asserted-by": "publisher",
+      "first-page": "1036",
+      "DOI": "10.1126/science.1112122",
+      "article-title": "Social-ecological resilience to coastal disasters.",
+      "volume": "309",
+      "author": "Adger",
+      "year": "2005",
+      "journal-title": "Science"
+    },
+    {
+      "key": "2025111820234320400_R2",
+      "doi-asserted-by": "publisher",
+      "first-page": "1",
+      "DOI": "10.2113/gsjfr.21.1.1",
+      "article-title": "Benthic foraminifera in sediment cores reflecting heavy metal pollution in Sorfjord, western Norway.",
+      "volume": "21",
+      "author": "Alve",
+      "year": "1991",
+      "journal-title": "The Journal of Foraminiferal Research"
+    },
+    {
+      "key": "2025111820234320400_R3",
+      "doi-asserted-by": "publisher",
+      "first-page": "137",
+      "DOI": "10.3354/meps116137",
+      "article-title": "Vertical migratory response of benthic foraminifera to controlled oxygen concentrations in an experimental mesocosm.",
+      "volume": "116",
+      "author": "Alve",
+      "year": "1995",
+      "journal-title": "Marine Ecology Progress Series"
+    },
+    {
+      "key": "2025111820234320400_R4",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.7717/peerj.950",
+      "article-title": "The unnatural history of Kāne‘ohe Bay: coral reef resilience in the face of centuries of anthropogenic impacts.",
+      "volume": "3",
+      "author": "Bahr",
+      "year": "2015",
+      "journal-title": "PeerJ"
+    },
+    {
+      "key": "2025111820234320400_R5",
+      "unstructured": "Banner AH (1974) Kaneohe Bay, Hawai‘i: urban pollution and a coral reefs ecosystem. In ‘Proceedings of the 2nd International Coral Reef Symposium’. pp. 685–702. (The Great Barrier Reef Committee: Brisbane)"
+    },
+    {
+      "key": "2025111820234320400_R7",
+      "doi-asserted-by": "publisher",
+      "first-page": "62",
+      "DOI": "10.1016/j.marmicro.2009.07.002",
+      "article-title": "Foraminiferal assemblage and reef check census in coral reef health monitoring of East Brazilian margin.",
+      "volume": "73",
+      "author": "Barbosa",
+      "year": "2009",
+      "journal-title": "Marine Micropaleontology"
+    },
+    {
+      "key": "2025111820234320400_R6",
+      "doi-asserted-by": "publisher",
+      "first-page": "169",
+      "DOI": "10.2113/gsjfr.42.2.169",
+      "article-title": "Foraminifer-based coral reef health assessment for southwestern Atlantic offshore archipelagos, Brazil.",
+      "volume": "42",
+      "author": "Barbosa",
+      "year": "2012",
+      "journal-title": "The Journal of Foraminiferal Research"
+    },
+    {
+      "key": "2025111820234320400_R8",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1126/science.aah4787",
+      "article-title": "Merging paleobiology with conservation biology to guide the future of terrestrial ecosystems.",
+      "volume": "355",
+      "author": "Barnosky",
+      "year": "2017",
+      "journal-title": "Science"
+    },
+    {
+      "key": "2025111820234320400_R9"
+    },
+    {
+      "key": "2025111820234320400_R10"
+    },
+    {
+      "key": "2025111820234320400_R11",
+      "doi-asserted-by": "publisher",
+      "first-page": "1",
+      "DOI": "10.18637/jss.v080.i01",
+      "article-title": "brms: an R package for Bayesian multilevel models using Stan.",
+      "volume": "80",
+      "author": "Bürkner",
+      "year": "2017",
+      "journal-title": "Journal of Statistical Software"
+    },
+    {
+      "key": "2025111820234320400_R12",
+      "doi-asserted-by": "publisher",
+      "first-page": "221",
+      "DOI": "10.1016/j.marpolbul.2009.08.008",
+      "article-title": "Foraminiferal assemblages in Biscayne Bay, Florida, USA: responses to urban and agricultural influence in a subtropical estuary.",
+      "volume": "59",
+      "author": "Carnahan",
+      "year": "2009",
+      "journal-title": "Marine Pollution Bulletin"
+    },
+    {
+      "key": "2025111820234320400_R13",
+      "doi-asserted-by": "publisher",
+      "first-page": "9",
+      "DOI": "10.1080/02757540.2010.529076",
+      "article-title": "Response of benthic foraminifera to heavy metal contamination in marine sediments (Sicilian coasts, Mediterranean Sea).",
+      "volume": "27",
+      "author": "Caruso",
+      "year": "2011",
+      "journal-title": "Chemistry and Ecology"
+    },
+    {
+      "key": "2025111820234320400_R14",
+      "unstructured": "Dix TL (2002) The distribution and ecology of benthic foraminifera of Tampa Bay, Florida. PhD dissertation. Department of Marine Science, University of South Florida, Tampa."
+    },
+    {
+      "key": "2025111820234320400_R54"
+    },
+    {
+      "key": "2025111820234320400_R15",
+      "doi-asserted-by": "publisher",
+      "first-page": "174",
+      "DOI": "10.1016/j.marchem.2007.01.016",
+      "article-title": "Air–sea CO2 exchange in a subtropical estuarine-coral reef system, Kaneohe Bay, Oahu, Hawai‘i.",
+      "volume": "106",
+      "author": "Fagan",
+      "year": "2007",
+      "journal-title": "Marine Chemistry"
+    },
+    {
+      "key": "2025111820234320400_R16",
+      "doi-asserted-by": "publisher",
+      "first-page": "274",
+      "DOI": "10.1016/j.marpolbul.2017.06.032",
+      "article-title": "Displacement effects of heavy human use on coral reef predators within the Molokini Marine Life Conservation District.",
+      "volume": "121",
+      "author": "Filous",
+      "year": "2017",
+      "journal-title": "Marine Pollution Bulletin"
+    },
+    {
+      "key": "2025111820234320400_R17",
+      "doi-asserted-by": "publisher",
+      "first-page": "146",
+      "DOI": "10.1002/aqc.2832",
+      "article-title": "Human-induced gradients of reef fish declines in the Hawaiian Archipelago viewed through the lens of traditional management boundaries.",
+      "volume": "28",
+      "author": "Friedlander",
+      "year": "2018",
+      "journal-title": "Aquatic Conservation: Marine and Freshwater Ecosystems"
+    },
+    {
+      "key": "2025111820234320400_R18",
+      "doi-asserted-by": "publisher",
+      "first-page": "404",
+      "DOI": "10.1016/j.ecss.2007.07.024",
+      "article-title": "Benthic foraminifera for heavy metal pollution monitoring: a case study from the central Adriatic Sea coast of Italy.",
+      "volume": "76",
+      "author": "Frontalini",
+      "year": "2008",
+      "journal-title": "Estuarine, Coastal and Shelf Science"
+    },
+    {
+      "key": "2025111820234320400_R19",
+      "doi-asserted-by": "publisher",
+      "first-page": "530",
+      "DOI": "10.3102/1076998615606113",
+      "article-title": "Stan: a probabilistic programming language for Bayesian inference and optimization.",
+      "volume": "40",
+      "author": "Gelman",
+      "year": "2015",
+      "journal-title": "Journal of Educational and Behavioral Statistics"
+    },
+    {
+      "key": "2025111820234320400_R20"
+    },
+    {
+      "key": "2025111820234320400_R21",
+      "doi-asserted-by": "publisher",
+      "first-page": "221",
+      "DOI": "10.1023/A:1021337310386",
+      "article-title": "Foraminifera as bioindicators in coral reef assessment and monitoring: the FORAM index.",
+      "volume": "81",
+      "author": "Hallock",
+      "year": "2003",
+      "journal-title": "Environmental Monitoring and Assessment"
+    },
+    {
+      "key": "2025111820234320400_R22",
+      "doi-asserted-by": "publisher",
+      "first-page": "253",
+      "DOI": "10.1016/S0921-8009(99)00015-4",
+      "article-title": "Ecosystem services generated by fish populations.",
+      "volume": "29",
+      "author": "Holmlund",
+      "year": "1999",
+      "journal-title": "Ecological Economics"
+    },
+    {
+      "key": "2025111820234320400_R23",
+      "doi-asserted-by": "publisher",
+      "first-page": "187",
+      "DOI": "10.3354/meps318187",
+      "article-title": "Zooplankton response to storm runoff in a tropical estuary: bottom-up and top-down controls.",
+      "volume": "318",
+      "author": "Hoover",
+      "year": "2006",
+      "journal-title": "Marine Ecology Progress Series"
+    },
+    {
+      "key": "2025111820234320400_R24",
+      "first-page": "501",
+      "article-title": "Coral reefs in Kaneohe Bay, Hawai‘i: two centuries of western influence and two decades of data.",
+      "volume": "57",
+      "author": "Hunter",
+      "year": "1995",
+      "journal-title": "Bulletin of Marine Science"
+    },
+    {
+      "key": "2025111820234320400_R25",
+      "doi-asserted-by": "publisher",
+      "first-page": "1627",
+      "DOI": "10.1111/j.1365-2486.2004.00836.x",
+      "article-title": "Global warming, regional trends and inshore environmental conditions influence coral bleaching in Hawai‘i.",
+      "volume": "10",
+      "author": "Jokiel",
+      "year": "2004",
+      "journal-title": "Global Change Biology"
+    },
+    {
+      "key": "2025111820234320400_R26",
+      "doi-asserted-by": "publisher",
+      "first-page": "159",
+      "DOI": "10.1353/psc.2004.0018",
+      "article-title": "Hawai‘i coral reef assessment and monitoring program: spatial patterns and temporal dynamics in reef coral communities.",
+      "volume": "58",
+      "author": "Jokiel",
+      "year": "2004",
+      "journal-title": "Pacific Science"
+    },
+    {
+      "key": "2025111820234320400_R27",
+      "doi-asserted-by": "publisher",
+      "first-page": "489",
+      "DOI": "10.1016/j.jmarsys.2011.06.004",
+      "article-title": "Living benthic foraminifera as an environmental proxy in coastal ecosystems: a case study from the Aegean Sea (Greece, NE Mediterranean).",
+      "volume": "88",
+      "author": "Koukousioura",
+      "year": "2011",
+      "journal-title": "Journal of Marine Systems"
+    },
+    {
+      "key": "2025111820234320400_R28",
+      "first-page": "194",
+      "article-title": "Water quality in a subtropical embayment more than a decade after diversion of sewage discharges.",
+      "volume": "50",
+      "author": "Laws",
+      "year": "1996",
+      "journal-title": "Pacific Science"
+    },
+    {
+      "key": "2025111820234320400_R29",
+      "doi-asserted-by": "publisher",
+      "first-page": "265",
+      "DOI": "10.1016/0141-1136(82)90041-1",
+      "article-title": "Sewage diversion effects on the water column of a subtropical estuary.",
+      "volume": "6",
+      "author": "Laws",
+      "year": "1982",
+      "journal-title": "Marine Environmental Research"
+    },
+    {
+      "key": "2025111820234320400_R55"
+    },
+    {
+      "key": "2025111820234320400_R30"
+    },
+    {
+      "key": "2025111820234320400_R31"
+    },
+    {
+      "key": "2025111820234320400_R32",
+      "doi-asserted-by": "publisher",
+      "first-page": "2062",
+      "DOI": "10.1016/j.marpolbul.2010.07.012",
+      "article-title": "Benthic foraminiferal assemblages from Moreton Bay, South-East Queensland, Australia: applications in monitoring water and substrate quality in subtropical estuarine environments.",
+      "volume": "60",
+      "author": "Narayan",
+      "year": "2010",
+      "journal-title": "Marine Pollution Bulletin"
+    },
+    {
+      "key": "2025111820234320400_R33",
+      "unstructured": "Neilson B (2014) Coral bleaching rapid response surveys September–October 2014. Available at http://dlnr.hawaii.gov/reefresponse/files/2014/10/DARCoralBleachingSrvyResults10.28.2014. pdf"
+    },
+    {
+      "key": "2025111820234320400_R34",
+      "unstructured": "Oksanen J, Guillaume Blanchet F, Friendly M, Kindt R, Legendre P, McGlinn D, Minchin PR, O’Hara RB, Simpson GL, Solymos P, Henry M, Stevens H, Szoecs E, Wagner H (2020) vegan: community ecology package. Available at https://CRAN.R-project.org/package=vegan"
+    },
+    {
+      "key": "2025111820234320400_R35",
+      "doi-asserted-by": "publisher",
+      "first-page": "95",
+      "DOI": "10.1016/j.marenvres.2014.04.005",
+      "article-title": "Contrasting responses of coral reef fauna and foraminiferal assemblages to human influence in La Parguera, Puerto Rico.",
+      "volume": "99",
+      "author": "Oliver",
+      "year": "2014",
+      "journal-title": "Marine Environmental Research"
+    },
+    {
+      "key": "2025111820234320400_R36",
+      "doi-asserted-by": "publisher",
+      "first-page": "955",
+      "DOI": "10.1126/science.1085706",
+      "article-title": "Global trajectories of the long-term decline of coral reef ecosystems.",
+      "volume": "301",
+      "author": "Pandolfi",
+      "year": "2003",
+      "journal-title": "Science"
+    },
+    {
+      "key": "2025111820234320400_R37",
+      "doi-asserted-by": "publisher",
+      "first-page": "175",
+      "DOI": "10.3354/meps021175",
+      "article-title": "Effects of sewage pollution on coral-reef communities.",
+      "volume": "21",
+      "author": "Pastorok",
+      "year": "1985",
+      "journal-title": "Marine Ecology Progress Series"
+    },
+    {
+      "key": "2025111820234320400_R38",
+      "doi-asserted-by": "publisher",
+      "first-page": "50",
+      "DOI": "10.1016/j.marmicro.2017.06.001",
+      "article-title": "Assessing coral reef health in the North Ari Atoll (Maldives) using the FoRAM Index.",
+      "volume": "133",
+      "author": "Pisapia",
+      "year": "2017",
+      "journal-title": "Marine Micropaleontology"
+    },
+    {
+      "key": "2025111820234320400_R39",
+      "doi-asserted-by": "publisher",
+      "first-page": "113612",
+      "DOI": "10.1016/j.envpol.2019.113612",
+      "article-title": "Foraminifera as bioindicators of water quality: the FoRAM Index revisited.",
+      "volume": "257",
+      "author": "Prazeres",
+      "year": "2020",
+      "journal-title": "Environmental Pollution"
+    },
+    {
+      "key": "2025111820234320400_R40",
+      "unstructured": "R Core Team (2021) R: a language and environment for statistical computing. (R Foundation for Statistical Computing: Vienna, Austria.) Available at https://www.R-project.org/"
+    },
+    {
+      "key": "2025111820234320400_R41"
+    },
+    {
+      "key": "2025111820234320400_R42",
+      "doi-asserted-by": "publisher",
+      "first-page": "327",
+      "DOI": "10.1007/BF02693916",
+      "article-title": "Controls on nutrient and phytoplankton dynamics during normal flow and storm runoff conditions, southern Kaneohe Bay, Hawai‘i.",
+      "volume": "28",
+      "author": "Ringuet",
+      "year": "2005",
+      "journal-title": "Estuaries"
+    },
+    {
+      "key": "2025111820234320400_R43",
+      "doi-asserted-by": "publisher",
+      "first-page": "1",
+      "DOI": "10.2984/69.1.1",
+      "article-title": "Over a decade of change in spatial and temporal dynamics of Hawaiian coral reef communities.",
+      "volume": "69",
+      "author": "Rodgers",
+      "year": "2015",
+      "journal-title": "Pacific Science"
+    },
+    {
+      "key": "2025111820234320400_R44",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1371/journal.pone.0001548",
+      "article-title": "Baselines and degradation of coral reefs in the Northern Line Islands.",
+      "volume": "3",
+      "author": "Sandin",
+      "year": "2008",
+      "journal-title": "PLoS ONE"
+    },
+    {
+      "key": "2025111820234320400_R46",
+      "first-page": "279",
+      "article-title": "Kaneohe Bay sewage diversion experiment: perspectives on ecosystem responses to nutritional perturbation.",
+      "volume": "35",
+      "author": "Smith",
+      "year": "1981",
+      "journal-title": "Pacific Science"
+    },
+    {
+      "key": "2025111820234320400_R47",
+      "doi-asserted-by": "publisher",
+      "first-page": "763",
+      "DOI": "10.1016/j.ecss.2008.02.014",
+      "article-title": "Benthic foraminifera as ecological indicators for water quality on the Great Barrier Reef.",
+      "volume": "78",
+      "author": "Uthicke",
+      "year": "2008",
+      "journal-title": "Estuarine, Coastal and Shelf Science"
+    },
+    {
+      "key": "2025111820234320400_R48",
+      "doi-asserted-by": "publisher",
+      "first-page": "1413",
+      "DOI": "10.1007/s11222-016-9696-4",
+      "article-title": "Practical Bayesian model evaluation using leave-one-out cross-validation and WAIC.",
+      "volume": "27",
+      "author": "Vehtari",
+      "year": "2017",
+      "journal-title": "Statistics and Computing"
+    },
+    {
+      "key": "2025111820234320400_R49",
+      "doi-asserted-by": "publisher",
+      "first-page": "667",
+      "DOI": "10.1214/20-BA1221",
+      "article-title": "Rank-normalization, folding, and localization: an improved PC21027_IE1.gif for assessing convergence of MCMC (with discussion).",
+      "volume": "16",
+      "author": "Vehtari",
+      "year": "2021",
+      "journal-title": "Bayesian Analysis"
+    },
+    {
+      "key": "2025111820234320400_R50",
+      "doi-asserted-by": "publisher",
+      "first-page": "3591",
+      "DOI": "10.1007/s10531-011-0152-7",
+      "article-title": "Evaluation of the FORAM index in a case of conservation: Benthic foraminifera as indicators of ecosystem resilience in protected and non-protected coral reefs of the Southern Caribbean.",
+      "volume": "20",
+      "author": "Velásquez",
+      "year": "2011",
+      "journal-title": "Biodiversity and Conservation"
+    },
+    {
+      "key": "2025111820234320400_R51",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.21105/joss.01686",
+      "article-title": "Welcome to the Tidyverse.",
+      "volume": "4",
+      "author": "Wickham",
+      "year": "2019",
+      "journal-title": "Journal of Open Source Software"
+    },
+    {
+      "key": "2025111820234320400_R52",
+      "doi-asserted-by": "publisher",
+      "first-page": "261",
+      "DOI": "10.1017/S0376892908004876",
+      "article-title": "Assessing the importance of fishing impacts on Hawaiian coral reef fish assemblages along regional-scale human population gradients.",
+      "volume": "35",
+      "author": "Williams",
+      "year": "2008",
+      "journal-title": "Environmental Conservation"
+    },
+    {
+      "key": "2025111820234320400_R53",
+      "doi-asserted-by": "publisher",
+      "first-page": "1023",
+      "DOI": "10.1111/1365-2435.13331",
+      "article-title": "Coral reef ecosystem services in the Anthropocene.",
+      "volume": "33",
+      "author": "Woodhead",
+      "year": "2019",
+      "journal-title": "Functional Ecology"
+    }
+  ],
+  "container-title": [
+    "Pacific Conservation Biology"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://connectsci.au/pc/article-pdf/29/3/238/236550/pc21027.pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "syndication"
+    },
+    {
+      "URL": "https://connectsci.au/pc/article-pdf/29/3/238/236550/pc21027.pdf",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        11,
+        19
+      ]
+    ],
+    "date-time": "2025-11-19T01:23:52Z",
+    "timestamp": 1763515432000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://connectsci.au/pc/article/29/3/238/38074/Benthic-foraminifera-as-bioindicators-for"
+    }
+  },
+  "subtitle": [],
+  "editor": [
+    {
+      "given": "Mike van",
+      "family": "Keulen",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "editor"
+        }
+      ]
+    }
+  ],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2022,
+        4,
+        12
+      ]
+    ]
+  },
+  "references-count": 54,
+  "journal-issue": {
+    "issue": "3",
+    "published-print": {
+      "date-parts": [
+        [
+          2023,
+          6,
+          1
+        ]
+      ]
+    }
+  },
+  "URL": "https://doi.org/10.1071/pc21027",
+  "relation": {},
+  "ISSN": [
+    "1038-2097",
+    "2204-4604"
+  ],
+  "issn-type": [
+    {
+      "value": "1038-2097",
+      "type": "print"
+    },
+    {
+      "value": "2204-4604",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2022,
+        4,
+        12
+      ]
+    ]
+  }
+}

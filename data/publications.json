@@ -1,0 +1,889 @@
+[
+  {
+    "title": "FINS—A Global Occurrence Dataset of Fossil Neoselachians From the Cretaceous to the Quaternary",
+    "doi": "10.1111/geb.70315",
+    "year": 2026,
+    "date": "2026-10-01",
+    "authors": [
+      {
+        "name": "Kristína Kocáková",
+        "self": false
+      },
+      {
+        "name": "Jaime A. Villafaña",
+        "self": false
+      },
+      {
+        "name": "Amanda Gardiner",
+        "self": false
+      },
+      {
+        "name": "Gregor H. Mathes",
+        "self": true
+      },
+      {
+        "name": "Théophile L. Mouton",
+        "self": false
+      },
+      {
+        "name": "Catalina Pimiento",
+        "self": false
+      }
+    ],
+    "journal": "Global Ecology and Biogeography",
+    "volume": "35",
+    "issue": "10",
+    "pages": "e70315",
+    "url": "/publication/journal-article/fins-a-global-occurrence-dataset-of-fossil-neoselachians-from-the-cretaceous-to-the-quaternary/",
+    "selected": false,
+    "focus": "",
+    "source": "https://api.crossref.org/works/10.1111/geb.70315"
+  },
+  {
+    "title": "Reduced extinction risk for autotrophs in the open ocean",
+    "doi": "10.1098/rspb.2026.1158",
+    "year": 2026,
+    "date": "2026-08-19",
+    "authors": [
+      {
+        "name": "Isaiah E. Smith",
+        "self": false
+      },
+      {
+        "name": "Gregor Hans Mathes",
+        "self": true
+      },
+      {
+        "name": "Tasnuva Ming Khan",
+        "self": false
+      },
+      {
+        "name": "Marina C. Rillo",
+        "self": false
+      },
+      {
+        "name": "Wolfgang Kiessling",
+        "self": false
+      }
+    ],
+    "journal": "Proceedings of the Royal Society B: Biological Sciences",
+    "volume": "293",
+    "issue": "2077",
+    "pages": "20261158",
+    "url": "/publication/journal-article/reduced-extinction-risk-for-autotrophs-in-the-open-ocean/",
+    "selected": false,
+    "focus": "",
+    "source": "https://api.crossref.org/works/10.1098/rspb.2026.1158"
+  },
+  {
+    "title": "The Extinction Risk–Range Change Relationship: Evidence From the Fossil Record",
+    "doi": "10.1111/geb.70226",
+    "year": 2026,
+    "date": "2026-03-01",
+    "authors": [
+      {
+        "name": "Eileen Straube",
+        "self": false
+      },
+      {
+        "name": "Manuel J. Steinbauer",
+        "self": false
+      },
+      {
+        "name": "Seth Finnegan",
+        "self": false
+      },
+      {
+        "name": "Gregor H. Mathes",
+        "self": true
+      }
+    ],
+    "journal": "Global Ecology and Biogeography",
+    "volume": "35",
+    "issue": "3",
+    "pages": "e70226",
+    "url": "/publication/journal-article/the-extinction-risk-range-change-relationship-evidence-from-the-fossil-record/",
+    "selected": false,
+    "focus": "",
+    "source": "https://api.crossref.org/works/10.1111/geb.70226"
+  },
+  {
+    "title": "Revealing the hidden patterns of shark and ray diversity over the past 145 million years",
+    "doi": "10.1016/j.cub.2025.12.017",
+    "year": 2026,
+    "date": "2026-02-01",
+    "authors": [
+      {
+        "name": "Amanda Gardiner",
+        "self": false
+      },
+      {
+        "name": "Gregor H. Mathes",
+        "self": true
+      },
+      {
+        "name": "Rebecca Cooper",
+        "self": false
+      },
+      {
+        "name": "Kristína Kocáková",
+        "self": false
+      },
+      {
+        "name": "Jaime A. Villafaña",
+        "self": false
+      },
+      {
+        "name": "Daniele Silvestro",
+        "self": false
+      },
+      {
+        "name": "Catalina Pimiento",
+        "self": false
+      }
+    ],
+    "journal": "Current Biology",
+    "volume": "36",
+    "issue": "4",
+    "pages": "1045-1053.e4",
+    "url": "/publication/journal-article/revealing-the-hidden-patterns-of-shark-and-ray-diversity-over-the-past-145-million-years/",
+    "selected": true,
+    "focus": "Reconstructing diversity from an uneven fossil record",
+    "source": "https://api.crossref.org/works/10.1016/j.cub.2025.12.017"
+  },
+  {
+    "title": "Global extinction events and persistent age-dependency in sharks and rays over the past 145 million years",
+    "doi": "10.1098/rspb.2025.2272",
+    "year": 2025,
+    "date": "2025-12-17",
+    "authors": [
+      {
+        "name": "Kristína Kocáková",
+        "self": false
+      },
+      {
+        "name": "Daniele Silvestro",
+        "self": false
+      },
+      {
+        "name": "Gregor Hans Mathes",
+        "self": true
+      },
+      {
+        "name": "Jaime Andres Villafaña",
+        "self": false
+      },
+      {
+        "name": "Catalina Pimiento",
+        "self": false
+      }
+    ],
+    "journal": "Proceedings of the Royal Society B: Biological Sciences",
+    "volume": "292",
+    "issue": "2061",
+    "pages": "20252272",
+    "url": "/publication/journal-article/global-extinction-events-and-persistent-age-dependency-in-sharks-and-rays-over-the-past-145-million-years/",
+    "selected": false,
+    "focus": "",
+    "source": "https://api.crossref.org/works/10.1098/rspb.2025.2272"
+  },
+  {
+    "title": "Europe’s lost landscape sculptors: Today’s potential range of the extinct elephant Palaeoloxodon antiquus",
+    "doi": "10.21425/fob.18.135081",
+    "year": 2025,
+    "date": "2025-04-23",
+    "authors": [
+      {
+        "name": "Franka Gaiser",
+        "self": false
+      },
+      {
+        "name": "Charlotte Müller",
+        "self": false
+      },
+      {
+        "name": "Paula Phan",
+        "self": false
+      },
+      {
+        "name": "Gregor Mathes",
+        "self": true
+      },
+      {
+        "name": "Manuel J. Steinbauer",
+        "self": false
+      }
+    ],
+    "journal": "Frontiers of Biogeography",
+    "volume": "18",
+    "issue": "",
+    "pages": "e135081",
+    "url": "/publication/journal-article/europe-s-lost-landscape-sculptors-today-s-potential-range-of-the-extinct-elephant-palaeoloxodon-antiquus/",
+    "selected": false,
+    "focus": "",
+    "source": "https://api.crossref.org/works/10.21425/fob.18.135081"
+  },
+  {
+    "title": "Eco‐Evolutionary Dynamics of Plant–Soil Feedbacks Explain the Spread Potential of a Plant Invader Under Climate Warming and Biocontrol Herbivory",
+    "doi": "10.1111/gcb.70110",
+    "year": 2025,
+    "date": "2025-03-01",
+    "authors": [
+      {
+        "name": "Yan Sun",
+        "self": false
+      },
+      {
+        "name": "Daniele Silvestro",
+        "self": false
+      },
+      {
+        "name": "Gregor H. Mathes",
+        "self": true
+      },
+      {
+        "name": "Marcel G. A. van der Heijden",
+        "self": false
+      },
+      {
+        "name": "Heinz Müller‐Schärer",
+        "self": false
+      }
+    ],
+    "journal": "Global Change Biology",
+    "volume": "31",
+    "issue": "3",
+    "pages": "e70110",
+    "url": "/publication/journal-article/eco-evolutionary-dynamics-of-plant-soil-feedbacks-explain-the-spread-potential-of-a-plant-invader-under-climate-warming-and-biocontrol-herbivory/",
+    "selected": false,
+    "focus": "",
+    "source": "https://api.crossref.org/works/10.1111/gcb.70110"
+  },
+  {
+    "title": "Marine species and assemblage change foreshadowed by their thermal bias over Early Jurassic warming",
+    "doi": "10.1038/s41467-025-56589-0",
+    "year": 2025,
+    "date": "2025-02-05",
+    "authors": [
+      {
+        "name": "Carl J. Reddin",
+        "self": false
+      },
+      {
+        "name": "Jan P. Landwehrs",
+        "self": false
+      },
+      {
+        "name": "Gregor H. Mathes",
+        "self": true
+      },
+      {
+        "name": "Clemens V. Ullmann",
+        "self": false
+      },
+      {
+        "name": "Georg Feulner",
+        "self": false
+      },
+      {
+        "name": "Martin Aberhan",
+        "self": false
+      }
+    ],
+    "journal": "Nature Communications",
+    "volume": "16",
+    "issue": "1",
+    "pages": "1370",
+    "url": "/publication/journal-article/marine-species-and-assemblage-change-foreshadowed-by-their-thermal-bias-over-early-jurassic-warming/",
+    "selected": false,
+    "focus": "",
+    "source": "https://api.crossref.org/works/10.1038/s41467-025-56589-0"
+  },
+  {
+    "title": "The effect of climate legacies on extinction dynamics: A systematic review",
+    "doi": "10.1017/ext.2025.2",
+    "year": 2025,
+    "date": "2025-01-01",
+    "authors": [
+      {
+        "name": "Gregor H. Mathes",
+        "self": true
+      },
+      {
+        "name": "Catalina Pimiento",
+        "self": false
+      },
+      {
+        "name": "Wolfgang Kiessling",
+        "self": false
+      },
+      {
+        "name": "Jens-Christian Svenning",
+        "self": false
+      },
+      {
+        "name": "Manuel J. Steinbauer",
+        "self": false
+      }
+    ],
+    "journal": "Cambridge Prisms: Extinction",
+    "volume": "3",
+    "issue": "",
+    "pages": "e6",
+    "url": "/publication/journal-article/the-effect-of-climate-legacies-on-extinction-dynamics-a-systematic-review/",
+    "selected": true,
+    "focus": "Connecting climate legacies and extinction",
+    "source": "https://api.crossref.org/works/10.1017/ext.2025.2"
+  },
+  {
+    "title": "Spatially Heterogeneous Responses of Planktonic Foraminiferal Assemblages Over 700,000 Years of Climate Change",
+    "doi": "10.1111/geb.13905",
+    "year": 2024,
+    "date": "2024-11-01",
+    "authors": [
+      {
+        "name": "Gregor H. Mathes",
+        "self": true
+      },
+      {
+        "name": "Carl J. Reddin",
+        "self": false
+      },
+      {
+        "name": "Wolfgang Kiessling",
+        "self": false
+      },
+      {
+        "name": "Gawain T. Antell",
+        "self": false
+      },
+      {
+        "name": "Erin E. Saupe",
+        "self": false
+      },
+      {
+        "name": "Manuel J. Steinbauer",
+        "self": false
+      }
+    ],
+    "journal": "Global Ecology and Biogeography",
+    "volume": "33",
+    "issue": "11",
+    "pages": "e13905",
+    "url": "/publication/journal-article/spatially-heterogeneous-responses-of-planktonic-foraminiferal-assemblages-over-700-000-years-of-climate-change/",
+    "selected": true,
+    "focus": "Biodiversity responses vary across space",
+    "source": "https://api.crossref.org/works/10.1111/geb.13905",
+    "correction": "https://doi.org/10.1111/geb.70119"
+  },
+  {
+    "title": "Automated visitor and wildlife monitoring with camera traps and machine learning",
+    "doi": "10.1002/rse2.367",
+    "year": 2024,
+    "date": "2024-04-01",
+    "authors": [
+      {
+        "name": "Veronika Mitterwallner",
+        "self": false
+      },
+      {
+        "name": "Anne Peters",
+        "self": false
+      },
+      {
+        "name": "Hendrik Edelhoff",
+        "self": false
+      },
+      {
+        "name": "Gregor Mathes",
+        "self": true
+      },
+      {
+        "name": "Hien Nguyen",
+        "self": false
+      },
+      {
+        "name": "Wibke Peters",
+        "self": false
+      },
+      {
+        "name": "Marco Heurich",
+        "self": false
+      },
+      {
+        "name": "Manuel J. Steinbauer",
+        "self": false
+      }
+    ],
+    "journal": "Remote Sensing in Ecology and Conservation",
+    "volume": "10",
+    "issue": "2",
+    "pages": "236-247",
+    "url": "/publication/journal-article/remote_sensing/",
+    "selected": false,
+    "focus": "",
+    "source": "https://api.crossref.org/works/10.1002/rse2.367",
+    "online_year": 2023
+  },
+  {
+    "title": "Global reduction of snow cover in ski areas under climate change",
+    "doi": "10.1371/journal.pone.0299735",
+    "year": 2024,
+    "date": "2024-03-13",
+    "authors": [
+      {
+        "name": "Veronika Mitterwallner",
+        "self": false
+      },
+      {
+        "name": "Manuel Steinbauer",
+        "self": false
+      },
+      {
+        "name": "Gregor Mathes",
+        "self": true
+      },
+      {
+        "name": "Anna Walentowitz",
+        "self": false
+      }
+    ],
+    "journal": "PLOS ONE",
+    "volume": "19",
+    "issue": "3",
+    "pages": "e0299735",
+    "url": "/publication/journal-article/skying/",
+    "selected": false,
+    "focus": "",
+    "source": "https://api.crossref.org/works/10.1371/journal.pone.0299735"
+  },
+  {
+    "title": "Bayesian analysis of biodiversity patterns via beam trawl versus video transect—a comparative case study of Svalbard rhodolith beds",
+    "doi": "10.1007/s10531-024-02788-y",
+    "year": 2024,
+    "date": "2024-03-01",
+    "authors": [
+      {
+        "name": "Eileen Straube",
+        "self": false
+      },
+      {
+        "name": "Hermann Neumann",
+        "self": false
+      },
+      {
+        "name": "Max Wisshak",
+        "self": false
+      },
+      {
+        "name": "Gregor Mathes",
+        "self": true
+      },
+      {
+        "name": "Sebastian Teichert",
+        "self": false
+      }
+    ],
+    "journal": "Biodiversity and Conservation",
+    "volume": "33",
+    "issue": "3",
+    "pages": "1099-1123",
+    "url": "/publication/journal-article/rodolith/",
+    "selected": false,
+    "focus": "",
+    "source": "https://api.crossref.org/works/10.1007/s10531-024-02788-y"
+  },
+  {
+    "title": "The extinct marine megafauna of the Phanerozoic",
+    "doi": "10.1017/ext.2024.12",
+    "year": 2024,
+    "date": "2024-01-01",
+    "authors": [
+      {
+        "name": "Catalina Pimiento",
+        "self": false
+      },
+      {
+        "name": "Kristína Kocáková",
+        "self": false
+      },
+      {
+        "name": "Gregor H. Mathes",
+        "self": true
+      },
+      {
+        "name": "Thodoris Argyriou",
+        "self": false
+      },
+      {
+        "name": "Edwin-Alberto Cadena",
+        "self": false
+      },
+      {
+        "name": "Jack A. Cooper",
+        "self": false
+      },
+      {
+        "name": "Dirley Cortés",
+        "self": false
+      },
+      {
+        "name": "Daniel J. Field",
+        "self": false
+      },
+      {
+        "name": "Christian Klug",
+        "self": false
+      },
+      {
+        "name": "Torsten M. Scheyer",
+        "self": false
+      },
+      {
+        "name": "Ana M. Valenzuela-Toro",
+        "self": false
+      },
+      {
+        "name": "Timon Buess",
+        "self": false
+      },
+      {
+        "name": "Meike Günter",
+        "self": false
+      },
+      {
+        "name": "Amanda M. Gardiner",
+        "self": false
+      },
+      {
+        "name": "Pascale Hatt",
+        "self": false
+      },
+      {
+        "name": "Geraldine Holdener",
+        "self": false
+      },
+      {
+        "name": "Giulia Jacober",
+        "self": false
+      },
+      {
+        "name": "Sabrina Kobelt",
+        "self": false
+      },
+      {
+        "name": "Sheldon Masseraz",
+        "self": false
+      },
+      {
+        "name": "Ian Mehli",
+        "self": false
+      },
+      {
+        "name": "Sarah Reiff",
+        "self": false
+      },
+      {
+        "name": "Eva Rigendinger",
+        "self": false
+      },
+      {
+        "name": "Mimo Ruckstuhl",
+        "self": false
+      },
+      {
+        "name": "Santana Schneider",
+        "self": false
+      },
+      {
+        "name": "Clarissa Seige",
+        "self": false
+      },
+      {
+        "name": "Nathalie Senn",
+        "self": false
+      },
+      {
+        "name": "Valeria Staccoli",
+        "self": false
+      },
+      {
+        "name": "Jessica Baumann",
+        "self": false
+      },
+      {
+        "name": "Livio Flüeler",
+        "self": false
+      },
+      {
+        "name": "Lino J. Guevara",
+        "self": false
+      },
+      {
+        "name": "Esin Ickin",
+        "self": false
+      },
+      {
+        "name": "Kimberley C. Kissling",
+        "self": false
+      },
+      {
+        "name": "Janis Rogenmoser",
+        "self": false
+      },
+      {
+        "name": "Dominik Spitznagel",
+        "self": false
+      },
+      {
+        "name": "Jaime A. Villafaña",
+        "self": false
+      },
+      {
+        "name": "Chiara Zanatta",
+        "self": false
+      }
+    ],
+    "journal": "Cambridge Prisms: Extinction",
+    "volume": "2",
+    "issue": "",
+    "pages": "e7",
+    "url": "/publication/journal-article/the-extinct-marine-megafauna-of-the-phanerozoic/",
+    "selected": false,
+    "focus": "",
+    "source": "https://api.crossref.org/works/10.1017/ext.2024.12"
+  },
+  {
+    "title": "Oversimplification risks too much: a response to ‘How predictable are mass extinction events?'",
+    "doi": "10.1098/rsos.230400",
+    "year": 2023,
+    "date": "2023-08-01",
+    "authors": [
+      {
+        "name": "Carl J. Reddin",
+        "self": false
+      },
+      {
+        "name": "Martin Aberhan",
+        "self": false
+      },
+      {
+        "name": "Danijela Dimitrijević",
+        "self": false
+      },
+      {
+        "name": "Elizabeth M. Dowding",
+        "self": false
+      },
+      {
+        "name": "Ádám T. Kocsis",
+        "self": false
+      },
+      {
+        "name": "Gregor Mathes",
+        "self": true
+      },
+      {
+        "name": "Paulina S. Nätscher",
+        "self": false
+      },
+      {
+        "name": "Mark E. Patzkowsky",
+        "self": false
+      },
+      {
+        "name": "Wolfgang Kiessling",
+        "self": false
+      }
+    ],
+    "journal": "Royal Society Open Science",
+    "volume": "10",
+    "issue": "8",
+    "pages": "230400",
+    "url": "/publication/journal-article/oversimplification/",
+    "selected": false,
+    "focus": "",
+    "source": "https://api.crossref.org/works/10.1098/rsos.230400"
+  },
+  {
+    "title": "Benthic foraminifera as bioindicators for assessing reef condition in Kāne‘ohe Bay, O‘ahu, Hawai‘i",
+    "doi": "10.1071/pc21027",
+    "year": 2023,
+    "date": "2023-06-01",
+    "authors": [
+      {
+        "name": "Gregor H. Mathes",
+        "self": true
+      },
+      {
+        "name": "Manuel J. Steinbauer",
+        "self": false
+      },
+      {
+        "name": "Laura Cotton",
+        "self": false
+      }
+    ],
+    "journal": "Pacific Conservation Biology",
+    "volume": "29",
+    "issue": "3",
+    "pages": "238-245",
+    "url": "/publication/journal-article/pacific_conservation/",
+    "selected": false,
+    "focus": "",
+    "source": "https://api.crossref.org/works/10.1071/pc21027",
+    "online_year": 2022
+  },
+  {
+    "title": "Five million years of high atmospheric CO2 in the aftermath of the Permian-Triassic mass extinction",
+    "doi": "10.1130/g49714.1",
+    "year": 2022,
+    "date": "2022-06-01",
+    "authors": [
+      {
+        "name": "Michael M. Joachimski",
+        "self": false
+      },
+      {
+        "name": "Johann Müller",
+        "self": false
+      },
+      {
+        "name": "Timothy M. Gallagher",
+        "self": false
+      },
+      {
+        "name": "Gregor Mathes",
+        "self": true
+      },
+      {
+        "name": "Daoliang L. Chu",
+        "self": false
+      },
+      {
+        "name": "Fedor Mouraviev",
+        "self": false
+      },
+      {
+        "name": "Vladimir Silantiev",
+        "self": false
+      },
+      {
+        "name": "Yadong D. Sun",
+        "self": false
+      },
+      {
+        "name": "Jinnan N. Tong",
+        "self": false
+      }
+    ],
+    "journal": "Geology",
+    "volume": "50",
+    "issue": "6",
+    "pages": "650-654",
+    "url": "/publication/journal-article/geology/",
+    "selected": false,
+    "focus": "",
+    "source": "https://api.crossref.org/works/10.1130/g49714.1"
+  },
+  {
+    "title": "Deep-time climate legacies affect origination rates of marine genera",
+    "doi": "10.1073/pnas.2105769118",
+    "year": 2021,
+    "date": "2021-09-07",
+    "authors": [
+      {
+        "name": "Gregor H. Mathes",
+        "self": true
+      },
+      {
+        "name": "Wolfgang Kiessling",
+        "self": false
+      },
+      {
+        "name": "Manuel J. Steinbauer",
+        "self": false
+      }
+    ],
+    "journal": "Proceedings of the National Academy of Sciences",
+    "volume": "118",
+    "issue": "36",
+    "pages": "e2105769118",
+    "url": "/publication/journal-article/pnas/",
+    "selected": false,
+    "focus": "",
+    "source": "https://api.crossref.org/works/10.1073/pnas.2105769118"
+  },
+  {
+    "title": "Outdoor cycling activity affected by COVID-19 related epidemic-control-decisions",
+    "doi": "10.1371/journal.pone.0249268",
+    "year": 2021,
+    "date": "2021-05-06",
+    "authors": [
+      {
+        "name": "Anne-Maria Schweizer",
+        "self": false
+      },
+      {
+        "name": "Anna Leiderer",
+        "self": false
+      },
+      {
+        "name": "Veronika Mitterwallner",
+        "self": false
+      },
+      {
+        "name": "Anna Walentowitz",
+        "self": false
+      },
+      {
+        "name": "Gregor Hans Mathes",
+        "self": true
+      },
+      {
+        "name": "Manuel Jonas Steinbauer",
+        "self": false
+      }
+    ],
+    "journal": "PLOS ONE",
+    "volume": "16",
+    "issue": "5",
+    "pages": "e0249268",
+    "url": "/publication/journal-article/covid_cycling/",
+    "selected": false,
+    "focus": "",
+    "source": "https://api.crossref.org/works/10.1371/journal.pone.0249268"
+  },
+  {
+    "title": "Extinction risk controlled by interaction of long-term and short-term climate change",
+    "doi": "10.1038/s41559-020-01377-w",
+    "year": 2021,
+    "date": "2021-01-18",
+    "authors": [
+      {
+        "name": "Gregor H. Mathes",
+        "self": true
+      },
+      {
+        "name": "Jeroen van Dijk",
+        "self": false
+      },
+      {
+        "name": "Wolfgang Kiessling",
+        "self": false
+      },
+      {
+        "name": "Manuel J. Steinbauer",
+        "self": false
+      }
+    ],
+    "journal": "Nature Ecology & Evolution",
+    "volume": "5",
+    "issue": "3",
+    "pages": "304-310",
+    "url": "/publication/journal-article/nature_eco_evo/",
+    "selected": true,
+    "focus": "How past climate shapes extinction risk",
+    "source": "https://api.crossref.org/works/10.1038/s41559-020-01377-w"
+  }
+]

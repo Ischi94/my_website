@@ -1,0 +1,1101 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        11,
+        13
+      ]
+    ],
+    "date-time": "2026-11-13T09:14:53Z",
+    "timestamp": 1794561293346,
+    "version": "4.9.1"
+  },
+  "reference-count": 70,
+  "publisher": "The Royal Society",
+  "issue": "2061",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2025,
+            12,
+            17
+          ]
+        ],
+        "date-time": "2025-12-17T00:00:00Z",
+        "timestamp": 1765929600000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "http://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2025,
+            12,
+            17
+          ]
+        ],
+        "date-time": "2025-12-17T00:00:00Z",
+        "timestamp": 1765929600000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "http://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "funder": [
+    {
+      "DOI": "10.13039/501100004359",
+      "name": "Vetenskapsrådet",
+      "doi-asserted-by": "publisher",
+      "id": [
+        {
+          "id": "10.13039/501100004359",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    },
+    {
+      "DOI": "10.13039/501100001711",
+      "name": "Schweizerischer Nationalfonds zur Förderung der Wissenschaftlichen Forschung",
+      "doi-asserted-by": "publisher",
+      "id": [
+        {
+          "id": "10.13039/501100001711",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    },
+    {
+      "DOI": "10.13039/100007633",
+      "name": "Stiftelsen för Miljöstrategisk Forskning",
+      "doi-asserted-by": "publisher",
+      "id": [
+        {
+          "id": "10.13039/100007633",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    },
+    {
+      "DOI": "10.13039/501100003006",
+      "name": "Eidgenössische Technische Hochschule Zürich",
+      "doi-asserted-by": "publisher",
+      "id": [
+        {
+          "id": "10.13039/501100003006",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+    "date-parts": [
+      [
+        2025,
+        12,
+        17
+      ]
+    ]
+  },
+  "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>Understanding extinction mechanisms, including what traits make some species more vulnerable than others, is key in a changing world. It has been proposed that species’ age predicts extinction risk. However, our understanding of age-dependent extinction (ADE) remains unresolved, with positive and negative trends being modelled only as mutually exclusive, and rarely across clade-specific diversification trajectories. Here, we reconstruct the global diversification trajectory of neoselachians (modern sharks and rays) over the past 145 Myr to assess ADE using a new model that allows positive and negative trends to co-occur. We recovered a dynamic diversification trajectory, including four previously undetected extinction events, the most significant in the Eocene–Oligocene. Negative ADE was consistently found over time, with young species, especially those younger than 4 Myr, being more vulnerable. Our results suggest that neoselachians have been more susceptible to extinction than previously recognized, with age being a consistent intrinsic predictor of their vulnerability through deep time.</jats:p>",
+  "DOI": "10.1098/rspb.2025.2272",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2026,
+        1,
+        15
+      ]
+    ],
+    "date-time": "2026-01-15T09:07:33Z",
+    "timestamp": 1768468053000
+  },
+  "source": "Crossref",
+  "is-referenced-by-count": 5,
+  "title": [
+    "Global extinction events and persistent age-dependency in sharks and rays over the past 145 million years"
+  ],
+  "prefix": "10.1098",
+  "volume": "292",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0002-2270-8435",
+      "authenticated-orcid": false,
+      "given": "Kristína",
+      "family": "Kocáková",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "University of Zurich 1 , ,",
+          "place": [
+            "8006 Zurich, Switzerland"
+          ],
+          "department": [
+            "Department of Paleontology"
+          ]
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-0100-0961",
+      "authenticated-orcid": false,
+      "given": "Daniele",
+      "family": "Silvestro",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "ETH Zurich 2 , ,",
+          "place": [
+            "4056 Basel, Switzerland"
+          ],
+          "department": [
+            "Department of Biosystems Science and Engineering"
+          ]
+        },
+        {
+          "name": "University of Gothenburg 3 , ,",
+          "place": [
+            "Gothenburg, Sweden, 413 19"
+          ],
+          "department": [
+            "Department of Biological and Environmental Science and Gothenburg Global Biodiversity Centre"
+          ]
+        },
+        {
+          "name": "Swiss Institute of Bioinformatics 4 , ,",
+          "place": [
+            "CH 4056 Basel, Switzerland"
+          ]
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-2788-1173",
+      "authenticated-orcid": false,
+      "given": "Gregor Hans",
+      "family": "Mathes",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "University of Zurich 1 , ,",
+          "place": [
+            "8006 Zurich, Switzerland"
+          ],
+          "department": [
+            "Department of Paleontology"
+          ]
+        },
+        {
+          "name": "University of Passau 5 , , ,",
+          "place": [
+            "Passau, Bavaria, Germany, HF93 44"
+          ],
+          "department": [
+            "Chair of Physical Geography"
+          ]
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-6441-9025",
+      "authenticated-orcid": false,
+      "given": "Jaime Andres",
+      "family": "Villafaña",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Universidad Católica de la Santísima Concepción 6 , ,",
+          "place": [
+            "Concepción, Chile, 4090541"
+          ],
+          "department": [
+            "Departamento de Ecología"
+          ]
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-5320-7246",
+      "authenticated-orcid": false,
+      "given": "Catalina",
+      "family": "Pimiento",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "University of Zurich 1 , ,",
+          "place": [
+            "8006 Zurich, Switzerland"
+          ],
+          "department": [
+            "Department of Paleontology"
+          ]
+        },
+        {
+          "name": "Swansea University 7 , ,",
+          "place": [
+            "Swansea SA2 8PP, UK"
+          ],
+          "department": [
+            "Department of Biosciences"
+          ]
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "175",
+  "published-online": {
+    "date-parts": [
+      [
+        2025,
+        12,
+        17
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "2026011504065686200_R1",
+      "doi-asserted-by": "crossref",
+      "first-page": "571",
+      "DOI": "10.2110/palo.2006.p06-055r",
+      "article-title": "Is extinction age dependent?",
+      "volume": "21",
+      "author": "Doran",
+      "year": "2006",
+      "journal-title": "Palaios"
+    },
+    {
+      "key": "2026011504065686200_R2",
+      "doi-asserted-by": "crossref",
+      "first-page": "13015",
+      "DOI": "10.1073/pnas.1510482112",
+      "article-title": "Expected time-invariant effects of biological traits on mammal species duration",
+      "volume": "112",
+      "author": "Smits",
+      "year": "2015",
+      "journal-title": "Proc. Natl Acad. Sci. USA"
+    },
+    {
+      "key": "2026011504065686200_R3",
+      "doi-asserted-by": "crossref",
+      "first-page": "458",
+      "DOI": "10.1093/sysbio/syx082",
+      "article-title": "Estimating age-dependent extinction: contrasting evidence from fossils and phylogenies",
+      "volume": "67",
+      "author": "Hagen",
+      "year": "2018",
+      "journal-title": "Syst. Biol."
+    },
+    {
+      "key": "2026011504065686200_R4",
+      "doi-asserted-by": "crossref",
+      "first-page": "439",
+      "DOI": "10.1111/ele.13441",
+      "article-title": "A 450 million years long latitudinal gradient in age-dependent extinction",
+      "volume": "23",
+      "author": "Silvestro",
+      "year": "2020",
+      "journal-title": "Ecol. Lett."
+    },
+    {
+      "key": "2026011504065686200_R5",
+      "first-page": "1",
+      "article-title": "A new evolutionary law",
+      "volume": "1",
+      "author": "Van Valen",
+      "year": "1973",
+      "journal-title": "Evol. Theory"
+    },
+    {
+      "key": "2026011504065686200_R6",
+      "doi-asserted-by": "crossref",
+      "first-page": "119",
+      "DOI": "10.1080/10292389509380516",
+      "article-title": "Investigating age-dependency of species extinction rates using dynamic survivorship analysis",
+      "volume": "10",
+      "author": "Pearson",
+      "year": "1995",
+      "journal-title": "Hist. Biol."
+    },
+    {
+      "key": "2026011504065686200_R7",
+      "doi-asserted-by": "crossref",
+      "first-page": "983",
+      "DOI": "10.1130/0091-7613(1992)020<0983:EOBCAI>2.3.CO;2",
+      "article-title": "Evolution of biological complexity and its relation to taxonomic longevity in the Ammonoidea",
+      "volume": "20",
+      "author": "Boyajian",
+      "year": "1992",
+      "journal-title": "Geology"
+    },
+    {
+      "key": "2026011504065686200_R8",
+      "doi-asserted-by": "crossref",
+      "first-page": "1498",
+      "DOI": "10.1073/pnas.1519092113",
+      "article-title": "Greenhouse–icehouse transition in the Late Ordovician marks a step change in extinction regime in the marine plankton",
+      "volume": "113",
+      "author": "Crampton",
+      "year": "2016",
+      "journal-title": "Proc. Natl Acad. Sci. USA"
+    },
+    {
+      "key": "2026011504065686200_R9",
+      "doi-asserted-by": "crossref",
+      "first-page": "20150216",
+      "DOI": "10.1098/rstb.2015.0216",
+      "article-title": "The challenges to inferring the regulators of biodiversity in deep time",
+      "volume": "371",
+      "author": "Ezard",
+      "year": "2016",
+      "journal-title": "Phil. Trans. R. Soc. B"
+    },
+    {
+      "key": "2026011504065686200_R10",
+      "doi-asserted-by": "crossref",
+      "first-page": "656",
+      "DOI": "10.1111/evo.14177",
+      "article-title": "Re-evaluation of the ‘law of constant extinction’ for ruminants at different taxonomical scales",
+      "volume": "75",
+      "author": "Januario",
+      "year": "2021",
+      "journal-title": "Evolution"
+    },
+    {
+      "key": "2026011504065686200_R11",
+      "doi-asserted-by": "crossref",
+      "first-page": "318",
+      "DOI": "10.1666/07008.1",
+      "article-title": "The Red Queen revisited: reevaluating the age selectivity of Phanerozoic marine genus extinctions",
+      "volume": "34",
+      "author": "Finnegan",
+      "year": "2008",
+      "journal-title": "Paleobiology"
+    },
+    {
+      "key": "2026011504065686200_R12",
+      "doi-asserted-by": "crossref",
+      "first-page": "3230",
+      "DOI": "10.1111/j.1558-5646.2011.01378.x",
+      "article-title": "Loss of sexual recombination and segregation is associated with increased diversification in evening primroses",
+      "volume": "65",
+      "author": "Johnson",
+      "year": "2011",
+      "journal-title": "Evolution"
+    },
+    {
+      "key": "2026011504065686200_R13",
+      "doi-asserted-by": "crossref",
+      "first-page": "193",
+      "DOI": "10.1016/0169-5347(96)10026-4",
+      "article-title": "Extinction filters and current resilience: the significance of past selection pressures for conservation biology",
+      "volume": "11",
+      "author": "Balmford",
+      "year": "1996",
+      "journal-title": "Trends Ecol. Evol."
+    },
+    {
+      "key": "2026011504065686200_R14",
+      "doi-asserted-by": "crossref",
+      "first-page": "885",
+      "DOI": "10.1111/j.1558-5646.2007.00077.x",
+      "article-title": "Lineages with long durations are old and morphologically average: an analysis using multiple datasets",
+      "volume": "61",
+      "author": "Liow",
+      "year": "2007",
+      "journal-title": "Evolution"
+    },
+    {
+      "key": "2026011504065686200_R15",
+      "doi-asserted-by": "crossref",
+      "first-page": "421",
+      "DOI": "10.1666/08023.1",
+      "article-title": "On the bidirectional relationship between geographic range and taxonomic duration",
+      "volume": "34",
+      "author": "Foote",
+      "year": "2008",
+      "journal-title": "Paleobiology"
+    },
+    {
+      "key": "2026011504065686200_R16",
+      "doi-asserted-by": "crossref",
+      "first-page": "501",
+      "DOI": "10.1146/annurev.ecolsys.39.110707.173510",
+      "article-title": "Species selection: theory and data",
+      "volume": "39",
+      "author": "Jablonski",
+      "year": "2008",
+      "journal-title": "Annu. Rev. Ecol. Evol. Syst."
+    },
+    {
+      "key": "2026011504065686200_R17",
+      "doi-asserted-by": "crossref",
+      "first-page": "224",
+      "DOI": "10.1666/08080.1",
+      "article-title": "Global occurrence trajectories of microfossils: environmental volatility and the rise and fall of individual species",
+      "volume": "36",
+      "author": "Liow",
+      "year": "2010",
+      "journal-title": "Paleobiology"
+    },
+    {
+      "key": "2026011504065686200_R18",
+      "doi-asserted-by": "crossref",
+      "first-page": "171",
+      "DOI": "10.1666/12028",
+      "article-title": "Determinants of early survival in marine animal genera",
+      "volume": "39",
+      "author": "Foote",
+      "year": "2013",
+      "journal-title": "Paleobiology"
+    },
+    {
+      "key": "2026011504065686200_R19",
+      "doi-asserted-by": "crossref",
+      "first-page": "407",
+      "DOI": "10.1017/S0094837300006151",
+      "article-title": "Taxonomic survivorship and morphologic complexity in Paleozoic bryozoan genera",
+      "volume": "4",
+      "author": "Anstey",
+      "year": "1978",
+      "journal-title": "Paleobiology"
+    },
+    {
+      "key": "2026011504065686200_R20",
+      "doi-asserted-by": "crossref",
+      "first-page": "107",
+      "DOI": "10.1017/S0022336000021557",
+      "article-title": "Origination, survivorship, and extinction of rudist taxa",
+      "volume": "60",
+      "author": "Jones",
+      "year": "1986",
+      "journal-title": "J. Paleontol."
+    },
+    {
+      "key": "2026011504065686200_R21",
+      "doi-asserted-by": "crossref",
+      "first-page": "42",
+      "DOI": "10.1017/S0094837300011386",
+      "article-title": "Mathematical models of cladogenesis",
+      "volume": "11",
+      "author": "Raup",
+      "year": "1985",
+      "journal-title": "Paleobiology"
+    },
+    {
+      "key": "2026011504065686200_R22",
+      "doi-asserted-by": "crossref",
+      "first-page": "349",
+      "DOI": "10.1126/science.1203060",
+      "article-title": "Interplay between changing climate and species’ ecology drives macroevolutionary dynamics",
+      "volume": "332",
+      "author": "Ezard",
+      "year": "2011",
+      "journal-title": "Science"
+    },
+    {
+      "key": "2026011504065686200_R23",
+      "doi-asserted-by": "crossref",
+      "first-page": "115",
+      "DOI": "10.1017/S0094837300013920",
+      "article-title": "Survivorship analysis of fossil taxa when real-time extinction rates vary: the Paleogene planktonic Foraminifera",
+      "volume": "18",
+      "author": "Pearson",
+      "year": "1992",
+      "journal-title": "Paleobiology"
+    },
+    {
+      "key": "2026011504065686200_R24",
+      "doi-asserted-by": "crossref",
+      "first-page": "49",
+      "DOI": "10.1017/S0094837300010344",
+      "article-title": "Taxon age and selectivity of extinction",
+      "volume": "17",
+      "author": "Boyajian",
+      "year": "1991",
+      "journal-title": "Paleobiology"
+    },
+    {
+      "key": "2026011504065686200_R25",
+      "doi-asserted-by": "crossref",
+      "first-page": "20584",
+      "DOI": "10.1073/pnas.1902693116",
+      "article-title": "Climate cooling and clade competition likely drove the decline of lamniform sharks",
+      "volume": "116",
+      "author": "Condamine",
+      "year": "2019",
+      "journal-title": "Proc. Natl Acad. Sci. USA"
+    },
+    {
+      "key": "2026011504065686200_R26",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1098/rsbl.2018.0458",
+      "article-title": "Diversification dynamics of mammalian clades during the K–Pg mass extinction",
+      "volume": "14",
+      "author": "Pires",
+      "year": "2018",
+      "journal-title": "Biol. Lett."
+    },
+    {
+      "key": "2026011504065686200_R27",
+      "doi-asserted-by": "crossref",
+      "first-page": "15253",
+      "DOI": "10.1073/pnas.1110395108",
+      "article-title": "Mass extinction of birds at the Cretaceous–Paleogene (K–Pg) boundary",
+      "volume": "108",
+      "author": "Longrich",
+      "year": "2011",
+      "journal-title": "Proc. Natl Acad. Sci. USA"
+    },
+    {
+      "key": "2026011504065686200_R28",
+      "doi-asserted-by": "crossref",
+      "first-page": "628",
+      "DOI": "10.1111/brv.12128",
+      "article-title": "The extinction of the dinosaurs",
+      "volume": "90",
+      "author": "Brusatte",
+      "year": "2015",
+      "journal-title": "Biol. Rev."
+    },
+    {
+      "key": "2026011504065686200_R29",
+      "doi-asserted-by": "crossref",
+      "first-page": "415",
+      "DOI": "10.1111/pala.12459",
+      "article-title": "Biotic and abiotic factors driving the diversification dynamics of Crocodylia",
+      "volume": "63",
+      "author": "Solórzano",
+      "year": "2020",
+      "journal-title": "Palaeontology"
+    },
+    {
+      "key": "2026011504065686200_R30",
+      "doi-asserted-by": "crossref",
+      "first-page": "213",
+      "DOI": "10.1038/275213a0",
+      "article-title": "Adaptive value, entropy and survivorship curves",
+      "volume": "275",
+      "author": "Demetrius",
+      "year": "1978",
+      "journal-title": "Nature"
+    },
+    {
+      "key": "2026011504065686200_R31",
+      "first-page": "17",
+      "volume-title": "Mesozoic fishes 3 – systematics, paleoenvironments and biodiversity",
+      "author": "Maisey",
+      "year": "2004"
+    },
+    {
+      "key": "2026011504065686200_R32",
+      "doi-asserted-by": "crossref",
+      "first-page": "112",
+      "DOI": "10.1017/pab.2024.11",
+      "article-title": "Aligning paleobiological research with conservation priorities using elasmobranchs as a model",
+      "volume": "51",
+      "author": "Dillon",
+      "year": "2025",
+      "journal-title": "Paleobiology"
+    },
+    {
+      "key": "2026011504065686200_R33",
+      "volume-title": "Handbook of paleoichthyology: chondrichthyes",
+      "author": "Cappetta",
+      "year": "2012"
+    },
+    {
+      "key": "2026011504065686200_R34",
+      "article-title": "FINS - a global occurrence dataset of fossil neoselachians from the Cretaceous to the Quaternary",
+      "author": "Kocáková",
+      "journal-title": "bioRxiv"
+    },
+    {
+      "key": "2026011504065686200_R35",
+      "doi-asserted-by": "crossref",
+      "first-page": "1846",
+      "DOI": "10.1126/science.1138657",
+      "article-title": "Cascading effects of the loss of apex predatory sharks from a coastal ocean",
+      "volume": "315",
+      "author": "Myers",
+      "year": "2007",
+      "journal-title": "Science"
+    },
+    {
+      "key": "2026011504065686200_R36",
+      "doi-asserted-by": "crossref",
+      "first-page": "839",
+      "DOI": "10.4202/app.00248.2016",
+      "article-title": "The oldest fossil record of the megamouth shark from the late Eocene of Denmark, and comments on the enigmatic megachasmid origin",
+      "volume": "61",
+      "author": "Shimada",
+      "year": "2016",
+      "journal-title": "Acta Palaeontol. Pol."
+    },
+    {
+      "key": "2026011504065686200_R37",
+      "doi-asserted-by": "crossref",
+      "first-page": "837",
+      "DOI": "10.1111/jfb.12874",
+      "article-title": "Annotated checklist of the living sharks, batoids and chimaeras (Chondrichthyes) of the world, with a focus on biogeographical diversity",
+      "volume": "88",
+      "author": "Weigmann",
+      "year": "2016",
+      "journal-title": "J. Fish Biol."
+    },
+    {
+      "key": "2026011504065686200_R38",
+      "doi-asserted-by": "crossref",
+      "first-page": "1342",
+      "DOI": "10.1071/MF16161",
+      "article-title": "How many trophic roles can elasmobranchs play in a marine tropical network?",
+      "volume": "68",
+      "author": "Navia",
+      "year": "2017",
+      "journal-title": "Mar. Freshw. Res."
+    },
+    {
+      "key": "2026011504065686200_R39",
+      "unstructured": "Ebert\n              DA\n            , DandoM, FowlerS. Sharks of the world: a complete guide. Princeton, NJ: Princeton University Press. Seehttp://www.jstor.org/stable/10.2307/j.ctv1574pqp."
+    },
+    {
+      "key": "2026011504065686200_R40",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1126/sciadv.abm9424",
+      "article-title": "The extinct shark Otodus megalodon was a transoceanic superpredator: inferences from 3D modeling",
+      "volume": "8",
+      "author": "Cooper",
+      "year": "2022",
+      "journal-title": "Sci. Adv."
+    },
+    {
+      "key": "2026011504065686200_R41",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1111/geb.13881",
+      "article-title": "The rise and fall of shark functional diversity over the last 66 million years",
+      "volume": "33",
+      "author": "Cooper",
+      "year": "2024",
+      "journal-title": "Glob. Ecol. Biogeogr."
+    },
+    {
+      "key": "2026011504065686200_R42",
+      "doi-asserted-by": "crossref",
+      "first-page": "755",
+      "DOI": "10.1111/jfb.14755",
+      "article-title": "A matter of size: the population structure of the smallest known living shark, Etmopterus perryi (Springer & Burgess, 1985), from deep waters off the Colombian Caribbean coast",
+      "volume": "99",
+      "author": "Paramo",
+      "year": "2021",
+      "journal-title": "J. Fish Biol."
+    },
+    {
+      "key": "2026011504065686200_R43",
+      "doi-asserted-by": "crossref",
+      "first-page": "181",
+      "DOI": "10.1016/S0031-0182(04)00420-1",
+      "article-title": "Neoselachian (Chondrichthyes, Elasmobranchii) diversity across the Cretaceous–Tertiary boundary",
+      "volume": "214",
+      "author": "Kriwet",
+      "year": "2004",
+      "journal-title": "Palaeogeogr. Palaeoclimatol. Palaeoecol."
+    },
+    {
+      "key": "2026011504065686200_R44",
+      "doi-asserted-by": "crossref",
+      "first-page": "55",
+      "DOI": "10.1144/SP295.5",
+      "article-title": "Diversity and biogeography patterns of Late Jurassic neoselachians (Chondrichthyes: Elasmobranchii)",
+      "volume": "295",
+      "author": "Kriwet",
+      "year": "2008",
+      "journal-title": "Geol. Soc. Lond. Spec. Publ."
+    },
+    {
+      "key": "2026011504065686200_R45",
+      "doi-asserted-by": "crossref",
+      "first-page": "945",
+      "DOI": "10.1098/rspb.2008.1441",
+      "article-title": "Diversification trajectories and evolutionary life-history traits in early sharks and batoids",
+      "volume": "276",
+      "author": "Kriwet",
+      "year": "2009",
+      "journal-title": "Proc. R. Soc. B"
+    },
+    {
+      "key": "2026011504065686200_R46",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1371/journal.pone.0044632",
+      "article-title": "An analytical approach for estimating fossil record and diversification events in sharks, skates and rays",
+      "volume": "7",
+      "author": "Guinot",
+      "year": "2012",
+      "journal-title": "PLoS One"
+    },
+    {
+      "key": "2026011504065686200_R47",
+      "doi-asserted-by": "crossref",
+      "first-page": "659",
+      "DOI": "10.1666/13069",
+      "article-title": "Rise and fall in diversity of Neogene marine vertebrates on the temperate Pacific coast of South America",
+      "volume": "40",
+      "author": "Villafaña",
+      "year": "2014",
+      "journal-title": "Paleobiology"
+    },
+    {
+      "key": "2026011504065686200_R48",
+      "doi-asserted-by": "crossref",
+      "first-page": "21906",
+      "DOI": "10.1038/s41598-022-26010-7",
+      "article-title": "Combining palaeontological and neontological data shows a delayed diversification burst of carcharhiniform sharks likely mediated by environmental change",
+      "volume": "12",
+      "author": "Brée",
+      "year": "2022",
+      "journal-title": "Scient. Rep."
+    },
+    {
+      "key": "2026011504065686200_R49",
+      "doi-asserted-by": "crossref",
+      "first-page": "802",
+      "DOI": "10.1126/science.abn2080",
+      "article-title": "Global impact and selectivity of the Cretaceous-Paleogene mass extinction among sharks, skates, and rays",
+      "volume": "379",
+      "author": "Guinot",
+      "year": "2023",
+      "journal-title": "Science"
+    },
+    {
+      "key": "2026011504065686200_R50",
+      "doi-asserted-by": "crossref",
+      "first-page": "329",
+      "DOI": "10.1017/pab.2022.40",
+      "article-title": "Diversification trajectories and paleobiogeography of Neogene chondrichthyans from Europe",
+      "volume": "49",
+      "author": "Villafaña",
+      "year": "2023",
+      "journal-title": "Paleobiology"
+    },
+    {
+      "key": "2026011504065686200_R51",
+      "doi-asserted-by": "crossref",
+      "first-page": "1100",
+      "DOI": "10.1038/s41559-017-0223-6",
+      "article-title": "The Pliocene marine megafauna extinction and its impact on functional diversity",
+      "volume": "1",
+      "author": "Pimiento",
+      "year": "2017",
+      "journal-title": "Nat. Ecol. Evol."
+    },
+    {
+      "key": "2026011504065686200_R52",
+      "doi-asserted-by": "crossref",
+      "first-page": "1105",
+      "DOI": "10.1126/science.aaz3549",
+      "article-title": "An early Miocene extinction in pelagic sharks",
+      "volume": "372",
+      "author": "Sibert",
+      "year": "2021",
+      "journal-title": "Science"
+    },
+    {
+      "key": "2026011504065686200_R53",
+      "doi-asserted-by": "crossref",
+      "first-page": "349",
+      "DOI": "10.1093/sysbio/syu006",
+      "article-title": "Bayesian estimation of speciation and extinction from incomplete fossil occurrence data",
+      "volume": "63",
+      "author": "Silvestro",
+      "year": "2014",
+      "journal-title": "Syst. Biol."
+    },
+    {
+      "key": "2026011504065686200_R54",
+      "doi-asserted-by": "crossref",
+      "first-page": "1126",
+      "DOI": "10.1111/2041-210X.12263",
+      "article-title": "PyRate: a new program to estimate speciation and extinction rates from incomplete fossil data",
+      "volume": "5",
+      "author": "Silvestro",
+      "year": "2014",
+      "journal-title": "Methods Ecol. Evol."
+    },
+    {
+      "key": "2026011504065686200_R55",
+      "doi-asserted-by": "crossref",
+      "first-page": "735",
+      "DOI": "10.1111/2041-210X.13161",
+      "article-title": "The R package divDyn for quantifying diversity dynamics using fossil sampling data",
+      "volume": "10",
+      "author": "Kocsis",
+      "year": "2019",
+      "journal-title": "Methods Ecol. Evol"
+    },
+    {
+      "key": "2026011504065686200_R56",
+      "doi-asserted-by": "crossref",
+      "first-page": "950",
+      "DOI": "10.1111/brv.12203",
+      "article-title": "‘Fish’ (Actinopterygii and Elasmobranchii) diversification patterns through deep time",
+      "volume": "91",
+      "author": "Guinot",
+      "year": "2016",
+      "journal-title": "Biol. Rev."
+    },
+    {
+      "key": "2026011504065686200_R57",
+      "doi-asserted-by": "crossref",
+      "first-page": "4169",
+      "DOI": "10.1038/s41598-020-61089-w",
+      "article-title": "Two-step extinction of Late Cretaceous marine vertebrates in northern Gulf of Mexico prolonged biodiversity loss prior to the Chicxulub impact",
+      "volume": "10",
+      "author": "Ikejiri",
+      "year": "2020",
+      "journal-title": "Scient. Rep."
+    },
+    {
+      "key": "2026011504065686200_R58",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1126/sciadv.adg8284",
+      "article-title": "Recurring volcanic winters during the latest Cretaceous: sulfur and fluorine budgets of Deccan Traps lavas",
+      "volume": "9",
+      "author": "Callegaro",
+      "year": "2023",
+      "journal-title": "Sci. Adv."
+    },
+    {
+      "key": "2026011504065686200_R59",
+      "doi-asserted-by": "crossref",
+      "first-page": "145",
+      "DOI": "10.1146/annurev.ea.22.050194.001045",
+      "article-title": "The Late Eocene-Oligocene extinctions",
+      "volume": "22",
+      "author": "Prothero",
+      "year": "1994",
+      "journal-title": "Annu. Rev. Earth Planet. Sci."
+    },
+    {
+      "key": "2026011504065686200_R60",
+      "doi-asserted-by": "crossref",
+      "first-page": "369",
+      "DOI": "10.1111/pala.12478",
+      "article-title": "The impact of the Pull of the Recent on extant elasmobranchs",
+      "volume": "63",
+      "author": "Pimiento",
+      "year": "2020",
+      "journal-title": "Palaeontology"
+    },
+    {
+      "key": "2026011504065686200_R61",
+      "first-page": "546",
+      "article-title": "Improved estimation of macroevolutionary rates from fossil data using a Bayesian framework",
+      "author": "Silvestro",
+      "journal-title": "Paleontology"
+    },
+    {
+      "key": "2026011504065686200_R62",
+      "doi-asserted-by": "crossref",
+      "first-page": "153",
+      "DOI": "10.1093/sysbio/syab045",
+      "article-title": "Empirical and methodological challenges to the model-based inference of diversification rates in extinct clades",
+      "volume": "71",
+      "author": "Černý",
+      "year": "2021",
+      "journal-title": "Syst. Biol."
+    },
+    {
+      "key": "2026011504065686200_R63",
+      "doi-asserted-by": "crossref",
+      "first-page": "511",
+      "DOI": "10.1666/13076",
+      "article-title": "The generification of the fossil record",
+      "volume": "40",
+      "author": "Hendricks",
+      "year": "2014",
+      "journal-title": "Paleobiology"
+    },
+    {
+      "key": "2026011504065686200_R64",
+      "doi-asserted-by": "crossref",
+      "first-page": "87",
+      "DOI": "10.1111/j.1475-4983.2006.00615.x",
+      "article-title": "Scale and hierarchy in macroevolution",
+      "volume": "50",
+      "author": "Jablonski",
+      "year": "2007",
+      "journal-title": "Palaeontology"
+    },
+    {
+      "key": "2026011504065686200_R65",
+      "doi-asserted-by": "crossref",
+      "first-page": "80",
+      "DOI": "10.1093/sysbio/syr076",
+      "article-title": "Taxonomic structure of the fossil record is shaped by sampling bias",
+      "volume": "61",
+      "author": "Lloyd",
+      "year": "2012",
+      "journal-title": "Syst. Biol."
+    },
+    {
+      "key": "2026011504065686200_R66",
+      "doi-asserted-by": "crossref",
+      "first-page": "383",
+      "DOI": "10.1111/1749-4877.12054",
+      "article-title": "Species longevity in North American fossil mammals",
+      "volume": "9",
+      "author": "Prothero",
+      "year": "2014",
+      "journal-title": "Integr. Zool."
+    },
+    {
+      "key": "2026011504065686200_R67",
+      "article-title": "Data from: Global extinction events and persistent age-dependency in sharks and rays over the past 145 million years. Zenodo.",
+      "author": "Kocakova",
+      "year": "2025"
+    },
+    {
+      "key": "2026011504065686200_R68",
+      "unstructured": "R Core Team\n          . R: a language and environment for statistical computing. Vienna, Austria: R Foundation for Statistical Computing. Seehttp://www.R-project.org/."
+    },
+    {
+      "key": "2026011504065686200_R69",
+      "article-title": "FINS: Fossil Neoselachian dataset. Zenodo",
+      "author": "Kocakova",
+      "year": "2025"
+    },
+    {
+      "key": "2026011504065686200_R70",
+      "article-title": "Supplementary Material from: Global Extinction Events and Persistent Age-Dependency in Sharks and Rays over the Past 145 Million Years. Figshare.",
+      "author": "Kocáková",
+      "year": "2025"
+    }
+  ],
+  "container-title": [
+    "Proceedings of the Royal Society B: Biological Sciences"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://royalsocietypublishing.org/rspb/article-pdf/doi/10.1098/rspb.2025.2272/4439827/rspb.2025.2272.pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "syndication"
+    },
+    {
+      "URL": "https://royalsocietypublishing.org/rspb/article-pdf/doi/10.1098/rspb.2025.2272/4439827/rspb.2025.2272.pdf",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2026,
+        5,
+        12
+      ]
+    ],
+    "date-time": "2026-05-12T21:22:20Z",
+    "timestamp": 1778620940000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "http://royalsocietypublishing.org/rspb/article/364705"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2025,
+        12,
+        17
+      ]
+    ]
+  },
+  "references-count": 70,
+  "journal-issue": {
+    "issue": "2061",
+    "published-print": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          17
+        ]
+      ]
+    }
+  },
+  "URL": "https://doi.org/10.1098/rspb.2025.2272",
+  "relation": {},
+  "ISSN": [
+    "1471-2954"
+  ],
+  "issn-type": [
+    {
+      "value": "1471-2954",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2025,
+        12,
+        17
+      ]
+    ]
+  },
+  "article-number": "20252272"
+}

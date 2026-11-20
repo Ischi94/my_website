@@ -1,0 +1,691 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        11,
+        18
+      ]
+    ],
+    "date-time": "2026-11-18T05:34:54Z",
+    "timestamp": 1794980094807,
+    "version": "4.9.1"
+  },
+  "reference-count": 36,
+  "publisher": "Geological Society of America",
+  "issue": "6",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+    "date-parts": [
+      [
+        2022,
+        6,
+        1
+      ]
+    ]
+  },
+  "abstract": "<jats:title>Abstract</jats:title>\n               <jats:p>The end-Permian mass extinction, the largest biological crisis in Earth history, is currently understood in the context of Siberian Traps volcanism introducing large quantities of greenhouse gases to the atmosphere, culminating in the Early Triassic hothouse. In our study, the late Permian and Early Triassic atmospheric CO2 history was reconstructed by applying the paleosol pCO2 barometer. Atmospheric pCO2 shows an approximate 4× increase from mean concentrations of 412–919 ppmv in the late Permian (Changhsingian) to maximum levels between 2181 and 2610 ppmv in the Early Triassic (late Griesbachian). Mean CO2 estimates for the later Early Triassic are between 1261–1936 ppmv (Dienerian) and 1063–1757 ppmv (Spathian). Significantly lower concentrations ranging from 343 to 634 ppmv are reconstructed for the latest Early to Middle Triassic (Anisian). The 5 m.y. episode of elevated pCO2 suggests that negative feedback mechanisms such as silicate weathering were not effective enough to reduce atmospheric pCO2 to precrisis levels and that marine authigenic clay formation (i.e., reverse weathering) may have been an important component of the global carbon cycle keeping atmospheric pCO2 at elevated levels.</jats:p>",
+  "DOI": "10.1130/g49714.1",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2022,
+        4,
+        11
+      ]
+    ],
+    "date-time": "2022-04-11T15:07:34Z",
+    "timestamp": 1649689654000
+  },
+  "page": "650-654",
+  "source": "Crossref",
+  "is-referenced-by-count": 87,
+  "title": [
+    "Five million years of high atmospheric CO2 in the aftermath of the Permian-Triassic mass extinction"
+  ],
+  "prefix": "10.1130",
+  "volume": "50",
+  "author": [
+    {
+      "given": "Michael M.",
+      "family": "Joachimski",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "GeoZentrum Nordbayern, Friedrich-Alexander Universität Erlangen-Nürnberg (FAU), Erlangen 91054, Germany"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Johann",
+      "family": "Müller",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "GeoZentrum Nordbayern, Friedrich-Alexander Universität Erlangen-Nürnberg (FAU), Erlangen 91054, Germany"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Timothy M.",
+      "family": "Gallagher",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Geology, Kent State University, Kent, Ohio 44240, USA"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Gregor",
+      "family": "Mathes",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Department of Sport Science & Bayreuth Center of Ecology and Environmental Research (BayCEER), Universität Bayreuth, Bayreuth 95447, Germany"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Daoliang L.",
+      "family": "Chu",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "State Key Laboratory of Biogeology and Environmental Geology, School of Earth Sciences, China University of Geosciences, Wuhan 430074, China"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Fedor",
+      "family": "Mouraviev",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Geology and Petroleum Technologies, Kazan Federal University, 420008 Kazan, Russia"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Vladimir",
+      "family": "Silantiev",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Geology and Petroleum Technologies, Kazan Federal University, 420008 Kazan, Russia"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Yadong D.",
+      "family": "Sun",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "GeoZentrum Nordbayern, Friedrich-Alexander Universität Erlangen-Nürnberg (FAU), Erlangen 91054, Germany"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Jinnan N.",
+      "family": "Tong",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "State Key Laboratory of Biogeology and Environmental Geology, School of Earth Sciences, China University of Geosciences, Wuhan 430074, China"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "257",
+  "published-online": {
+    "date-parts": [
+      [
+        2022,
+        4,
+        11
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "2022052015352291400_b1",
+      "doi-asserted-by": "crossref",
+      "first-page": "18723",
+      "DOI": "10.1038/s41598-019-54023-2",
+      "article-title": "The main pulse of the Siberian Traps expanded in size and composition",
+      "volume": "9",
+      "author": "Augland",
+      "year": "2019",
+      "journal-title": "Scientific Reports"
+    },
+    {
+      "key": "2022052015352291400_b2",
+      "doi-asserted-by": "crossref",
+      "first-page": "37",
+      "DOI": "10.1016/S0031-0182(02)00245-6",
+      "article-title": "Growth and demise of Permian biogenic chert along northwest Pangea: Evidence for end-Permian collapse of thermohaline circulation: Palaeogeography",
+      "volume": "184",
+      "author": "Beauchamp",
+      "year": "2002",
+      "journal-title": "Palaeoclimatology, Palaeoecology"
+    },
+    {
+      "key": "2022052015352291400_b3",
+      "first-page": "630",
+      "article-title": "Seasonal bias in the formation and stable isotopic composition of pedogenic carbonate in modern soils from central New",
+      "volume": "121",
+      "author": "Breecker",
+      "year": "2009",
+      "journal-title": "Bulletin"
+    },
+    {
+      "key": "2022052015352291400_b4",
+      "doi-asserted-by": "crossref",
+      "first-page": "e1500470",
+      "DOI": "10.1126/sciadv.1500470",
+      "article-title": "High-precision geochronology confirms voluminous magmatism before, during, and after Earth's most severe extinction",
+      "volume": "1",
+      "author": "Burgess",
+      "year": "2015",
+      "journal-title": "Science Advances"
+    },
+    {
+      "key": "2022052015352291400_b5",
+      "doi-asserted-by": "crossref",
+      "first-page": "377",
+      "DOI": "10.2475/ajs.291.4.377",
+      "article-title": "Carbon dioxide in the atmosphere: Evidence from Cenozoic and Mesozoic paleosols",
+      "volume": "291",
+      "author": "Cerling",
+      "year": "1991",
+      "journal-title": "American Journal of Science"
+    },
+    {
+      "key": "2022052015352291400_b6",
+      "doi-asserted-by": "crossref",
+      "first-page": "375",
+      "DOI": "10.1038/ngeo1475",
+      "article-title": "The timing and pattern of biotic recovery following the end-Permian mass extinction",
+      "volume": "5",
+      "author": "Chen",
+      "year": "2012",
+      "journal-title": "Nature Geoscience"
+    },
+    {
+      "key": "2022052015352291400_b7",
+      "doi-asserted-by": "crossref",
+      "first-page": "113",
+      "DOI": "10.1016/S1631-0713(03)00006-3",
+      "article-title": "On the ages of flood basalt events",
+      "volume": "335",
+      "author": "Courtillot",
+      "year": "2003",
+      "journal-title": "Comptes Rendus Geoscience"
+    },
+    {
+      "key": "2022052015352291400_b8",
+      "doi-asserted-by": "crossref",
+      "first-page": "257",
+      "DOI": "10.1016/j.chemgeo.2002.10.001",
+      "article-title": "Basalt weathering laws and the impact of basalt weathering on the global carbon cycle",
+      "volume": "202",
+      "author": "Dessert",
+      "year": "2003",
+      "journal-title": "Chemical Geology"
+    },
+    {
+      "key": "2022052015352291400_b9",
+      "doi-asserted-by": "crossref",
+      "first-page": "805",
+      "DOI": "10.2475/ajs.299.10.805",
+      "article-title": "A 400 million year carbon isotope record of pedogenic carbonate: Implications for paleoatmospheric carbon dioxide",
+      "volume": "299",
+      "author": "Ekart",
+      "year": "1999",
+      "journal-title": "American Journal of Science"
+    },
+    {
+      "key": "2022052015352291400_b10",
+      "doi-asserted-by": "crossref",
+      "first-page": "665",
+      "DOI": "10.1130/B30887.1",
+      "article-title": "Latest Permian paleosols from Wapadsberg Pass, South Africa: Implications for Changhsingian climate",
+      "volume": "126",
+      "author": "Gastaldo",
+      "year": "2014",
+      "journal-title": "Geological Society of America Bulletin"
+    },
+    {
+      "key": "2022052015352291400_b11",
+      "doi-asserted-by": "crossref",
+      "first-page": "1139",
+      "DOI": "10.1175/1520-0450(2003)042<1139:ADSTDA>2.0.CO;2",
+      "article-title": "A daily soil temperature dataset and soil temperature climatology of the contiguous United States",
+      "volume": "42",
+      "author": "Hu",
+      "year": "2003",
+      "journal-title": "Journal of Applied Meteorology"
+    },
+    {
+      "key": "2022052015352291400_b12",
+      "doi-asserted-by": "crossref",
+      "first-page": "471",
+      "DOI": "10.1038/s41586-018-0408-4",
+      "article-title": "Reverse weathering as a long-term stabilizer of marine pH and planetary climate",
+      "volume": "560",
+      "author": "Isson",
+      "year": "2018",
+      "journal-title": "Nature"
+    },
+    {
+      "key": "2022052015352291400_b13",
+      "doi-asserted-by": "crossref",
+      "first-page": "669",
+      "DOI": "10.1130/2007.2430(31)",
+      "article-title": "Evaluation of different models for the origin of the Siberian Traps",
+      "volume-title": "Plates, Plumes, and Planetary Processes: Geological Society of America Special Paper 430",
+      "author": "Ivanov",
+      "year": "2007"
+    },
+    {
+      "key": "2022052015352291400_b14",
+      "doi-asserted-by": "crossref",
+      "first-page": "427",
+      "DOI": "10.1130/B35108.1",
+      "article-title": "Siberian Trap volcanism, global warming and the Permian-Triassic mass extinction: New insights from Armenian Permian-Triassic sections",
+      "volume": "132",
+      "author": "Joachimski",
+      "year": "2020",
+      "journal-title": "Geological Society of America Bulletin"
+    },
+    {
+      "key": "2022052015352291400_b15",
+      "doi-asserted-by": "crossref",
+      "first-page": "20170078",
+      "DOI": "10.1098/rsta.2017.0078",
+      "article-title": "Prolonged late Permian–Early Triassic hyperthermal: Failure of climate regulation",
+      "volume": "376",
+      "author": "Kump",
+      "year": "2018",
+      "journal-title": "Philosophical Transactions Royal Society, series A"
+    },
+    {
+      "key": "2022052015352291400_b16",
+      "doi-asserted-by": "crossref",
+      "first-page": "37",
+      "DOI": "10.1016/j.palaeo.2018.09.006",
+      "article-title": "Reconstruction of atmospheric CO2 concentration during the late Changhsingian based on fossil conifers from the Dalong Formation in South China: Palaeogeography",
+      "volume": "519",
+      "author": "Li",
+      "year": "2019",
+      "journal-title": "Palaeoclimatology, Palaeoecology"
+    },
+    {
+      "key": "2022052015352291400_b17",
+      "doi-asserted-by": "crossref",
+      "first-page": "109790",
+      "DOI": "10.1016/j.palaeo.2020.109790",
+      "article-title": "Evidence for volcanism and weathering during the Permian-Triassic mass extinction from Meishan (South China) osmium isotope record",
+      "volume": "553",
+      "author": "Liu",
+      "year": "2020",
+      "journal-title": "Palaeogeography, Palaeoclimatology, Palaeoecology"
+    },
+    {
+      "key": "2022052015352291400_b18",
+      "doi-asserted-by": "crossref",
+      "first-page": "162",
+      "DOI": "10.1016/j.gca.2018.12.026",
+      "article-title": "An experimental evaluation of the use of Δ13C as a proxy for palaeoatmospheric CO2",
+      "volume": "247",
+      "author": "Lomax",
+      "year": "2019",
+      "journal-title": "Geochimica et Cosmochimica Acta"
+    },
+    {
+      "key": "2022052015352291400_b19",
+      "doi-asserted-by": "crossref",
+      "first-page": "835",
+      "DOI": "10.1130/B25555.1",
+      "article-title": "Secular change in the Precambrian silica cycle: Insights from chert petrology",
+      "volume": "117",
+      "author": "Maliva",
+      "year": "2005",
+      "journal-title": "Geological Society of America Bulletin"
+    },
+    {
+      "key": "2022052015352291400_b20",
+      "doi-asserted-by": "crossref",
+      "first-page": "57",
+      "DOI": "10.1016/j.gca.2012.10.012",
+      "article-title": "Modern soil constraints on reconstructing deep-time atmospheric CO2",
+      "volume": "101",
+      "author": "Montañez",
+      "year": "2013",
+      "journal-title": "Geochimica et Cosmochimica Acta"
+    },
+    {
+      "key": "2022052015352291400_b21",
+      "first-page": "163",
+      "article-title": "Triassic radiolarian biostratigraphy",
+      "volume-title": "The Triassic Timescale: Geological Society [London] Special Publication 334",
+      "author": "O’Dogherty",
+      "year": "2010"
+    },
+    {
+      "key": "2022052015352291400_b22",
+      "doi-asserted-by": "crossref",
+      "first-page": "903",
+      "DOI": "10.1016/B978-0-12-824360-2.00025-5",
+      "article-title": "The Triassic Period",
+      "volume-title": "Geological Time Scale 2020",
+      "author": "Ogg",
+      "year": "2020"
+    },
+    {
+      "key": "2022052015352291400_b23",
+      "doi-asserted-by": "crossref",
+      "first-page": "53",
+      "DOI": "10.1016/j.palaeo.2005.08.011",
+      "article-title": "Multi-proxy paleosol evidence for Middle and Late Triassic climate trends in eastern Utah: Palaeogeography",
+      "volume": "232",
+      "author": "Prochnow",
+      "year": "2006",
+      "journal-title": "Palaeoclimatology, Palaeoecology"
+    },
+    {
+      "key": "2022052015352291400_b24",
+      "doi-asserted-by": "crossref",
+      "first-page": "103177",
+      "DOI": "10.1016/j.gloplacha.2020.103177",
+      "article-title": "Deep time perspective on rising atmospheric CO2",
+      "volume": "189",
+      "author": "Retallack",
+      "year": "2020",
+      "journal-title": "Global and Planetary Change"
+    },
+    {
+      "key": "2022052015352291400_b25",
+      "doi-asserted-by": "crossref",
+      "first-page": "419",
+      "DOI": "10.1016/0016-7037(92)90142-6",
+      "article-title": "Carbon isotopic fractionation in synthetic aragonite and calcite: Effects of temperature and precipitation rate",
+      "volume": "56",
+      "author": "Romanek",
+      "year": "1992",
+      "journal-title": "Geochimica et Cosmochimica Acta"
+    },
+    {
+      "key": "2022052015352291400_b26",
+      "doi-asserted-by": "crossref",
+      "first-page": "110638",
+      "DOI": "10.1016/j.palaeo.2021.110638",
+      "article-title": "Atmospheric CO2 estimates based on Gondwanan (Indian) pedogenic carbonates reveal positive linkage with Mesozoic temperature variations: Palaeogeography",
+      "volume": "582",
+      "author": "Roy",
+      "year": "2021",
+      "journal-title": "Palaeoclimatology, Palaeoecology"
+    },
+    {
+      "key": "2022052015352291400_b27",
+      "doi-asserted-by": "crossref",
+      "first-page": "27",
+      "DOI": "10.1016/j.epsl.2011.12.028",
+      "article-title": "Rapid emplacement of the Central Atlantic Magmatic Province as a net sink for CO2",
+      "volume": "323–324",
+      "author": "Schaller",
+      "year": "2012",
+      "journal-title": "Earth and Planetary Science Letters"
+    },
+    {
+      "key": "2022052015352291400_b28",
+      "first-page": "26",
+      "article-title": "Atlas of Phanerozoic Ocean Currents and Salinity (Mollweide Projection): PALEOMAP Project PaleoAtlas for ArcGIS",
+      "author": "Scotese",
+      "year": "2014"
+    },
+    {
+      "key": "2022052015352291400_b29",
+      "doi-asserted-by": "crossref",
+      "first-page": "140",
+      "DOI": "10.1016/j.epsl.2015.05.035",
+      "article-title": "Integrated Sr isotope variations and global environmental changes through the late Permian to early Late Triassic",
+      "volume": "424",
+      "author": "Song",
+      "year": "2015",
+      "journal-title": "Earth and Planetary Science Letters"
+    },
+    {
+      "key": "2022052015352291400_b30",
+      "doi-asserted-by": "crossref",
+      "first-page": "733",
+      "DOI": "10.1130/B25803.1",
+      "article-title": "A Permian-Triassic boundary section at Quinn River Crossing, northwestern Nevada, and implications for the cause of the Early Triassic chert gap on the western Pangean margin",
+      "volume": "118",
+      "author": "Sperling",
+      "year": "2006",
+      "journal-title": "Geological Society of America Bulletin"
+    },
+    {
+      "key": "2022052015352291400_b31",
+      "doi-asserted-by": "crossref",
+      "first-page": "366",
+      "DOI": "10.1126/science.1224126",
+      "article-title": "Lethally hot temperatures during the Early Triassic greenhouse",
+      "volume": "338",
+      "author": "Sun",
+      "year": "2012",
+      "journal-title": "Science"
+    },
+    {
+      "key": "2022052015352291400_b32",
+      "doi-asserted-by": "crossref",
+      "first-page": "490",
+      "DOI": "10.1016/j.epsl.2008.11.015",
+      "article-title": "Siberian gas venting and the end-Permian environmental crisis",
+      "volume": "277",
+      "author": "Svensen",
+      "year": "2009",
+      "journal-title": "Earth and Planetary Science Letters"
+    },
+    {
+      "key": "2022052015352291400_b33",
+      "doi-asserted-by": "crossref",
+      "first-page": "159",
+      "DOI": "10.1016/j.epsl.2018.05.044",
+      "article-title": "Mercury anomalies across the end-Permian mass extinction in South China from shallow and deep water depositional environments",
+      "volume": "496",
+      "author": "Wang",
+      "year": "2018",
+      "journal-title": "Earth and Planetary Science Letters"
+    },
+    {
+      "key": "2022052015352291400_b34",
+      "doi-asserted-by": "crossref",
+      "first-page": "316",
+      "DOI": "10.1016/j.palaeo.2015.09.008",
+      "article-title": "Transition into a hothouse world at the Permian-Triassic boundary—A model study: Palaeogeography",
+      "volume": "440",
+      "author": "Winguth",
+      "year": "2015",
+      "journal-title": "Palaeoclimatology, Palaeoecology"
+    },
+    {
+      "key": "2022052015352291400_b35",
+      "doi-asserted-by": "crossref",
+      "first-page": "2137",
+      "DOI": "10.1038/s41467-021-22298-7",
+      "article-title": "Six-fold increase of atmospheric CO2 during the Permian-Triassic mass extinction",
+      "volume": "12",
+      "author": "Wu",
+      "year": "2021",
+      "journal-title": "Nature Communications"
+    },
+    {
+      "key": "2022052015352291400_b36",
+      "doi-asserted-by": "crossref",
+      "first-page": "147",
+      "DOI": "10.1016/j.earscirev.2019.01.025",
+      "article-title": "The evolution of latitudinal temperature gradients from the latest Cretaceous through the present",
+      "volume": "189",
+      "author": "Zhang",
+      "year": "2019",
+      "journal-title": "Earth-Science Reviews"
+    }
+  ],
+  "container-title": [
+    "Geology"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://pubs.geoscienceworld.org/gsa/geology/article-pdf/50/6/650/5606841/g49714.1.pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "syndication"
+    },
+    {
+      "URL": "https://pubs.geoscienceworld.org/gsa/geology/article-pdf/50/6/650/5606841/g49714.1.pdf",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2022,
+        5,
+        20
+      ]
+    ],
+    "date-time": "2022-05-20T15:36:45Z",
+    "timestamp": 1653061005000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://pubs.geoscienceworld.org/geology/article/50/6/650/612995/Five-million-years-of-high-atmospheric-CO2-in-the"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2022,
+        4,
+        11
+      ]
+    ]
+  },
+  "references-count": 36,
+  "journal-issue": {
+    "issue": "6",
+    "published-online": {
+      "date-parts": [
+        [
+          2022,
+          4,
+          11
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2022,
+          6,
+          1
+        ]
+      ]
+    }
+  },
+  "URL": "https://doi.org/10.1130/g49714.1",
+  "relation": {},
+  "ISSN": [
+    "0091-7613",
+    "1943-2682"
+  ],
+  "issn-type": [
+    {
+      "value": "0091-7613",
+      "type": "print"
+    },
+    {
+      "value": "1943-2682",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2022,
+        4,
+        11
+      ]
+    ]
+  }
+}

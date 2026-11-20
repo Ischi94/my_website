@@ -5,7 +5,7 @@ authors:
 - Manuel J. Steinbauer
 - admin
 - Anna Walentowitz
-date: "2024-02-14T00:00:00Z"
+date: "2024-03-13"
 doi: "10.1371/journal.pone.0299735"
 image:
   caption: ''
@@ -17,13 +17,13 @@ publication: '*PloS ONE* <br> [Read the publication](https://journals.plos.org/p
 publication_short: "*PloS ONE*. DOI: 10.1371/journal.pone.0299735. [Read the publication](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0299735)"
 publication_types:
 - "2"
-publishDate: "2021-09-01T00:00:00Z"
+publishDate: "2024-03-13"
 summary: 
 tags: 
 - Remote Sensing
 - Skying
 - Publication
-title: Global reduction of snow cover in ski areas under climate change
+title: "Global reduction of snow cover in ski areas under climate change"
 buttons:
     - text: Read the publication here
       url: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0299735"

@@ -1,7 +1,5 @@
 ---
-header:
-  caption: ""
-  image: ""
+aliases: ["/publication_types/2/","/authors/","/authors/eileen-straube/","/authors/hermann-neumann/","/authors/max-wisshak/","/publication_types/","/authors/sebastian-teichert/","/authors/adam-t.-kocsis/","/authors/anna-walentowitz/","/authors/carl-reddin/","/authors/danijela-dimitrijevic/","/authors/elizabeth-m.-dowding/","/authors/manuel-j.-steinbauer/","/authors/mark-e.-patzkowsky/","/authors/martin-aberhan/","/authors/paulina-s.-natscher/","/authors/veronika-mitterwallner/","/authors/anne-peters/","/authors/hendrik-edelhoff/","/authors/hien-nguyen/","/authors/marco-heurich/","/authors/wibke-peters/","/authors/daoliang-chu/","/authors/fedor-mouraviev/","/authors/jinnan-n.-tong/","/authors/johann-muller/","/authors/michael-joachimski/","/authors/timothy-gallagher/","/authors/vladimir-silantiev/","/authors/yadong-sung/","/authors/laura-cotton/","/authors/wolfgang-kiessling/","/authors/anna-leiderer/","/authors/anne-maria-schweizer/","/authors/jeroen-van-dijk/"]
 title: Publications
-view: 5
+description: "Peer-reviewed journal publications by Gregor Mathes, with complete author lists, DOI links and a downloadable bibliography."
 ---

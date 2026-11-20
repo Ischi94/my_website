@@ -27,7 +27,7 @@ library(tidyverse)
 
 # Overview
 
-This is the second part of the introduction to ggplot2, written for the palaeobiology master students at Uni Erlangen. You can find the **first part** on the [evolvED homepage](https://www.evolv-ed.net/post/introduction-to-ggplot2-part-i/).  
+This is the second part of the introduction to ggplot2, written for the palaeobiology master students at Uni Erlangen. You can find the **first part** on the [first tutorial page](/2020/06/29/introduction-to-ggplot2-part-1/).  
 Here, we will dive a little bit deeper into ggplot2 and see how we can modify the default output of ggplot. In the end you will be able to personalise a plot to fit your needs, enabling you to produce publication ready plots within the R environment.  
 You can find all exercises, solutions, and source code for this introduction in my [github repository](https://github.com/Ischi94/ggplot_intro).   
 Please note that ggplot might be a gateway drug to the tidyverse. Unfortunately, this is neither an introduction to the tidyverse nor an exhaustive report showing you every detail of ggplots. If needed, I can provide an intro to the tidyverse within the next weeks. Ggplot offers the chance to produce *any* graph you can think of. Use your power wisely.  
@@ -455,7 +455,7 @@ To modify an individual theme component you use code like `plot + theme(element.
 
 * `element_blank()` draws nothing. Use this if you don't want anything drawn, and no space allocated for that element.  
   
-There are around 40 unique elements that control the appearance of the plot. They can be roughly grouped into five categories: plot, axis, legend, panel and facet. Take a look at [chapter 15.4](https://ggplot2-book.org/polishing.html#introduction-5) of the ggplot2 book to see them all. 
+There are around 40 unique elements that control the appearance of the plot. They can be roughly grouped into five categories: plot, axis, legend, panel and facet. Take a look at [the themes chapter](https://ggplot2-book.org/themes.html) of the ggplot2 book to see them all. 
   
   
 # Highlighting  

@@ -1,0 +1,845 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        11,
+        3
+      ]
+    ],
+    "date-time": "2026-11-03T10:35:03Z",
+    "timestamp": 1793702103724,
+    "version": "4.5.1"
+  },
+  "reference-count": 59,
+  "publisher": "Public Library of Science (PLoS)",
+  "issue": "3",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2024,
+            3,
+            13
+          ]
+        ],
+        "date-time": "2024-03-13T00:00:00Z",
+        "timestamp": 1710288000000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "http://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "funder": [
+    {
+      "DOI": "10.13039/501100001659",
+      "name": "Deutsche Forschungsgemeinschaft",
+      "doi-asserted-by": "publisher",
+      "award": [
+        "491183248"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "491183248"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/501100001659",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "www.plosone.org"
+    ],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "PLoS ONE"
+  ],
+  "abstract": "<jats:p>Ongoing climate change substantially alters snowfall patterns with severe but diverging consequences for global ski areas. A global assessment as well as the investigation of potential implications for mountain ecosystems is currently lacking. We quantify future trends in natural snow cover days under different climate change scenarios until 2100 in seven major global skiing regions and discuss implications for mountainous biodiversity by analysing how natural snow cover days relate to regional human population density. Within all major skiing regions, snow cover days are projected to decrease substantially under every assessed climate change scenario. Thirteen percent of all current ski areas are projected to completely lose natural annual snow cover and one fifth will experience a reduction of more than 50% by 2071–2100 relative to historic baselines. Future skiable areas will concentrate in less populated areas, towards continental regions and inner parts of the mountain ranges. As skiable areas will be located at greater distances to highly populated areas in the future, we expect an expansion of infrastructure and increasing intervening actions (i.e., artificial snowmaking, slope grooming) to prolong snow duration. Our results are concerning for both the recreational and economic value of skiing as well as for mountain biodiversity since vulnerable high-altitude species might be threatened by space reductions with ski area expansion.</jats:p>",
+  "DOI": "10.1371/journal.pone.0299735",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2024,
+        3,
+        13
+      ]
+    ],
+    "date-time": "2024-03-13T13:25:37Z",
+    "timestamp": 1710336337000
+  },
+  "page": "e0299735",
+  "update-policy": "https://doi.org/10.1371/journal.pone.corrections_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 31,
+  "title": [
+    "Global reduction of snow cover in ski areas under climate change"
+  ],
+  "prefix": "10.1371",
+  "volume": "19",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0002-9535-0171",
+      "authenticated-orcid": true,
+      "given": "Veronika",
+      "family": "Mitterwallner",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Manuel",
+      "family": "Steinbauer",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Gregor",
+      "family": "Mathes",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Anna",
+      "family": "Walentowitz",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "340",
+  "published-online": {
+    "date-parts": [
+      [
+        2024,
+        3,
+        13
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "pone.0299735.ref001",
+      "doi-asserted-by": "crossref",
+      "first-page": "255",
+      "DOI": "10.3354/cr00706",
+      "article-title": "Climate change effects on snow conditions in mainland Australia and adaptation at ski resorts through snowmaking.",
+      "volume": "35",
+      "author": "K Hennessy",
+      "year": "2008",
+      "journal-title": "Clim Res"
+    },
+    {
+      "key": "pone.0299735.ref002",
+      "doi-asserted-by": "crossref",
+      "first-page": "1343",
+      "DOI": "10.5194/tc-15-1343-2021",
+      "article-title": "Observed snow depth trends in the European Alps: 1971 to 2019.",
+      "volume": "15",
+      "author": "M Matiu",
+      "year": "2021",
+      "journal-title": "The Cryosphere."
+    },
+    {
+      "key": "pone.0299735.ref003",
+      "doi-asserted-by": "crossref",
+      "first-page": "1330",
+      "DOI": "10.3390/atmos11121330",
+      "article-title": "Changes in Snow Depth, Snow Cover Duration, and Potential Snowmaking Conditions in Austria, 1961–2020—A Model Based Approach.",
+      "volume": "11",
+      "author": "M Olefs",
+      "year": "2020",
+      "journal-title": "Atmosphere"
+    },
+    {
+      "key": "pone.0299735.ref004",
+      "doi-asserted-by": "crossref",
+      "first-page": "13318",
+      "DOI": "10.3390/su132313318",
+      "article-title": "Ski Tourism: A Case Study as a Booster for the Economic Development of Chongli, in China.",
+      "volume": "13",
+      "author": "J Li",
+      "year": "2021",
+      "journal-title": "Sustainability"
+    },
+    {
+      "key": "pone.0299735.ref005",
+      "doi-asserted-by": "crossref",
+      "first-page": "231",
+      "DOI": "10.1038/s41586-018-0005-6",
+      "article-title": "Accelerated increase in plant species richness on mountain summits is linked to warming",
+      "volume": "556",
+      "author": "MJ Steinbauer",
+      "year": "2018",
+      "journal-title": "Nature"
+    },
+    {
+      "key": "pone.0299735.ref006",
+      "doi-asserted-by": "crossref",
+      "first-page": "427",
+      "DOI": "10.1007/s00704-010-0311-x",
+      "article-title": "Analysis of high-resolution simulations for the Black Forest region from a point of view of tourism climatology–a comparison between two regional climate models (REMO and CLM).",
+      "volume": "103",
+      "author": "C Endler",
+      "year": "2011",
+      "journal-title": "Theor Appl Climatol."
+    },
+    {
+      "key": "pone.0299735.ref007",
+      "doi-asserted-by": "crossref",
+      "first-page": "261",
+      "DOI": "10.1175/JHM-D-14-0035.1",
+      "article-title": "Scenarios of Future Snow Conditions in Styria (Austrian Alps).",
+      "volume": "16",
+      "author": "T Marke",
+      "year": "2015",
+      "journal-title": "J Hydrometeorol."
+    },
+    {
+      "key": "pone.0299735.ref008",
+      "doi-asserted-by": "crossref",
+      "first-page": "8043",
+      "DOI": "10.1038/s41598-019-44068-8",
+      "article-title": "Climate controls on snow reliability in French Alps ski resorts.",
+      "volume": "9",
+      "author": "P Spandre",
+      "year": "2019",
+      "journal-title": "Sci Rep."
+    },
+    {
+      "key": "pone.0299735.ref009",
+      "doi-asserted-by": "crossref",
+      "first-page": "735",
+      "DOI": "10.1007/s00382-012-1545-3",
+      "article-title": "Alpine snow cover in a changing climate: a regional climate model perspective.",
+      "volume": "41",
+      "author": "C Steger",
+      "year": "2013",
+      "journal-title": "Clim Dyn."
+    },
+    {
+      "key": "pone.0299735.ref010",
+      "doi-asserted-by": "crossref",
+      "first-page": "447",
+      "DOI": "10.1007/BF00140356",
+      "article-title": "Climate change and snow-cover duration in the Australian Alps",
+      "volume": "32",
+      "author": "PH Whetton",
+      "year": "1996",
+      "journal-title": "Clim Change"
+    },
+    {
+      "key": "pone.0299735.ref011",
+      "doi-asserted-by": "crossref",
+      "first-page": "323",
+      "DOI": "10.5367/te.2013.0272",
+      "article-title": "The Christmas—Easter Shift: Simulating Alpine Ski Resorts’ Future Development under Climate Change Conditions Using the Parameter ‘Optimal Ski Day",
+      "volume": "20",
+      "author": "A Berghammer",
+      "year": "2014",
+      "journal-title": "Tour Econ"
+    },
+    {
+      "key": "pone.0299735.ref012",
+      "author": "Laurent Vanat",
+      "year": "2021",
+      "journal-title": "2021 International Report on Snow & Mountain Tourism."
+    },
+    {
+      "key": "pone.0299735.ref013",
+      "volume-title": "Climate change and tourism (in German).",
+      "author": "B. Abegg",
+      "year": "1996"
+    },
+    {
+      "key": "pone.0299735.ref014",
+      "doi-asserted-by": "crossref",
+      "first-page": "1411",
+      "DOI": "10.1007/s11027-006-9071-4",
+      "article-title": "Climate change adaptation in the ski industry.",
+      "volume": "12",
+      "author": "D Scott",
+      "year": "2007",
+      "journal-title": "Mitig Adapt Strateg Glob Change"
+    },
+    {
+      "key": "pone.0299735.ref015",
+      "doi-asserted-by": "crossref",
+      "first-page": "121",
+      "DOI": "10.1017/S0376892900024541",
+      "article-title": "Environmental Deterioration Resulting from Ski-resort Construction in Japan",
+      "volume": "21",
+      "author": "S. Tsuyuzaki",
+      "year": "1994",
+      "journal-title": "Environ Conserv"
+    },
+    {
+      "key": "pone.0299735.ref016",
+      "doi-asserted-by": "crossref",
+      "first-page": "2299",
+      "DOI": "10.1111/jbi.12796",
+      "article-title": "Climate change will increase the potential conflict between skiing and high-elevation bird species in the Alps",
+      "volume": "43",
+      "author": "M Brambilla",
+      "year": "2016",
+      "journal-title": "J Biogeogr"
+    },
+    {
+      "key": "pone.0299735.ref017",
+      "doi-asserted-by": "crossref",
+      "first-page": "3401",
+      "DOI": "10.1098/rspb.2010.0612",
+      "article-title": "Projected range contractions of montane biodiversity under global warming",
+      "volume": "277",
+      "author": "FA La Sorte",
+      "year": "2010",
+      "journal-title": "Proc R Soc B Biol Sci"
+    },
+    {
+      "key": "pone.0299735.ref018",
+      "doi-asserted-by": "crossref",
+      "first-page": "139",
+      "DOI": "10.5367/te.2012.0103",
+      "article-title": "The Prospective Impact of Climate Change on Tourism and Regional Economic Development: A Simulation Study for Bavaria.",
+      "volume": "18",
+      "author": "A Soboll",
+      "year": "2012",
+      "journal-title": "Tour Econ"
+    },
+    {
+      "key": "pone.0299735.ref019",
+      "doi-asserted-by": "crossref",
+      "first-page": "959",
+      "DOI": "10.1016/j.scitotenv.2019.02.086",
+      "article-title": "Impact of ski piste management on mountain grassland ecosystems in the Southern Alps",
+      "volume": "665",
+      "author": "S Casagrande Bacchiocchi",
+      "year": "2019",
+      "journal-title": "Sci Total Environ"
+    },
+    {
+      "key": "pone.0299735.ref020",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.3389/fpls.2018.01586",
+      "article-title": "Legacy Effects of Climate Extremes in Alpine Grassland.",
+      "volume": "9",
+      "author": "HJ De Boeck",
+      "year": "2018",
+      "journal-title": "Front Plant Sci"
+    },
+    {
+      "key": "pone.0299735.ref021",
+      "doi-asserted-by": "crossref",
+      "first-page": "30",
+      "DOI": "10.1016/j.baae.2017.10.003",
+      "article-title": "Positive sport–biosphere interactions?—Cross-country skiing delays spring phenology of meadow vegetation",
+      "volume": "27",
+      "author": "MJ Steinbauer",
+      "year": "2018",
+      "journal-title": "Basic Appl Ecol"
+    },
+    {
+      "key": "pone.0299735.ref022",
+      "doi-asserted-by": "crossref",
+      "first-page": "306",
+      "DOI": "10.1111/j.1365-2664.2005.01011.x",
+      "article-title": "Effects of ski piste preparation on alpine vegetation: Ski piste preparation and alpine vegetation",
+      "volume": "42",
+      "author": "S Wipf",
+      "year": "2005",
+      "journal-title": "J Appl Ecol"
+    },
+    {
+      "key": "pone.0299735.ref023",
+      "doi-asserted-by": "crossref",
+      "first-page": "307",
+      "DOI": "10.1038/s41597-021-01084-6",
+      "article-title": "Global daily 1 km land surface precipitation based on cloud cover-informed downscaling.",
+      "volume": "8",
+      "author": "DN Karger",
+      "year": "2021",
+      "journal-title": "Sci Data"
+    },
+    {
+      "key": "pone.0299735.ref024",
+      "first-page": "2.1 KB.",
+      "article-title": "Climatologies at high resolution for the earth’s land surface areasCHELSA V2.1 (current).",
+      "author": "Dirk Nikolaus Karger",
+      "year": "2021"
+    },
+    {
+      "key": "pone.0299735.ref025",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1029/2019MS002015",
+      "article-title": "The GFDL Earth System Model Version 4.1 (GFDL‐ESM 4.1): Overall Coupled Model Description and Simulation Characteristics.",
+      "volume": "12",
+      "author": "JP Dunne",
+      "year": "2020",
+      "journal-title": "J Adv Model Earth Syst."
+    },
+    {
+      "key": "pone.0299735.ref026",
+      "doi-asserted-by": "crossref",
+      "first-page": "170122",
+      "DOI": "10.1038/sdata.2017.122",
+      "article-title": "Climatologies at high resolution for the earth’s land surface areas.",
+      "volume": "4",
+      "author": "DN Karger",
+      "year": "2017",
+      "journal-title": "Sci Data."
+    },
+    {
+      "key": "pone.0299735.ref027",
+      "volume-title": "Gridded Population of the World, Version 4 (GPWv4): Population Density, Revision 11.",
+      "author": "Center For International Earth Science Information Network-CIESIN-Columbia University",
+      "year": "2017"
+    },
+    {
+      "key": "pone.0299735.ref028",
+      "doi-asserted-by": "crossref",
+      "first-page": "583",
+      "DOI": "10.1080/01621459.1952.10483441",
+      "article-title": "Use of Ranks in One-Criterion Variance Analysis",
+      "volume": "47",
+      "author": "WH Kruskal",
+      "year": "1952",
+      "journal-title": "J Am Stat Assoc"
+    },
+    {
+      "key": "pone.0299735.ref029",
+      "doi-asserted-by": "crossref",
+      "first-page": "19656",
+      "DOI": "10.1073/pnas.2007117117",
+      "article-title": "RCP8.5 tracks cumulative CO2 emissions",
+      "volume": "117",
+      "author": "CR Schwalm",
+      "year": "2020",
+      "journal-title": "Proc Natl Acad Sci"
+    },
+    {
+      "key": "pone.0299735.ref030",
+      "doi-asserted-by": "crossref",
+      "first-page": "618",
+      "DOI": "10.1038/d41586-020-00177-3",
+      "article-title": "Emissions–the ‘business as usual’ story is misleading.",
+      "volume": "577",
+      "author": "Z Hausfather",
+      "year": "2020",
+      "journal-title": "Nature"
+    },
+    {
+      "key": "pone.0299735.ref031",
+      "first-page": "35",
+      "volume-title": "Contribution of Working Groups I, II and III to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change.",
+      "author": "IPCC, 2023",
+      "year": "2023"
+    },
+    {
+      "key": "pone.0299735.ref032",
+      "author": "R. Hijams",
+      "year": "2023",
+      "journal-title": "raster: Geographic Data Analysis and Modeling"
+    },
+    {
+      "key": "pone.0299735.ref033",
+      "article-title": "Robitaille (Ctb), Marcus W Beck (Rev), MikeJohnson-NOAA (Ctb), Tarak Shah (Ctb), Jakub Nowosad (Ctb).",
+      "author": "JW Hollister",
+      "year": "2023",
+      "journal-title": "jhollist/elevatr: CRAN Release v0.99.0. Zenodo"
+    },
+    {
+      "key": "pone.0299735.ref034",
+      "doi-asserted-by": "crossref",
+      "first-page": "111781",
+      "DOI": "10.1016/j.rse.2020.111781",
+      "article-title": "Hotspots of snow cover changes in global mountain regions over 2000–2018.",
+      "volume": "243",
+      "author": "C. Notarnicola",
+      "year": "2020",
+      "journal-title": "Remote Sens Environ."
+    },
+    {
+      "key": "pone.0299735.ref035",
+      "doi-asserted-by": "crossref",
+      "first-page": "141",
+      "DOI": "10.2478/congeo-2013-0009",
+      "article-title": "Changes in snowfall/precipitation-day ratio in Slovakia and their linkages with air temperature and precipitation.",
+      "volume": "43",
+      "author": "N Nikolova",
+      "year": "2013",
+      "journal-title": "Contrib Geophys Geod"
+    },
+    {
+      "key": "pone.0299735.ref036",
+      "doi-asserted-by": "crossref",
+      "first-page": "n/a",
+      "DOI": "10.1029/2011GL046976",
+      "article-title": "Seasonal trends and temperature dependence of the snowfall/precipitation-day ratio in Switzerland: SNOWFALL/PRECIPITATION-DAY RATIO",
+      "volume": "38",
+      "author": "G Serquet",
+      "year": "2011",
+      "journal-title": "Geophys Res Lett"
+    },
+    {
+      "key": "pone.0299735.ref037",
+      "first-page": "30",
+      "article-title": "Climate Change and Snow Cover in the European Alps",
+      "author": "C. Marty",
+      "year": "2013",
+      "journal-title": "The Impact of Skiing on Mountain Environments."
+    },
+    {
+      "key": "pone.0299735.ref038",
+      "doi-asserted-by": "crossref",
+      "first-page": "759",
+      "DOI": "10.5194/tc-12-759-2018",
+      "article-title": "The European mountain cryosphere: a review of its current state, trends, and future challenges.",
+      "volume": "12",
+      "author": "M Beniston",
+      "year": "2018",
+      "journal-title": "The Cryosphere."
+    },
+    {
+      "key": "pone.0299735.ref039",
+      "doi-asserted-by": "crossref",
+      "first-page": "441",
+      "DOI": "10.1007/s10584-007-9310-z",
+      "article-title": "Changes in frost, snow and Baltic sea ice by the end of the twenty-first century based on climate model projections for Europe",
+      "volume": "86",
+      "author": "K Jylhä",
+      "year": "2008",
+      "journal-title": "Clim Change"
+    },
+    {
+      "key": "pone.0299735.ref040",
+      "doi-asserted-by": "crossref",
+      "first-page": "677",
+      "DOI": "10.1007/s00484-019-01822-x",
+      "article-title": "The impact of climate change on ski resorts in China",
+      "volume": "65",
+      "author": "Y Fang",
+      "year": "2021",
+      "journal-title": "Int J Biometeorol"
+    },
+    {
+      "key": "pone.0299735.ref041",
+      "doi-asserted-by": "crossref",
+      "first-page": "197",
+      "DOI": "10.3354/cr01117",
+      "article-title": "Modeling climate change effects on winter ski tourism in Andorra.",
+      "volume": "54",
+      "author": "M Pons-Pons",
+      "year": "2012",
+      "journal-title": "Clim Res"
+    },
+    {
+      "key": "pone.0299735.ref042",
+      "doi-asserted-by": "crossref",
+      "first-page": "577",
+      "DOI": "10.1080/14616688.2012.762539",
+      "article-title": "Climate Change Impact Assessment of Ski Tourism in Tyrol.",
+      "volume": "15",
+      "author": "R Steiger",
+      "year": "2013",
+      "journal-title": "Tour Geogr."
+    },
+    {
+      "key": "pone.0299735.ref043",
+      "first-page": "175",
+      "volume-title": "Global Warming of 15°C: IPCC Special Report on impacts of global warming of 15°C above pre-industrial levels in context of strengthening response to climate change, sustainable development, and efforts to eradicate poverty. 1st ed.",
+      "author": "O. Hoegh-Guldberg",
+      "year": "2018",
+      "edition": "1"
+    },
+    {
+      "key": "pone.0299735.ref044",
+      "doi-asserted-by": "crossref",
+      "first-page": "2495",
+      "DOI": "10.5194/tc-14-2495-2020",
+      "article-title": "Historical Northern Hemisphere snow cover trends and projected changes in the CMIP6 multi-model ensemble.",
+      "volume": "14",
+      "author": "L Mudryk",
+      "year": "2020",
+      "journal-title": "The Cryosphere."
+    },
+    {
+      "key": "pone.0299735.ref045",
+      "doi-asserted-by": "crossref",
+      "first-page": "229",
+      "DOI": "10.1659/MRD-JOURNAL-D-10-00112.1",
+      "article-title": "Winter Tourism and Climate Change in the Alps: An Assessment of Resource Consumption, Snow Reliability, and Future Snowmaking Potential.",
+      "volume": "31",
+      "author": "C Rixen",
+      "year": "2011",
+      "journal-title": "Mt Res Dev."
+    },
+    {
+      "key": "pone.0299735.ref046",
+      "doi-asserted-by": "crossref",
+      "first-page": "29",
+      "DOI": "10.3390/cli6020029",
+      "article-title": "Climate Change Adaptation of Alpine Ski Tourism in Spain.",
+      "volume": "6",
+      "author": "L Campos Rodrigues",
+      "year": "2018",
+      "journal-title": "Climate"
+    },
+    {
+      "key": "pone.0299735.ref047",
+      "doi-asserted-by": "crossref",
+      "first-page": "430",
+      "DOI": "10.1007/s13280-010-0039-y",
+      "article-title": "Climate Response by the Ski Industry: The Shortcomings of Snowmaking for Australian Resorts",
+      "volume": "39",
+      "author": "CM Pickering",
+      "year": "2010",
+      "journal-title": "AMBIO"
+    },
+    {
+      "key": "pone.0299735.ref048",
+      "doi-asserted-by": "crossref",
+      "first-page": "281",
+      "DOI": "10.1007/s10531-011-0184-z",
+      "article-title": "Direct and indirect effects of ski run management on alpine Orthoptera.",
+      "volume": "21",
+      "author": "T Keßler",
+      "year": "2012",
+      "journal-title": "Biodivers Conserv."
+    },
+    {
+      "key": "pone.0299735.ref049",
+      "doi-asserted-by": "crossref",
+      "first-page": "568",
+      "DOI": "10.1657/1523-0430(07-044)[RIXEN]2.0.CO;2",
+      "article-title": "Altered Snow Density and Chemistry Change Soil Nitrogen Mineralization and Plant Growth.",
+      "volume": "40",
+      "author": "C Rixen",
+      "year": "2008",
+      "journal-title": "Arct Antarct Alp Res"
+    },
+    {
+      "key": "pone.0299735.ref050",
+      "doi-asserted-by": "crossref",
+      "first-page": "381",
+      "DOI": "10.1890/06-0875",
+      "article-title": "Early Onset of Vegetation Growth Vs. Rapid Green-up: Impacts on Juvenile Mountain Ungulates",
+      "volume": "88",
+      "author": "N Pettorelli",
+      "year": "2007",
+      "journal-title": "Ecology"
+    },
+    {
+      "key": "pone.0299735.ref051",
+      "first-page": "131",
+      "volume-title": "IPCC Special Report on the Ocean and Cryosphere in a Changing Climate",
+      "author": "R. Hock",
+      "year": "2019",
+      "edition": "1"
+    },
+    {
+      "key": "pone.0299735.ref052",
+      "doi-asserted-by": "crossref",
+      "first-page": "2124",
+      "DOI": "10.1175/2008JCLI2665.1",
+      "article-title": "The Response of Northern Hemisphere Snow Cover to a Changing Climate*.",
+      "volume": "22",
+      "author": "RD Brown",
+      "year": "2009",
+      "journal-title": "J Clim."
+    },
+    {
+      "key": "pone.0299735.ref053",
+      "doi-asserted-by": "crossref",
+      "first-page": "219",
+      "DOI": "10.1080/1479053X.2010.502383",
+      "article-title": "Systems Analysis of Climate Change Vulnerability for the US Northeast Ski Sector.",
+      "volume": "7",
+      "author": "J Dawson",
+      "year": "2010",
+      "journal-title": "Tour Hosp Plan Dev."
+    },
+    {
+      "key": "pone.0299735.ref054",
+      "article-title": "Intra‐day variability of temperature and its near‐surface gradient with elevation over mountainous terrain: Comparing MODIS land surface temperature data with coarse and fine scale near‐surface measurements.",
+      "volume": "41",
+      "author": "A Collados‐Lara",
+      "year": "2020",
+      "journal-title": "Int J Climatol."
+    },
+    {
+      "key": "pone.0299735.ref055",
+      "doi-asserted-by": "crossref",
+      "first-page": "106",
+      "DOI": "10.1016/j.advwatres.2018.12.010",
+      "article-title": "A distributed cellular automata model to simulate potential future impacts of climate change on snow cover area.",
+      "volume": "124",
+      "author": "A-J Collados-Lara",
+      "year": "2019",
+      "journal-title": "Adv Water Resour"
+    },
+    {
+      "key": "pone.0299735.ref056",
+      "doi-asserted-by": "crossref",
+      "first-page": "147776",
+      "DOI": "10.1016/j.scitotenv.2021.147776",
+      "article-title": "Assessing the impact of climate change–and its uncertainty–on snow cover areas by using cellular automata models and stochastic weather generators",
+      "volume": "788",
+      "author": "A-J Collados-Lara",
+      "year": "2021",
+      "journal-title": "Sci Total Environ"
+    },
+    {
+      "key": "pone.0299735.ref057",
+      "doi-asserted-by": "crossref",
+      "first-page": "230",
+      "DOI": "10.1016/j.jhydrol.2017.04.058",
+      "article-title": "Estimation of the spatiotemporal dynamics of snow covered area by using cellular automata models",
+      "volume": "550",
+      "author": "E Pardo-Igúzquiza",
+      "year": "2017",
+      "journal-title": "J Hydrol"
+    },
+    {
+      "key": "pone.0299735.ref058",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1017/9781009325844",
+      "volume-title": "Climate Change 2022 –Impacts, Adaptation and Vulnerability: Working Group II Contribution to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change",
+      "author": "Intergovernmental Panel On Climate Change (Ipcc).",
+      "year": "2023",
+      "edition": "1"
+    },
+    {
+      "key": "pone.0299735.ref059",
+      "doi-asserted-by": "crossref",
+      "first-page": "1355",
+      "DOI": "10.1126/science.1173113",
+      "article-title": "Ecological Dynamics Across the Arctic Associated with Recent Climate Change",
+      "volume": "325",
+      "author": "E Post",
+      "year": "2009",
+      "journal-title": "Science"
+    }
+  ],
+  "container-title": [
+    "PLOS ONE"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://dx.plos.org/10.1371/journal.pone.0299735",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2024,
+        3,
+        13
+      ]
+    ],
+    "date-time": "2024-03-13T13:26:10Z",
+    "timestamp": 1710336370000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://dx.plos.org/10.1371/journal.pone.0299735"
+    }
+  },
+  "subtitle": [],
+  "editor": [
+    {
+      "given": "Sher",
+      "family": "Muhammad",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "editor"
+        }
+      ]
+    }
+  ],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2024,
+        3,
+        13
+      ]
+    ]
+  },
+  "references-count": 59,
+  "journal-issue": {
+    "issue": "3",
+    "published-online": {
+      "date-parts": [
+        [
+          2024,
+          3,
+          13
+        ]
+      ]
+    }
+  },
+  "URL": "https://doi.org/10.1371/journal.pone.0299735",
+  "relation": {},
+  "ISSN": [
+    "1932-6203"
+  ],
+  "issn-type": [
+    {
+      "value": "1932-6203",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2024,
+        3,
+        13
+      ]
+    ]
+  }
+}

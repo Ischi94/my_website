@@ -1,0 +1,911 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        9,
+        21
+      ]
+    ],
+    "date-time": "2026-09-21T17:55:18Z",
+    "timestamp": 1790013318453,
+    "version": "4.0.1"
+  },
+  "reference-count": 60,
+  "publisher": "Elsevier BV",
+  "issue": "4",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2026,
+            2,
+            1
+          ]
+        ],
+        "date-time": "2026-02-01T00:00:00Z",
+        "timestamp": 1769904000000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2026,
+            2,
+            1
+          ]
+        ],
+        "date-time": "2026-02-01T00:00:00Z",
+        "timestamp": 1769904000000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.elsevier.com/legal/tdmrep-license"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2025,
+            12,
+            5
+          ]
+        ],
+        "date-time": "2025-12-05T00:00:00Z",
+        "timestamp": 1764892800000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "http://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "funder": [
+    {
+      "DOI": "10.13039/501100001711",
+      "name": "Swiss National Science Foundation",
+      "doi-asserted-by": "publisher",
+      "id": [
+        {
+          "id": "10.13039/501100001711",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    },
+    {
+      "DOI": "10.13039/100019580",
+      "name": "Swedish Research Council Formas",
+      "doi-asserted-by": "publisher",
+      "id": [
+        {
+          "id": "10.13039/100019580",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "cell.com",
+      "elsevier.com",
+      "sciencedirect.com"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "Current Biology"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2026,
+        2
+      ]
+    ]
+  },
+  "DOI": "10.1016/j.cub.2025.12.017",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2026,
+        1,
+        22
+      ]
+    ],
+    "date-time": "2026-01-22T16:26:04Z",
+    "timestamp": 1769099164000
+  },
+  "page": "1045-1053.e4",
+  "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 6,
+  "title": [
+    "Revealing the hidden patterns of shark and ray diversity over the past 145 million years"
+  ],
+  "prefix": "10.1016",
+  "volume": "36",
+  "author": [
+    {
+      "given": "Amanda",
+      "family": "Gardiner",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Gregor H.",
+      "family": "Mathes",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Rebecca",
+      "family": "Cooper",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Kristína",
+      "family": "Kocáková",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Jaime A.",
+      "family": "Villafaña",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Daniele",
+      "family": "Silvestro",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-5320-7246",
+      "authenticated-orcid": false,
+      "given": "Catalina",
+      "family": "Pimiento",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "78",
+  "reference": [
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib1",
+      "first-page": "17",
+      "article-title": "Mesozoic elasmobranchs, neoselachian phylogeny and the rise of modern elasmobranch diversity",
+      "volume": "3",
+      "author": "Maisey",
+      "year": "2004",
+      "journal-title": "Mesozoic Fishes"
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib2",
+      "unstructured": "Cappetta, H. (2012). Handbook of paleoichthyology. In Handbook of Paleoichthyology. 3e. Chondrichthyes. Mesozoic and Cenozoic Elasmobranchii: teeth. Mesozoic and Cenozoic Elasmobranchii: teeth., pp. 1–512."
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib3",
+      "doi-asserted-by": "crossref",
+      "first-page": "918",
+      "DOI": "10.1111/j.1095-8649.2012.03245.x",
+      "article-title": "What is an elasmobranch'? The impact of palaeontology in understanding elasmobranch phylogeny and evolution",
+      "volume": "80",
+      "author": "Maisey",
+      "year": "2012",
+      "journal-title": "J. Fish Biol."
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib4",
+      "doi-asserted-by": "crossref",
+      "first-page": "837",
+      "DOI": "10.1111/jfb.12874",
+      "article-title": "Annotated checklist of the living sharks, batoids and chimaeras (Chondrichthyes) of the world, with a focus on biogeographical diversity",
+      "volume": "88",
+      "author": "Weigmann",
+      "year": "2016",
+      "journal-title": "J. Fish Biol."
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib5",
+      "doi-asserted-by": "crossref",
+      "first-page": "181",
+      "DOI": "10.1016/S0031-0182(04)00420-1",
+      "article-title": "Neoselachian (chondrichthyes, elasmobranchii) diversity across the cretaceous–tertiary boundary",
+      "volume": "214",
+      "author": "Kriwet",
+      "year": "2004",
+      "journal-title": "Palaeogeogr. Palaeoclimatol. Palaeoecol."
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib6",
+      "doi-asserted-by": "crossref",
+      "first-page": "215",
+      "DOI": "10.1666/04069.1",
+      "article-title": "Diversification of the Neoselachii (Chondrichthyes) during the Jurassic and Cretaceous",
+      "volume": "32",
+      "author": "Underwood",
+      "year": "2006",
+      "journal-title": "Paleobiology"
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib7",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1371/journal.pone.0044632",
+      "article-title": "An analytical approach for estimating fossil record and diversification events in sharks, skates and rays",
+      "volume": "7",
+      "author": "Guinot",
+      "year": "2012",
+      "journal-title": "PLoS one"
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib8",
+      "doi-asserted-by": "crossref",
+      "first-page": "950",
+      "DOI": "10.1111/brv.12203",
+      "article-title": "‘Fish’ (Actinopterygii and Elasmobranchii) diversification patterns through deep time",
+      "volume": "91",
+      "author": "Guinot",
+      "year": "2016",
+      "journal-title": "Biol. Rev. Camb. Philos. Soc."
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib9",
+      "doi-asserted-by": "crossref",
+      "first-page": "802",
+      "DOI": "10.1126/science.abn2080",
+      "article-title": "Global impact and selectivity of the Cretaceous-Paleogene mass extinction among sharks, skates, and rays",
+      "volume": "379",
+      "author": "Guinot",
+      "year": "2023",
+      "journal-title": "Science"
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib10",
+      "doi-asserted-by": "crossref",
+      "first-page": "1100",
+      "DOI": "10.1038/s41559-017-0223-6",
+      "article-title": "The Pliocene marine megafauna extinction and its impact on functional diversity",
+      "volume": "1",
+      "author": "Pimiento",
+      "year": "2017",
+      "journal-title": "Nat. Ecol. Evol."
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib11",
+      "doi-asserted-by": "crossref",
+      "first-page": "329",
+      "DOI": "10.1017/pab.2022.40",
+      "article-title": "Diversification trajectories and paleobiogeography of Neogene chondrichthyans from Europe",
+      "volume": "49",
+      "author": "Villafaña",
+      "year": "2023",
+      "journal-title": "Paleobiology"
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib12",
+      "doi-asserted-by": "crossref",
+      "first-page": "659",
+      "DOI": "10.1666/13069",
+      "article-title": "Rise and fall in diversity of Neogene marine vertebrates on the temperate Pacific coast of South America",
+      "volume": "40",
+      "author": "Villafaña",
+      "year": "2014",
+      "journal-title": "Paleobiology"
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib13",
+      "doi-asserted-by": "crossref",
+      "first-page": "591",
+      "DOI": "10.1111/pala.12079",
+      "article-title": "Crossing the boundary: an elasmobranch fauna from S tevns K lint, D enmark",
+      "volume": "57",
+      "author": "Adolfssen",
+      "year": "2014",
+      "journal-title": "Palaeontology"
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib14",
+      "doi-asserted-by": "crossref",
+      "first-page": "20584",
+      "DOI": "10.1073/pnas.1902693116",
+      "article-title": "Climate cooling and clade competition likely drove the decline of lamniform sharks",
+      "volume": "116",
+      "author": "Condamine",
+      "year": "2019",
+      "journal-title": "Proc. Natl. Acad. Sci. USA"
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib15",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1038/s41598-022-26010-7",
+      "article-title": "Combining palaeontological and neontological data shows a delayed diversification burst of carcharhiniform sharks likely mediated by environmental change",
+      "volume": "12",
+      "author": "Brée",
+      "year": "2022",
+      "journal-title": "Sci. Rep."
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib16",
+      "article-title": "The apparent exponential radiation of Phanerozoic land vertebrates is an artefact of spatial sampling biases",
+      "volume": "287",
+      "author": "Close",
+      "year": "2020",
+      "journal-title": "Proc. Biol. Sci."
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib17",
+      "doi-asserted-by": "crossref",
+      "first-page": "905",
+      "DOI": "10.1016/j.cub.2024.12.038",
+      "article-title": "Apparent timescaling of fossil diversification rates is caused by sampling bias",
+      "volume": "35",
+      "author": "Reijenga",
+      "year": "2025",
+      "journal-title": "Curr. Biol."
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib18",
+      "article-title": "FINS - A global occurrence dataset of fossil neoselachians from the Cretaceous to the Quaternary",
+      "author": "Kocáková",
+      "year": "2025",
+      "journal-title": "bioRxiv"
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib19",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1038/s41467-024-48434-7",
+      "article-title": "DeepDive: estimating global biodiversity patterns through time using deep learning",
+      "volume": "15",
+      "author": "Cooper",
+      "year": "2024",
+      "journal-title": "Nat. Commun."
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib20",
+      "doi-asserted-by": "crossref",
+      "first-page": "1191",
+      "DOI": "10.1126/science.1189910",
+      "article-title": "The shifting balance of diversity among major marine animal groups",
+      "volume": "329",
+      "author": "Alroy",
+      "year": "2010",
+      "journal-title": "Science"
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib21",
+      "doi-asserted-by": "crossref",
+      "first-page": "1126",
+      "DOI": "10.1111/2041-210X.12263",
+      "article-title": "PyRate: a new program to estimate speciation and extinction rates from incomplete fossil data",
+      "volume": "5",
+      "author": "Silvestro",
+      "year": "2014",
+      "journal-title": "Methods Ecol. Evol."
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib22",
+      "doi-asserted-by": "crossref",
+      "first-page": "349",
+      "DOI": "10.1093/sysbio/syu006",
+      "article-title": "Bayesian Estimation of Speciation and Extinction from Incomplete Fossil Occurrence Data",
+      "volume": "63",
+      "author": "Silvestro",
+      "year": "2014",
+      "journal-title": "Syst. Biol."
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib23",
+      "doi-asserted-by": "crossref",
+      "first-page": "177",
+      "DOI": "10.1017/pab.2023.36",
+      "article-title": "Spatial standardization of taxon occurrence data—a call to action",
+      "volume": "50",
+      "author": "Antell",
+      "year": "2024",
+      "journal-title": "Paleobiology"
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib27",
+      "first-page": "25",
+      "article-title": "Serratolamna serrata (Agassiz) (Pisces, Neoselachii) from the Maastrichtian (Late Cretaceous) of Jamaica",
+      "volume": "34",
+      "author": "Underwood",
+      "year": "1999",
+      "journal-title": "Carib. J. Earth Sci."
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib28",
+      "first-page": "945",
+      "article-title": "Diversification trajectories and evolutionary life-history traits in early sharks and batoids",
+      "volume": "276",
+      "author": "Kriwet",
+      "year": "2009",
+      "journal-title": "Proc. Biol. Sci."
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib29",
+      "first-page": "1552",
+      "article-title": "Paleoreef maps: evaluation of a comprehensive database on Phanerozoic reefs",
+      "volume": "83",
+      "author": "Kiessling",
+      "year": "1999",
+      "journal-title": "AAPG Bull."
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib30",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1126/science.adk3705",
+      "article-title": "A 485-million-year history of Earth’s surface temperature",
+      "volume": "385",
+      "author": "Judd",
+      "year": "2024",
+      "journal-title": "Science"
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib31",
+      "doi-asserted-by": "crossref",
+      "first-page": "245",
+      "DOI": "10.1017/S0094837300005352",
+      "article-title": "The Mesozoic Marine Revolution: Evidence from Snails, Predators and Grazers",
+      "volume": "3",
+      "author": "Vermeij",
+      "year": "1977",
+      "journal-title": "Paleobiology"
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib32",
+      "first-page": "224",
+      "article-title": "The Evolution of Marine Reptiles",
+      "volume": "2",
+      "author": "Motani",
+      "year": "2009",
+      "journal-title": "Evol.: Educ. Outreach"
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib33",
+      "article-title": "Top of the food chains: an ecological network of the marine Paja Formation biota from the Early Cretaceous of Colombia reveals the highest trophic levels ever estimated",
+      "volume": "202",
+      "author": "Cortés",
+      "year": "2023",
+      "journal-title": "Zool. J. Linn. Soc."
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib34",
+      "doi-asserted-by": "crossref",
+      "first-page": "17084",
+      "DOI": "10.1073/pnas.2006087117",
+      "article-title": "Asteroid impact, not volcanism, caused the end-Cretaceous dinosaur extinction",
+      "volume": "117",
+      "author": "Chiarenza",
+      "year": "2020",
+      "journal-title": "Proc. Natl. Acad. Sci. USA"
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib35",
+      "doi-asserted-by": "crossref",
+      "first-page": "17",
+      "DOI": "10.1016/j.palaeo.2013.05.018",
+      "article-title": "Physical drivers of mosasaur evolution",
+      "volume": "400",
+      "author": "Polcyn",
+      "year": "2014",
+      "journal-title": "Palaeogeogr. Palaeoclimatol. Palaeoecol."
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib36",
+      "doi-asserted-by": "crossref",
+      "first-page": "8537",
+      "DOI": "10.1073/pnas.1504985112",
+      "article-title": "New Age of Fishes initiated by the Cretaceous−Paleogene mass extinction",
+      "volume": "112",
+      "author": "Sibert",
+      "year": "2015",
+      "journal-title": "Proc. Natl. Acad. Sci. USA"
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib37",
+      "doi-asserted-by": "crossref",
+      "first-page": "707",
+      "DOI": "10.1111/j.1475-4983.2012.01165.x",
+      "article-title": "Five hundred million years of extinction and recovery: a phanerozoic survey of large-scale diversity patterns in fishes",
+      "volume": "55",
+      "author": "Friedman",
+      "year": "2012",
+      "journal-title": "Palaeontology"
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib38",
+      "doi-asserted-by": "crossref",
+      "first-page": "1",
+      "DOI": "10.1111/pala.12267",
+      "article-title": "Buoyancy mechanisms limit preservation of coleoid cephalopod soft tissues in Mesozoic Lagerstätten",
+      "volume": "60",
+      "author": "Clements",
+      "year": "2017",
+      "journal-title": "Palaeontology"
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib39",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1111/geb.13881",
+      "article-title": "The rise and fall of shark functional diversity over the last 66 million years",
+      "volume": "33",
+      "author": "Cooper",
+      "year": "2024",
+      "journal-title": "Glob. Ecol. Biogeogr."
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib40",
+      "doi-asserted-by": "crossref",
+      "first-page": "489",
+      "DOI": "10.1146/annurev-earth-040610-133431",
+      "article-title": "The Paleocene-Eocene Thermal Maximum: A perturbation of carbon cycle, climate, and biosphere with implications for the future",
+      "volume": "39",
+      "author": "McInerney",
+      "year": "2011",
+      "journal-title": "Annu. Rev. Earth Planet. Sci."
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib41",
+      "series-title": "Placing Our Current ‘hyperthermal’in the Context of Rapid Climate Change in Our Geological Past",
+      "author": "Foster",
+      "year": "2018"
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib42",
+      "doi-asserted-by": "crossref",
+      "first-page": "573",
+      "DOI": "10.1093/sysbio/syp060",
+      "article-title": "Radiation of Extant Cetaceans Driven by Restructuring of the Oceans",
+      "volume": "58",
+      "author": "Steeman",
+      "year": "2009",
+      "journal-title": "Syst. Biol."
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib43",
+      "doi-asserted-by": "crossref",
+      "first-page": "4",
+      "DOI": "10.2110/sedred.2005.4.4",
+      "article-title": "A toothy tale of evolution: convergence in tooth morphology among marine Mesozoic–Cenozoic sharks, reptiles, and mammals",
+      "volume": "3",
+      "author": "Ciampaglio",
+      "year": "2005",
+      "journal-title": "TSR"
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib44",
+      "doi-asserted-by": "crossref",
+      "first-page": "75",
+      "DOI": "10.1016/j.palaeo.2011.04.008",
+      "article-title": "The Eocene–Oligocene transition: Changes in sea level, temperature or both?",
+      "volume": "335–336",
+      "author": "Houben",
+      "year": "2012",
+      "journal-title": "Palaeogeogr. Palaeoclimatol. Palaeoecol."
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib45",
+      "doi-asserted-by": "crossref",
+      "first-page": "686",
+      "DOI": "10.1126/science.1059412",
+      "article-title": "Trends, rhythms, and aberrations in global climate 65 Ma to present",
+      "volume": "292",
+      "author": "Zachos",
+      "year": "2001",
+      "journal-title": "Science"
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib24",
+      "series-title": "R: A Language and Environment for Statistical Computing",
+      "author": "Team",
+      "year": "2017"
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib25",
+      "doi-asserted-by": "crossref",
+      "first-page": "1923",
+      "DOI": "10.1111/2041-210X.70070",
+      "article-title": "DeepDiveR—a software for deep learning estimation of palaeodiversity from fossil occurrences",
+      "volume": "16",
+      "author": "Cooper",
+      "year": "2025",
+      "journal-title": "Methods Ecol. Evol."
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib26",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Gardiner, A., Mathes, G.H., Cooper, R.B., Kocáková, K., A., V.J., Silvestro, D., and Pimiento, C. (2025). Data and codes for Deep Learning Reveals the Hidden Patterns of Shark and Ray Diversity over the past 145 Million Years.",
+      "DOI": "10.1016/j.cub.2025.12.017"
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib46",
+      "unstructured": "Scotese, C.R. (2017). Atlas of Ancient Oceans & Continents: Plate Tectonics during the Last 1.5 billion years. Today. 21."
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib47",
+      "first-page": "23",
+      "article-title": "Atlas of Early Cretaceous Paleogeographic Maps, PALEOMAP Atlas for ArcGIS",
+      "volume": "2",
+      "author": "Scotese",
+      "year": "2014",
+      "journal-title": "Cret. Maps"
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib48",
+      "series-title": "Atlas of Earth History",
+      "author": "Scotese",
+      "year": "2001"
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib49",
+      "first-page": "16",
+      "article-title": "Atlas of Late Cretaceous Maps, PALEOMAP Atlas for ArcGIS",
+      "volume": "2",
+      "author": "Scotese",
+      "year": "2014",
+      "journal-title": "Cret. Maps"
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib50",
+      "series-title": "The Cenozoic, Mollweide Projection",
+      "article-title": "Atlas of Neogene Paleogeographic Maps, PALEOMAP Atlas for ArcGIS",
+      "author": "Scotese",
+      "year": "2014"
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib51",
+      "series-title": "The Cenozoic, Mollweide Projection",
+      "article-title": "Atlas of Paleogene Paleogeographic Maps, PALEOMAP Atlas for ArcGIS",
+      "author": "Scotese",
+      "year": "2014"
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib52",
+      "doi-asserted-by": "crossref",
+      "first-page": "369",
+      "DOI": "10.1111/pala.12478",
+      "article-title": "The impact of the Pull of the Recent on extant elasmobranchs",
+      "volume": "63",
+      "author": "Pimiento",
+      "year": "2020",
+      "journal-title": "Palaeontology"
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib53",
+      "series-title": "The Geologic Time Scale 2-Volume Set",
+      "author": "Gradstein",
+      "year": "2012"
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib54",
+      "doi-asserted-by": "crossref",
+      "first-page": "420",
+      "DOI": "10.1126/science.aay8309",
+      "article-title": "The spatial structure of Phanerozoic marine animal diversity",
+      "volume": "368",
+      "author": "Close",
+      "year": "2020",
+      "journal-title": "Science"
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib55",
+      "doi-asserted-by": "crossref",
+      "first-page": "107",
+      "DOI": "10.1007/s00015-011-0075-z",
+      "article-title": "A new Jurassic cow shark (Chondrichthyes, Hexanchiformes) with comments on Jurassic hexanchiform systematics",
+      "volume": "104",
+      "author": "Kriwet",
+      "year": "2011",
+      "journal-title": "Swiss J. Geosci."
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib56",
+      "article-title": "An articulated skeleton of the neoselachian shark Palaeocarcharias from the Late Jurassic Canjuers Lagerstätte (southeastern France)",
+      "volume": "111",
+      "author": "Guinot",
+      "year": "2025",
+      "journal-title": "ann. paleontol. (Elsevier)"
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib57",
+      "doi-asserted-by": "crossref",
+      "first-page": "637",
+      "DOI": "10.1007/s12542-019-00451-4",
+      "article-title": "A new Pliensbachian elasmobranch (Vertebrata, Chondrichthyes) assemblage from Europe, and its contribution to the understanding of late Early Jurassic elasmobranch diversity and distributional patterns",
+      "volume": "93",
+      "author": "Stumpf",
+      "year": "2019",
+      "journal-title": "PalZ"
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib58",
+      "unstructured": "Abadi, M., Barham, P., Chen, J., Chen, Z., Davis, A., Dean, J., Devin, M., Ghemawat, S., Irving, G., and Isard, M. (2016). {TensorFlow}: a system for {Large-Scale} machine learning, pp. 265–283."
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib59",
+      "doi-asserted-by": "crossref",
+      "first-page": "735",
+      "DOI": "10.1111/2041-210X.13161",
+      "article-title": "The R package divDyn for quantifying diversity dynamics using fossil sampling data",
+      "volume": "10",
+      "author": "Kocsis",
+      "year": "2019",
+      "journal-title": "Methods Ecol. Evol."
+    },
+    {
+      "key": "10.1016/j.cub.2025.12.017_bib60",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1038/s41467-022-30507-0",
+      "article-title": "Global diversity dynamics in the fossil record are regionally heterogeneous",
+      "volume": "13",
+      "author": "Flannery-Sutherland",
+      "year": "2022",
+      "journal-title": "Nat. Commun."
+    }
+  ],
+  "container-title": [
+    "Current Biology"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S0960982225016380?httpAccept=text/xml",
+      "content-type": "text/xml",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://api.elsevier.com/content/article/PII:S0960982225016380?httpAccept=text/plain",
+      "content-type": "text/plain",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2026,
+        3,
+        2
+      ]
+    ],
+    "date-time": "2026-03-02T21:13:45Z",
+    "timestamp": 1772486025000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0960982225016380"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2026,
+        2
+      ]
+    ]
+  },
+  "references-count": 60,
+  "journal-issue": {
+    "issue": "4",
+    "published-print": {
+      "date-parts": [
+        [
+          2026,
+          2
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "S0960982225016380"
+  ],
+  "URL": "https://doi.org/10.1016/j.cub.2025.12.017",
+  "relation": {},
+  "ISSN": [
+    "0960-9822"
+  ],
+  "issn-type": [
+    {
+      "value": "0960-9822",
+      "type": "print"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2026,
+        2
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "Elsevier",
+      "name": "publisher",
+      "label": "This article is maintained by"
+    },
+    {
+      "value": "Revealing the hidden patterns of shark and ray diversity over the past 145 million years",
+      "name": "articletitle",
+      "label": "Article Title"
+    },
+    {
+      "value": "Current Biology",
+      "name": "journaltitle",
+      "label": "Journal Title"
+    },
+    {
+      "value": "https://doi.org/10.1016/j.cub.2025.12.017",
+      "name": "articlelink",
+      "label": "CrossRef DOI link to publisher maintained version"
+    },
+    {
+      "value": "article",
+      "name": "content_type",
+      "label": "Content Type"
+    },
+    {
+      "value": "© 2025 The Author(s). Published by Elsevier Inc.",
+      "name": "copyright",
+      "label": "Copyright"
+    }
+  ]
+}

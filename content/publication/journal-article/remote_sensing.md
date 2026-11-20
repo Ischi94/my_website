@@ -9,8 +9,8 @@ authors:
 - Wibke Peters
 - Marco Heurich
 - Manuel J. Steinbauer
-date: "2023-08-20T00:00:00Z"
-doi: "doi.org/10.1002/rse2.367"
+date: "2024-04-01"
+doi: "10.1002/rse2.367"
 image:
   caption: ''
   focal_point: ""
@@ -21,13 +21,13 @@ publication: '*Remote Sensing in Ecology and Conservation* <br> [Read the public
 publication_short: "*Remote Sensing in Ecology and Conservation*. DOI: doi.org/10.1002/rse2.367. [Read the publication](https://zslpublications.onlinelibrary.wiley.com/doi/full/10.1002/rse2.367)"
 publication_types:
 - "2"
-publishDate: "2021-09-01T00:00:00Z"
+publishDate: "2024-04-01"
 summary: 
 tags:
 - Remote Sensing
 - Machine Learning
 - Publication
-title: Automated visitor and wildlife monitoring with camera traps and machine learning
+title: "Automated visitor and wildlife monitoring with camera traps and machine learning"
 buttons:
     - text: Read the publication here
       url: "https://zslpublications.onlinelibrary.wiley.com/doi/full/10.1002/rse2.367"

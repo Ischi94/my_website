@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}Gregor Mathes</title>
+  {{ $description := .Description | default .Params.summary | default site.Params.description }}
+  <meta name="description" content="{{ $description | plainify }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+  <meta name="author" content="Gregor Mathes">
+  {{ with .Params.doi }}{{ range where site.Data.publications "doi" . }}
+  <meta name="citation_title" content="{{ .title }}">
+  {{ range .authors }}<meta name="citation_author" content="{{ .name }}">{{ end }}
+  <meta name="citation_publication_date" content="{{ .year }}">
+  <meta name="citation_journal_title" content="{{ .journal }}">
+  <meta name="citation_doi" content="{{ .doi }}">
+  {{ end }}{{ end }}
+  {{ if eq hugo.Environment "preview" }}<meta name="robots" content="noindex, nofollow">{{ end }}
+  <meta property="og:title" content="{{ .Title }}">
+  <meta property="og:description" content="{{ $description | plainify }}">
+  <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  {{ $portrait := resources.Get "images/portrait.jpg" }}
+  {{ $social := $portrait.Fit "1000x1000 webp q85" }}
+  <meta property="og:image" content="{{ $social.Permalink }}">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+  {{ $css := resources.Get "css/site.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  {{ range .AlternativeOutputFormats }}<link rel="alternate" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ site.Title }}">{{ end }}
+  {{ if .IsHome }}
+  {{ $person := dict "@context" "https://schema.org" "@type" "Person" "name" "Gregor Mathes" "url" site.BaseURL "image" $social.Permalink "affiliation" (dict "@type" "CollegeOrUniversity" "name" "University of Passau") "sameAs" (slice site.Params.scholar site.Params.orcid site.Params.github site.Params.institution) "knowsAbout" (slice "Palaeobiology" "Physical geography" "Quantitative ecology" "Biodiversity" "Bayesian statistics") }}
+  <script type="application/ld+json">{{ $person | jsonify | safeJS }}</script>
+  {{ end }}
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="{{ "/" | relURL }}">Gregor Mathes<span>Earth, life & environmental change</span></a>
+      <nav aria-label="Main navigation">
+        {{ range site.Menus.main }}<a href="{{ .URL | relURL }}"{{ if eq $.RelPermalink .URL }} aria-current="page"{{ end }}>{{ .Name }}</a>{{ end }}
+      </nav>
+    </div>
+  </header>
+  <main id="main">{{ block "main" . }}{{ end }}</main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div><strong>Gregor Mathes</strong><p>Physical Geography · University of Passau</p></div>
+      <div class="footer-links"><a href="{{ "/resources/" | relURL }}">Resources</a><a href="{{ site.Params.scholar }}">Google Scholar</a><a href="{{ site.Params.orcid }}">ORCID</a><a href="{{ "/about/#contact" | relURL }}">Contact</a><a href="{{ "/privacy/" | relURL }}">Privacy</a></div>
+      <p class="copyright">© {{ now.Year }} Gregor Mathes</p>
+    </div>
+  </footer>
+  {{ if or (eq .Section "post") (eq .Section "talk") }}
+  <script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script>
+  {{ end }}
+</body>
+</html>

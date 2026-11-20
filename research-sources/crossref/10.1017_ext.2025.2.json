@@ -1,0 +1,725 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        8,
+        18
+      ]
+    ],
+    "date-time": "2026-08-18T14:10:56Z",
+    "timestamp": 1787062256399,
+    "version": "build-2736575974"
+  },
+  "reference-count": 80,
+  "publisher": "Cambridge University Press (CUP)",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2025,
+            3,
+            17
+          ]
+        ],
+        "date-time": "2025-03-17T00:00:00Z",
+        "timestamp": 1742169600000
+      },
+      "content-version": "unspecified",
+      "delay-in-days": 75,
+      "URL": "http://creativecommons.org/licenses/by-nc/4.0"
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "Camb. prisms Extinction"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2025
+      ]
+    ]
+  },
+  "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>One of the main objectives of ecological research is to enhance our understanding of the processes that lead to species extinction. A potentially crucial extinction pattern is the dependence of contemporary biodiversity dynamics on past climates, also known as “climate legacy”. However, the general impact of climate legacy on extinction dynamics is unknown. Here, we conduct a systematic review to summarize the effect of climate legacies on extinction dynamics. We find that few works studying the relationship between extinction dynamics and climate include the potential impact of climate legacies (10%), with even fewer studies reaching beyond merely discussing them (3%). Among the studies that quantified climate legacies, six out of seven reported an improved fit of models to extinction dynamics, with most also describing substantial impacts of legacy effects on extinction risk. These include an increase in extinction risk of up to 40% when temperature changes add to a long-term trend in the same direction, as well as substantial effects on species’ adaptations, population dynamics and juvenile recruitment. Various ecological processes have been identified in the literature as potential ways in which climate legacies could affect the vulnerability of modern ecosystems to anthropogenic climate change, including niche conservatism, physiological thresholds, time lags and cascading effects. Overall, we find high agreement that climate legacy is a crucial process shaping extinction dynamics. Incorporating climate legacies in biodiversity assessments could be a key step toward a better understanding of the ecological consequences arising from climate change.</jats:p>",
+  "DOI": "10.1017/ext.2025.2",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2025,
+        3,
+        17
+      ]
+    ],
+    "date-time": "2025-03-17T04:36:22Z",
+    "timestamp": 1742186182000
+  },
+  "source": "Crossref",
+  "is-referenced-by-count": 1,
+  "title": [
+    "The effect of climate legacies on extinction dynamics: A systematic review"
+  ],
+  "prefix": "10.1017",
+  "volume": "3",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0002-2788-1173",
+      "authenticated-orcid": false,
+      "given": "Gregor H.",
+      "family": "Mathes",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "University of Zurich"
+        },
+        {
+          "name": "University of Bayreuth"
+        },
+        {
+          "name": "Friedrich-Alexander University Erlangen-Nürnberg (FAU)"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-5320-7246",
+      "authenticated-orcid": false,
+      "given": "Catalina",
+      "family": "Pimiento",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "University of Zurich"
+        },
+        {
+          "name": "Swansea University"
+        },
+        {
+          "name": "Smithsonian Tropical Research Institute"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Wolfgang",
+      "family": "Kiessling",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Friedrich-Alexander University Erlangen-Nürnberg (FAU)"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-3415-0862",
+      "authenticated-orcid": false,
+      "given": "Jens-Christian",
+      "family": "Svenning",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Aarhus University"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Manuel J.",
+      "family": "Steinbauer",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "University of Bayreuth"
+        },
+        {
+          "name": "University of Bergen"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "56",
+  "published-online": {
+    "date-parts": [
+      [
+        2025,
+        3,
+        17
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "S2755095825000026_r1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1073/pnas.2017105118"
+    },
+    {
+      "key": "S2755095825000026_r25",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/j.1461-0248.2005.00739.x"
+    },
+    {
+      "key": "S2755095825000026_r52",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.3189/002214311798843250"
+    },
+    {
+      "key": "S2755095825000026_r61",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/1749-4877.12315"
+    },
+    {
+      "key": "S2755095825000026_r17",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1126/sciadv.aaz0414"
+    },
+    {
+      "key": "S2755095825000026_r16",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1086/603614"
+    },
+    {
+      "key": "S2755095825000026_r21",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.2307/2656952"
+    },
+    {
+      "key": "S2755095825000026_r57",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/ncomms10511"
+    },
+    {
+      "key": "S2755095825000026_r37",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.3354/meps12148"
+    },
+    {
+      "key": "S2755095825000026_r76",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1371/journal.pbio.2001104"
+    },
+    {
+      "key": "S2755095825000026_r72",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/nature22900"
+    },
+    {
+      "key": "S2755095825000026_r50",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1017/S0094837300011684"
+    },
+    {
+      "key": "S2755095825000026_r51",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/s41558-020-0690-7"
+    },
+    {
+      "key": "S2755095825000026_r70",
+      "first-page": "e5",
+      "article-title": "The late-Quaternary megafauna extinctions: Patterns, causes, ecological consequences and implications for ecosystem management in the Anthropocene",
+      "volume": "2",
+      "author": "Svenning",
+      "year": "2024",
+      "journal-title": "Cambridge Prisms: Extinction"
+    },
+    {
+      "key": "S2755095825000026_r30",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/ele.12232"
+    },
+    {
+      "key": "S2755095825000026_r55",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s00484-020-01971-4"
+    },
+    {
+      "key": "S2755095825000026_r66",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1177/2053019614564785"
+    },
+    {
+      "key": "S2755095825000026_r43",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1073/pnas.0610947104"
+    },
+    {
+      "key": "S2755095825000026_r31",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/s41558-018-0351-2"
+    },
+    {
+      "key": "S2755095825000026_r6",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-642-25038-5_4"
+    },
+    {
+      "key": "S2755095825000026_r62",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/nclimate2552"
+    },
+    {
+      "key": "S2755095825000026_r40",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/s41559-020-01377-w"
+    },
+    {
+      "key": "S2755095825000026_r2",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/j.2005.0906-7590.04253.x"
+    },
+    {
+      "key": "S2755095825000026_r13",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.tree.2014.06.005"
+    },
+    {
+      "key": "S2755095825000026_r63",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1098/rstb.2021.0376"
+    },
+    {
+      "key": "S2755095825000026_r75",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1073/pnas.0901639106"
+    },
+    {
+      "key": "S2755095825000026_r12",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1146/annurev-marine-010318-095106"
+    },
+    {
+      "key": "S2755095825000026_r65",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1890/13-0653.1"
+    },
+    {
+      "key": "S2755095825000026_r3",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1126/science.abn7950"
+    },
+    {
+      "key": "S2755095825000026_r22",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/S0304-3800(00)00373-2"
+    },
+    {
+      "key": "S2755095825000026_r35",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/cobi.12234"
+    },
+    {
+      "key": "S2755095825000026_r71",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.3732/ajb.1200469"
+    },
+    {
+      "key": "S2755095825000026_r8",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1098/rsbl.2016.0828"
+    },
+    {
+      "key": "S2755095825000026_r42",
+      "doi-asserted-by": "crossref",
+      "first-page": "406",
+      "DOI": "10.1007/s10021-001-0019-y",
+      "article-title": "Spatial resilience of coral reefs",
+      "volume": "4",
+      "author": "Nyström",
+      "year": "2001",
+      "journal-title": "Ecosystems"
+    },
+    {
+      "key": "S2755095825000026_r27",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.tree.2003.09.007"
+    },
+    {
+      "key": "S2755095825000026_r41",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1098/rspb.2007.1302"
+    },
+    {
+      "key": "S2755095825000026_r39",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1126/science.adj5763"
+    },
+    {
+      "key": "S2755095825000026_r54",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.2307/3546454"
+    },
+    {
+      "key": "S2755095825000026_r14",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/ele.12048"
+    },
+    {
+      "key": "S2755095825000026_r60",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/brv.12432"
+    },
+    {
+      "key": "S2755095825000026_r74",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/gcb.12763"
+    },
+    {
+      "key": "S2755095825000026_r49",
+      "volume-title": "R: A Language and Environment for Statistical Computing",
+      "year": "2023"
+    },
+    {
+      "key": "S2755095825000026_r78",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1146/annurev.ecolsys.36.102803.095431"
+    },
+    {
+      "key": "S2755095825000026_r11",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/ece3.2892"
+    },
+    {
+      "key": "S2755095825000026_r77",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/mec.15073"
+    },
+    {
+      "key": "S2755095825000026_r24",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.5194/hess-15-1065-2011"
+    },
+    {
+      "key": "S2755095825000026_r33",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1086/282487"
+    },
+    {
+      "key": "S2755095825000026_r34",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/fee.1311"
+    },
+    {
+      "key": "S2755095825000026_r4",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.tree.2005.08.005"
+    },
+    {
+      "key": "S2755095825000026_r28",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1175/2009BAMS2607.1"
+    },
+    {
+      "key": "S2755095825000026_r48",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/gcb.12510"
+    },
+    {
+      "key": "S2755095825000026_r29",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1146/annurev.es.04.110173.000245"
+    },
+    {
+      "key": "S2755095825000026_r44",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/ele.12399"
+    },
+    {
+      "key": "S2755095825000026_r10",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.ecolind.2016.10.024"
+    },
+    {
+      "key": "S2755095825000026_r9",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/sdata.2018.254"
+    },
+    {
+      "key": "S2755095825000026_r26",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/pala.12370"
+    },
+    {
+      "key": "S2755095825000026_r20",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/ddi.12744"
+    },
+    {
+      "key": "S2755095825000026_r79",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/gcb.14169"
+    },
+    {
+      "key": "S2755095825000026_r7",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/gcb.14375"
+    },
+    {
+      "key": "S2755095825000026_r58",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1126/science.1210173"
+    },
+    {
+      "key": "S2755095825000026_r59",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.tree.2013.05.010"
+    },
+    {
+      "key": "S2755095825000026_r68",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/j.1461-0248.2007.01038.x"
+    },
+    {
+      "key": "S2755095825000026_r45",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1175/JCLI3748.1"
+    },
+    {
+      "key": "S2755095825000026_r46",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1126/science.aai9214"
+    },
+    {
+      "key": "S2755095825000026_r56",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1098/rstb.2013.0273"
+    },
+    {
+      "key": "S2755095825000026_r69",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1146/annurev-ecolsys-112414-054314"
+    },
+    {
+      "key": "S2755095825000026_r36",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1126/science.1133267"
+    },
+    {
+      "key": "S2755095825000026_r23",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/gcb.16486"
+    },
+    {
+      "key": "S2755095825000026_r32",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1371/journal.pone.0081598"
+    },
+    {
+      "key": "S2755095825000026_r64",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1038/s41467-021-25019-2"
+    },
+    {
+      "key": "S2755095825000026_r67",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/j.0906-7590.2008.05206.x"
+    },
+    {
+      "key": "S2755095825000026_r80",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1130/G39992.1"
+    },
+    {
+      "key": "S2755095825000026_r47",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.earscirev.2020.103266"
+    },
+    {
+      "key": "S2755095825000026_r15",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.2980/i1195-6860-12-3-316.1"
+    },
+    {
+      "key": "S2755095825000026_r19",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1029/2000GL012015"
+    },
+    {
+      "key": "S2755095825000026_r38",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1071/WR13054"
+    },
+    {
+      "key": "S2755095825000026_r5",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1098/rstb.2013.0264"
+    },
+    {
+      "key": "S2755095825000026_r18",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.gloenvcha.2006.04.002"
+    },
+    {
+      "key": "S2755095825000026_r53",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1111/j.1461-0248.2009.01295.x"
+    },
+    {
+      "key": "S2755095825000026_r73",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1098/rspb.2011.2367"
+    }
+  ],
+  "container-title": [
+    "Cambridge Prisms: Extinction"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/S2755095825000026",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        10,
+        7
+      ]
+    ],
+    "date-time": "2025-10-07T14:49:09Z",
+    "timestamp": 1759848549000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://www.cambridge.org/core/product/identifier/S2755095825000026/type/journal_article"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2025
+      ]
+    ]
+  },
+  "references-count": 80,
+  "alternative-id": [
+    "S2755095825000026"
+  ],
+  "URL": "https://doi.org/10.1017/ext.2025.2",
+  "relation": {
+    "has-review": [
+      {
+        "id-type": "doi",
+        "id": "10.1017/ext.2025.2.pr13",
+        "asserted-by": "object"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.1017/ext.2025.2.pr7",
+        "asserted-by": "object"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.1017/ext.2025.2.pr6",
+        "asserted-by": "object"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.1017/ext.2025.2.pr5",
+        "asserted-by": "object"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.1017/ext.2025.2.pr4",
+        "asserted-by": "object"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.1017/ext.2025.2.pr3",
+        "asserted-by": "object"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.1017/ext.2025.2.pr2",
+        "asserted-by": "object"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.1017/ext.2025.2.pr1",
+        "asserted-by": "object"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.1017/ext.2025.2.pr9",
+        "asserted-by": "object"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.1017/ext.2025.2.pr8",
+        "asserted-by": "object"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.1017/ext.2025.2.pr10",
+        "asserted-by": "object"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.1017/ext.2025.2.pr12",
+        "asserted-by": "object"
+      },
+      {
+        "id-type": "doi",
+        "id": "10.1017/ext.2025.2.pr11",
+        "asserted-by": "object"
+      }
+    ]
+  },
+  "ISSN": [
+    "2755-0958"
+  ],
+  "issn-type": [
+    {
+      "value": "2755-0958",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2025
+      ]
+    ]
+  },
+  "article-number": "e6"
+}
